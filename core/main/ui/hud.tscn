@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://blcxorm5qb0kt"]
+
+[ext_resource type="Script" uid="uid://1q216kdnjbx5" path="res://core/main/ui/hud.gd" id="1_3lhy4"]
+[ext_resource type="PackedScene" uid="uid://prcsfo1q7apm" path="res://core/ui/toast/toast.tscn" id="2_2asln"]
+[ext_resource type="PackedScene" uid="uid://d0c3yv4pi3vju" path="res://game/ui/inventory/inventory_ui.tscn" id="2_c6nsw"]
+[ext_resource type="PackedScene" uid="uid://cd65yvy1mcd3f" path="res://core/ui/interaction_prompt.tscn" id="2_ub1m4"]
+[ext_resource type="PackedScene" uid="uid://dghqnqfa8qkkq" path="res://core/ui/toast/toaster.tscn" id="4_2asln"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmagn"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="HUD" type="CanvasLayer" unique_id=1545210953]
+script = ExtResource("1_3lhy4")
+
+[node name="Prompts" type="Control" parent="." unique_id=919163365]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InteractionPrompt" parent="Prompts" unique_id=1992812548 instance=ExtResource("2_ub1m4")]
+layout_mode = 1
+offset_left = -54.0
+offset_right = 54.0
+
+[node name="Windows" type="Control" parent="." unique_id=1575906040]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryUI" parent="Windows" unique_id=1428632633 instance=ExtResource("2_c6nsw")]
+layout_mode = 1
+
+[node name="Bars" type="Control" parent="." unique_id=291245043]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Bars" unique_id=1042426092]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 320.0
+grow_vertical = 0
+
+[node name="HealthBar" type="ProgressBar" parent="Bars/VBoxContainer" unique_id=1862355485]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_qmagn")
+
+[node name="Toaster" parent="." unique_id=408394193 instance=ExtResource("4_2asln")]
+_toast_ui_scene = ExtResource("2_2asln")

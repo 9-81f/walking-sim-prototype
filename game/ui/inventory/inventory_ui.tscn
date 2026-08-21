@@ -1,0 +1,208 @@
+[gd_scene format=3 uid="uid://d0c3yv4pi3vju"]
+
+[ext_resource type="Script" uid="uid://bn7onpiuxfim1" path="res://game/ui/inventory/inventory_ui.gd" id="1_85i2r"]
+[ext_resource type="PackedScene" uid="uid://bjhwqb8h0kf1x" path="res://game/ui/inventory/components/item_slot.tscn" id="2_ljiqe"]
+[ext_resource type="Texture2D" uid="uid://bvh4xr5sf67uq" path="res://assets/icons/keyboard_mouse_input_prompts/keyboard-&-mouse_sheet_default.png" id="3_y17tc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmagn"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 0.49019608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85i2r"]
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 0.49019608)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmagn"]
+atlas = ExtResource("3_y17tc")
+region = Rect2(320, 832, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyex4"]
+atlas = ExtResource("3_y17tc")
+region = Rect2(448, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85i2r"]
+atlas = ExtResource("3_y17tc")
+region = Rect2(128, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60lgg"]
+atlas = ExtResource("3_y17tc")
+region = Rect2(512, 448, 64, 64)
+
+[node name="InventoryUI" type="Control" unique_id=1428632633 node_paths=PackedStringArray("_item_slot_grid_container", "_info_name", "_info_description")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_85i2r")
+_item_slot_scene = ExtResource("2_ljiqe")
+_item_slot_grid_container = NodePath("PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/InventoryPanel/MarginContainer/VBoxContainer/MarginContainer/GridContainer")
+_info_name = NodePath("PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/ItemInfo/MarginContainer/VBoxContainer/ItemName")
+_info_description = NodePath("PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/ItemInfo/MarginContainer/VBoxContainer/ItemDescription")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1958227588]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qmagn")
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer" unique_id=752944608]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer" unique_id=864599632]
+layout_mode = 2
+
+[node name="InventoryAndInfoContainer" type="HFlowContainer" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=99809747]
+custom_minimum_size = Vector2(1024, 520)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="InventoryPanel" type="PanelContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer" unique_id=892682256]
+custom_minimum_size = Vector2(660, 520)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qmagn")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/InventoryPanel" unique_id=2057353024]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/InventoryPanel/MarginContainer" unique_id=1784840679]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="InventoryTitle" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=1431964495]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Inventory"
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/InventoryPanel/MarginContainer/VBoxContainer" unique_id=103220548]
+layout_mode = 2
+theme_override_constants/margin_top = 8
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/InventoryPanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=1944966645]
+layout_mode = 2
+columns = 4
+
+[node name="ItemInfo" type="PanelContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer" unique_id=1740233533]
+custom_minimum_size = Vector2(360, 0)
+custom_maximum_size = Vector2(360, -1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qmagn")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/ItemInfo" unique_id=1218961336]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/ItemInfo/MarginContainer" unique_id=664445359]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="InfoTitle" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/ItemInfo/MarginContainer/VBoxContainer" unique_id=312751721]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Info"
+uppercase = true
+
+[node name="ItemName" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/ItemInfo/MarginContainer/VBoxContainer" unique_id=1449924408]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/ItemInfo/MarginContainer/VBoxContainer" unique_id=1533568642]
+layout_mode = 2
+
+[node name="ItemDescription" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InventoryAndInfoContainer/ItemInfo/MarginContainer/VBoxContainer" unique_id=1633428084]
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="InputLegendContainer" type="PanelContainer" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=1762561926]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_85i2r")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer" unique_id=1603931290]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="LegendFlowContainer" type="HFlowContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer" unique_id=343655255]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer" unique_id=1126824112]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer" unique_id=955492752]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qmagn")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer" unique_id=936616856]
+layout_mode = 2
+text = "Navigate"
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer" unique_id=439949865]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer2" unique_id=1015614560]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_pyex4")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer2" unique_id=935188425]
+layout_mode = 2
+text = "Use/Toggle Equip"
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer" unique_id=1063051617]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer4" unique_id=1395682553]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_85i2r")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer4" unique_id=235028811]
+layout_mode = 2
+text = "Drop"
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer" unique_id=282840044]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer3" unique_id=1835484792]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_60lgg")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer3" unique_id=644705742]
+layout_mode = 2
+text = "Exit"
+vertical_alignment = 1

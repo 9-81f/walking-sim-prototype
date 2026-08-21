@@ -1,0 +1,1801 @@
+[gd_scene format=3 uid="uid://b8lkawm1vounp"]
+
+[ext_resource type="PackedScene" uid="uid://bvcsn0yo21ujv" path="res://assets/environments/PSX modular house interior pack/geometry/archBrick.glb" id="1_3ibws"]
+[ext_resource type="PackedScene" uid="uid://dvv3odkc7csho" path="res://assets/environments/PSX modular house interior pack/geometry/archMarble.glb" id="2_qk3fg"]
+[ext_resource type="PackedScene" uid="uid://bxyg22r1vgk88" path="res://assets/environments/PSX modular house interior pack/geometry/archPlaster2.glb" id="3_ndbsb"]
+[ext_resource type="PackedScene" uid="uid://djrp5tkq076co" path="res://assets/environments/PSX modular house interior pack/geometry/archPlaster3.glb" id="4_twvsi"]
+[ext_resource type="PackedScene" uid="uid://dv3fni6fma3ct" path="res://assets/environments/PSX modular house interior pack/geometry/archPlaster.glb" id="5_v2cul"]
+[ext_resource type="PackedScene" uid="uid://dhsr8pc0cebtu" path="res://assets/environments/PSX modular house interior pack/geometry/archTiles.glb" id="6_2tn42"]
+[ext_resource type="PackedScene" uid="uid://hlmhuiivsy2x" path="res://assets/environments/PSX modular house interior pack/geometry/archWallpaper2.glb" id="7_bmpbc"]
+[ext_resource type="PackedScene" uid="uid://nydusremxr8a" path="res://assets/environments/PSX modular house interior pack/geometry/archWallpaper.glb" id="8_4r7to"]
+[ext_resource type="PackedScene" uid="uid://hy1oxhpmynso" path="res://assets/environments/PSX modular house interior pack/geometry/archWood.glb" id="9_hbv8n"]
+[ext_resource type="PackedScene" uid="uid://cou3kr7sy8ul4" path="res://assets/environments/PSX modular house interior pack/geometry/capRoofConcrete.glb" id="10_ivbot"]
+[ext_resource type="PackedScene" uid="uid://cgjuquru1qm0e" path="res://assets/environments/PSX modular house interior pack/geometry/capRoofMetal.glb" id="11_o3kaw"]
+[ext_resource type="PackedScene" uid="uid://bu4e4frqrdu73" path="res://assets/environments/PSX modular house interior pack/geometry/capRoofWallConcrete.glb" id="12_i1j18"]
+[ext_resource type="PackedScene" uid="uid://cangtf75wmfll" path="res://assets/environments/PSX modular house interior pack/geometry/capRoofWallMetal.glb" id="13_jn1y0"]
+[ext_resource type="PackedScene" uid="uid://d3sfvqfhkehku" path="res://assets/environments/PSX modular house interior pack/geometry/capRoofWallWood.glb" id="14_w0i7g"]
+[ext_resource type="PackedScene" uid="uid://ce4q8sqgfatlg" path="res://assets/environments/PSX modular house interior pack/geometry/capRoofWood.glb" id="15_xbbog"]
+[ext_resource type="PackedScene" uid="uid://cfu5dda6xxmmb" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingConcrete.glb" id="16_luist"]
+[ext_resource type="PackedScene" uid="uid://c6yyo4en7cm1g" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingHalfConcrete.glb" id="17_gbqbk"]
+[ext_resource type="PackedScene" uid="uid://5s2hljy1wrc0" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingHalfPlaster2.glb" id="18_4g6m7"]
+[ext_resource type="PackedScene" uid="uid://pnlraisa7w88" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingHalfPlaster3.glb" id="19_yaaqh"]
+[ext_resource type="PackedScene" uid="uid://b3briiprhsoat" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingHalfPlaster.glb" id="20_g0lxv"]
+[ext_resource type="PackedScene" uid="uid://c24vwa1mc5rme" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingHalfTiles.glb" id="21_kjhne"]
+[ext_resource type="PackedScene" uid="uid://bbhhah6rup4l6" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingHalfWood.glb" id="22_vrlj8"]
+[ext_resource type="PackedScene" uid="uid://sp2gsta56xab" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingPlaster2.glb" id="23_hq4o8"]
+[ext_resource type="PackedScene" uid="uid://cphix1ofkhu6m" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingPlaster3.glb" id="24_t5y7j"]
+[ext_resource type="PackedScene" uid="uid://des1ewau0hqra" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingPlaster.glb" id="25_drien"]
+[ext_resource type="PackedScene" uid="uid://de7jqfc0qdt55" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingTiles.glb" id="26_pn6m7"]
+[ext_resource type="PackedScene" uid="uid://wmf7vc2isvtj" path="res://assets/environments/PSX modular house interior pack/geometry/ceilingWood.glb" id="27_j7r3a"]
+[ext_resource type="PackedScene" uid="uid://d31a7kmmhttt8" path="res://assets/environments/PSX modular house interior pack/geometry/cornerPillarMetal.glb" id="28_wab3p"]
+[ext_resource type="PackedScene" uid="uid://deaup4w5ikhi0" path="res://assets/environments/PSX modular house interior pack/geometry/cornerPillarPlaster.glb" id="29_7sw0k"]
+[ext_resource type="PackedScene" uid="uid://076dmi1ilhf3" path="res://assets/environments/PSX modular house interior pack/geometry/cornerPillarStone.glb" id="30_ml587"]
+[ext_resource type="PackedScene" uid="uid://buebhebh6ubyk" path="res://assets/environments/PSX modular house interior pack/geometry/cornerPillarWood.glb" id="31_n2uo5"]
+[ext_resource type="PackedScene" uid="uid://8g2x1y8jtmkp" path="res://assets/environments/PSX modular house interior pack/geometry/floorCarpet2.glb" id="35_bvx8s"]
+[ext_resource type="PackedScene" uid="uid://dmhtivwnsjges" path="res://assets/environments/PSX modular house interior pack/geometry/floorCarpet.glb" id="36_ilinl"]
+[ext_resource type="PackedScene" uid="uid://cqkk70rxsctrx" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfCarpet2.glb" id="37_krqd1"]
+[ext_resource type="PackedScene" uid="uid://bg27q755nw6i" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfCarpet.glb" id="38_21rmm"]
+[ext_resource type="PackedScene" uid="uid://dcf3on2dop17h" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfMarble.glb" id="39_ly8lf"]
+[ext_resource type="PackedScene" uid="uid://ew7jrmka1dqv" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfStone.glb" id="40_6hbjq"]
+[ext_resource type="PackedScene" uid="uid://bjq11al2yn23b" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfTiles.glb" id="41_fydiu"]
+[ext_resource type="PackedScene" uid="uid://bp6dfe0yrhh0h" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfWood2.glb" id="42_eom20"]
+[ext_resource type="PackedScene" uid="uid://87pyd35lpnu5" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfWood.glb" id="43_5lwas"]
+[ext_resource type="PackedScene" uid="uid://cptkapyugre0b" path="res://assets/environments/PSX modular house interior pack/geometry/floorMarble.glb" id="44_niew4"]
+[ext_resource type="PackedScene" uid="uid://cokcefahibj6v" path="res://assets/environments/PSX modular house interior pack/geometry/floorStone.glb" id="45_402c3"]
+[ext_resource type="PackedScene" uid="uid://dqst8h2oo35sv" path="res://assets/environments/PSX modular house interior pack/geometry/floorTiles.glb" id="46_oq3xb"]
+[ext_resource type="PackedScene" uid="uid://cavxghm75wxkq" path="res://assets/environments/PSX modular house interior pack/geometry/floorWood2.glb" id="47_a0doh"]
+[ext_resource type="PackedScene" uid="uid://7gw7jdrvm2ov" path="res://assets/environments/PSX modular house interior pack/geometry/floorWood.glb" id="48_8iagd"]
+[ext_resource type="PackedScene" uid="uid://yw5dvfkb7107" path="res://assets/environments/PSX modular house interior pack/geometry/pillarBrick.glb" id="49_lu1wi"]
+[ext_resource type="PackedScene" uid="uid://c738oyprg2dld" path="res://assets/environments/PSX modular house interior pack/geometry/stairsGuardMetal2.glb" id="50_rwu2u"]
+[ext_resource type="PackedScene" uid="uid://cqi0sk0j2mrw" path="res://assets/environments/PSX modular house interior pack/geometry/stairsGuardMetal.glb" id="51_5ksf1"]
+[ext_resource type="PackedScene" uid="uid://bewrml1iyhbli" path="res://assets/environments/PSX modular house interior pack/geometry/stairsGuardWood2.glb" id="52_vuhn6"]
+[ext_resource type="PackedScene" uid="uid://g8s3s2v0imlm" path="res://assets/environments/PSX modular house interior pack/geometry/stairsGuardWood.glb" id="53_j02wp"]
+[ext_resource type="PackedScene" uid="uid://1l0wr5tpu0ol" path="res://assets/environments/PSX modular house interior pack/geometry/stairsRailCornerMetal.glb" id="54_ue8tn"]
+[ext_resource type="PackedScene" uid="uid://cm1a01lwnkfmo" path="res://assets/environments/PSX modular house interior pack/geometry/stairsRailCornerWood2.glb" id="55_4lmlg"]
+[ext_resource type="PackedScene" uid="uid://birhloo38pfg" path="res://assets/environments/PSX modular house interior pack/geometry/stairsRailCornerWood.glb" id="56_bqxgp"]
+[ext_resource type="PackedScene" uid="uid://bhlgy727ih1yg" path="res://assets/environments/PSX modular house interior pack/geometry/stairsRailMetal.glb" id="57_qofkg"]
+[ext_resource type="PackedScene" uid="uid://43ymnttolkne" path="res://assets/environments/PSX modular house interior pack/geometry/stairsRailWood2.glb" id="58_06du5"]
+[ext_resource type="PackedScene" uid="uid://be8ja8xkyhjbs" path="res://assets/environments/PSX modular house interior pack/geometry/stairsRailWood.glb" id="59_e2yg8"]
+[ext_resource type="PackedScene" uid="uid://ce8vvj6i3qtfp" path="res://assets/environments/PSX modular house interior pack/geometry/stairsStone.glb" id="60_fejnh"]
+[ext_resource type="PackedScene" uid="uid://djwn0gad06miy" path="res://assets/environments/PSX modular house interior pack/geometry/stairsWood2.glb" id="61_os7hy"]
+[ext_resource type="PackedScene" uid="uid://s1h5cpu5g2ai" path="res://assets/environments/PSX modular house interior pack/geometry/stairsWood3.glb" id="62_ynl1t"]
+[ext_resource type="PackedScene" uid="uid://cop32st18ctsr" path="res://assets/environments/PSX modular house interior pack/geometry/stairsWood4.glb" id="63_dlljr"]
+[ext_resource type="PackedScene" uid="uid://pb07thuetpg2" path="res://assets/environments/PSX modular house interior pack/geometry/stairsWood.glb" id="64_0kkp8"]
+[ext_resource type="PackedScene" uid="uid://baauq3xfdtygm" path="res://assets/environments/PSX modular house interior pack/geometry/wallBrick.glb" id="65_le4kq"]
+[ext_resource type="PackedScene" uid="uid://dhaolnisea3ma" path="res://assets/environments/PSX modular house interior pack/geometry/wallDiagonalBrick.glb" id="66_mpc0b"]
+[ext_resource type="PackedScene" uid="uid://capd845mismhb" path="res://assets/environments/PSX modular house interior pack/geometry/wallDiagonalMarble.glb" id="67_tj5hj"]
+[ext_resource type="PackedScene" uid="uid://68lqacmnwv2t" path="res://assets/environments/PSX modular house interior pack/geometry/wallDiagonalPlaster2.glb" id="68_248yu"]
+[ext_resource type="PackedScene" uid="uid://cccvfr7ojd4cs" path="res://assets/environments/PSX modular house interior pack/geometry/wallDiagonalPlaster3.glb" id="69_s13qj"]
+[ext_resource type="PackedScene" uid="uid://ds61tbgvx6dmt" path="res://assets/environments/PSX modular house interior pack/geometry/wallDiagonalPlaster.glb" id="70_v68tp"]
+[ext_resource type="PackedScene" uid="uid://wa5mqcn17bft" path="res://assets/environments/PSX modular house interior pack/geometry/wallDiagonalTiles.glb" id="71_7sxmx"]
+[ext_resource type="PackedScene" uid="uid://dr3v3xlwnqnlo" path="res://assets/environments/PSX modular house interior pack/geometry/wallDiagonalWallpaper2.glb" id="72_ss5kd"]
+[ext_resource type="PackedScene" uid="uid://t7v10ue4s1a3" path="res://assets/environments/PSX modular house interior pack/geometry/wallDiagonalWallpaper.glb" id="73_71rgx"]
+[ext_resource type="PackedScene" uid="uid://dd5ejwh4dcm3v" path="res://assets/environments/PSX modular house interior pack/geometry/wallDiagonalWood.glb" id="74_su8fd"]
+[ext_resource type="PackedScene" uid="uid://dsdfuanndsr1m" path="res://assets/environments/PSX modular house interior pack/geometry/wallDoorBrick.glb" id="75_gkf5r"]
+[ext_resource type="PackedScene" uid="uid://b513jmt4dqeu5" path="res://assets/environments/PSX modular house interior pack/geometry/wallDoorMarble.glb" id="76_qs7fh"]
+[ext_resource type="PackedScene" uid="uid://cyr2ju1xnitbf" path="res://assets/environments/PSX modular house interior pack/geometry/wallDoorPlaster2.glb" id="77_fyhsh"]
+[ext_resource type="PackedScene" uid="uid://bn7t3lbbfdtwj" path="res://assets/environments/PSX modular house interior pack/geometry/wallDoorPlaster3.glb" id="78_bpg1t"]
+[ext_resource type="PackedScene" uid="uid://u741in8gqypt" path="res://assets/environments/PSX modular house interior pack/geometry/wallDoorPlaster.glb" id="79_rm7ei"]
+[ext_resource type="PackedScene" uid="uid://bmhw56ikutd5i" path="res://assets/environments/PSX modular house interior pack/geometry/wallDoorTiles.glb" id="80_nlkqd"]
+[ext_resource type="PackedScene" uid="uid://ivuh4sbww1co" path="res://assets/environments/PSX modular house interior pack/geometry/wallDoorWallpaper2.glb" id="81_r88b5"]
+[ext_resource type="PackedScene" uid="uid://b41ts55vp0q0o" path="res://assets/environments/PSX modular house interior pack/geometry/wallDoorWallpaper.glb" id="82_ica4q"]
+[ext_resource type="PackedScene" uid="uid://chpvgyh2xyy58" path="res://assets/environments/PSX modular house interior pack/geometry/wallDoorWood.glb" id="83_h3g3b"]
+[ext_resource type="PackedScene" uid="uid://bhf2w26ja41w7" path="res://assets/environments/PSX modular house interior pack/geometry/wallHalfBrick.glb" id="84_m8dbo"]
+[ext_resource type="PackedScene" uid="uid://dag3a46he8lu8" path="res://assets/environments/PSX modular house interior pack/geometry/wallHalfMarble.glb" id="85_tptkk"]
+[ext_resource type="PackedScene" uid="uid://cox5olhxtfnsf" path="res://assets/environments/PSX modular house interior pack/geometry/wallHalfPlaster2.glb" id="86_ojf3o"]
+[ext_resource type="PackedScene" uid="uid://bh736vd8hu4ul" path="res://assets/environments/PSX modular house interior pack/geometry/wallHalfPlaster3.glb" id="87_ol8yx"]
+[ext_resource type="PackedScene" uid="uid://dseru3q5bgyjg" path="res://assets/environments/PSX modular house interior pack/geometry/wallHalfPlaster.glb" id="88_xd2vs"]
+[ext_resource type="PackedScene" uid="uid://dlqx3lbfsjenn" path="res://assets/environments/PSX modular house interior pack/geometry/wallHalfTiles.glb" id="89_v4qeg"]
+[ext_resource type="PackedScene" uid="uid://w3vt82ne0vkp" path="res://assets/environments/PSX modular house interior pack/geometry/wallHalfWallpaper2.glb" id="90_lsj2t"]
+[ext_resource type="PackedScene" uid="uid://ddgorycivvhos" path="res://assets/environments/PSX modular house interior pack/geometry/wallHalfWallpaper.glb" id="91_lyjmb"]
+[ext_resource type="PackedScene" uid="uid://cr7iwwysmd727" path="res://assets/environments/PSX modular house interior pack/geometry/wallHalfWood.glb" id="92_n5oq3"]
+[ext_resource type="PackedScene" uid="uid://gwopjnle4abo" path="res://assets/environments/PSX modular house interior pack/geometry/wallMarble.glb" id="93_mreig"]
+[ext_resource type="PackedScene" uid="uid://bov1vywtok356" path="res://assets/environments/PSX modular house interior pack/geometry/wallNibBrick.glb" id="94_six8b"]
+[ext_resource type="PackedScene" uid="uid://d3p8bdlo40prp" path="res://assets/environments/PSX modular house interior pack/geometry/wallNibMarble.glb" id="95_i3ii0"]
+[ext_resource type="PackedScene" uid="uid://bwx8eectkwuas" path="res://assets/environments/PSX modular house interior pack/geometry/wallNibPlaster2.glb" id="96_dgba3"]
+[ext_resource type="PackedScene" uid="uid://cx6mt8bpesocy" path="res://assets/environments/PSX modular house interior pack/geometry/wallNibPlaster3.glb" id="97_eqigq"]
+[ext_resource type="PackedScene" uid="uid://c2fi80oufkcog" path="res://assets/environments/PSX modular house interior pack/geometry/wallNibPlaster.glb" id="98_60u45"]
+[ext_resource type="PackedScene" uid="uid://5gga5qcwg6xm" path="res://assets/environments/PSX modular house interior pack/geometry/wallNibTiles.glb" id="99_0pmd8"]
+[ext_resource type="PackedScene" uid="uid://b6e85rk4nf1lt" path="res://assets/environments/PSX modular house interior pack/geometry/wallNibWallpaper2.glb" id="100_y3t1d"]
+[ext_resource type="PackedScene" uid="uid://dtxcyickjvc0d" path="res://assets/environments/PSX modular house interior pack/geometry/wallNibWallpaper.glb" id="101_c8s56"]
+[ext_resource type="PackedScene" uid="uid://cqcwon2cwe2k6" path="res://assets/environments/PSX modular house interior pack/geometry/wallNibWood.glb" id="102_g6ar6"]
+[ext_resource type="PackedScene" uid="uid://c6ygti6r2fb07" path="res://assets/environments/PSX modular house interior pack/geometry/wallPlaster2.glb" id="103_ptaqi"]
+[ext_resource type="PackedScene" uid="uid://cjwrsiuumxvui" path="res://assets/environments/PSX modular house interior pack/geometry/wallPlaster3.glb" id="104_y8i1k"]
+[ext_resource type="PackedScene" uid="uid://bisflcuptyesn" path="res://assets/environments/PSX modular house interior pack/geometry/wallPlaster.glb" id="105_oc4ip"]
+[ext_resource type="PackedScene" uid="uid://md28ot52s803" path="res://assets/environments/PSX modular house interior pack/geometry/wallStairsBrick.glb" id="106_s2ky2"]
+[ext_resource type="PackedScene" uid="uid://c1s13b2vw15r5" path="res://assets/environments/PSX modular house interior pack/geometry/wallTiles.glb" id="107_ylybl"]
+[ext_resource type="PackedScene" uid="uid://brs3du43atpmv" path="res://assets/environments/PSX modular house interior pack/geometry/wallTurnBrick.glb" id="108_hddru"]
+[ext_resource type="PackedScene" uid="uid://bilcvq8pkevnn" path="res://assets/environments/PSX modular house interior pack/geometry/wallTurnMarble.glb" id="109_nrcyg"]
+[ext_resource type="PackedScene" uid="uid://dmp4kf5od3w0o" path="res://assets/environments/PSX modular house interior pack/geometry/wallTurnPlaster2.glb" id="110_bukwd"]
+[ext_resource type="PackedScene" uid="uid://bggj5bov136a2" path="res://assets/environments/PSX modular house interior pack/geometry/wallTurnPlaster3.glb" id="111_rqvcx"]
+[ext_resource type="PackedScene" uid="uid://dng0papcam303" path="res://assets/environments/PSX modular house interior pack/geometry/wallTurnPlaster.glb" id="112_s7unj"]
+[ext_resource type="PackedScene" uid="uid://cn6wwakvy8ud4" path="res://assets/environments/PSX modular house interior pack/geometry/wallTurnTiles.glb" id="113_khjor"]
+[ext_resource type="PackedScene" uid="uid://baifn07o0vuob" path="res://assets/environments/PSX modular house interior pack/geometry/wallTurnWallpaper2.glb" id="114_12heo"]
+[ext_resource type="PackedScene" uid="uid://d3pbf4vr10ekx" path="res://assets/environments/PSX modular house interior pack/geometry/wallTurnWallpaper.glb" id="115_rpxno"]
+[ext_resource type="PackedScene" uid="uid://dw7d8lnvjvk20" path="res://assets/environments/PSX modular house interior pack/geometry/wallTurnWood.glb" id="116_nqw8o"]
+[ext_resource type="PackedScene" uid="uid://q7v3gmvd7vww" path="res://assets/environments/PSX modular house interior pack/geometry/wallWallpaper2.glb" id="117_jkenk"]
+[ext_resource type="PackedScene" uid="uid://ditqo6rdt3s1k" path="res://assets/environments/PSX modular house interior pack/geometry/wallWallpaper.glb" id="118_crogm"]
+[ext_resource type="PackedScene" uid="uid://cbbxewgtixhq4" path="res://assets/environments/PSX modular house interior pack/geometry/wallWindowBrick.glb" id="119_pw4i6"]
+[ext_resource type="PackedScene" uid="uid://b35ho4qu608q0" path="res://assets/environments/PSX modular house interior pack/geometry/wallWindowMarble.glb" id="120_m2ujc"]
+[ext_resource type="PackedScene" uid="uid://c816fta2phwm5" path="res://assets/environments/PSX modular house interior pack/geometry/wallWindowPlaster2.glb" id="121_d6isb"]
+[ext_resource type="PackedScene" uid="uid://bflp671c5ytwc" path="res://assets/environments/PSX modular house interior pack/geometry/wallWindowPlaster3.glb" id="122_btlf0"]
+[ext_resource type="PackedScene" uid="uid://c6rwbgecyj3b2" path="res://assets/environments/PSX modular house interior pack/geometry/wallWindowPlaster.glb" id="123_b6dnx"]
+[ext_resource type="PackedScene" uid="uid://ce7b2t5um1suo" path="res://assets/environments/PSX modular house interior pack/geometry/wallWindowTiles.glb" id="124_p2pec"]
+[ext_resource type="PackedScene" uid="uid://ctxgmubr60klg" path="res://assets/environments/PSX modular house interior pack/geometry/wallWindowWallpaper2.glb" id="125_x1fx5"]
+[ext_resource type="PackedScene" uid="uid://c1vfy3jtejwmx" path="res://assets/environments/PSX modular house interior pack/geometry/wallWindowWallpaper.glb" id="126_dx2gc"]
+[ext_resource type="PackedScene" uid="uid://dnnnv1t8xr6v5" path="res://assets/environments/PSX modular house interior pack/geometry/wallWindowWood.glb" id="127_st31p"]
+[ext_resource type="PackedScene" uid="uid://3kvrateabc7v" path="res://assets/environments/PSX modular house interior pack/geometry/wallWood.glb" id="128_f08t0"]
+[ext_resource type="PackedScene" uid="uid://c4b1ex1nq8esb" path="res://assets/environments/PSX modular house interior pack/geometry/WindowWood2.glb" id="129_axnlt"]
+[ext_resource type="PackedScene" uid="uid://cjphmwiwnrgn2" path="res://assets/environments/PSX modular house interior pack/geometry/windowWood3.glb" id="130_d6bbw"]
+[ext_resource type="PackedScene" uid="uid://r0g7kqlcj3ll" path="res://assets/environments/PSX modular house interior pack/geometry/WindowWood.glb" id="131_1r58i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
+size = Vector3(0.6633545, 3.9698486, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kjoil"]
+size = Vector3(4, 0.1, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kssrv"]
+size = Vector3(4, 0.1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78xn6"]
+size = Vector3(0.2, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ktmh6"]
+size = Vector3(0.6, 3.9, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v7nto"]
+size = Vector3(0.08121338, 1.0694091, 8.35)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d4u7g"]
+size = Vector3(0.081, 0.748, 8.485)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yb2cq"]
+size = Vector3(0.081, 0.748, 8.484688)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ibws"]
+size = Vector3(0.081, 0.90000004, 8.485)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qk3fg"]
+size = Vector3(0.081, 0.90000004, 8.484688)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_155sq"]
+size = Vector3(0.122, 1.2610352, 0.122)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jsjat"]
+size = Vector3(2, 1.03479, 0.12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o3kaw"]
+size = Vector3(2, 0.7, 9.126795)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p44yn"]
+size = Vector3(2, 0.7, 8.871021)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sjqw4"]
+size = Vector3(2, 3.9838867, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ivbot"]
+size = Vector3(2, 2.3, 3.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1p301"]
+size = Vector3(4, 4, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ndbsb"]
+size = Vector3(5.8, 4, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w7igs"]
+size = Vector3(1.1, 4, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_twvsi"]
+size = Vector3(1.3174652, 4, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w7m0f"]
+size = Vector3(2, 4, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a0l5d"]
+size = Vector3(0.2, 4, 2.083838)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m7rcb"]
+size = Vector3(4, 5.7000003, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2tn42"]
+size = Vector3(2.1379273, 4, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v2cul"]
+size = Vector3(2.1757324, 4, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bmpbc"]
+size = Vector3(1.283, 4, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbv8n"]
+size = Vector3(1.099, 4, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4r7to"]
+size = Vector3(1.151, 4, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ajxc"]
+size = Vector3(1.4353027, 1.7476563, 0.13085938)
+
+[node name="PsxModularHouseInteriorLib" type="Node3D" unique_id=720749344]
+
+[node name="archBrick3" parent="." unique_id=2058061614 instance=ExtResource("1_3ibws")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archBrick3/archBrick" parent_id_path=PackedInt32Array(2058061614, 422802310) index="0" unique_id=1498279670]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archBrick3/archBrick/StaticBody3D" unique_id=1078863721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archBrick3/archBrick/StaticBody3D" unique_id=406550666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archBrick3/archBrick/StaticBody3D" unique_id=1636084091]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="archMarble2" parent="." unique_id=651635391 instance=ExtResource("2_qk3fg")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archMarble2/archMarble" parent_id_path=PackedInt32Array(651635391, 1263842650) index="0" unique_id=571024444]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archMarble2/archMarble/StaticBody3D" unique_id=1184747435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archMarble2/archMarble/StaticBody3D" unique_id=1601131286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archMarble2/archMarble/StaticBody3D" unique_id=1310362221]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="archPlaster22" parent="." unique_id=1446051056 instance=ExtResource("3_ndbsb")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archPlaster22/archPlaster2" parent_id_path=PackedInt32Array(1446051056, 743714770) index="0" unique_id=468148871]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archPlaster22/archPlaster2/StaticBody3D" unique_id=1878856975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archPlaster22/archPlaster2/StaticBody3D" unique_id=617322838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archPlaster22/archPlaster2/StaticBody3D" unique_id=638435982]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="archPlaster32" parent="." unique_id=1535321545 instance=ExtResource("4_twvsi")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archPlaster32/archPlaster3" parent_id_path=PackedInt32Array(1535321545, 1722712001) index="0" unique_id=1395024322]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archPlaster32/archPlaster3/StaticBody3D" unique_id=1072081342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archPlaster32/archPlaster3/StaticBody3D" unique_id=93630239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archPlaster32/archPlaster3/StaticBody3D" unique_id=617440137]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="archPlaster2" parent="." unique_id=468878978 instance=ExtResource("5_v2cul")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archPlaster2/archPlaster" parent_id_path=PackedInt32Array(468878978, 661837444) index="0" unique_id=2018537552]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archPlaster2/archPlaster/StaticBody3D" unique_id=330362679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archPlaster2/archPlaster/StaticBody3D" unique_id=827211990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archPlaster2/archPlaster/StaticBody3D" unique_id=1720891992]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="archTiles2" parent="." unique_id=624597815 instance=ExtResource("6_2tn42")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archTiles2/archTiles" parent_id_path=PackedInt32Array(624597815, 1327381594) index="0" unique_id=1388959162]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archTiles2/archTiles/StaticBody3D" unique_id=1402669599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archTiles2/archTiles/StaticBody3D" unique_id=704977358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archTiles2/archTiles/StaticBody3D" unique_id=1298533117]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="archWallpaper22" parent="." unique_id=2023332097 instance=ExtResource("7_bmpbc")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archWallpaper22/archWallpaper2" parent_id_path=PackedInt32Array(2023332097, 133701869) index="0" unique_id=16342841]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archWallpaper22/archWallpaper2/StaticBody3D" unique_id=1024638593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archWallpaper22/archWallpaper2/StaticBody3D" unique_id=1704901222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archWallpaper22/archWallpaper2/StaticBody3D" unique_id=840713563]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="archWallpaper2" parent="." unique_id=127380134 instance=ExtResource("8_4r7to")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archWallpaper2/archWallpaper" parent_id_path=PackedInt32Array(127380134, 131498461) index="0" unique_id=1799003772]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archWallpaper2/archWallpaper/StaticBody3D" unique_id=1982402331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archWallpaper2/archWallpaper/StaticBody3D" unique_id=1475715163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archWallpaper2/archWallpaper/StaticBody3D" unique_id=494035246]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="archWood2" parent="." unique_id=749226554 instance=ExtResource("9_hbv8n")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archWood2/archWood" parent_id_path=PackedInt32Array(749226554, 1819014695) index="0" unique_id=33058804]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archWood2/archWood/StaticBody3D" unique_id=466835363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archWood2/archWood/StaticBody3D" unique_id=2072411486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archWood2/archWood/StaticBody3D" unique_id=485683039]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="archBrick2" parent="." unique_id=1539525031 instance=ExtResource("1_3ibws")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="archBrick2/archBrick" parent_id_path=PackedInt32Array(1539525031, 422802310) index="0" unique_id=905059759]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="archBrick2/archBrick/StaticBody3D" unique_id=1144151241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6683228, 2, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="archBrick2/archBrick/StaticBody3D" unique_id=1822568559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6655467, 1.9849243, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="archBrick2/archBrick/StaticBody3D" unique_id=948323169]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.64, 1.9)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="capRoofConcrete2" parent="." unique_id=1628348557 instance=ExtResource("10_ivbot")]
+visible = false
+
+[node name="capRoofMetal2" parent="." unique_id=1810726066 instance=ExtResource("11_o3kaw")]
+visible = false
+
+[node name="capRoofWallConcrete2" parent="." unique_id=1770967461 instance=ExtResource("12_i1j18")]
+visible = false
+
+[node name="capRoofWallMetal2" parent="." unique_id=268230629 instance=ExtResource("13_jn1y0")]
+visible = false
+
+[node name="capRoofWallWood2" parent="." unique_id=1889356296 instance=ExtResource("14_w0i7g")]
+visible = false
+
+[node name="capRoofWood2" parent="." unique_id=439022871 instance=ExtResource("15_xbbog")]
+visible = false
+
+[node name="ceilingConcrete2" parent="." unique_id=2087693454 instance=ExtResource("16_luist")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingConcrete2/ceilingConcrete" parent_id_path=PackedInt32Array(2087693454, 1313012502) index="0" unique_id=1847973153]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingConcrete2/ceilingConcrete/StaticBody3D" unique_id=1518972221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, 0)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="ceilingHalfConcrete2" parent="." unique_id=732428498 instance=ExtResource("17_gbqbk")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingHalfConcrete2/ceilingHalfConcrete" parent_id_path=PackedInt32Array(732428498, 1935938795) index="0" unique_id=362762293]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingHalfConcrete2/ceilingHalfConcrete/StaticBody3D" unique_id=394136015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="ceilingHalfPlaster22" parent="." unique_id=1941068133 instance=ExtResource("18_4g6m7")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingHalfPlaster22/ceilingHalfPlaster2" parent_id_path=PackedInt32Array(1941068133, 490940058) index="0" unique_id=1436114489]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingHalfPlaster22/ceilingHalfPlaster2/StaticBody3D" unique_id=1664375123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="ceilingHalfPlaster32" parent="." unique_id=780428067 instance=ExtResource("19_yaaqh")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingHalfPlaster32/ceilingHalfPlaster3" parent_id_path=PackedInt32Array(780428067, 260846414) index="0" unique_id=915521221]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingHalfPlaster32/ceilingHalfPlaster3/StaticBody3D" unique_id=219138947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="ceilingHalfPlaster2" parent="." unique_id=813684175 instance=ExtResource("20_g0lxv")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingHalfPlaster2/ceilingHalfPlaster" parent_id_path=PackedInt32Array(813684175, 60359112) index="0" unique_id=1465604561]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingHalfPlaster2/ceilingHalfPlaster/StaticBody3D" unique_id=370538490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="ceilingHalfTiles2" parent="." unique_id=1397141372 instance=ExtResource("21_kjhne")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingHalfTiles2/ceilingHalfTiles" parent_id_path=PackedInt32Array(1397141372, 627080019) index="0" unique_id=1754562117]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingHalfTiles2/ceilingHalfTiles/StaticBody3D" unique_id=671438504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="ceilingHalfWood2" parent="." unique_id=1973560954 instance=ExtResource("22_vrlj8")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingHalfWood2/ceilingHalfWood" parent_id_path=PackedInt32Array(1973560954, 1078689185) index="0" unique_id=1079932527]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingHalfWood2/ceilingHalfWood/StaticBody3D" unique_id=1623061783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="ceilingPlaster22" parent="." unique_id=1105266496 instance=ExtResource("23_hq4o8")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingPlaster22/ceilingPlaster2" parent_id_path=PackedInt32Array(1105266496, 676384080) index="0" unique_id=1304243178]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingPlaster22/ceilingPlaster2/StaticBody3D" unique_id=751836205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, 0)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="ceilingPlaster32" parent="." unique_id=859478012 instance=ExtResource("24_t5y7j")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingPlaster32/ceilingPlaster3" parent_id_path=PackedInt32Array(859478012, 1717308998) index="0" unique_id=1039963067]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingPlaster32/ceilingPlaster3/StaticBody3D" unique_id=1763689237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, 0)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="ceilingPlaster2" parent="." unique_id=1190716932 instance=ExtResource("25_drien")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingPlaster2/ceilingPlaster" parent_id_path=PackedInt32Array(1190716932, 653740647) index="0" unique_id=354858051]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingPlaster2/ceilingPlaster/StaticBody3D" unique_id=1329436151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, 0)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="ceilingTiles2" parent="." unique_id=607859023 instance=ExtResource("26_pn6m7")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingTiles2/ceilingTiles" parent_id_path=PackedInt32Array(607859023, 1216091467) index="0" unique_id=1963700667]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingTiles2/ceilingTiles/StaticBody3D" unique_id=541121177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, 0)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="ceilingWood2" parent="." unique_id=1468405761 instance=ExtResource("27_j7r3a")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceilingWood2/ceilingWood" parent_id_path=PackedInt32Array(1468405761, 1958644048) index="0" unique_id=631965536]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceilingWood2/ceilingWood/StaticBody3D" unique_id=1403109893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9, 0)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="cornerPillarMetal2" parent="." unique_id=127773288 instance=ExtResource("28_wab3p")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cornerPillarMetal2/cornerPillarMetal" parent_id_path=PackedInt32Array(127773288, 511603454) index="0" unique_id=616444613]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cornerPillarMetal2/cornerPillarMetal/StaticBody3D" unique_id=1262509595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 2, 1.9)
+shape = SubResource("BoxShape3D_78xn6")
+
+[node name="cornerPillarPlaster2" parent="." unique_id=1592517805 instance=ExtResource("29_7sw0k")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cornerPillarPlaster2/cornerPillarPlaster" parent_id_path=PackedInt32Array(1592517805, 1855095866) index="0" unique_id=733462799]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cornerPillarPlaster2/cornerPillarPlaster/StaticBody3D" unique_id=1549957756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 2, 1.9)
+shape = SubResource("BoxShape3D_78xn6")
+
+[node name="cornerPillarStone2" parent="." unique_id=1754473906 instance=ExtResource("30_ml587")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cornerPillarStone2/cornerPillarStone" parent_id_path=PackedInt32Array(1754473906, 516270360) index="0" unique_id=773240556]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cornerPillarStone2/cornerPillarStone/StaticBody3D" unique_id=873813223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 2, 1.9)
+shape = SubResource("BoxShape3D_78xn6")
+
+[node name="cornerPillarWood2" parent="." unique_id=1152030495 instance=ExtResource("31_n2uo5")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cornerPillarWood2/cornerPillarWood" parent_id_path=PackedInt32Array(1152030495, 1028831711) index="0" unique_id=646139705]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cornerPillarWood2/cornerPillarWood/StaticBody3D" unique_id=132741688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 2, 1.9)
+shape = SubResource("BoxShape3D_78xn6")
+
+[node name="floorCarpet22" parent="." unique_id=716945635 instance=ExtResource("35_bvx8s")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorCarpet22/floorCarpet2" parent_id_path=PackedInt32Array(716945635, 1799139109) index="0" unique_id=1890350525]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorCarpet22/floorCarpet2/StaticBody3D" unique_id=1048431441]
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="floorCarpet2" parent="." unique_id=2089495357 instance=ExtResource("36_ilinl")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorCarpet2/floorCarpet" parent_id_path=PackedInt32Array(2089495357, 137384750) index="0" unique_id=829885730]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorCarpet2/floorCarpet/StaticBody3D" unique_id=2057070770]
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="floorHalfCarpet22" parent="." unique_id=362677710 instance=ExtResource("37_krqd1")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorHalfCarpet22/floorHalfCarpet2" parent_id_path=PackedInt32Array(362677710, 1085766858) index="0" unique_id=352610930]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfCarpet22/floorHalfCarpet2/StaticBody3D" unique_id=1300860764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="floorHalfCarpet2" parent="." unique_id=1320179478 instance=ExtResource("38_21rmm")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorHalfCarpet2/floorHalfCarpet" parent_id_path=PackedInt32Array(1320179478, 814485397) index="0" unique_id=189884587]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfCarpet2/floorHalfCarpet/StaticBody3D" unique_id=1837353756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="floorHalfMarble2" parent="." unique_id=2060136991 instance=ExtResource("39_ly8lf")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorHalfMarble2/floorHalfMarble" parent_id_path=PackedInt32Array(2060136991, 1977904291) index="0" unique_id=2116783201]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfMarble2/floorHalfMarble/StaticBody3D" unique_id=516862656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="floorHalfStone2" parent="." unique_id=2081643468 instance=ExtResource("40_6hbjq")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorHalfStone2/floorHalfStone" parent_id_path=PackedInt32Array(2081643468, 179094076) index="0" unique_id=85625910]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfStone2/floorHalfStone/StaticBody3D" unique_id=1753025377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="floorHalfTiles2" parent="." unique_id=636290330 instance=ExtResource("41_fydiu")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorHalfTiles2/floorHalfTiles" parent_id_path=PackedInt32Array(636290330, 588161972) index="0" unique_id=2037436358]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfTiles2/floorHalfTiles/StaticBody3D" unique_id=182899756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="floorHalfWood22" parent="." unique_id=124555174 instance=ExtResource("42_eom20")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorHalfWood22/floorHalfWood2" parent_id_path=PackedInt32Array(124555174, 593516326) index="0" unique_id=276585355]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfWood22/floorHalfWood2/StaticBody3D" unique_id=866575625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="floorHalfWood2" parent="." unique_id=1194793150 instance=ExtResource("43_5lwas")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorHalfWood2/floorHalfWood" parent_id_path=PackedInt32Array(1194793150, 1575879384) index="0" unique_id=545168160]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfWood2/floorHalfWood/StaticBody3D" unique_id=968933480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_kssrv")
+
+[node name="floorMarble2" parent="." unique_id=1479798925 instance=ExtResource("44_niew4")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorMarble2/floorMarble" parent_id_path=PackedInt32Array(1479798925, 1144876984) index="0" unique_id=804397047]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorMarble2/floorMarble/StaticBody3D" unique_id=103482392]
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="floorStone2" parent="." unique_id=238899762 instance=ExtResource("45_402c3")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorStone2/floorStone" parent_id_path=PackedInt32Array(238899762, 1635084634) index="0" unique_id=1871681204]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorStone2/floorStone/StaticBody3D" unique_id=153317738]
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="floorTiles2" parent="." unique_id=1954820455 instance=ExtResource("46_oq3xb")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorTiles2/floorTiles" parent_id_path=PackedInt32Array(1954820455, 1283909080) index="0" unique_id=2085787371]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorTiles2/floorTiles/StaticBody3D" unique_id=1602611705]
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="floorWood22" parent="." unique_id=227953122 instance=ExtResource("47_a0doh")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorWood22/floorWood2" parent_id_path=PackedInt32Array(227953122, 1435556677) index="0" unique_id=380039671]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorWood22/floorWood2/StaticBody3D" unique_id=1633366135]
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="floorWood2" parent="." unique_id=1639769959 instance=ExtResource("48_8iagd")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floorWood2/floorWood" parent_id_path=PackedInt32Array(1639769959, 2059436486) index="0" unique_id=344953057]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorWood2/floorWood/StaticBody3D" unique_id=1673691311]
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="pillarBrick2" parent="." unique_id=1236862948 instance=ExtResource("49_lu1wi")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pillarBrick2/pillarBrick" parent_id_path=PackedInt32Array(1236862948, 654602071) index="0" unique_id=576355107]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pillarBrick2/pillarBrick/StaticBody3D" unique_id=258604005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95, 0)
+shape = SubResource("BoxShape3D_ktmh6")
+
+[node name="stairsGuardMetal22" parent="." unique_id=477848869 instance=ExtResource("50_rwu2u")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsGuardMetal22/stairsGuardMetal2" parent_id_path=PackedInt32Array(477848869, 2083092625) index="0" unique_id=556845262]
+
+[node name="LeftBox3D" type="CollisionShape3D" parent="stairsGuardMetal22/stairsGuardMetal2/StaticBody3D" unique_id=411876005]
+transform = Transform3D(1, 0, 0, 0, 0.9025852, 0.43051112, 0, -0.43051112, 0.9025852, 1.0446717, -1.452, -3.999)
+shape = SubResource("BoxShape3D_v7nto")
+
+[node name="RightBox3D2" type="CollisionShape3D" parent="stairsGuardMetal22/stairsGuardMetal2/StaticBody3D" unique_id=1250916387]
+transform = Transform3D(1, 0, 0, 0, 0.9025852, 0.43051112, 0, -0.43051112, 0.9025852, -1.044, -1.452, -3.999)
+shape = SubResource("BoxShape3D_v7nto")
+
+[node name="stairsGuardMetal2" parent="." unique_id=323865093 instance=ExtResource("51_5ksf1")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsGuardMetal2/stairsGuardMetal" parent_id_path=PackedInt32Array(323865093, 476029741) index="0" unique_id=1159013372]
+
+[node name="LeftBox3D" type="CollisionShape3D" parent="stairsGuardMetal2/stairsGuardMetal/StaticBody3D" unique_id=1699726277]
+transform = Transform3D(1, 0, 0, 0, 0.89648634, 0.44307116, 0, -0.44307116, 0.89648634, 0.946, -1.228, -3.992)
+shape = SubResource("BoxShape3D_d4u7g")
+
+[node name="RightBox3D2" type="CollisionShape3D" parent="stairsGuardMetal2/stairsGuardMetal/StaticBody3D" unique_id=885631497]
+transform = Transform3D(1, 0, 0, 0, 0.89648634, 0.44307116, 0, -0.44307116, 0.89648634, -0.946, -1.228179, -3.9921093)
+shape = SubResource("BoxShape3D_yb2cq")
+
+[node name="stairsGuardWood22" parent="." unique_id=1170570083 instance=ExtResource("52_vuhn6")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsGuardWood22/stairsGuardWood2" parent_id_path=PackedInt32Array(1170570083, 150662857) index="0" unique_id=2113240782]
+
+[node name="LeftBox3D" type="CollisionShape3D" parent="stairsGuardWood22/stairsGuardWood2/StaticBody3D" unique_id=1852197590]
+transform = Transform3D(1, 0, 0, 0, 0.89648634, 0.44307116, 0, -0.44307116, 0.89648634, 0.946, -1.296133, -3.9583266)
+shape = SubResource("BoxShape3D_3ibws")
+
+[node name="RightBox3D2" type="CollisionShape3D" parent="stairsGuardWood22/stairsGuardWood2/StaticBody3D" unique_id=771505927]
+transform = Transform3D(1, 0, 0, 0, 0.89648634, 0.44307116, 0, -0.44307116, 0.89648634, -0.946, -1.296312, -3.9584358)
+shape = SubResource("BoxShape3D_qk3fg")
+
+[node name="stairsGuardWood2" parent="." unique_id=1688640714 instance=ExtResource("53_j02wp")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsGuardWood2/stairsGuardWood" parent_id_path=PackedInt32Array(1688640714, 692879297) index="0" unique_id=1600729070]
+
+[node name="LeftBox3D" type="CollisionShape3D" parent="stairsGuardWood2/stairsGuardWood/StaticBody3D" unique_id=430000804]
+transform = Transform3D(1, 0, 0, 0, 0.89648634, 0.44307116, 0, -0.44307116, 0.89648634, 0.946, -1.296133, -3.9583266)
+shape = SubResource("BoxShape3D_3ibws")
+
+[node name="RightBox3D2" type="CollisionShape3D" parent="stairsGuardWood2/stairsGuardWood/StaticBody3D" unique_id=658959184]
+transform = Transform3D(1, 0, 0, 0, 0.89648634, 0.44307116, 0, -0.44307116, 0.89648634, -0.946, -1.296312, -3.9584358)
+shape = SubResource("BoxShape3D_qk3fg")
+
+[node name="stairsRailCornerMetal2" parent="." unique_id=1849863638 instance=ExtResource("54_ue8tn")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsRailCornerMetal2/stairsRailCornerMetal" parent_id_path=PackedInt32Array(1849863638, 1567777858) index="0" unique_id=2023015460]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsRailCornerMetal2/stairsRailCornerMetal/StaticBody3D" unique_id=885052000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9387183, 0.6805176, -0.061403807)
+shape = SubResource("BoxShape3D_155sq")
+
+[node name="stairsRailCornerWood22" parent="." unique_id=242518466 instance=ExtResource("55_4lmlg")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsRailCornerWood22/stairsRailCornerWood2" parent_id_path=PackedInt32Array(242518466, 4051622) index="0" unique_id=1760149446]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsRailCornerWood22/stairsRailCornerWood2/StaticBody3D" unique_id=1554204648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9387183, 0.6805176, -0.061403807)
+shape = SubResource("BoxShape3D_155sq")
+
+[node name="stairsRailCornerWood2" parent="." unique_id=1082150582 instance=ExtResource("56_bqxgp")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsRailCornerWood2/stairsRailCornerWood" parent_id_path=PackedInt32Array(1082150582, 23454240) index="0" unique_id=627954760]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsRailCornerWood2/stairsRailCornerWood/StaticBody3D" unique_id=645512942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9387183, 0.6805176, -0.061403807)
+shape = SubResource("BoxShape3D_155sq")
+
+[node name="stairsRailMetal2" parent="." unique_id=1491107292 instance=ExtResource("57_qofkg")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsRailMetal2/stairsRailMetal" parent_id_path=PackedInt32Array(1491107292, 2025310548) index="0" unique_id=1189365716]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsRailMetal2/stairsRailMetal/StaticBody3D" unique_id=701011696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.517395, -0.062199403)
+shape = SubResource("BoxShape3D_jsjat")
+
+[node name="stairsRailWood22" parent="." unique_id=1763705370 instance=ExtResource("58_06du5")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsRailWood22/stairsRailWood2" parent_id_path=PackedInt32Array(1763705370, 1912785391) index="0" unique_id=1853380624]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsRailWood22/stairsRailWood2/StaticBody3D" unique_id=1082764599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.517395, -0.062199403)
+shape = SubResource("BoxShape3D_jsjat")
+
+[node name="stairsRailWood2" parent="." unique_id=618083134 instance=ExtResource("59_e2yg8")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsRailWood2/stairsRailWood" parent_id_path=PackedInt32Array(618083134, 1308599683) index="0" unique_id=1127421147]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsRailWood2/stairsRailWood/StaticBody3D" unique_id=1792280487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.517395, -0.062199403)
+shape = SubResource("BoxShape3D_jsjat")
+
+[node name="stairsStone2" parent="." unique_id=155332288 instance=ExtResource("60_fejnh")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsStone2/stairsStone" parent_id_path=PackedInt32Array(155332288, 1515002090) index="0" unique_id=1362172286]
+transform = Transform3D(1, 0, 0, 0, 0.8925858, 0.45087752, 0, -0.45087752, 0.8925858, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsStone2/stairsStone/StaticBody3D" unique_id=1766825032]
+transform = Transform3D(1, 0, 0, 0, 1.0000031, -2.9802322e-08, 0, 2.9802322e-08, 1.0000031, 0, -0.108000755, -4.921661)
+shape = SubResource("BoxShape3D_o3kaw")
+
+[node name="stairsWood22" parent="." unique_id=1245042950 instance=ExtResource("61_os7hy")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsWood22/stairsWood2" parent_id_path=PackedInt32Array(1245042950, 2122165397) index="0" unique_id=628078194]
+transform = Transform3D(1, 0, 0, 0, 0.8925858, 0.45087752, 0, -0.45087752, 0.8925858, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsWood22/stairsWood2/StaticBody3D" unique_id=1322154289]
+transform = Transform3D(1, 0, 0, 0, 1.0000031, -2.9802322e-08, 0, 2.9802322e-08, 1.0000031, 0, -0.176, -4.78)
+shape = SubResource("BoxShape3D_p44yn")
+
+[node name="stairsWood32" parent="." unique_id=1053590233 instance=ExtResource("62_ynl1t")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsWood32/stairsWood3" parent_id_path=PackedInt32Array(1053590233, 229285174) index="0" unique_id=1460374654]
+transform = Transform3D(1, 0, 0, 0, 0.8925858, 0.45087752, 0, -0.45087752, 0.8925858, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsWood32/stairsWood3/StaticBody3D" unique_id=1179548851]
+transform = Transform3D(1, 0, 0, 0, 1.0000031, -2.9802322e-08, 0, 2.9802322e-08, 1.0000031, 0, -0.176, -4.78)
+shape = SubResource("BoxShape3D_p44yn")
+
+[node name="stairsWood42" parent="." unique_id=981551333 instance=ExtResource("63_dlljr")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsWood42/stairsWood4" parent_id_path=PackedInt32Array(981551333, 1537304565) index="0" unique_id=357697104]
+transform = Transform3D(1, 0, 0, 0, 0.8925858, 0.45087752, 0, -0.45087752, 0.8925858, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsWood42/stairsWood4/StaticBody3D" unique_id=974243519]
+transform = Transform3D(1, 0, 0, 0, 1.0000031, -2.9802322e-08, 0, 2.9802322e-08, 1.0000031, 0, -0.176, -4.78)
+shape = SubResource("BoxShape3D_p44yn")
+
+[node name="stairsWood2" parent="." unique_id=1198766739 instance=ExtResource("64_0kkp8")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stairsWood2/stairsWood" parent_id_path=PackedInt32Array(1198766739, 1670130801) index="0" unique_id=431478785]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stairsWood2/stairsWood/StaticBody3D" unique_id=623265548]
+transform = Transform3D(1, 0, 0, 0, 0.892588, 0.45087865, 0, -0.45087865, 0.892588, 0, -2.31, -4.18)
+shape = SubResource("BoxShape3D_p44yn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="stairsWood2/stairsWood/StaticBody3D" unique_id=1308205279]
+transform = Transform3D(1, 0, 0, 0, 0.999993, -2.9802068e-08, 0, 2.9802068e-08, 0.999993, 0, -1.9875638, -0.19979395)
+shape = SubResource("BoxShape3D_sjqw4")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="stairsWood2/stairsWood/StaticBody3D" unique_id=892028916]
+transform = Transform3D(1, 0, 0, 0, 0.9999887, 0, 0, 0, 0.9999887, 0, -2.8295033, -1.8497789)
+shape = SubResource("BoxShape3D_ivbot")
+
+[node name="wallBrick2" parent="." unique_id=2072836785 instance=ExtResource("65_le4kq")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallBrick2/wallBrick" parent_id_path=PackedInt32Array(2072836785, 1613823135) index="0" unique_id=1989564650]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallBrick2/wallBrick/StaticBody3D" unique_id=1294323117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.9124023)
+shape = SubResource("BoxShape3D_1p301")
+
+[node name="wallDiagonalBrick2" parent="." unique_id=128400825 instance=ExtResource("66_mpc0b")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDiagonalBrick2/wallDiagonalBrick" parent_id_path=PackedInt32Array(128400825, 2056452683) index="0" unique_id=2089570365]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDiagonalBrick2/wallDiagonalBrick/StaticBody3D" unique_id=471009196]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.035355303, 2, -0.052242424)
+shape = SubResource("BoxShape3D_ndbsb")
+
+[node name="wallDiagonalMarble2" parent="." unique_id=1983162456 instance=ExtResource("67_tj5hj")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDiagonalMarble2/wallDiagonalMarble" parent_id_path=PackedInt32Array(1983162456, 361762848) index="0" unique_id=1238669881]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDiagonalMarble2/wallDiagonalMarble/StaticBody3D" unique_id=1003614271]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.035355303, 2, -0.052242424)
+shape = SubResource("BoxShape3D_ndbsb")
+
+[node name="wallDiagonalPlaster22" parent="." unique_id=1187815758 instance=ExtResource("68_248yu")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDiagonalPlaster22/wallDiagonalPlaster2" parent_id_path=PackedInt32Array(1187815758, 1668069417) index="0" unique_id=1970165947]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDiagonalPlaster22/wallDiagonalPlaster2/StaticBody3D" unique_id=986473706]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.035355303, 2, -0.052242424)
+shape = SubResource("BoxShape3D_ndbsb")
+
+[node name="wallDiagonalPlaster32" parent="." unique_id=877525515 instance=ExtResource("69_s13qj")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDiagonalPlaster32/wallDiagonalPlaster3" parent_id_path=PackedInt32Array(877525515, 775302740) index="0" unique_id=1611956450]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDiagonalPlaster32/wallDiagonalPlaster3/StaticBody3D" unique_id=867638267]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.035355303, 2, -0.052242424)
+shape = SubResource("BoxShape3D_ndbsb")
+
+[node name="wallDiagonalPlaster2" parent="." unique_id=1224337052 instance=ExtResource("70_v68tp")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDiagonalPlaster2/wallDiagonalPlaster" parent_id_path=PackedInt32Array(1224337052, 376422407) index="0" unique_id=739324203]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDiagonalPlaster2/wallDiagonalPlaster/StaticBody3D" unique_id=1558803222]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.035355303, 2, -0.052242424)
+shape = SubResource("BoxShape3D_ndbsb")
+
+[node name="wallDiagonalTiles2" parent="." unique_id=407214969 instance=ExtResource("71_7sxmx")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDiagonalTiles2/wallDiagonalTiles" parent_id_path=PackedInt32Array(407214969, 1824767402) index="0" unique_id=939489260]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDiagonalTiles2/wallDiagonalTiles/StaticBody3D" unique_id=177790738]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.035355303, 2, -0.052242424)
+shape = SubResource("BoxShape3D_ndbsb")
+
+[node name="wallDiagonalWallpaper22" parent="." unique_id=716007955 instance=ExtResource("72_ss5kd")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDiagonalWallpaper22/wallDiagonalWallpaper2" parent_id_path=PackedInt32Array(716007955, 1514105866) index="0" unique_id=1672702289]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDiagonalWallpaper22/wallDiagonalWallpaper2/StaticBody3D" unique_id=15733998]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.035355303, 2, -0.052242424)
+shape = SubResource("BoxShape3D_ndbsb")
+
+[node name="wallDiagonalWallpaper2" parent="." unique_id=1705707513 instance=ExtResource("73_71rgx")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDiagonalWallpaper2/wallDiagonalWallpaper" parent_id_path=PackedInt32Array(1705707513, 577154906) index="0" unique_id=1462766196]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDiagonalWallpaper2/wallDiagonalWallpaper/StaticBody3D" unique_id=861830138]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.035355303, 2, -0.052242424)
+shape = SubResource("BoxShape3D_ndbsb")
+
+[node name="wallDiagonalWood2" parent="." unique_id=1139355287 instance=ExtResource("74_su8fd")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDiagonalWood2/wallDiagonalWood" parent_id_path=PackedInt32Array(1139355287, 894443438) index="0" unique_id=972559187]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDiagonalWood2/wallDiagonalWood/StaticBody3D" unique_id=1005135051]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.035355303, 2, -0.052242424)
+shape = SubResource("BoxShape3D_ndbsb")
+
+[node name="wallDoorBrick2" parent="." unique_id=745995044 instance=ExtResource("75_gkf5r")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDoorBrick2/wallDoorBrick" parent_id_path=PackedInt32Array(745995044, 1907271482) index="0" unique_id=77822867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9000001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDoorBrick2/wallDoorBrick/StaticBody3D" unique_id=980406441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallDoorBrick2/wallDoorBrick/StaticBody3D" unique_id=249876440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wallDoorBrick2/wallDoorBrick/StaticBody3D" unique_id=734483741]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1303697e-07, 3.3412068, 0)
+shape = SubResource("BoxShape3D_twvsi")
+
+[node name="wallDoorMarble2" parent="." unique_id=242850092 instance=ExtResource("76_qs7fh")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDoorMarble2/wallDoorMarble" parent_id_path=PackedInt32Array(242850092, 1010401214) index="0" unique_id=1467630580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9000001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDoorMarble2/wallDoorMarble/StaticBody3D" unique_id=473661347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallDoorMarble2/wallDoorMarble/StaticBody3D" unique_id=1271978133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wallDoorMarble2/wallDoorMarble/StaticBody3D" unique_id=1786062742]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1303697e-07, 3.3412068, 0)
+shape = SubResource("BoxShape3D_twvsi")
+
+[node name="wallDoorPlaster22" parent="." unique_id=738850971 instance=ExtResource("77_fyhsh")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDoorPlaster22/wallDoorPlaster2" parent_id_path=PackedInt32Array(738850971, 590827184) index="0" unique_id=879543248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9000001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDoorPlaster22/wallDoorPlaster2/StaticBody3D" unique_id=1596037804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallDoorPlaster22/wallDoorPlaster2/StaticBody3D" unique_id=958507460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wallDoorPlaster22/wallDoorPlaster2/StaticBody3D" unique_id=104004582]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1303697e-07, 3.3412068, 0)
+shape = SubResource("BoxShape3D_twvsi")
+
+[node name="wallDoorPlaster32" parent="." unique_id=2108724174 instance=ExtResource("78_bpg1t")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDoorPlaster32/wallDoorPlaster3" parent_id_path=PackedInt32Array(2108724174, 1733718156) index="0" unique_id=129848623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9000001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDoorPlaster32/wallDoorPlaster3/StaticBody3D" unique_id=1918434025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallDoorPlaster32/wallDoorPlaster3/StaticBody3D" unique_id=1041465811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wallDoorPlaster32/wallDoorPlaster3/StaticBody3D" unique_id=945944284]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1303697e-07, 3.3412068, 0)
+shape = SubResource("BoxShape3D_twvsi")
+
+[node name="wallDoorPlaster2" parent="." unique_id=977167997 instance=ExtResource("79_rm7ei")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDoorPlaster2/wallDoorPlaster" parent_id_path=PackedInt32Array(977167997, 1373079336) index="0" unique_id=13144807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9000001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDoorPlaster2/wallDoorPlaster/StaticBody3D" unique_id=1542766297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallDoorPlaster2/wallDoorPlaster/StaticBody3D" unique_id=1947646338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wallDoorPlaster2/wallDoorPlaster/StaticBody3D" unique_id=262366600]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1303697e-07, 3.3412068, 0)
+shape = SubResource("BoxShape3D_twvsi")
+
+[node name="wallDoorTiles2" parent="." unique_id=2081626701 instance=ExtResource("80_nlkqd")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDoorTiles2/wallDoorTiles" parent_id_path=PackedInt32Array(2081626701, 316551347) index="0" unique_id=347378759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9000001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDoorTiles2/wallDoorTiles/StaticBody3D" unique_id=1513818929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallDoorTiles2/wallDoorTiles/StaticBody3D" unique_id=306785632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wallDoorTiles2/wallDoorTiles/StaticBody3D" unique_id=305249704]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1303697e-07, 3.3412068, 0)
+shape = SubResource("BoxShape3D_twvsi")
+
+[node name="wallDoorWallpaper22" parent="." unique_id=992334698 instance=ExtResource("81_r88b5")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDoorWallpaper22/wallDoorWallpaper2" parent_id_path=PackedInt32Array(992334698, 869057653) index="0" unique_id=695589560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9000001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDoorWallpaper22/wallDoorWallpaper2/StaticBody3D" unique_id=354060432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallDoorWallpaper22/wallDoorWallpaper2/StaticBody3D" unique_id=1786645359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wallDoorWallpaper22/wallDoorWallpaper2/StaticBody3D" unique_id=1807490616]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1303697e-07, 3.3412068, 0)
+shape = SubResource("BoxShape3D_twvsi")
+
+[node name="wallDoorWallpaper2" parent="." unique_id=1280943675 instance=ExtResource("82_ica4q")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDoorWallpaper2/wallDoorWallpaper" parent_id_path=PackedInt32Array(1280943675, 251149584) index="0" unique_id=120675135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9000001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDoorWallpaper2/wallDoorWallpaper/StaticBody3D" unique_id=1573075792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallDoorWallpaper2/wallDoorWallpaper/StaticBody3D" unique_id=566883192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wallDoorWallpaper2/wallDoorWallpaper/StaticBody3D" unique_id=2014425965]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1303697e-07, 3.3412068, 0)
+shape = SubResource("BoxShape3D_twvsi")
+
+[node name="wallDoorWood2" parent="." unique_id=613419063 instance=ExtResource("83_h3g3b")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallDoorWood2/wallDoorWood" parent_id_path=PackedInt32Array(613419063, 2016624020) index="0" unique_id=1645370815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9000001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallDoorWood2/wallDoorWood/StaticBody3D" unique_id=730431927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallDoorWood2/wallDoorWood/StaticBody3D" unique_id=1127971966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45, 2, 0)
+shape = SubResource("BoxShape3D_w7igs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wallDoorWood2/wallDoorWood/StaticBody3D" unique_id=117520620]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.1303697e-07, 3.3412068, 0)
+shape = SubResource("BoxShape3D_twvsi")
+
+[node name="wallHalfBrick2" parent="." unique_id=1275844693 instance=ExtResource("84_m8dbo")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallHalfBrick2/wallHalfBrick" parent_id_path=PackedInt32Array(1275844693, 1502130447) index="0" unique_id=1768531562]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallHalfBrick2/wallHalfBrick/StaticBody3D" unique_id=269748796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.9)
+shape = SubResource("BoxShape3D_w7m0f")
+
+[node name="wallHalfMarble2" parent="." unique_id=673360828 instance=ExtResource("85_tptkk")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallHalfMarble2/wallHalfMarble" parent_id_path=PackedInt32Array(673360828, 1243695876) index="0" unique_id=865485604]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallHalfMarble2/wallHalfMarble/StaticBody3D" unique_id=1435424811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.9)
+shape = SubResource("BoxShape3D_w7m0f")
+
+[node name="wallHalfPlaster22" parent="." unique_id=2014523709 instance=ExtResource("86_ojf3o")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallHalfPlaster22/wallHalfPlaster2" parent_id_path=PackedInt32Array(2014523709, 1304114634) index="0" unique_id=608017942]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallHalfPlaster22/wallHalfPlaster2/StaticBody3D" unique_id=1277969304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.9)
+shape = SubResource("BoxShape3D_w7m0f")
+
+[node name="wallHalfPlaster32" parent="." unique_id=1950204350 instance=ExtResource("87_ol8yx")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallHalfPlaster32/wallHalfPlaster3" parent_id_path=PackedInt32Array(1950204350, 480171051) index="0" unique_id=1288241131]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallHalfPlaster32/wallHalfPlaster3/StaticBody3D" unique_id=621955984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.9)
+shape = SubResource("BoxShape3D_w7m0f")
+
+[node name="wallHalfPlaster2" parent="." unique_id=1021275937 instance=ExtResource("88_xd2vs")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallHalfPlaster2/wallHalfPlaster" parent_id_path=PackedInt32Array(1021275937, 893312796) index="0" unique_id=1265129902]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallHalfPlaster2/wallHalfPlaster/StaticBody3D" unique_id=717503600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.9)
+shape = SubResource("BoxShape3D_w7m0f")
+
+[node name="wallHalfTiles2" parent="." unique_id=2113431953 instance=ExtResource("89_v4qeg")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallHalfTiles2/wallHalfTiles" parent_id_path=PackedInt32Array(2113431953, 1701578781) index="0" unique_id=1676832204]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallHalfTiles2/wallHalfTiles/StaticBody3D" unique_id=1315104545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.9)
+shape = SubResource("BoxShape3D_w7m0f")
+
+[node name="wallHalfWallpaper22" parent="." unique_id=1707455870 instance=ExtResource("90_lsj2t")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallHalfWallpaper22/wallHalfWallpaper2" parent_id_path=PackedInt32Array(1707455870, 60450612) index="0" unique_id=2061875685]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallHalfWallpaper22/wallHalfWallpaper2/StaticBody3D" unique_id=614363347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.9)
+shape = SubResource("BoxShape3D_w7m0f")
+
+[node name="wallHalfWallpaper2" parent="." unique_id=1584327048 instance=ExtResource("91_lyjmb")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallHalfWallpaper2/wallHalfWallpaper" parent_id_path=PackedInt32Array(1584327048, 1669006402) index="0" unique_id=1870847153]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallHalfWallpaper2/wallHalfWallpaper/StaticBody3D" unique_id=1087139627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.9)
+shape = SubResource("BoxShape3D_w7m0f")
+
+[node name="wallHalfWood2" parent="." unique_id=852587257 instance=ExtResource("92_n5oq3")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallHalfWood2/wallHalfWood" parent_id_path=PackedInt32Array(852587257, 656831504) index="0" unique_id=1324386973]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallHalfWood2/wallHalfWood/StaticBody3D" unique_id=216984841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.9)
+shape = SubResource("BoxShape3D_w7m0f")
+
+[node name="wallMarble2" parent="." unique_id=612939452 instance=ExtResource("93_mreig")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallMarble2/wallMarble" parent_id_path=PackedInt32Array(612939452, 1062545508) index="0" unique_id=1877036014]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallMarble2/wallMarble/StaticBody3D" unique_id=71764502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.9124023)
+shape = SubResource("BoxShape3D_1p301")
+
+[node name="wallNibBrick2" parent="." unique_id=1462847876 instance=ExtResource("94_six8b")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallNibBrick2/wallNibBrick" parent_id_path=PackedInt32Array(1462847876, 895460777) index="0" unique_id=1274029983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallNibBrick2/wallNibBrick/StaticBody3D" unique_id=152466063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0002441, -0.041918993)
+shape = SubResource("BoxShape3D_a0l5d")
+
+[node name="wallNibMarble2" parent="." unique_id=1010275691 instance=ExtResource("95_i3ii0")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallNibMarble2/wallNibMarble" parent_id_path=PackedInt32Array(1010275691, 1752984908) index="0" unique_id=166040624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallNibMarble2/wallNibMarble/StaticBody3D" unique_id=1249971091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0002441, -0.041918993)
+shape = SubResource("BoxShape3D_a0l5d")
+
+[node name="wallNibPlaster22" parent="." unique_id=215042359 instance=ExtResource("96_dgba3")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallNibPlaster22/wallNibPlaster2" parent_id_path=PackedInt32Array(215042359, 672889374) index="0" unique_id=1745870582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallNibPlaster22/wallNibPlaster2/StaticBody3D" unique_id=549598742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0002441, -0.041918993)
+shape = SubResource("BoxShape3D_a0l5d")
+
+[node name="wallNibPlaster32" parent="." unique_id=760671852 instance=ExtResource("97_eqigq")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallNibPlaster32/wallNibPlaster3" parent_id_path=PackedInt32Array(760671852, 666814871) index="0" unique_id=627027520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallNibPlaster32/wallNibPlaster3/StaticBody3D" unique_id=237494988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0002441, -0.041918993)
+shape = SubResource("BoxShape3D_a0l5d")
+
+[node name="wallNibPlaster2" parent="." unique_id=105218850 instance=ExtResource("98_60u45")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallNibPlaster2/wallNibPlaster" parent_id_path=PackedInt32Array(105218850, 1938713340) index="0" unique_id=2024098327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallNibPlaster2/wallNibPlaster/StaticBody3D" unique_id=1537431514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0002441, -0.041918993)
+shape = SubResource("BoxShape3D_a0l5d")
+
+[node name="wallNibTiles2" parent="." unique_id=358114184 instance=ExtResource("99_0pmd8")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallNibTiles2/wallNibTiles" parent_id_path=PackedInt32Array(358114184, 934014442) index="0" unique_id=1725666845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallNibTiles2/wallNibTiles/StaticBody3D" unique_id=460124343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0002441, -0.041918993)
+shape = SubResource("BoxShape3D_a0l5d")
+
+[node name="wallNibWallpaper22" parent="." unique_id=112798936 instance=ExtResource("100_y3t1d")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallNibWallpaper22/wallNibWallpaper2" parent_id_path=PackedInt32Array(112798936, 467158782) index="0" unique_id=534359091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallNibWallpaper22/wallNibWallpaper2/StaticBody3D" unique_id=1002048324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0002441, -0.041918993)
+shape = SubResource("BoxShape3D_a0l5d")
+
+[node name="wallNibWallpaper2" parent="." unique_id=757260516 instance=ExtResource("101_c8s56")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallNibWallpaper2/wallNibWallpaper" parent_id_path=PackedInt32Array(757260516, 330884969) index="0" unique_id=1827845452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallNibWallpaper2/wallNibWallpaper/StaticBody3D" unique_id=802852177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0002441, -0.041918993)
+shape = SubResource("BoxShape3D_a0l5d")
+
+[node name="wallNibWood2" parent="." unique_id=1576452735 instance=ExtResource("102_g6ar6")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallNibWood2/wallNibWood" parent_id_path=PackedInt32Array(1576452735, 865656204) index="0" unique_id=2021110638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallNibWood2/wallNibWood/StaticBody3D" unique_id=1838607606]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0002441, -0.041918993)
+shape = SubResource("BoxShape3D_a0l5d")
+
+[node name="wallPlaster22" parent="." unique_id=182822114 instance=ExtResource("103_ptaqi")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallPlaster22/wallPlaster2" parent_id_path=PackedInt32Array(182822114, 900153074) index="0" unique_id=63957759]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallPlaster22/wallPlaster2/StaticBody3D" unique_id=1877168205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.9124023)
+shape = SubResource("BoxShape3D_1p301")
+
+[node name="wallPlaster32" parent="." unique_id=147612768 instance=ExtResource("104_y8i1k")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallPlaster32/wallPlaster3" parent_id_path=PackedInt32Array(147612768, 1962841711) index="0" unique_id=1311925978]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallPlaster32/wallPlaster3/StaticBody3D" unique_id=1784667261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.9124023)
+shape = SubResource("BoxShape3D_1p301")
+
+[node name="wallPlaster2" parent="." unique_id=1774826993 instance=ExtResource("105_oc4ip")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallPlaster2/wallPlaster" parent_id_path=PackedInt32Array(1774826993, 1872099007) index="0" unique_id=398923880]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallPlaster2/wallPlaster/StaticBody3D" unique_id=834696578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.9124023)
+shape = SubResource("BoxShape3D_1p301")
+
+[node name="wallStairsBrick2" parent="." unique_id=253299837 instance=ExtResource("106_s2ky2")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallStairsBrick2/wallStairsBrick" parent_id_path=PackedInt32Array(253299837, 2111498502) index="0" unique_id=1276370273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8999999, 4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallStairsBrick2/wallStairsBrick/StaticBody3D" unique_id=963695529]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0.13535523, -0.03535509)
+shape = SubResource("BoxShape3D_m7rcb")
+
+[node name="wallTiles2" parent="." unique_id=571514 instance=ExtResource("107_ylybl")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTiles2/wallTiles" parent_id_path=PackedInt32Array(571514, 364678636) index="0" unique_id=751514284]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTiles2/wallTiles/StaticBody3D" unique_id=1209236058]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.9124023)
+shape = SubResource("BoxShape3D_1p301")
+
+[node name="wallTurnBrick2" parent="." unique_id=1209723776 instance=ExtResource("108_hddru")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTurnBrick2/wallTurnBrick" parent_id_path=PackedInt32Array(1209723776, 579804468) index="0" unique_id=1473449798]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTurnBrick2/wallTurnBrick/StaticBody3D" unique_id=747250370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9310974, 2, 1.8748046)
+shape = SubResource("BoxShape3D_2tn42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallTurnBrick2/wallTurnBrick/StaticBody3D" unique_id=881579392]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15000007, 2, 2.9126706)
+shape = SubResource("BoxShape3D_v2cul")
+
+[node name="wallTurnMarble2" parent="." unique_id=1131489534 instance=ExtResource("109_nrcyg")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTurnMarble2/wallTurnMarble" parent_id_path=PackedInt32Array(1131489534, 992577644) index="0" unique_id=779908138]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTurnMarble2/wallTurnMarble/StaticBody3D" unique_id=284027570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9310974, 2, 1.8748046)
+shape = SubResource("BoxShape3D_2tn42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallTurnMarble2/wallTurnMarble/StaticBody3D" unique_id=1986130563]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15000007, 2, 2.9126706)
+shape = SubResource("BoxShape3D_v2cul")
+
+[node name="wallTurnPlaster22" parent="." unique_id=1857591140 instance=ExtResource("110_bukwd")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTurnPlaster22/wallTurnPlaster2" parent_id_path=PackedInt32Array(1857591140, 1172170034) index="0" unique_id=391750705]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTurnPlaster22/wallTurnPlaster2/StaticBody3D" unique_id=680297399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9310974, 2, 1.8748046)
+shape = SubResource("BoxShape3D_2tn42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallTurnPlaster22/wallTurnPlaster2/StaticBody3D" unique_id=874692123]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15000007, 2, 2.9126706)
+shape = SubResource("BoxShape3D_v2cul")
+
+[node name="wallTurnPlaster32" parent="." unique_id=2136721133 instance=ExtResource("111_rqvcx")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTurnPlaster32/wallTurnPlaster3" parent_id_path=PackedInt32Array(2136721133, 1302891589) index="0" unique_id=2037912312]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTurnPlaster32/wallTurnPlaster3/StaticBody3D" unique_id=2146099371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9310974, 2, 1.8748046)
+shape = SubResource("BoxShape3D_2tn42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallTurnPlaster32/wallTurnPlaster3/StaticBody3D" unique_id=1113703570]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15000007, 2, 2.9126706)
+shape = SubResource("BoxShape3D_v2cul")
+
+[node name="wallTurnPlaster2" parent="." unique_id=294356651 instance=ExtResource("112_s7unj")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTurnPlaster2/wallTurnPlaster" parent_id_path=PackedInt32Array(294356651, 1457989012) index="0" unique_id=1268855703]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTurnPlaster2/wallTurnPlaster/StaticBody3D" unique_id=234036729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9310974, 2, 1.8748046)
+shape = SubResource("BoxShape3D_2tn42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallTurnPlaster2/wallTurnPlaster/StaticBody3D" unique_id=1740046554]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15000007, 2, 2.9126706)
+shape = SubResource("BoxShape3D_v2cul")
+
+[node name="wallTurnTiles2" parent="." unique_id=1166509705 instance=ExtResource("113_khjor")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTurnTiles2/wallTurnTiles" parent_id_path=PackedInt32Array(1166509705, 1029138524) index="0" unique_id=1814541324]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTurnTiles2/wallTurnTiles/StaticBody3D" unique_id=2104973946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9310974, 2, 1.8748046)
+shape = SubResource("BoxShape3D_2tn42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallTurnTiles2/wallTurnTiles/StaticBody3D" unique_id=1404244791]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15000007, 2, 2.9126706)
+shape = SubResource("BoxShape3D_v2cul")
+
+[node name="wallTurnWallpaper22" parent="." unique_id=232469068 instance=ExtResource("114_12heo")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTurnWallpaper22/wallTurnWallpaper2" parent_id_path=PackedInt32Array(232469068, 482179653) index="0" unique_id=690361907]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTurnWallpaper22/wallTurnWallpaper2/StaticBody3D" unique_id=1523535834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9310974, 2, 1.8748046)
+shape = SubResource("BoxShape3D_2tn42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallTurnWallpaper22/wallTurnWallpaper2/StaticBody3D" unique_id=1253491395]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15000007, 2, 2.9126706)
+shape = SubResource("BoxShape3D_v2cul")
+
+[node name="wallTurnWallpaper2" parent="." unique_id=1670689824 instance=ExtResource("115_rpxno")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTurnWallpaper2/wallTurnWallpaper" parent_id_path=PackedInt32Array(1670689824, 2049062847) index="0" unique_id=581317315]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTurnWallpaper2/wallTurnWallpaper/StaticBody3D" unique_id=1991803265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9310974, 2, 1.8748046)
+shape = SubResource("BoxShape3D_2tn42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallTurnWallpaper2/wallTurnWallpaper/StaticBody3D" unique_id=692819844]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15000007, 2, 2.9126706)
+shape = SubResource("BoxShape3D_v2cul")
+
+[node name="wallTurnWood2" parent="." unique_id=974020744 instance=ExtResource("116_nqw8o")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallTurnWood2/wallTurnWood" parent_id_path=PackedInt32Array(974020744, 1760360850) index="0" unique_id=884735658]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallTurnWood2/wallTurnWood/StaticBody3D" unique_id=2131006246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9310974, 2, 1.8748046)
+shape = SubResource("BoxShape3D_2tn42")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wallTurnWood2/wallTurnWood/StaticBody3D" unique_id=1048992158]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15000007, 2, 2.9126706)
+shape = SubResource("BoxShape3D_v2cul")
+
+[node name="wallWallpaper22" parent="." unique_id=648379038 instance=ExtResource("117_jkenk")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWallpaper22/wallWallpaper2" parent_id_path=PackedInt32Array(648379038, 1803991932) index="0" unique_id=1361057754]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallWallpaper22/wallWallpaper2/StaticBody3D" unique_id=1536708318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.9)
+shape = SubResource("BoxShape3D_1p301")
+
+[node name="wallWallpaper2" parent="." unique_id=2082404809 instance=ExtResource("118_crogm")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWallpaper2/wallWallpaper" parent_id_path=PackedInt32Array(2082404809, 1881876246) index="0" unique_id=2070293361]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallWallpaper2/wallWallpaper/StaticBody3D" unique_id=957923694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.9)
+shape = SubResource("BoxShape3D_1p301")
+
+[node name="wallWindowBrick2" parent="." unique_id=368780115 instance=ExtResource("119_pw4i6")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWindowBrick2/wallWindowBrick" parent_id_path=PackedInt32Array(368780115, 2132128090) index="0" unique_id=1574787561]
+
+[node name="LeftCollisionShape3D" type="CollisionShape3D" parent="wallWindowBrick2/wallWindowBrick/StaticBody3D" unique_id=1043550340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3586547, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="TopCollisionShape3D" type="CollisionShape3D" parent="wallWindowBrick2/wallWindowBrick/StaticBody3D" unique_id=1324285337]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.965043e-05, 3.4506474, 1.9)
+shape = SubResource("BoxShape3D_hbv8n")
+
+[node name="RightCollisionShape3D" type="CollisionShape3D" parent="wallWindowBrick2/wallWindowBrick/StaticBody3D" unique_id=1698197953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.358594, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="BottomCollisionShape3D" type="CollisionShape3D" parent="wallWindowBrick2/wallWindowBrick/StaticBody3D" unique_id=578107163]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.9649275e-05, 0.5771975, 1.9)
+shape = SubResource("BoxShape3D_4r7to")
+
+[node name="wallWindowMarble2" parent="." unique_id=80123793 instance=ExtResource("120_m2ujc")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWindowMarble2/wallWindowMarble" parent_id_path=PackedInt32Array(80123793, 1166926426) index="0" unique_id=219985197]
+
+[node name="LeftCollisionShape3D" type="CollisionShape3D" parent="wallWindowMarble2/wallWindowMarble/StaticBody3D" unique_id=633142939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3586547, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="TopCollisionShape3D" type="CollisionShape3D" parent="wallWindowMarble2/wallWindowMarble/StaticBody3D" unique_id=2039730575]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.965043e-05, 3.4506474, 1.9)
+shape = SubResource("BoxShape3D_hbv8n")
+
+[node name="RightCollisionShape3D" type="CollisionShape3D" parent="wallWindowMarble2/wallWindowMarble/StaticBody3D" unique_id=1346902084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.358594, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="BottomCollisionShape3D" type="CollisionShape3D" parent="wallWindowMarble2/wallWindowMarble/StaticBody3D" unique_id=1307759508]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.9649275e-05, 0.5771975, 1.9)
+shape = SubResource("BoxShape3D_4r7to")
+
+[node name="wallWindowPlaster22" parent="." unique_id=1268483512 instance=ExtResource("121_d6isb")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWindowPlaster22/wallWindowPlaster2" parent_id_path=PackedInt32Array(1268483512, 851934205) index="0" unique_id=1637470022]
+
+[node name="LeftCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster22/wallWindowPlaster2/StaticBody3D" unique_id=354606042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3586547, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="TopCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster22/wallWindowPlaster2/StaticBody3D" unique_id=512476030]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.965043e-05, 3.4506474, 1.9)
+shape = SubResource("BoxShape3D_hbv8n")
+
+[node name="RightCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster22/wallWindowPlaster2/StaticBody3D" unique_id=1142338981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.358594, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="BottomCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster22/wallWindowPlaster2/StaticBody3D" unique_id=1030047698]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.9649275e-05, 0.5771975, 1.9)
+shape = SubResource("BoxShape3D_4r7to")
+
+[node name="wallWindowPlaster32" parent="." unique_id=429340555 instance=ExtResource("122_btlf0")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWindowPlaster32/wallWindowPlaster3" parent_id_path=PackedInt32Array(429340555, 1653105156) index="0" unique_id=60553046]
+
+[node name="LeftCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster32/wallWindowPlaster3/StaticBody3D" unique_id=1306802438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3586547, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="TopCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster32/wallWindowPlaster3/StaticBody3D" unique_id=2087511038]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.965043e-05, 3.4506474, 1.9)
+shape = SubResource("BoxShape3D_hbv8n")
+
+[node name="RightCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster32/wallWindowPlaster3/StaticBody3D" unique_id=786837690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.358594, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="BottomCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster32/wallWindowPlaster3/StaticBody3D" unique_id=2064743600]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.9649275e-05, 0.5771975, 1.9)
+shape = SubResource("BoxShape3D_4r7to")
+
+[node name="wallWindowPlaster2" parent="." unique_id=93249050 instance=ExtResource("123_b6dnx")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWindowPlaster2/wallWindowPlaster" parent_id_path=PackedInt32Array(93249050, 2026595410) index="0" unique_id=813524663]
+
+[node name="LeftCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster2/wallWindowPlaster/StaticBody3D" unique_id=1169915380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3586547, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="TopCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster2/wallWindowPlaster/StaticBody3D" unique_id=1479593639]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.965043e-05, 3.4506474, 1.9)
+shape = SubResource("BoxShape3D_hbv8n")
+
+[node name="RightCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster2/wallWindowPlaster/StaticBody3D" unique_id=1588431668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.358594, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="BottomCollisionShape3D" type="CollisionShape3D" parent="wallWindowPlaster2/wallWindowPlaster/StaticBody3D" unique_id=174868698]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.9649275e-05, 0.5771975, 1.9)
+shape = SubResource("BoxShape3D_4r7to")
+
+[node name="wallWindowTiles2" parent="." unique_id=1643990679 instance=ExtResource("124_p2pec")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWindowTiles2/wallWindowTiles" parent_id_path=PackedInt32Array(1643990679, 1080596514) index="0" unique_id=95914585]
+
+[node name="LeftCollisionShape3D" type="CollisionShape3D" parent="wallWindowTiles2/wallWindowTiles/StaticBody3D" unique_id=611695404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3586547, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="TopCollisionShape3D" type="CollisionShape3D" parent="wallWindowTiles2/wallWindowTiles/StaticBody3D" unique_id=1249670698]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.965043e-05, 3.4506474, 1.9)
+shape = SubResource("BoxShape3D_hbv8n")
+
+[node name="RightCollisionShape3D" type="CollisionShape3D" parent="wallWindowTiles2/wallWindowTiles/StaticBody3D" unique_id=895341041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.358594, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="BottomCollisionShape3D" type="CollisionShape3D" parent="wallWindowTiles2/wallWindowTiles/StaticBody3D" unique_id=1695317893]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.9649275e-05, 0.5771975, 1.9)
+shape = SubResource("BoxShape3D_4r7to")
+
+[node name="wallWindowWallpaper22" parent="." unique_id=1469552203 instance=ExtResource("125_x1fx5")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWindowWallpaper22/wallWindowWallpaper2" parent_id_path=PackedInt32Array(1469552203, 1933648847) index="0" unique_id=831899068]
+
+[node name="LeftCollisionShape3D" type="CollisionShape3D" parent="wallWindowWallpaper22/wallWindowWallpaper2/StaticBody3D" unique_id=1379453694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3586547, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="TopCollisionShape3D" type="CollisionShape3D" parent="wallWindowWallpaper22/wallWindowWallpaper2/StaticBody3D" unique_id=18064632]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.965043e-05, 3.4506474, 1.9)
+shape = SubResource("BoxShape3D_hbv8n")
+
+[node name="RightCollisionShape3D" type="CollisionShape3D" parent="wallWindowWallpaper22/wallWindowWallpaper2/StaticBody3D" unique_id=1147680434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.358594, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="BottomCollisionShape3D" type="CollisionShape3D" parent="wallWindowWallpaper22/wallWindowWallpaper2/StaticBody3D" unique_id=289736955]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.9649275e-05, 0.5771975, 1.9)
+shape = SubResource("BoxShape3D_4r7to")
+
+[node name="wallWindowWallpaper2" parent="." unique_id=1109632846 instance=ExtResource("126_dx2gc")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWindowWallpaper2/wallWindowWallpaper" parent_id_path=PackedInt32Array(1109632846, 348771999) index="0" unique_id=117087368]
+
+[node name="LeftCollisionShape3D" type="CollisionShape3D" parent="wallWindowWallpaper2/wallWindowWallpaper/StaticBody3D" unique_id=1978548200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3586547, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="TopCollisionShape3D" type="CollisionShape3D" parent="wallWindowWallpaper2/wallWindowWallpaper/StaticBody3D" unique_id=1149522297]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.965043e-05, 3.4506474, 1.9)
+shape = SubResource("BoxShape3D_hbv8n")
+
+[node name="RightCollisionShape3D" type="CollisionShape3D" parent="wallWindowWallpaper2/wallWindowWallpaper/StaticBody3D" unique_id=1041185089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.358594, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="BottomCollisionShape3D" type="CollisionShape3D" parent="wallWindowWallpaper2/wallWindowWallpaper/StaticBody3D" unique_id=2014803663]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.9649275e-05, 0.5771975, 1.9)
+shape = SubResource("BoxShape3D_4r7to")
+
+[node name="wallWindowWood2" parent="." unique_id=2091310204 instance=ExtResource("127_st31p")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWindowWood2/wallWindowWood" parent_id_path=PackedInt32Array(2091310204, 1910411543) index="0" unique_id=1240684076]
+
+[node name="LeftCollisionShape3D" type="CollisionShape3D" parent="wallWindowWood2/wallWindowWood/StaticBody3D" unique_id=1737795269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3586547, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="TopCollisionShape3D" type="CollisionShape3D" parent="wallWindowWood2/wallWindowWood/StaticBody3D" unique_id=95352249]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.965043e-05, 3.4506474, 1.9)
+shape = SubResource("BoxShape3D_hbv8n")
+
+[node name="RightCollisionShape3D" type="CollisionShape3D" parent="wallWindowWood2/wallWindowWood/StaticBody3D" unique_id=1172055730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.358594, 2, 1.9)
+shape = SubResource("BoxShape3D_bmpbc")
+
+[node name="BottomCollisionShape3D" type="CollisionShape3D" parent="wallWindowWood2/wallWindowWood/StaticBody3D" unique_id=63429441]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 7.9649275e-05, 0.5771975, 1.9)
+shape = SubResource("BoxShape3D_4r7to")
+
+[node name="wallWood2" parent="." unique_id=333380060 instance=ExtResource("128_f08t0")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wallWood2/wallWood" parent_id_path=PackedInt32Array(333380060, 484613868) index="0" unique_id=257506312]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wallWood2/wallWood/StaticBody3D" unique_id=890600928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1.9)
+shape = SubResource("BoxShape3D_1p301")
+
+[node name="WindowWood22" parent="." unique_id=656777021 instance=ExtResource("129_axnlt")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WindowWood22/WindowWood2" parent_id_path=PackedInt32Array(656777021, 915904096) index="1" unique_id=786389425]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WindowWood22/WindowWood2/StaticBody3D" unique_id=1726843658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.026172, 1.9)
+shape = SubResource("BoxShape3D_4ajxc")
+
+[node name="windowWood32" parent="." unique_id=682863215 instance=ExtResource("130_d6bbw")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="windowWood32/windowWood3" parent_id_path=PackedInt32Array(682863215, 380440176) index="1" unique_id=826821696]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="windowWood32/windowWood3/StaticBody3D" unique_id=1357345133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.026172, 1.9)
+shape = SubResource("BoxShape3D_4ajxc")
+
+[node name="WindowWood2" parent="." unique_id=1982453118 instance=ExtResource("131_1r58i")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WindowWood2/WindowWood" parent_id_path=PackedInt32Array(1982453118, 928041780) index="1" unique_id=311874609]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WindowWood2/WindowWood/StaticBody3D" unique_id=1814784960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.026172, 1.9)
+shape = SubResource("BoxShape3D_4ajxc")
+
+[editable path="archBrick3"]
+[editable path="archMarble2"]
+[editable path="archPlaster22"]
+[editable path="archPlaster32"]
+[editable path="archPlaster2"]
+[editable path="archTiles2"]
+[editable path="archWallpaper22"]
+[editable path="archWallpaper2"]
+[editable path="archWood2"]
+[editable path="archBrick2"]
+[editable path="ceilingConcrete2"]
+[editable path="ceilingHalfConcrete2"]
+[editable path="ceilingHalfPlaster22"]
+[editable path="ceilingHalfPlaster32"]
+[editable path="ceilingHalfPlaster2"]
+[editable path="ceilingHalfTiles2"]
+[editable path="ceilingHalfWood2"]
+[editable path="ceilingPlaster22"]
+[editable path="ceilingPlaster32"]
+[editable path="ceilingPlaster2"]
+[editable path="ceilingTiles2"]
+[editable path="ceilingWood2"]
+[editable path="cornerPillarMetal2"]
+[editable path="cornerPillarPlaster2"]
+[editable path="cornerPillarStone2"]
+[editable path="cornerPillarWood2"]
+[editable path="floorCarpet22"]
+[editable path="floorCarpet2"]
+[editable path="floorHalfCarpet22"]
+[editable path="floorHalfCarpet2"]
+[editable path="floorHalfMarble2"]
+[editable path="floorHalfStone2"]
+[editable path="floorHalfTiles2"]
+[editable path="floorHalfWood22"]
+[editable path="floorHalfWood2"]
+[editable path="floorMarble2"]
+[editable path="floorStone2"]
+[editable path="floorTiles2"]
+[editable path="floorWood22"]
+[editable path="floorWood2"]
+[editable path="pillarBrick2"]
+[editable path="stairsGuardMetal22"]
+[editable path="stairsGuardMetal2"]
+[editable path="stairsGuardWood22"]
+[editable path="stairsGuardWood2"]
+[editable path="stairsRailCornerMetal2"]
+[editable path="stairsRailCornerWood22"]
+[editable path="stairsRailCornerWood2"]
+[editable path="stairsRailMetal2"]
+[editable path="stairsRailWood22"]
+[editable path="stairsRailWood2"]
+[editable path="stairsStone2"]
+[editable path="stairsWood22"]
+[editable path="stairsWood32"]
+[editable path="stairsWood42"]
+[editable path="stairsWood2"]
+[editable path="wallBrick2"]
+[editable path="wallDiagonalBrick2"]
+[editable path="wallDiagonalMarble2"]
+[editable path="wallDiagonalPlaster22"]
+[editable path="wallDiagonalPlaster32"]
+[editable path="wallDiagonalPlaster2"]
+[editable path="wallDiagonalTiles2"]
+[editable path="wallDiagonalWallpaper22"]
+[editable path="wallDiagonalWallpaper2"]
+[editable path="wallDiagonalWood2"]
+[editable path="wallDoorBrick2"]
+[editable path="wallDoorMarble2"]
+[editable path="wallDoorPlaster22"]
+[editable path="wallDoorPlaster32"]
+[editable path="wallDoorPlaster2"]
+[editable path="wallDoorTiles2"]
+[editable path="wallDoorWallpaper22"]
+[editable path="wallDoorWallpaper2"]
+[editable path="wallDoorWood2"]
+[editable path="wallHalfBrick2"]
+[editable path="wallHalfMarble2"]
+[editable path="wallHalfPlaster22"]
+[editable path="wallHalfPlaster32"]
+[editable path="wallHalfPlaster2"]
+[editable path="wallHalfTiles2"]
+[editable path="wallHalfWallpaper22"]
+[editable path="wallHalfWallpaper2"]
+[editable path="wallHalfWood2"]
+[editable path="wallMarble2"]
+[editable path="wallNibBrick2"]
+[editable path="wallNibMarble2"]
+[editable path="wallNibPlaster22"]
+[editable path="wallNibPlaster32"]
+[editable path="wallNibPlaster2"]
+[editable path="wallNibTiles2"]
+[editable path="wallNibWallpaper22"]
+[editable path="wallNibWallpaper2"]
+[editable path="wallNibWood2"]
+[editable path="wallPlaster22"]
+[editable path="wallPlaster32"]
+[editable path="wallPlaster2"]
+[editable path="wallStairsBrick2"]
+[editable path="wallTiles2"]
+[editable path="wallTurnBrick2"]
+[editable path="wallTurnMarble2"]
+[editable path="wallTurnPlaster22"]
+[editable path="wallTurnPlaster32"]
+[editable path="wallTurnPlaster2"]
+[editable path="wallTurnTiles2"]
+[editable path="wallTurnWallpaper22"]
+[editable path="wallTurnWallpaper2"]
+[editable path="wallTurnWood2"]
+[editable path="wallWallpaper22"]
+[editable path="wallWallpaper2"]
+[editable path="wallWindowBrick2"]
+[editable path="wallWindowMarble2"]
+[editable path="wallWindowPlaster22"]
+[editable path="wallWindowPlaster32"]
+[editable path="wallWindowPlaster2"]
+[editable path="wallWindowTiles2"]
+[editable path="wallWindowWallpaper22"]
+[editable path="wallWindowWallpaper2"]
+[editable path="wallWindowWood2"]
+[editable path="wallWood2"]
+[editable path="WindowWood22"]
+[editable path="windowWood32"]
+[editable path="WindowWood2"]

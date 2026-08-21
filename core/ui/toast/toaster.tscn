@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dghqnqfa8qkkq"]
+
+[ext_resource type="Script" uid="uid://c2dij12b08e1v" path="res://core/ui/toast/toaster.gd" id="1_dox6g"]
+
+[node name="Toaster" type="Control" unique_id=408394193]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dox6g")
+metadata/_custom_type_script = "uid://c2dij12b08e1v"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=152726173]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 9.0
+grow_horizontal = 2
+grow_vertical = 2

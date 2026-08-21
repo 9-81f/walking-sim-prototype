@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://0t3pln6427bv"]
+
+[ext_resource type="PackedScene" uid="uid://b37kkalgnmryk" path="res://game/items/equippables/tools/flashlight_black_equip.tscn" id="1_7ew72"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_g8stw"]
+[ext_resource type="Texture2D" uid="uid://b68ot64bniqhk" path="res://assets/icons/items/flashlight_black_icon.png" id="2_f3w52"]
+[ext_resource type="ArrayMesh" uid="uid://bdmxwibqu0lu3" path="res://assets/equipments/flashlights/flashlight_black.res" id="3_kr2lh"]
+
+[resource]
+script = ExtResource("1_g8stw")
+id = "flashlight_equip_black_001"
+display_name = "Flashlight"
+description = "Standard & handy flashlight."
+icon = ExtResource("2_f3w52")
+mesh = ExtResource("3_kr2lh")
+type = 1
+hand_slot = 2
+equip_scene = ExtResource("1_7ew72")
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

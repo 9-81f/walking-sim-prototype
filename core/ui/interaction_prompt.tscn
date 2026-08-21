@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cd65yvy1mcd3f"]
+
+[ext_resource type="Script" uid="uid://cccbtk4c4wkne" path="res://core/ui/interaction_prompt.gd" id="1_miwuu"]
+[ext_resource type="Texture2D" uid="uid://tkosdp3sb318" path="res://assets/icons/keyboard_mouse_input_prompts/keyboard-&-mouse_sheet_double.png" id="2_efsid"]
+
+[sub_resource type="Gradient" id="Gradient_fwqs0"]
+offsets = PackedFloat32Array(0, 0.30851063, 0.7553192, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.19607843, 0, 0, 0, 0.19607843, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8t6vg"]
+gradient = SubResource("Gradient_fwqs0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u5g0s"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+texture = SubResource("GradientTexture1D_8t6vg")
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmagn"]
+atlas = ExtResource("2_efsid")
+region = Rect2(768, 1152, 128, 128)
+
+[node name="InteractionPrompt" type="PanelContainer" unique_id=1992812548]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -108.0
+offset_right = 30.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_u5g0s")
+script = ExtResource("1_miwuu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=721982644]
+layout_mode = 2
+
+[node name="PromptIcon" type="TextureRect" parent="HBoxContainer" unique_id=684560898]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qmagn")
+expand_mode = 3
+
+[node name="PromptMessage" type="Label" parent="HBoxContainer" unique_id=100843025]
+layout_mode = 2
+text = "pick up"
+horizontal_alignment = 1

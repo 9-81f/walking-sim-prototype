@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://6mabdxpg1554"]
+
+[ext_resource type="Texture2D" uid="uid://cuontrinldtbb" path="res://assets/keys/old_key/old_key_01_icon.png" id="1_n8ik5"]
+[ext_resource type="ArrayMesh" uid="uid://b18e8gn7aeq25" path="res://assets/keys/old_key/key_01.res" id="2_anybs"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="3_h106w"]
+
+[resource]
+script = ExtResource("3_h106w")
+id = "old_key_01"
+display_name = "Old Key"
+description = "Old rusty key"
+icon = ExtResource("1_n8ik5")
+mesh = ExtResource("2_anybs")
+type = 4
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

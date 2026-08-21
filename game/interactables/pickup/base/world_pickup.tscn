@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://day3uq5b1g3od"]
+
+[ext_resource type="Script" uid="uid://34bhp8hs5lar" path="res://game/interactables/pickup/base/world_pickup.gd" id="1_gys37"]
+[ext_resource type="Material" uid="uid://cok0hs2re3bv0" path="res://assets/materials/color_focus_overlay.tres" id="2_kmlcm"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="3_ggyrw"]
+[ext_resource type="Texture2D" uid="uid://tkosdp3sb318" path="res://assets/icons/keyboard_mouse_input_prompts/keyboard-&-mouse_sheet_double.png" id="4_kmlcm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qio0"]
+atlas = ExtResource("4_kmlcm")
+region = Rect2(768, 1152, 128, 128)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_uejpt"]
+radius = 0.7
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lvqrj"]
+radius = 0.1
+height = 0.2
+
+[node name="WorldPickup" type="RigidBody3D" unique_id=1270918494]
+collision_layer = 512
+gravity_scale = 3.0
+script = ExtResource("1_gys37")
+_focus_material_overlay = ExtResource("2_kmlcm")
+
+[node name="Interactable3D" type="Area3D" parent="." unique_id=2062370923]
+collision_layer = 512
+script = ExtResource("3_ggyrw")
+prompt_message = "Pick up"
+input_icon = SubResource("AtlasTexture_8qio0")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable3D" unique_id=856419237]
+shape = SubResource("SphereShape3D_uejpt")
+debug_color = Color(0.9404895, 1.5498103e-05, 0.61695915, 0.41960785)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1588936443]
+shape = SubResource("CapsuleShape3D_lvqrj")
+
+[node name="MeshSocket" type="MeshInstance3D" parent="." unique_id=1622810596]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dobxmnybr6j5a"]
+
+[ext_resource type="ArrayMesh" uid="uid://c7oce3cjykvwc" path="res://assets/equipments/knives/knife_001_mesh.tres" id="1_4atlj"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_hatnw"]
+[ext_resource type="Texture2D" uid="uid://4itf0nrp0dd7" path="res://assets/icons/items/knife001_icon.png" id="1_km2uk"]
+[ext_resource type="PackedScene" uid="uid://dafjrwrc7bio7" path="res://game/items/equippables/weapons/kitchen_knife_equip.tscn" id="1_yc4th"]
+
+[resource]
+script = ExtResource("1_hatnw")
+id = "kitchen-knife-001"
+display_name = "Kitchen Knife"
+description = "A sharp & well-maintained kitchen knife. Looks clean"
+icon = ExtResource("1_km2uk")
+mesh = ExtResource("1_4atlj")
+type = 3
+hand_slot = 1
+equip_scene = ExtResource("1_yc4th")
+is_storable = false
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

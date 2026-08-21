@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://c5y1y8ees2bnd"]
+
+[ext_resource type="Script" uid="uid://dc6p10hjxh044" path="res://game/actors/player/player_fps.gd" id="1_b23eu"]
+[ext_resource type="Script" uid="uid://bucvysv5kaf2m" path="res://core/components/motion_component_3d.gd" id="1_btjqu"]
+[ext_resource type="Script" uid="uid://d0u0jnigygic1" path="res://game/helpers/fps_camera_utility.gd" id="2_tiye0"]
+[ext_resource type="Script" uid="uid://cyh7wi6qfidx0" path="res://core/components/trigger_observer_3d_component.gd" id="4_ehyvf"]
+[ext_resource type="Script" uid="uid://cbtych1f4qbcx" path="res://core/components/fsm_component.gd" id="6_oawdx"]
+[ext_resource type="Script" uid="uid://jwd3aaum55oe" path="res://core/components/carry_component.gd" id="7_ehyvf"]
+[ext_resource type="Script" uid="uid://c15e2o5mhx57h" path="res://game/actors/states/idle_state.gd" id="7_tiye0"]
+[ext_resource type="Script" uid="uid://yamtgsdfk7mx" path="res://game/actors/states/walk_state.gd" id="8_iuwj5"]
+[ext_resource type="Script" uid="uid://otmaj06j4tq3" path="res://game/actors/player/components/input_component.gd" id="8_oawdx"]
+[ext_resource type="Script" uid="uid://rmt52waqsusg" path="res://game/actors/states/run_state.gd" id="9_qdo3w"]
+[ext_resource type="Script" uid="uid://dpl1ks8h4ik1q" path="res://game/components/health_component.gd" id="11_cl8og"]
+[ext_resource type="Script" uid="uid://doab7xvk0qpc3" path="res://game/actors/states/jump_state.gd" id="11_iuwj5"]
+[ext_resource type="Script" uid="uid://cpebs6d1lmciv" path="res://game/actors/states/crouch_state.gd" id="12_qdo3w"]
+[ext_resource type="Script" uid="uid://b552pp0d3p3xn" path="res://core/components/interactor_component_3d.gd" id="14_b0bri"]
+[ext_resource type="Script" uid="uid://dkn4vbs3kvbse" path="res://core/components/equip_component.gd" id="16_7ew0s"]
+[ext_resource type="Script" uid="uid://c672h0saglkn6" path="res://game/actors/states/armed_state.gd" id="17_ehyvf"]
+[ext_resource type="Script" uid="uid://dtnjipr4fb7gb" path="res://game/actors/states/unarmed_state.gd" id="18_8qio0"]
+[ext_resource type="Script" uid="uid://cwcf7tb3dbtqq" path="res://game/actors/states/carry_state.gd" id="18_cl8og"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qmagn"]
+height = 1.7
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
+
+[node name="PlayerFPS" type="CharacterBody3D" unique_id=1807322468]
+collision_layer = 4
+collision_mask = 281
+script = ExtResource("1_b23eu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=679487015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("CapsuleShape3D_qmagn")
+
+[node name="FPSCameraUtility" type="Node3D" parent="." unique_id=583659781 node_paths=PackedStringArray("_motion", "_camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+script = ExtResource("2_tiye0")
+_motion = NodePath("../MotionComponent3D")
+_camera = NodePath("Camera3D")
+_bob_ampl = 0.05
+metadata/_custom_type_script = "uid://d0u0jnigygic1"
+
+[node name="Camera3D" type="Camera3D" parent="FPSCameraUtility" unique_id=515127440]
+
+[node name="LHandEquipSocket" type="Marker3D" parent="FPSCameraUtility/Camera3D" unique_id=727771303]
+transform = Transform3D(0.9999994, 0, 0, 0, 0.99999976, 0, 0, 0, 1, -0.269, -0.32, -0.38)
+
+[node name="RHandEquipSocket" type="Marker3D" parent="FPSCameraUtility/Camera3D" unique_id=1494025759]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.9999995, 0, 0, 0, 0.9999995, 0.27884352, -0.3198923, -0.38004494)
+
+[node name="CarryMarker" type="Marker3D" parent="FPSCameraUtility/Camera3D" unique_id=1922407003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31999993, -0.49799997)
+
+[node name="InteractionCast3D" type="RayCast3D" parent="FPSCameraUtility/Camera3D" unique_id=439539899]
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 513
+collide_with_areas = true
+
+[node name="CeilingCheckCast3D" type="RayCast3D" parent="FPSCameraUtility" unique_id=1275863761]
+target_position = Vector3(0, 1, 0)
+collide_with_areas = true
+
+[node name="TriggerObserverComponent" type="Area3D" parent="." unique_id=720590500]
+collision_layer = 0
+collision_mask = 1024
+script = ExtResource("4_ehyvf")
+metadata/_custom_type_script = "uid://cyh7wi6qfidx0"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerObserverComponent" unique_id=99364534]
+shape = SubResource("SphereShape3D_qmagn")
+debug_color = Color(0.9736423, 0, 0.43591514, 0.41960785)
+
+[node name="Interactor3D" type="Node" parent="." unique_id=574459745 node_paths=PackedStringArray("_raycast", "_actor")]
+script = ExtResource("14_b0bri")
+_raycast = NodePath("../FPSCameraUtility/Camera3D/InteractionCast3D")
+_actor = NodePath("..")
+metadata/_custom_type_script = "uid://b552pp0d3p3xn"
+
+[node name="InputComponent" type="Node" parent="." unique_id=1574988100]
+script = ExtResource("8_oawdx")
+metadata/_custom_type_script = "uid://otmaj06j4tq3"
+
+[node name="MotionComponent3D" type="Node" parent="." unique_id=1280130432 node_paths=PackedStringArray("ceiling_checker")]
+script = ExtResource("1_btjqu")
+ceiling_checker = NodePath("../FPSCameraUtility/CeilingCheckCast3D")
+metadata/_custom_type_script = "uid://bucvysv5kaf2m"
+
+[node name="EquipComponent" type="Node" parent="." unique_id=2137199745 node_paths=PackedStringArray("r_hand_socket_marker", "l_hand_socket_marker")]
+script = ExtResource("16_7ew0s")
+r_hand_socket_marker = NodePath("../FPSCameraUtility/Camera3D/RHandEquipSocket")
+l_hand_socket_marker = NodePath("../FPSCameraUtility/Camera3D/LHandEquipSocket")
+metadata/_custom_type_script = "uid://dkn4vbs3kvbse"
+
+[node name="CarryComponent" type="Node" parent="." unique_id=2025416107 node_paths=PackedStringArray("carry_marker")]
+script = ExtResource("7_ehyvf")
+carry_marker = NodePath("../FPSCameraUtility/Camera3D/CarryMarker")
+metadata/_custom_type_script = "uid://jwd3aaum55oe"
+
+[node name="HealthComponent" type="Node" parent="." unique_id=2042106492]
+script = ExtResource("11_cl8og")
+metadata/_custom_type_script = "uid://dpl1ks8h4ik1q"
+
+[node name="LocomotionFSM" type="Node" parent="." unique_id=1084679752]
+script = ExtResource("6_oawdx")
+metadata/_custom_type_script = "uid://cbtych1f4qbcx"
+
+[node name="IdleState" type="Node" parent="LocomotionFSM" unique_id=1446676364 node_paths=PackedStringArray("_motion", "_input")]
+script = ExtResource("7_tiye0")
+_motion = NodePath("../../MotionComponent3D")
+_input = NodePath("../../InputComponent")
+metadata/_custom_type_script = "uid://c15e2o5mhx57h"
+
+[node name="WalkState" type="Node" parent="LocomotionFSM" unique_id=1625672174 node_paths=PackedStringArray("_motion", "_input")]
+script = ExtResource("8_iuwj5")
+_motion = NodePath("../../MotionComponent3D")
+_input = NodePath("../../InputComponent")
+metadata/_custom_type_script = "uid://yamtgsdfk7mx"
+
+[node name="RunState" type="Node" parent="LocomotionFSM" unique_id=1607141983 node_paths=PackedStringArray("_motion", "_input")]
+script = ExtResource("9_qdo3w")
+_motion = NodePath("../../MotionComponent3D")
+_input = NodePath("../../InputComponent")
+metadata/_custom_type_script = "uid://rmt52waqsusg"
+
+[node name="JumpState" type="Node" parent="LocomotionFSM" unique_id=1769628558 node_paths=PackedStringArray("_motion")]
+script = ExtResource("11_iuwj5")
+_motion = NodePath("../../MotionComponent3D")
+metadata/_custom_type_script = "uid://doab7xvk0qpc3"
+
+[node name="CrouchState" type="Node" parent="LocomotionFSM" unique_id=1613328745 node_paths=PackedStringArray("_motion", "_input", "_collision_shape", "_tag_along")]
+script = ExtResource("12_qdo3w")
+_motion = NodePath("../../MotionComponent3D")
+_input = NodePath("../../InputComponent")
+_collision_shape = NodePath("../../CollisionShape3D")
+_tag_along = NodePath("../../FPSCameraUtility")
+metadata/_custom_type_script = "uid://cpebs6d1lmciv"
+
+[node name="ActionFSM" type="Node" parent="." unique_id=424083808]
+script = ExtResource("6_oawdx")
+default_state = &"UnarmedState"
+metadata/_custom_type_script = "uid://cbtych1f4qbcx"
+
+[node name="ArmedState" type="Node" parent="ActionFSM" unique_id=1675156836 node_paths=PackedStringArray("equip")]
+script = ExtResource("17_ehyvf")
+equip = NodePath("../../EquipComponent")
+metadata/_custom_type_script = "uid://c672h0saglkn6"
+
+[node name="UnarmedState" type="Node" parent="ActionFSM" unique_id=120747266 node_paths=PackedStringArray("equip")]
+script = ExtResource("18_8qio0")
+equip = NodePath("../../EquipComponent")
+metadata/_custom_type_script = "uid://dtnjipr4fb7gb"
+
+[node name="CarryState" type="Node" parent="ActionFSM" unique_id=1155031821]
+script = ExtResource("18_cl8og")
+metadata/_custom_type_script = "uid://cwcf7tb3dbtqq"

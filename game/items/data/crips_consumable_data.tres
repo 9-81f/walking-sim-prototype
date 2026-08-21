@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dxustpfhqcied"]
+
+[ext_resource type="Texture2D" uid="uid://c4k63uqlx31eg" path="res://assets/consumables/chips-icon.png" id="1_1w83x"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_typwl"]
+[ext_resource type="ArrayMesh" uid="uid://bwe76fu2knstb" path="res://assets/consumables/chipsbottle.res" id="2_hppcp"]
+
+[resource]
+script = ExtResource("1_typwl")
+id = "crisps-consumable-001"
+display_name = "Crisps"
+description = "A bag of crisps. Add +5 health on consumption."
+icon = ExtResource("1_1w83x")
+mesh = ExtResource("2_hppcp")
+is_stackable = true
+max_stack_size = 10
+stats_modifiers = Dictionary[String, Variant]({
+"heal": 5
+})
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

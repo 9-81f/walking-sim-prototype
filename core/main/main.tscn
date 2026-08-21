@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://obqrhadcd84u"]
+
+[ext_resource type="PackedScene" uid="uid://c5y1y8ees2bnd" path="res://game/actors/player/player_fps.tscn" id="1_8fcwd"]
+[ext_resource type="Script" uid="uid://cp85g8pcwm2is" path="res://core/main/main.gd" id="1_k5wvu"]
+[ext_resource type="PackedScene" uid="uid://blcxorm5qb0kt" path="res://core/main/ui/hud.tscn" id="5_81xgm"]
+[ext_resource type="PackedScene" uid="uid://sfh4ye4pxs3i" path="res://game/levels/sandbox.tscn" id="7_xwlw8"]
+[ext_resource type="PackedScene" uid="uid://bqn7wqiorrhgn" path="res://game/ui/inspect/inspect_ui.tscn" id="8_5alkf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_k5wvu"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_81xgm"]
+sky_material = SubResource("ProceduralSkyMaterial_k5wvu")
+
+[sub_resource type="Environment" id="Environment_qctb3"]
+background_mode = 2
+sky = SubResource("Sky_81xgm")
+glow_enabled = true
+
+[node name="Main" type="Node3D" unique_id=1450284131]
+script = ExtResource("1_k5wvu")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=66065697]
+environment = SubResource("Environment_qctb3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2058568249]
+light_energy = 0.15
+shadow_enabled = true
+sky_mode = 2
+
+[node name="PlayerFPS" parent="." unique_id=1807322468 instance=ExtResource("1_8fcwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="ActiveLevel" type="Node3D" parent="." unique_id=788955052]
+
+[node name="Sandbox" parent="ActiveLevel" unique_id=1366386856 instance=ExtResource("7_xwlw8")]
+
+[node name="HUD" parent="." unique_id=1545210953 instance=ExtResource("5_81xgm")]
+
+[node name="Windows" parent="HUD" index="1" unique_id=1575906040]
+visible = true
+
+[node name="InspectUI" parent="HUD/Windows" index="0" unique_id=1459878502 instance=ExtResource("8_5alkf")]
+layout_mode = 1
+
+[editable path="HUD"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bjhwqb8h0kf1x"]
+
+[ext_resource type="Texture2D" uid="uid://bm77igx34civf" path="res://icon.svg" id="1_erk2a"]
+[ext_resource type="Script" uid="uid://dbll06wm4jdxt" path="res://game/ui/inventory/components/item_slot.gd" id="2_85v88"]
+
+[node name="ItemSlot" type="Button" unique_id=310976811]
+custom_minimum_size = Vector2(120, 120)
+offset_right = 120.0
+offset_bottom = 120.0
+text = "0"
+icon = ExtResource("1_erk2a")
+alignment = 2
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+script = ExtResource("2_85v88")

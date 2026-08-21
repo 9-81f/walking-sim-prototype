@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://jiux1lg5yvi8"]
+
+[ext_resource type="PackedScene" uid="uid://dqop5reuphnmj" path="res://assets/environments/PSX modular house interior pack/geometry/door_wood_2.tscn" id="1_8irli"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="2_v3kht"]
+[ext_resource type="Texture2D" uid="uid://tkosdp3sb318" path="res://assets/icons/keyboard_mouse_input_prompts/keyboard-&-mouse_sheet_double.png" id="3_v3kht"]
+[ext_resource type="Script" uid="uid://b7sokq5tfwike" path="res://game/components/interactable_door_component.gd" id="4_l65ip"]
+[ext_resource type="Material" uid="uid://be3utuf1r1apg" path="res://assets/materials/color_focus_overlay_02.tres" id="5_v3kht"]
+[ext_resource type="Script" uid="uid://d05res58un2au" path="res://game/components/lock_component.gd" id="6_fdk8d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2asln"]
+atlas = ExtResource("3_v3kht")
+region = Rect2(768, 1152, 128, 128)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kjoil"]
+radius = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
+size = Vector3(1.6359375, 2.525, 0.25)
+
+[node name="WoodDoorWhite01" type="Node3D" unique_id=414897940]
+
+[node name="doorWood2" parent="." unique_id=518525437 instance=ExtResource("1_8irli")]
+
+[node name="doorWood_001" parent="doorWood2/doorWood" parent_id_path=PackedInt32Array(518525437, 349414273) index="0" unique_id=795664557]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, -0.817564, 0.049999878, 2)
+
+[node name="Interactable3D" type="Area3D" parent="doorWood2/doorWood/doorWood_001" index="0" unique_id=142511234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.817564, -0.049999878, -2)
+script = ExtResource("2_v3kht")
+prompt_message = "Open"
+input_icon = SubResource("AtlasTexture_2asln")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="doorWood2/doorWood/doorWood_001/Interactable3D" unique_id=1321646742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+shape = SubResource("SphereShape3D_kjoil")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="doorWood2/doorWood/doorWood_001" index="1" unique_id=1318699685]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="doorWood2/doorWood/doorWood_001/StaticBody3D" unique_id=1786084581]
+transform = Transform3D(0.9999934, 0, 0, 0, 1, 0, 0, 0, 0.9999934, 0.8179646, 1.2625002, 9.536743e-07)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="InteractableDoorComponent" type="Node3D" parent="." unique_id=1667934561 node_paths=PackedStringArray("_door_pivot", "_interact", "_lock_component")]
+script = ExtResource("4_l65ip")
+_door_pivot = NodePath("../doorWood2/doorWood/doorWood_001")
+_focus_material_overlay = ExtResource("5_v3kht")
+_interact = NodePath("../doorWood2/doorWood/doorWood_001/Interactable3D")
+_lock_component = NodePath("LockComponent")
+metadata/_custom_type_script = "uid://b7sokq5tfwike"
+
+[node name="LockComponent" type="Node" parent="InteractableDoorComponent" unique_id=812169925]
+script = ExtResource("6_fdk8d")
+_is_permanent_locked = true
+metadata/_custom_type_script = "uid://d05res58un2au"
+
+[editable path="doorWood2"]

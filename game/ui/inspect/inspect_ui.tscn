@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://bqn7wqiorrhgn"]
+
+[ext_resource type="Script" uid="uid://cg5jrcqj1guxk" path="res://game/ui/inspect/inspect_ui.gd" id="1_tjjrm"]
+[ext_resource type="Texture2D" uid="uid://bvh4xr5sf67uq" path="res://assets/icons/keyboard_mouse_input_prompts/keyboard-&-mouse_sheet_default.png" id="2_rstuf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmagn"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 0.49019608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rstuf"]
+bg_color = Color(0.17254902, 0.17254902, 0.17254902, 0.40784314)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_my5ee"]
+atlas = ExtResource("2_rstuf")
+region = Rect2(320, 896, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i5s6"]
+atlas = ExtResource("2_rstuf")
+region = Rect2(384, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y58q"]
+atlas = ExtResource("2_rstuf")
+region = Rect2(448, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wk7n"]
+atlas = ExtResource("2_rstuf")
+region = Rect2(576, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ry31"]
+atlas = ExtResource("2_rstuf")
+region = Rect2(960, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7leu"]
+atlas = ExtResource("2_rstuf")
+region = Rect2(640, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eira"]
+atlas = ExtResource("2_rstuf")
+region = Rect2(128, 576, 64, 64)
+
+[node name="InspectUI" type="Control" unique_id=1459878502]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tjjrm")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2025757487]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qmagn")
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer" unique_id=663784699]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer" unique_id=994494849]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=995847719]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer" unique_id=2046153728]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SubViewport" type="SubViewport" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer" unique_id=1391415385]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=2022142620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+near = 0.01
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=1189554007]
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=1162623479]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer" unique_id=50023548]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=531256335]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Title"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=246228985]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ItemDescription" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=137899535]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+text = "Description"
+autowrap_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=430386111]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1034185703]
+layout_mode = 2
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet"
+fit_content = true
+
+[node name="InputLegendContainer" type="PanelContainer" parent="PanelContainer/CenterContainer/VBoxContainer" unique_id=1205346237]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rstuf")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer" unique_id=1034472279]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="LegendFlowContainer" type="HFlowContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer" unique_id=1715084668]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 8
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer" unique_id=1161058326]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer" unique_id=170238000]
+layout_mode = 2
+theme_override_constants/separation = -16
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer/HBoxContainer" unique_id=1185700745]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_my5ee")
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer/HBoxContainer" unique_id=133101324]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_5i5s6")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer" unique_id=1645972772]
+layout_mode = 2
+theme_override_constants/line_spacing = 0
+text = "Rotate 
+Left/Right"
+vertical_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer" unique_id=882422119]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer5" unique_id=307813959]
+layout_mode = 2
+theme_override_constants/separation = -16
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer5/HBoxContainer" unique_id=1752458236]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_7y58q")
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer5/HBoxContainer" unique_id=536635520]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_8wk7n")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer5" unique_id=522116600]
+layout_mode = 2
+theme_override_constants/line_spacing = 0
+text = "Rotate 
+Up/Down"
+vertical_alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer" unique_id=1615068153]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer6" unique_id=899998726]
+layout_mode = 2
+theme_override_constants/separation = -16
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer6/HBoxContainer" unique_id=894023451]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_7ry31")
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer6/HBoxContainer" unique_id=484707715]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_f7leu")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer6" unique_id=702909155]
+layout_mode = 2
+theme_override_constants/line_spacing = 0
+text = "Zoom
+In/Out"
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer" unique_id=230812887]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer4" unique_id=815628126]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_3eira")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/InputLegendContainer/MarginContainer/LegendFlowContainer/HBoxContainer4" unique_id=1565954622]
+layout_mode = 2
+text = "Exit"
+vertical_alignment = 1

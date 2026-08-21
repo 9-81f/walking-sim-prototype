@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://prcsfo1q7apm"]
+
+[ext_resource type="Texture2D" uid="uid://4itf0nrp0dd7" path="res://assets/icons/items/knife001_icon.png" id="1_1m4kt"]
+[ext_resource type="Script" uid="uid://c613ty1thnjav" path="res://core/ui/toast/toast.gd" id="1_aqe4r"]
+
+[sub_resource type="Gradient" id="Gradient_c4mph"]
+colors = PackedColorArray(0, 0, 0, 0.41568628, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7pest"]
+gradient = SubResource("Gradient_c4mph")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c4mph"]
+texture = SubResource("GradientTexture1D_7pest")
+
+[node name="Toast" type="PanelContainer" unique_id=322206982]
+offset_right = 320.0
+offset_bottom = 36.0
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_c4mph")
+script = ExtResource("1_aqe4r")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2003076100]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1336949797]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ToastIcon" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=1435381933]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_1m4kt")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="ToastMessage" type="Label" parent="MarginContainer/HBoxContainer" unique_id=101976123]
+layout_mode = 2
+text = "1x added to inventory"
+vertical_alignment = 1

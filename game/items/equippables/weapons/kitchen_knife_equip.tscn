@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dafjrwrc7bio7"]
+
+[ext_resource type="Script" uid="uid://dy4mtx5vq40wr" path="res://game/items/equippables/weapons/kitchen_knife_equip.gd" id="1_qacb0"]
+[ext_resource type="ArrayMesh" uid="uid://c7oce3cjykvwc" path="res://assets/equipments/knives/knife_001_mesh.tres" id="2_e8x1d"]
+
+[node name="KitchenKnifeEquip" type="Node3D" unique_id=53833476]
+script = ExtResource("1_qacb0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1521015010]
+transform = Transform3D(-0.45, 0, -3.934025e-08, 0, 0.45, 0, 3.934025e-08, 0, -0.45, 0, 0, 0)
+cast_shadow = 0
+mesh = ExtResource("2_e8x1d")
