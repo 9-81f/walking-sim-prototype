@@ -12,9 +12,9 @@ region = Rect2(768, 1152, 128, 128)
 [sub_resource type="SphereShape3D" id="SphereShape3D_uejpt"]
 radius = 0.7
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lvqrj"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_k8fu3"]
+height = 0.1
 radius = 0.1
-height = 0.2
 
 [node name="WorldPickup" type="RigidBody3D" unique_id=1270918494]
 collision_layer = 512
@@ -34,7 +34,8 @@ shape = SubResource("SphereShape3D_uejpt")
 debug_color = Color(0.9404895, 1.5498103e-05, 0.61695915, 0.41960785)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1588936443]
-shape = SubResource("CapsuleShape3D_lvqrj")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.049934216, 0)
+shape = SubResource("CylinderShape3D_k8fu3")
 
 [node name="MeshSocket" type="MeshInstance3D" parent="." unique_id=1622810596]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)

@@ -9,6 +9,8 @@ signal blurred(interactor: Node3D)
 @export var is_enabled := true
 @export var input_icon: Texture2D = preload("res://assets/icons/keyboard_mouse_input_prompts/Default/keyboard_f.png")
 
+var _is_focused := false
+
 class PromptData:
 	var prompt_message: String
 	var prompt_icon: Texture2D
@@ -22,15 +24,20 @@ func get_prompt() -> PromptData:
 
 func focus(interactor: Node3D) -> void:
 	if not is_enabled: return
+	_is_focused = true
 	UiEvents.display_interaction_prompt_requested.emit(get_prompt())
 	focused.emit(interactor)
 	
 func interact(interactor: Node3D) -> void:
 	if not is_enabled: return
-	UiEvents.dismiss_interaction_prompt_requested.emit()
+	if _is_focused:
+		UiEvents.display_interaction_prompt_requested.emit(get_prompt())
+	else:
+		UiEvents.dismiss_interaction_prompt_requested.emit()
 	interacted.emit(interactor)
 	
 func blur(interactor: Node3D) -> void:
+	_is_focused = false
 	UiEvents.dismiss_interaction_prompt_requested.emit()
 	blurred.emit(interactor)
 	
