@@ -32,6 +32,8 @@ func _physics_process(_delta: float) -> void:
 			_set_target(collider)
 		else:
 			_clear_target()
+	else:
+		_clear_target()
 
 func _set_target(interaction: Interactable3D) -> void:
 	if current_interaction:

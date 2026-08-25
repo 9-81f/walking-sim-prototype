@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://cwpqh1s2ml3fa"]
 
 [ext_resource type="PackedScene" uid="uid://bb0mkntmfd30i" path="res://assets/environments/PSX modular house interior pack/props/cabinetSink.glb" id="1_wjulk"]
+[ext_resource type="Script" uid="uid://r4m0eshactwm" path="res://game/components/loot_container_component.gd" id="2_l6b6a"]
 [ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="2_lr6fa"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="3_oj0g2"]
 [ext_resource type="Script" uid="uid://b7sokq5tfwike" path="res://game/components/interactable_door_component.gd" id="3_uer2q"]
-[ext_resource type="Script" uid="uid://evm6758yh37o" path="res://game/components/container_component.gd" id="4_71cu3"]
+[ext_resource type="Script" uid="uid://d05res58un2au" path="res://game/components/lock_component.gd" id="7_let6a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
 size = Vector3(0.2, 0.6, 0.5)
@@ -20,39 +22,72 @@ size = Vector3(0.8, 0.0392334, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_oj0g2"]
 size = Vector3(0.8, 0.7, 0.039892577)
 
-[node name="CabinetSink" unique_id=1025581081 instance=ExtResource("1_wjulk")]
+[node name="CabinetSink" unique_id=1025581081 node_paths=PackedStringArray("_enclosures") instance=ExtResource("1_wjulk")]
+script = ExtResource("2_l6b6a")
+_enclosures = {
+NodePath("LeftDoorManager"): null,
+NodePath("RightDoorManager"): null
+}
 
-[node name="Interactable3D" type="Area3D" parent="cabinetSink/cabinetSink_001" parent_id_path=PackedInt32Array(2136986575) index="0" unique_id=342838648]
+[node name="LeftDoorManager" type="Node3D" parent="." index="0" unique_id=204270353 node_paths=PackedStringArray("_mesh_to_tween", "interact", "lock")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49123535, 0.39471865, 0.26017076)
+script = ExtResource("3_uer2q")
+_mesh_to_tween = NodePath("../cabinetSink/cabinetSink_002")
+_target_tween_prop_value = -100.0
+_enable_focus_overlay = false
+interact = NodePath("../cabinetSink/cabinetSink_002/Interactable3D")
+lock = NodePath("LockComponent")
+metadata/_custom_type_script = "uid://b7sokq5tfwike"
+
+[node name="LockComponent" type="Node" parent="LeftDoorManager" index="0" unique_id=1455128960]
+script = ExtResource("7_let6a")
+_remove_key_on_use = true
+metadata/_custom_type_script = "uid://d05res58un2au"
+
+[node name="RightDoorManager" type="Node3D" parent="." index="1" unique_id=2025431917 node_paths=PackedStringArray("_mesh_to_tween", "interact", "lock")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39123535, 0.39471865, -0.2601698)
+script = ExtResource("3_uer2q")
+_mesh_to_tween = NodePath("../cabinetSink/cabinetSink_001")
+_target_tween_prop_value = 100.0
+_enable_focus_overlay = false
+interact = NodePath("../cabinetSink/cabinetSink_001/Interactable3D")
+lock = NodePath("LockComponent")
+metadata/_custom_type_script = "uid://b7sokq5tfwike"
+
+[node name="LockComponent" type="Node" parent="RightDoorManager" index="0" unique_id=465130662]
+script = ExtResource("7_let6a")
+_remove_key_on_use = true
+metadata/_custom_type_script = "uid://d05res58un2au"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="cabinetSink/cabinetSink_001" parent_id_path=PackedInt32Array(2136986575) index="0" unique_id=665532504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.20999998)
+script = ExtResource("3_oj0g2")
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="Interactable3D" type="Area3D" parent="cabinetSink/cabinetSink_001" parent_id_path=PackedInt32Array(2136986575) index="1" unique_id=342838648 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21)
 script = ExtResource("2_lr6fa")
+_spatial_prompt = NodePath("../SpatialPromptComponent")
 metadata/_custom_type_script = "uid://cwcrparb0y6ct"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetSink/cabinetSink_001/Interactable3D" index="0" unique_id=318655480]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.20996094)
 shape = SubResource("BoxShape3D_qmagn")
 
-[node name="InteractableDoorComponent" type="Node3D" parent="cabinetSink/cabinetSink_001" parent_id_path=PackedInt32Array(2136986575) index="1" unique_id=2025431917 node_paths=PackedStringArray("_door_pivot", "_interact")]
-script = ExtResource("3_uer2q")
-_door_pivot = NodePath("..")
-_opened_pivot_angle = 100.05
-_interact = NodePath("../Interactable3D")
-metadata/_custom_type_script = "uid://b7sokq5tfwike"
+[node name="SpatialPromptComponent" type="Sprite3D" parent="cabinetSink/cabinetSink_002" parent_id_path=PackedInt32Array(1512177058) index="0" unique_id=1412287233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.20999998)
+script = ExtResource("3_oj0g2")
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
 
-[node name="Interactable3D" type="Area3D" parent="cabinetSink/cabinetSink_002" parent_id_path=PackedInt32Array(1512177058) index="0" unique_id=1578807975]
+[node name="Interactable3D" type="Area3D" parent="cabinetSink/cabinetSink_002" parent_id_path=PackedInt32Array(1512177058) index="1" unique_id=1578807975 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.21)
 script = ExtResource("2_lr6fa")
+_spatial_prompt = NodePath("../SpatialPromptComponent")
 metadata/_custom_type_script = "uid://cwcrparb0y6ct"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetSink/cabinetSink_002/Interactable3D" index="0" unique_id=1965374217]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.20999998)
 shape = SubResource("BoxShape3D_uer2q")
 
-[node name="InteractableDoorComponent" type="Node3D" parent="cabinetSink/cabinetSink_002" parent_id_path=PackedInt32Array(1512177058) index="1" unique_id=204270353 node_paths=PackedStringArray("_door_pivot", "_interact")]
-script = ExtResource("3_uer2q")
-_door_pivot = NodePath("..")
-_opened_pivot_angle = -100.05
-_interact = NodePath("../Interactable3D")
-metadata/_custom_type_script = "uid://b7sokq5tfwike"
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=373034522]
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=373034522]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.5514582, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1918206241]
@@ -70,13 +105,3 @@ shape = SubResource("BoxShape3D_oj0g2")
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=842278275]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, -0.152, -0.48)
 shape = SubResource("BoxShape3D_oj0g2")
-
-[node name="RightContainerComponent" type="Node" parent="." index="2" unique_id=1929818235 node_paths=PackedStringArray("_door_component")]
-script = ExtResource("4_71cu3")
-_door_component = NodePath("../cabinetSink/cabinetSink_001/InteractableDoorComponent")
-metadata/_custom_type_script = "uid://evm6758yh37o"
-
-[node name="LeftContainerComponent" type="Node" parent="." index="3" unique_id=1328105635 node_paths=PackedStringArray("_door_component")]
-script = ExtResource("4_71cu3")
-_door_component = NodePath("../cabinetSink/cabinetSink_002/InteractableDoorComponent")
-metadata/_custom_type_script = "uid://evm6758yh37o"

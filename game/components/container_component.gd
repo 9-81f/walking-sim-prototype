@@ -10,12 +10,14 @@ func _ready() -> void:
 	else:
 		_set_items_enabled(false)
 		
-	_door_component.door_opened.connect(func(): _set_items_enabled(true))
-	_door_component.door_closed.connect(func(): _set_items_enabled(false))
+	_door_component.opened.connect(func(): _set_items_enabled(true))
+	_door_component.closed.connect(func(): _set_items_enabled(false))
 
 func _set_items_enabled(enable: bool) -> void:
 	for interactable in _contained_interactables:
-		if is_instance_valid(interactable):
-			var interactable_node := interactable.get_node_or_null("Interactable3D") as Interactable3D
-			if interactable_node:
-				interactable_node.is_enabled = enable
+		if not is_instance_valid(interactable): continue
+			
+		var interactable_node := interactable.get_node_or_null("Interactable3D") as Interactable3D
+		if interactable_node:
+			interactable_node.is_enabled = enable
+			interactable_node.update_prompt_state()
