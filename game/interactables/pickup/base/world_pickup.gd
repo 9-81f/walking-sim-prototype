@@ -1,14 +1,18 @@
 extends RigidBody3D
 class_name WorldPickup
 
+@export_category("Display Settings")
 @export var display_standing := false
-@export var data: ItemData
-@export_range(1, 99) var _quantity := 1
+@export var _enable_focus_overlay := true
 @export var _focus_material_overlay: StandardMaterial3D
 @export var _interaction_radius: float = 0.3:
 	set(value):
 		_interaction_radius = value
 		_update_interaction_radius()
+
+@export_category("Data Settings")
+@export var data: ItemData
+@export_range(1, 99) var _quantity := 1
 
 @onready var _mesh_socket: MeshInstance3D = $MeshSocket
 @onready var interactable: Interactable3D = $Interactable3D
@@ -46,9 +50,10 @@ func _update_interaction_radius() -> void:
 	(_interact_shape.shape as SphereShape3D).radius = _interaction_radius
 		
 func _on_focused(_interactor: Node3D) -> void:
+	if not _enable_focus_overlay: return
 	_mesh_socket.material_overlay = _focus_material_overlay
 
-func _on_interacted(interactor: Node3D) -> void:
+func _on_interacted(interactor: Node3D) -> void:	
 	if data.is_storable: 
 		_store_pickup(
 			func():
@@ -62,6 +67,7 @@ func _on_interacted(interactor: Node3D) -> void:
 				_carry_pickup(interactor)
 
 func _on_blurred(_interactor: Node3D) -> void:
+	if not _enable_focus_overlay: return
 	_mesh_socket.material_overlay = null
 	
 func _store_pickup(callback: Callable = func(): pass) -> void:

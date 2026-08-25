@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c5y1y8ees2bnd" path="res://game/actors/player/player_fps.tscn" id="1_8fcwd"]
 [ext_resource type="Script" uid="uid://cp85g8pcwm2is" path="res://core/main/main.gd" id="1_k5wvu"]
 [ext_resource type="PackedScene" uid="uid://blcxorm5qb0kt" path="res://core/main/ui/hud.tscn" id="5_81xgm"]
+[ext_resource type="Texture2D" uid="uid://hye73388185s" path="res://assets/icons/reticle/crosshair-000.png" id="6_81xgm"]
 [ext_resource type="PackedScene" uid="uid://sfh4ye4pxs3i" path="res://game/levels/sandbox.tscn" id="7_xwlw8"]
 [ext_resource type="PackedScene" uid="uid://bqn7wqiorrhgn" path="res://game/ui/inspect/inspect_ui.tscn" id="8_5alkf"]
 
@@ -43,5 +44,31 @@ visible = true
 
 [node name="InspectUI" parent="HUD/Windows" index="0" unique_id=1459878502 instance=ExtResource("8_5alkf")]
 layout_mode = 1
+
+[node name="Reticle" type="Control" parent="HUD" unique_id=731120024]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Reticle" unique_id=391718159]
+modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -74.0
+offset_right = 74.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_81xgm")
 
 [editable path="HUD"]

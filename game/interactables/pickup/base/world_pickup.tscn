@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://cok0hs2re3bv0" path="res://assets/materials/color_focus_overlay.tres" id="2_kmlcm"]
 [ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="3_ggyrw"]
 [ext_resource type="Texture2D" uid="uid://tkosdp3sb318" path="res://assets/icons/keyboard_mouse_input_prompts/keyboard-&-mouse_sheet_double.png" id="4_kmlcm"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="5_ggyrw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qio0"]
 atlas = ExtResource("4_kmlcm")
@@ -17,17 +18,25 @@ height = 0.1
 radius = 0.1
 
 [node name="WorldPickup" type="RigidBody3D" unique_id=1270918494]
-collision_layer = 512
+collision_layer = 0
 gravity_scale = 3.0
 script = ExtResource("1_gys37")
 _focus_material_overlay = ExtResource("2_kmlcm")
 
-[node name="Interactable3D" type="Area3D" parent="." unique_id=2062370923]
+[node name="Interactable3D" type="Area3D" parent="." unique_id=2062370923 node_paths=PackedStringArray("_spatial_prompt")]
 collision_layer = 512
 script = ExtResource("3_ggyrw")
 prompt_message = "Pick up"
 input_icon = SubResource("AtlasTexture_8qio0")
+_spatial_prompt = NodePath("SpatialPromptComponent")
 metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="Interactable3D" unique_id=1606224821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+billboard = 2
+no_depth_test = true
+script = ExtResource("5_ggyrw")
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable3D" unique_id=856419237]
 shape = SubResource("SphereShape3D_uejpt")
