@@ -1,0 +1,129 @@
+[gd_scene format=4 uid="uid://b3weo10n7b5pe"]
+
+[ext_resource type="PackedScene" uid="uid://bsas8et3bjsv3" path="res://game/interactables/switches/base_switch.tscn" id="1_gddif"]
+[ext_resource type="Texture2D" uid="uid://cmky6gf5f18om" path="res://assets/environments/PSX modular house interior pack/props/lightSwitch_albedo.png" id="2_8qovi"]
+[ext_resource type="Texture2D" uid="uid://c7yesv03sj7wu" path="res://assets/environments/PSX modular house interior pack/props/lightSwitch_roughness.png" id="3_b22f5"]
+[ext_resource type="Script" uid="uid://fet110r47r63" path="res://core/components/flick_switch_component.gd" id="4_qf11x"]
+[ext_resource type="Script" uid="uid://b4dg5dsmsigbm" path="res://core/components/audio_toggle_component.gd" id="5_b22f5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_amtst"]
+resource_name = "lightSwitch"
+albedo_texture = ExtResource("2_8qovi")
+metallic_texture = ExtResource("3_b22f5")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_b22f5")
+roughness_texture_channel = 1
+texture_filter = 2
+metadata/extras = {
+"yp": {
+"active_ypaint_node": "",
+"expand_content": 0.0
+}
+}
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hysf3"]
+_surfaces = [{
+"aabb": AABB(-3.9126608e-06, -0.09373875, -0.09373875, 0.034728736, 0.1874775, 0.1874775),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("DgAMAAEABgABAAwADgAPAAwADwAGAAwACwAPAA4AAAALAA4ACwANAA8ADQALAAAADQAQAA8ADwAQAAYADQAKABAADQAAAAoABwAGABAABwAQAAgACAAQAAoABAAGAAcACAAKAAkACQAKAAAACQAAAAUABAACAAYABgACAAEAAwACAAQABQAAABEABQARAAMAAwARAAIAEQABAAIAAAAOABEAEQAOAAEA"),
+"lods": [0.0189224, PackedByteArray("AAABAAIAAwAAAAIAAwACAAQABQAAAAMABAACAAYABgACAAEABAAGAAcABwAGAAgACQAAAAUACAAKAAkACQAKAAAACAAGAAoAAAALAAEABgABAAwACwAMAAEADQAKAAYADQAAAAoADQAGAAwADQALAAAACwANAAwA")],
+"name": "lightSwitch",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("dq0AAP//AAAAAP////8AAHat/////wAA////f0KpAADn6TfLQqkAAOfpxzRCqQAAdq3//wAAAADn6TfLvFYAAP///3+8VgAA5+nHNLxWAAB2rQAAAAAAAAAAAAD//wAAAAD//wAAAAAAAAAAAAAAAAAA/3///wAAAAD/fwAAAAD///9/AAAAAP///3///wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g5c7w"]
+resource_name = "lightSwitch_Cube_089"
+_surfaces = [{
+"aabb": AABB(-3.9126608e-06, -0.09373875, -0.09373875, 0.034728736, 0.1874775, 0.1874775),
+"attribute_data": PackedByteArray("pPITvCnrfYCk8n2AKesTvIT4/////2jE/////4T4aMSE+BO8//99gP//E7yE+H2AM/b//7juaMQz9mjEuO7//zmthrvP6PB/z+iGuzmt8H+i1O3h0+j//6DUcfM8rf//1ujcw3DBc/Oh1GfQb8Ht4XHBadA+rdzDBMuGuwTL8H8z9jPiKesz4jP2SJ4p60ieotTt4dPo//+g1HHz2Ojt4XDBc/M5re3hb8Ht4Tyt//+h1GfQ2Ojt4dbo3MM+rdzDccFp0Dmt7eE="),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("HgARABIAHgAfABEAEAAfAB4AEAATAB8AIAANAA4AIAAhAA0ADAAhACAADAAPACEAIgABAAIAIgAjAAEAAAAjACIAAAADACMABAAFAAYABAAHAAUACAAJAAoACAALAAkAJAAlACYAJAAnACUAFgAXABkAFgAVABcAHAAYABoAHAAdABgAKAApACoAKAArACkALAAtABQALAAuAC0AGwAvADAAGwAxAC8A"),
+"lods": [0.0189224, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFgAVABcAFAAYABUAFgAXABkAGgAYABQAGQAXABsAHAAYABoAGwAXAB0AHAAdABgAGwAdABwA")],
+"material": SubResource("StandardMaterial3D_amtst"),
+"name": "lightSwitch",
+"primitive": 3,
+"uv_scale": Vector4(1.9820614, 1.9820614, 0, 0),
+"vertex_count": 50,
+"vertex_data": PackedByteArray("dq0AAP//AIAAAP////8AgHat/////wCAAAAAAP//AIAAAAAAAAD/v3atAAD///+/dq0AAAAA/78AAAAA////v3at//8AAP//AAD///////8AAP//AAD//3at////////AAAAAAAA//92rf//AAD//wAA//8AAP//dq0AAAAA//8AAAAA//9U1QAA//8AAFTVAAD/////VNUAAAAAAABU1f///3+8VobBdq0AAAAAcMDn6cc0vFZwwHatAAD//3DAdq3//wAAcMDn6cc0QqlxwOfpN8u8VnDA////f0KpqL7n6TfLQqlwwHat/////3DAAAD/f///VNUAAP9/AABU1QAA/38AAP//////fwAA//////9///8AgAAA/3///wCA////f7xWhcF2rQAAAACFwefpxzS8VoTB////fwAAhsHn6cc0Qqmnvv///3///6e+////f0Kpp752rQAA//+ovufpN8u8VoXB////fwAAhcF2rf//AACFwXat/////6i+5+k3y0Kpqb7///9///+nvv9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//3//v/9//7//f/+//3//v/9/////f////3////9///9U1VTVVNVU1VTVVNVU1VTV8YqRBeZ0MhbndDIW6HQyFjGWGwvrdDIWMZYeC06LdgUxlhkLMZYZC1TVVNVU1VTV/3////9/////f////3///1Z68wpUevMKMnr0Cmx68gqCek4LgXpOC3F6TguOek4L8oqiBfKKoQXyiq4FTot0BU+LUgVNi4wF")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_hysf3")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_aovmu"]
+_surfaces = [{
+"aabb": AABB(0.020575268, -0.05508596, -0.030218909, 0.031630076, 0.11017192, 0.060437806),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("CAABAAIAAgABAAQAAgAEAAcABAABAAkACAAJAAEABwAEAAoABAAJAAoACwACAAcACwAIAAIABwAKAAsAAAAJAAgACwAKAAYACgAJAAMAAAADAAkACgADAAYACAAFAAAACAALAAUABQADAAAACwAGAAUABQAGAAMA"),
+"lods": [0.009215101, PackedByteArray("AAABAAIAAAADAAEAAgABAAQABQADAAAAAgAFAAAABgABAAMABAABAAYABQAGAAMAAgAEAAcABQACAAcABwAEAAYABwAGAAUA")],
+"name": "lightSwitch",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAAAAAACahv//AAAAAAAA//8AAAAA//8AAAAAAACahv7///8AAAAAAAD+/wAA//8AAP7/AAAAAP7///8AAAAA/38AAAAAcJr/fwAAAABwmv9//v8AAAAA/3/+/wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g2gly"]
+resource_name = "lightSwitch_Cube_090"
+_surfaces = [{
+"aabb": AABB(0.020575268, -0.05508596, -0.030218909, 0.031630076, 0.11017192, 0.060437806),
+"attribute_data": PackedByteArray("SwJibOcKZqVLAmalqhJibOcKrsTnCmalrkSuxK5EZqVLAmal5wquxEsCrsTnCmalDVWuxK5EZqUNVWalrkSuxEsCrsSqErP9SwKz/ecKrsRLAsUukyHKZ0sCymeTIcUuSwLkiCsM5IhwJ2alcCeuxHAnrsRwJ2alSwIw4SsMMOFLAkdLkyFHSw=="),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("GAABAAIAGAAZAAEAAAAZABgAAAADABkABAAaABsABAAFABoAHAAHAAYAHAAdAAcACAAJAAoACAALAAkAHgARABIAHgAfABEAEAAfAB4AEAATAB8ADAANAA4ADAAPAA0AIAAVABYAIAAhABUAIQAgABQAIQAUABcA"),
+"lods": [0.009215101, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABgAFAAcACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFQAUABcA")],
+"material": SubResource("StandardMaterial3D_amtst"),
+"name": "lightSwitch",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 34,
+"vertex_data": PackedByteArray("AAAAAAAA//+ahv//AAD//wAA//8AAP////8AAAAA//+ahv7///9L1JqG//8AAEvU//8AAP7/RtD//wAAAABG0AAA//8AAP+/mob+/////78AAP7/////v5qG//8AAP+/AAAAAP7//////wAAAAD//wAAAAAAAP////8AAP7///8AAP7///8AgP//AAD+/wCAAAAAAP7/AICahv7///8AgAAAAAD+////AAD//wAA//8AAP7//////wAAAAAAAP//AAD/fwAA//9wmv9/AAD//3Ca/38AAEvUcJr/f/7/S9Rwmv9//v9G0HCa/38AAEbQAAD/f/7/AIBwmv9//v8AgAAA/3/+////AAD/fwAA//////9/////f////3////9/76v3Ve+r91VPsadYT7GnWP///3////9/////f////3//f/8//3//P/9//z//f/8//3////9/////f////3////8//3//P/9//z//f/8//3////9/////f++r91Xvq/dVT7GnWE+xp1j/f////3////8//3//P/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_aovmu")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_b22f5"]
+radius = 0.3
+
+[node name="FlickSwitch" unique_id=800763591 instance=ExtResource("1_gddif")]
+
+[node name="lightSwitch" type="MeshInstance3D" parent="VisualSocket" parent_id_path=PackedInt32Array(476945848) index="0" unique_id=1362965831]
+mesh = SubResource("ArrayMesh_g5c7w")
+metadata/extras = {
+"yp_decal": {}
+}
+
+[node name="lightSwitch_001" type="MeshInstance3D" parent="VisualSocket/lightSwitch" index="0" unique_id=2097961152]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_g2gly")
+metadata/extras = {
+"yp_decal": {}
+}
+
+[node name="SpatialPromptComponent" parent="Interactable3D" parent_id_path=PackedInt32Array(1109806985) index="0" unique_id=610268147]
+_display_position_y = 0.0
+
+[node name="CollisionShape3D" parent="Interactable3D" parent_id_path=PackedInt32Array(1109806985) index="1" unique_id=786361068]
+shape = SubResource("SphereShape3D_b22f5")
+
+[node name="FlickSwitchComponent" type="Node3D" parent="." index="2" unique_id=1397123858 node_paths=PackedStringArray("_mesh_to_tween", "_controller")]
+script = ExtResource("4_qf11x")
+_mesh_to_tween = NodePath("../VisualSocket/lightSwitch/lightSwitch_001")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://fet110r47r63"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="3" unique_id=767024718]
+
+[node name="AudioToggleComponent" type="Node3D" parent="." index="4" unique_id=88642874 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("5_b22f5")
+_audio = NodePath("../AudioStreamPlayer3D")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"

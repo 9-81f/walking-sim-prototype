@@ -8,6 +8,7 @@ class_name InventoryUI
 
 var equip: EquipComponent = null
 var _focused_item: ItemData = null
+var _last_focused_item: ItemData = null
 
 func _ready() -> void:
 	super._ready()
@@ -28,14 +29,16 @@ func _on_refresh() -> void:
 		var item_slot: ItemSlot = _item_slot_scene.instantiate()
 		_item_slot_grid_container.add_child(item_slot)
 		
-		if not first_slot: first_slot = item_slot
-		
 		var quantity := InventoryDataManager.list[item]
 		var is_holding := equip.is_holding(item) if equip else false
 		item_slot.setup(item, quantity, is_holding)
 		
+		if not first_slot or item_slot.item_data == _last_focused_item:
+			first_slot = item_slot
+		
 		item_slot.focus_entered.connect(func():
 			_focused_item = item
+			_last_focused_item = item
 			_info_name.text = item.display_name
 			_info_description.text = item.description
 		)

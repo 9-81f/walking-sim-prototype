@@ -3,7 +3,7 @@ class_name LootContainerComponent
 
 @export var _enclosures: Dictionary[InteractableEnclosure3D, LootData] = {}
 
-var _world_pickup_scene: PackedScene = preload("res://game/interactables/pickup/base/world_pickup.tscn")
+var _world_pickup_scene: PackedScene = preload("res://game/interactables/pickup/world_pickup.tscn")
 
 var _managed_interactables: Dictionary[InteractableEnclosure3D, Array] = {}
 

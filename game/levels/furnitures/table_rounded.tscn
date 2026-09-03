@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://h0jirq08asc3"]
+
+[ext_resource type="PackedScene" uid="uid://cjx5o5fgwwuvu" path="res://assets/environments/PSX modular house interior pack/props/table2.glb" id="1_xhy6c"]
+[ext_resource type="PhysicsMaterial" uid="uid://d3nr0imiwj6uy" path="res://game/resources/surfaces/phys_wood.tres" id="2_6emgg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
+size = Vector3(1.875, 0.77500004, 1)
+
+[node name="TableRounded" unique_id=479919991 instance=ExtResource("1_xhy6c")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1368428622]
+physics_material_override = ExtResource("2_6emgg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1443649326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38750002, 0)
+shape = SubResource("BoxShape3D_qmagn")

@@ -6,7 +6,7 @@ signal opened()
 signal closed()
 
 @export_category("Visual Settings")
-@export var _mesh_to_tween: MeshInstance3D
+@export var _mesh_to_tween: Node3D
 @export var _default_tween_prop_value: float
 @export var _target_tween_prop_value: float
 @export var _enable_focus_overlay := true

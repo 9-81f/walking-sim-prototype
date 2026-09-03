@@ -19,6 +19,12 @@
 [ext_resource type="Script" uid="uid://c672h0saglkn6" path="res://game/actors/states/armed_state.gd" id="17_ehyvf"]
 [ext_resource type="Script" uid="uid://dtnjipr4fb7gb" path="res://game/actors/states/unarmed_state.gd" id="18_8qio0"]
 [ext_resource type="Script" uid="uid://cwcf7tb3dbtqq" path="res://game/actors/states/carry_state.gd" id="18_cl8og"]
+[ext_resource type="Script" uid="uid://dsyswg6pcnqt7" path="res://game/components/footsteps_component.gd" id="20_qs0de"]
+[ext_resource type="Resource" uid="uid://b1xuijgn3ksto" path="res://game/actors/player/resources/surface_wood_audio.tres" id="21_blps4"]
+[ext_resource type="Script" uid="uid://dkol5mkpvdafy" path="res://core/blueprints/surface_audio_data.gd" id="22_afsr7"]
+[ext_resource type="Resource" uid="uid://bs2435svvrldm" path="res://game/actors/player/resources/surface_stone_audio.tres" id="23_hjiih"]
+[ext_resource type="Resource" uid="uid://s14oo35dt82q" path="res://game/actors/player/resources/surface_marble_audio.tres" id="24_cjvdx"]
+[ext_resource type="Resource" uid="uid://b4l72ktrlilce" path="res://game/actors/player/resources/surface_carpet_audio.tres" id="25_iw8hl"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qmagn"]
 height = 1.7
@@ -26,7 +32,7 @@ height = 1.7
 [sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_v86bf"]
-height = 1.7
+height = 2.4250002
 radius = 2.0
 
 [node name="PlayerFPS" type="CharacterBody3D" unique_id=1807322468]
@@ -84,6 +90,7 @@ script = ExtResource("4_cl8og")
 metadata/_custom_type_script = "uid://boumyplnqab50"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ProximityObserverComponent" unique_id=1115535941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36250007, 0)
 shape = SubResource("CylinderShape3D_v86bf")
 debug_color = Color(0.6480645, 0.33130592, 1, 0.41960785)
 
@@ -97,9 +104,11 @@ metadata/_custom_type_script = "uid://b552pp0d3p3xn"
 script = ExtResource("8_oawdx")
 metadata/_custom_type_script = "uid://otmaj06j4tq3"
 
-[node name="MotionComponent3D" type="Node" parent="." unique_id=1280130432 node_paths=PackedStringArray("ceiling_checker")]
+[node name="MotionComponent3D" type="Node" parent="." unique_id=1280130432 node_paths=PackedStringArray("ceiling_checker", "footstep_audio")]
 script = ExtResource("1_btjqu")
+_base_speed = 7.0
 ceiling_checker = NodePath("../FPSCameraUtility/CeilingCheckCast3D")
+footstep_audio = NodePath("../FootstepsComponent")
 metadata/_custom_type_script = "uid://bucvysv5kaf2m"
 
 [node name="EquipComponent" type="Node" parent="." unique_id=2137199745 node_paths=PackedStringArray("r_hand_socket_marker", "l_hand_socket_marker")]
@@ -170,3 +179,13 @@ metadata/_custom_type_script = "uid://dtnjipr4fb7gb"
 [node name="CarryState" type="Node" parent="ActionFSM" unique_id=1155031821]
 script = ExtResource("18_cl8og")
 metadata/_custom_type_script = "uid://cwcf7tb3dbtqq"
+
+[node name="FootstepsComponent" type="RayCast3D" parent="." unique_id=1451599351 node_paths=PackedStringArray("_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+script = ExtResource("20_qs0de")
+_player = NodePath("../AudioStreamPlayer3D")
+_default_data = ExtResource("21_blps4")
+_surface_data_list = Array[ExtResource("22_afsr7")]([ExtResource("21_blps4"), ExtResource("23_hjiih"), ExtResource("24_cjvdx"), ExtResource("25_iw8hl")])
+metadata/_custom_type_script = "uid://dsyswg6pcnqt7"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2055062699]

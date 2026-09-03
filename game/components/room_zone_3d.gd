@@ -25,6 +25,7 @@ func _collect_interactables() -> void:
 func _find_interactables_recursive(node: Node) -> void:
 	if node is Interactable3D:
 		_room_interactables.append(node)
+		
 	for child in node.get_children():
 		_find_interactables_recursive(child)
 

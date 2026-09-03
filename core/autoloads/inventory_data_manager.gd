@@ -2,7 +2,7 @@ extends Node
 
 signal updated()
 
-const _world_pickup_scene: PackedScene = preload("res://game/interactables/pickup/base/world_pickup.tscn")
+const _world_pickup_scene: PackedScene = preload("res://game/interactables/pickup/world_pickup.tscn")
 var list: Dictionary[ItemData, int] = {}
 var _max_capacity := 8
 

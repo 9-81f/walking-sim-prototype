@@ -2,7 +2,8 @@ extends UIWindow
 class_name InspectUI
 
 #TODO: Complete inspect ui implementation
-@onready var _mesh: MeshInstance3D = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport/MeshInstance3D
+@onready var _mesh_transform: Node3D = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D
+@onready var _mesh: MeshInstance3D = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D/MeshInstance3D
 @onready var _subviewport_container: SubViewportContainer = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer
 @onready var _subviewport_cam: Camera3D = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport/Camera3D
 @onready var _item_name: Label = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/ItemName
@@ -21,7 +22,7 @@ func _ready() -> void:
 	
 	_defaults = {
 		"camera_pos": _subviewport_cam.position,
-		"mesh_rotation": _mesh.rotation
+		"mesh_rotation": _mesh_transform.rotation
 	}
 	
 	UiEvents.item_inspection_requested.connect(_on_item_inspection_requested)
@@ -36,6 +37,7 @@ func _on_refresh() -> void:
 	_mesh.mesh = _current_item.mesh
 	_item_name.text = _current_item.display_name
 	_item_desc.text = _current_item.description
+	
 	if _current_item.readable_text:
 		_rich_texts.text = _current_item.readable_text
 	else:
@@ -46,6 +48,10 @@ func _get_initial_focus() -> Control:
 	
 func _setup(item: ItemData) -> void:
 	_current_item = item
+	
+	var aabb := _current_item.mesh.get_aabb()
+	var center := aabb.get_center()
+	_mesh.position = -center
 
 func _physics_process(delta: float) -> void:
 	if not visible: return
@@ -59,14 +65,14 @@ func _physics_process(delta: float) -> void:
 	_subviewport_cam.position.z += applied_zoom
 	_subviewport_cam.position.z = clampf(_subviewport_cam.position.z, 0.25, 1.0)
 	
-	_mesh.rotation.x += (input_y_axis * _inspect_x_rotation_speed) * delta
-	_mesh.rotation.y += (input_x_axis * _inspect_y_rotation_speed) * delta
+	_mesh_transform.rotation.x += (input_y_axis * _inspect_x_rotation_speed) * delta
+	_mesh_transform.rotation.y += (input_x_axis * _inspect_y_rotation_speed) * delta
 	
 func close() -> void:
 	super.close()
 	if _defaults:
 		_subviewport_cam.position = _defaults["camera_pos"]
-		_mesh.rotation = _defaults["mesh_rotation"]
+		_mesh_transform.rotation = _defaults["mesh_rotation"]
 
 # ==========================================
 # INPUT LIFECYCLE

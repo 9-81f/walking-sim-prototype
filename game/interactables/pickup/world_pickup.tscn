@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://day3uq5b1g3od"]
+
+[ext_resource type="Script" uid="uid://34bhp8hs5lar" path="res://game/interactables/pickup/world_pickup.gd" id="1_vcx1u"]
+[ext_resource type="Material" uid="uid://cok0hs2re3bv0" path="res://assets/materials/color_focus_overlay.tres" id="2_5ly6f"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="3_kbnwp"]
+[ext_resource type="Texture2D" uid="uid://tkosdp3sb318" path="res://assets/icons/keyboard_mouse_input_prompts/keyboard-&-mouse_sheet_double.png" id="4_bvvoy"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="5_ul25e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qio0"]
+atlas = ExtResource("4_bvvoy")
+region = Rect2(768, 1152, 128, 128)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_uejpt"]
+radius = 0.7
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_k8fu3"]
+height = 0.05
+radius = 0.1
+
+[node name="WorldPickup" type="RigidBody3D" unique_id=1270918494]
+collision_layer = 0
+gravity_scale = 3.0
+script = ExtResource("1_vcx1u")
+_enable_focus_overlay = false
+_focus_material_overlay = ExtResource("2_5ly6f")
+
+[node name="Interactable3D" type="Area3D" parent="." unique_id=2062370923 node_paths=PackedStringArray("_spatial_prompt")]
+collision_layer = 512
+script = ExtResource("3_kbnwp")
+prompt_message = "Pick up"
+input_icon = SubResource("AtlasTexture_8qio0")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="Interactable3D" unique_id=1606224821]
+billboard = 2
+no_depth_test = true
+script = ExtResource("5_ul25e")
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable3D" unique_id=856419237]
+shape = SubResource("SphereShape3D_uejpt")
+debug_color = Color(0.9404895, 1.5498103e-05, 0.61695915, 0.41960785)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1588936443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025429599, 0)
+shape = SubResource("CylinderShape3D_k8fu3")
+
+[node name="MeshSocket" type="MeshInstance3D" parent="." unique_id=1622810596]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1152518483]

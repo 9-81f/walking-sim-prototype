@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://4k5kg2xelujc"]
+
+[ext_resource type="PackedScene" uid="uid://da0ofdaxl73ea" path="res://assets/environments/PSX modular house interior pack/props/cabinetLowCorner.glb" id="1_f4hbi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
+size = Vector3(0.9057617, 1.0229187, 1)
+
+[node name="CabinetLowCorner" unique_id=2097487932 instance=ExtResource("1_f4hbi")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=25556337]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1431772764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5539551, 0.5684967, 0)
+shape = SubResource("BoxShape3D_qmagn")

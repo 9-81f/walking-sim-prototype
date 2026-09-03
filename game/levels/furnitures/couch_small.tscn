@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://nt7w7xrvjta3"]
+
+[ext_resource type="PackedScene" uid="uid://ca8jxb4nba5iu" path="res://assets/environments/PSX modular house interior pack/props/couchSmall.glb" id="1_xkbpp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fb1cx"]
+size = Vector3(1.4250001, 0.625, 1.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xkbpp"]
+size = Vector3(1.4250001, 1.1, 0.45000002)
+
+[node name="CouchSmall" type="Node3D" unique_id=953881942]
+
+[node name="couchSmall2" parent="." unique_id=807851998 instance=ExtResource("1_xkbpp")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1398356174]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=623217634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3125, 0)
+shape = SubResource("BoxShape3D_fb1cx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1590782454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, -0.34999996)
+shape = SubResource("BoxShape3D_xkbpp")
