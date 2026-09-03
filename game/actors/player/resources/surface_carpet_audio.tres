@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SurfaceAudioData" format=3 uid="uid://b4l72ktrlilce"]
+
+[ext_resource type="AudioStream" uid="uid://cjyfrssuld6c1" path="res://game/actors/player/audio/footstep_carpet_stream.tres" id="1_gf087"]
+[ext_resource type="Script" uid="uid://dkol5mkpvdafy" path="res://core/blueprints/surface_audio_data.gd" id="1_q8tgk"]
+[ext_resource type="PhysicsMaterial" uid="uid://bfbu5kqaiul2" path="res://game/resources/surfaces/phys_carpet.tres" id="1_wtl73"]
+
+[resource]
+script = ExtResource("1_q8tgk")
+physics_material = ExtResource("1_wtl73")
+audio_stream = ExtResource("1_gf087")
+metadata/_custom_type_script = "uid://dkol5mkpvdafy"

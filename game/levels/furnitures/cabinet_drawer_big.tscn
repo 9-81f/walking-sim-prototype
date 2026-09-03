@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://k4yjqgakj5rp"]
+
+[ext_resource type="PackedScene" uid="uid://bsi42jduuhggr" path="res://assets/environments/PSX modular house interior pack/props/cabinet.glb" id="1_ysyj0"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="2_nwy8n"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="3_tpxvl"]
+[ext_resource type="Script" uid="uid://d3mq1lue5yf1t" path="res://game/components/switch_toggle_component.gd" id="4_84p7a"]
+[ext_resource type="Script" uid="uid://b0ld3gnc7p4sc" path="res://core/components/tween_mesh_toggle.gd" id="5_tpxvl"]
+[ext_resource type="Script" uid="uid://b4dg5dsmsigbm" path="res://core/components/audio_toggle_component.gd" id="6_ukcxg"]
+[ext_resource type="AudioStream" uid="uid://di7qw2j56i1ix" path="res://assets/sfx/rpg-audio/drawKnife2.ogg" id="7_koqic"]
+[ext_resource type="AudioStream" uid="uid://n7heyxaud12q" path="res://assets/sfx/rpg-audio/drawKnife1.ogg" id="8_tre1k"]
+[ext_resource type="AudioStream" uid="uid://bhido0heh3kqs" path="res://assets/sfx/rpg-audio/chop.ogg" id="9_ukcxg"]
+[ext_resource type="Script" uid="uid://d05res58un2au" path="res://game/components/lock_component.gd" id="10_koqic"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="11_777ly"]
+[ext_resource type="Resource" uid="uid://6mabdxpg1554" path="res://game/items/data/old_key_01.tres" id="12_lrcr7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s86j5"]
+radius = 0.13
+height = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
+size = Vector3(1.346875, 0.025, 0.43271485)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tpxvl"]
+size = Vector3(0.025, 0.29049072, 0.43271485)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kjoil"]
+size = Vector3(1.35, 0.29033202, 0.025)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kjoil"]
+radius = 0.13
+height = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_84p7a"]
+size = Vector3(1.5, 0.08730469, 0.475)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s86j5"]
+size = Vector3(1.5, 0.13886718, 0.475)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_litqs"]
+size = Vector3(1.5, 0.05, 0.475)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78xn6"]
+size = Vector3(0.05, 2.025, 0.475)
+
+[node name="CabinetDrawerBig" unique_id=1254286147 instance=ExtResource("1_ysyj0")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Interactable3D" type="Area3D" parent="cabinet/cabinet_001" parent_id_path=PackedInt32Array(465826324) index="0" unique_id=1771269937 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.425)
+script = ExtResource("2_nwy8n")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="cabinet/cabinet_001/Interactable3D" index="0" unique_id=1167969623]
+script = ExtResource("3_tpxvl")
+_display_position_y = 0.0
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinet/cabinet_001/Interactable3D" index="1" unique_id=1650872583]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_s86j5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cabinet/cabinet_001" parent_id_path=PackedInt32Array(465826324) index="1" unique_id=454492828]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinet/cabinet_001/StaticBody3D" index="0" unique_id=390862288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0015625954, -0.14068598, 0.2158691)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="cabinet/cabinet_001/StaticBody3D" index="1" unique_id=1493412642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66250014, -0.00794059, 0.2158691)
+shape = SubResource("BoxShape3D_tpxvl")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="cabinet/cabinet_001/StaticBody3D" index="2" unique_id=1378099771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65896666, -0.00794059, 0.2158691)
+shape = SubResource("BoxShape3D_tpxvl")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="cabinet/cabinet_001/StaticBody3D" index="3" unique_id=899386958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00844723, 0.4208333)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="cabinet/cabinet_001/StaticBody3D" index="4" unique_id=342573294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00844723, 0.004166603)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="Interactable3D" type="Area3D" parent="cabinet/cabinet_002" parent_id_path=PackedInt32Array(342009625) index="0" unique_id=1391543713 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.425)
+script = ExtResource("2_nwy8n")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="cabinet/cabinet_002/Interactable3D" index="0" unique_id=445632283]
+script = ExtResource("3_tpxvl")
+_display_position_y = 0.0
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinet/cabinet_002/Interactable3D" index="1" unique_id=1566943101]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_kjoil")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="cabinet/cabinet_002" parent_id_path=PackedInt32Array(342009625) index="1" unique_id=666710044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0038935393, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinet/cabinet_002/StaticBody3D2" index="0" unique_id=1230580845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0015625954, -0.14068598, 0.2158691)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="cabinet/cabinet_002/StaticBody3D2" index="1" unique_id=828296744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66250014, -0.00794059, 0.2158691)
+shape = SubResource("BoxShape3D_tpxvl")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="cabinet/cabinet_002/StaticBody3D2" index="2" unique_id=1449090353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65896666, -0.00794059, 0.2158691)
+shape = SubResource("BoxShape3D_tpxvl")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="cabinet/cabinet_002/StaticBody3D2" index="3" unique_id=252114826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00844723, 0.4208333)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="cabinet/cabinet_002/StaticBody3D2" index="4" unique_id=1024307699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00844723, 0.004166603)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="FirstToggleComponent" type="Node3D" parent="." index="1" unique_id=1024117689 node_paths=PackedStringArray("interact", "_lock")]
+script = ExtResource("4_84p7a")
+interact = NodePath("../cabinet/cabinet_001/Interactable3D")
+_true_prompt = "Push"
+_false_prompt = "Pull"
+_lock = NodePath("LockComponent")
+metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
+
+[node name="TweenMeshToggleComponent" type="Node3D" parent="FirstToggleComponent" index="0" unique_id=1959446693 node_paths=PackedStringArray("_node_to_tween", "_controller")]
+script = ExtResource("5_tpxvl")
+_node_to_tween = NodePath("../../cabinet/cabinet_001")
+_tween_property = NodePath("position:z")
+_default_tween_value = -0.178
+_target_tween_value = 0.147
+_locked_state_tween_offset = 0.005
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b0ld3gnc7p4sc"
+
+[node name="AudioToggleComponent" type="Node3D" parent="FirstToggleComponent" index="1" unique_id=1889921238 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("6_ukcxg")
+_audio = NodePath("../AudioStreamPlayer3D")
+_on_sound = ExtResource("7_koqic")
+_off_sound = ExtResource("8_tre1k")
+_locked_sound = ExtResource("9_ukcxg")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="FirstToggleComponent" index="2" unique_id=1780163196]
+transform = Transform3D(0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0, 0.6666667, 0, 0.5666667, 0)
+
+[node name="LockComponent" type="Node" parent="FirstToggleComponent" index="3" unique_id=1442929534]
+script = ExtResource("10_koqic")
+_permanent_locked_prompt = "Jammed shut. Doesn't budge."
+required_keys = Array[ExtResource("11_777ly")]([ExtResource("12_lrcr7")])
+metadata/_custom_type_script = "uid://d05res58un2au"
+
+[node name="SecondToggleComponent" type="Node3D" parent="." index="2" unique_id=2090671411 node_paths=PackedStringArray("interact")]
+script = ExtResource("4_84p7a")
+interact = NodePath("../cabinet/cabinet_002/Interactable3D")
+_true_prompt = "Push"
+_false_prompt = "Pull"
+metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
+
+[node name="TweenMeshToggleComponent" type="Node3D" parent="SecondToggleComponent" index="0" unique_id=1285147443 node_paths=PackedStringArray("_node_to_tween", "_controller")]
+script = ExtResource("5_tpxvl")
+_node_to_tween = NodePath("../../cabinet/cabinet_002")
+_tween_property = NodePath("position:z")
+_default_tween_value = -0.178
+_target_tween_value = 0.147
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b0ld3gnc7p4sc"
+
+[node name="AudioToggleComponent" type="Node3D" parent="SecondToggleComponent" index="1" unique_id=1270772039 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("6_ukcxg")
+_audio = NodePath("../AudioStreamPlayer3D")
+_on_sound = ExtResource("7_koqic")
+_off_sound = ExtResource("8_tre1k")
+_locked_sound = ExtResource("9_ukcxg")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="SecondToggleComponent" index="2" unique_id=406943569]
+transform = Transform3D(0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0, 0.6666667, 0, 0.5666667, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=303862472]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1855221650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.043652337, 0)
+shape = SubResource("BoxShape3D_84p7a")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=37557277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78453773, 0)
+shape = SubResource("BoxShape3D_s86j5")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1021248035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2123046, 0)
+shape = SubResource("BoxShape3D_litqs")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=1398415837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.595638, 0)
+shape = SubResource("BoxShape3D_litqs")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="4" unique_id=988767194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7250001, 1.0125, 0)
+shape = SubResource("BoxShape3D_78xn6")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" index="5" unique_id=908211680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72251886, 1.0125, 0)
+shape = SubResource("BoxShape3D_78xn6")

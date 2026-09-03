@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="GridMapAudioRegistry" format=3 uid="uid://bwnaxim35yt68"]
+
+[ext_resource type="Script" uid="uid://ctsef8visket2" path="res://core/blueprints/gridmap_audio_registry.gd" id="1_62a3v"]
+[ext_resource type="AudioStream" uid="uid://bnhkptydrtp6t" path="res://game/actors/player/audio/footstep_wood_stream.tres" id="1_fjhop"]
+[ext_resource type="AudioStream" uid="uid://rvgm62mcahqw" path="res://game/actors/player/audio/footstep_concrete_stream.tres" id="2_fpd2b"]
+[ext_resource type="AudioStream" uid="uid://cjyfrssuld6c1" path="res://game/actors/player/audio/footstep_carpet_stream.tres" id="3_2ofif"]
+
+[resource]
+script = ExtResource("1_62a3v")
+registry = Dictionary[int, AudioStream]({
+31: ExtResource("3_2ofif"),
+32: ExtResource("3_2ofif"),
+33: ExtResource("3_2ofif"),
+34: ExtResource("3_2ofif"),
+35: ExtResource("2_fpd2b"),
+36: ExtResource("2_fpd2b"),
+39: ExtResource("1_fjhop"),
+40: ExtResource("2_fpd2b"),
+41: ExtResource("2_fpd2b"),
+44: ExtResource("1_fjhop")
+})
+metadata/_custom_type_script = "uid://ctsef8visket2"

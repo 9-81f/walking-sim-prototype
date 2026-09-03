@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://1las6wc2ags1"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwa18x7ub8xoq" path="res://assets/inspectables/book_001.res" id="1_irxkv"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="2_rkwqp"]
+
+[resource]
+script = ExtResource("2_rkwqp")
+id = "book-inspct-001"
+display_name = "Opened Book"
+description = "There is some written notes here..."
+mesh = ExtResource("1_irxkv")
+type = 2
+is_storable = false
+readable_text = "To whom it may concern,
+
+I certainly hoped you won't be concerned. Too much concern can lead to stress and stress is not good for your concern.
+
+Concerning this book, we hope this won't stick as your concern for more than some matter of seconds."
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

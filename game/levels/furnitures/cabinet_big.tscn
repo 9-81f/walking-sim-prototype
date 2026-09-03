@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://cylw3g70jej6s"]
+
+[ext_resource type="PackedScene" uid="uid://beumq1d4tkek" path="res://assets/environments/PSX modular house interior pack/props/cabinetBig.glb" id="1_bufln"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="2_h2a28"]
+[ext_resource type="Script" uid="uid://d3mq1lue5yf1t" path="res://game/components/switch_toggle_component.gd" id="2_w8dwf"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="3_sy8m5"]
+[ext_resource type="Script" uid="uid://b0ld3gnc7p4sc" path="res://core/components/tween_mesh_toggle.gd" id="5_33541"]
+[ext_resource type="Script" uid="uid://b4dg5dsmsigbm" path="res://core/components/audio_toggle_component.gd" id="7_33541"]
+[ext_resource type="AudioStream" uid="uid://b0ooc3jw5o8ig" path="res://game/levels/furnitures/audio/impact_wood_medium.tres" id="8_xdodb"]
+[ext_resource type="AudioStream" uid="uid://dh2j0bau0w25x" path="res://game/levels/furnitures/audio/impact_wood_heavy.tres" id="9_pc7j1"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kjoil"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
+size = Vector3(1.6750001, 0.2, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xdodb"]
+size = Vector3(0.075, 2.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pc7j1"]
+size = Vector3(0.075, 2.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xaxec"]
+size = Vector3(0.001, 2.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_31ynh"]
+size = Vector3(1.6750001, 0.05, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_trt82"]
+size = Vector3(1.6750001, 0.03293457, 0.5)
+
+[node name="CabinetBig" unique_id=2038461481 instance=ExtResource("1_bufln")]
+
+[node name="Interactable3D" type="Area3D" parent="cabinetBig/cabinetBig_001" parent_id_path=PackedInt32Array(1069612747) index="0" unique_id=620456712 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.375, -0.14999998, 0)
+script = ExtResource("2_h2a28")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="cabinetBig/cabinetBig_001/Interactable3D" index="0" unique_id=1138619597]
+script = ExtResource("3_sy8m5")
+_display_position_y = 0.0
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetBig/cabinetBig_001/Interactable3D" index="1" unique_id=1553446268]
+shape = SubResource("SphereShape3D_qmagn")
+
+[node name="Interactable3D" type="Area3D" parent="cabinetBig/cabinetBig_002" parent_id_path=PackedInt32Array(370267789) index="0" unique_id=1908004982 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.375, -0.14999998, 0)
+script = ExtResource("2_h2a28")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="cabinetBig/cabinetBig_002/Interactable3D" index="0" unique_id=937646192]
+script = ExtResource("3_sy8m5")
+_display_position_y = 0.0
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetBig/cabinetBig_002/Interactable3D" index="1" unique_id=1863748686]
+shape = SubResource("SphereShape3D_kjoil")
+
+[node name="LeftDoorSwitchToggle" type="Node3D" parent="." index="1" unique_id=1037239425 node_paths=PackedStringArray("interact")]
+script = ExtResource("2_w8dwf")
+interact = NodePath("../cabinetBig/cabinetBig_001/Interactable3D")
+_true_prompt = "Close"
+_false_prompt = "Open"
+metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
+
+[node name="LeftDoorTweenMeshToggle" type="Node3D" parent="LeftDoorSwitchToggle" index="0" unique_id=1693356003 node_paths=PackedStringArray("_node_to_tween", "_controller")]
+script = ExtResource("5_33541")
+_node_to_tween = NodePath("../../cabinetBig/cabinetBig_001")
+_target_tween_value = -90.0
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b0ld3gnc7p4sc"
+
+[node name="AudioToggleComponent" type="Node3D" parent="LeftDoorSwitchToggle" index="1" unique_id=734193814 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("7_33541")
+_audio = NodePath("../AudioStreamPlayer3D")
+_on_sound = ExtResource("8_xdodb")
+_off_sound = ExtResource("8_xdodb")
+_locked_sound = ExtResource("9_pc7j1")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LeftDoorSwitchToggle" index="2" unique_id=283825529]
+
+[node name="RightDoorSwitchToggle" type="Node3D" parent="." index="2" unique_id=2030130894 node_paths=PackedStringArray("interact")]
+script = ExtResource("2_w8dwf")
+interact = NodePath("../cabinetBig/cabinetBig_002/Interactable3D")
+_true_prompt = "Close"
+_false_prompt = "Open"
+metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
+
+[node name="RightDoorTweenMeshToggle" type="Node3D" parent="RightDoorSwitchToggle" index="0" unique_id=1914331531 node_paths=PackedStringArray("_node_to_tween", "_controller")]
+script = ExtResource("5_33541")
+_node_to_tween = NodePath("../../cabinetBig/cabinetBig_002")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b0ld3gnc7p4sc"
+
+[node name="AudioToggleComponent" type="Node3D" parent="RightDoorSwitchToggle" index="1" unique_id=2104800708 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("7_33541")
+_audio = NodePath("../AudioStreamPlayer3D")
+_on_sound = ExtResource("8_xdodb")
+_off_sound = ExtResource("8_xdodb")
+_locked_sound = ExtResource("9_pc7j1")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RightDoorSwitchToggle" index="2" unique_id=2111163051]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=359207356]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1496493448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.099999994, 0)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=730646300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8000001, 1.2500001, 0)
+shape = SubResource("BoxShape3D_xdodb")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1410880313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 1.2500001, 0)
+shape = SubResource("BoxShape3D_pc7j1")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=572992485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5390258e-08, 1.2500001, 0)
+shape = SubResource("BoxShape3D_xaxec")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="4" unique_id=690216437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 2.4750001, 0)
+shape = SubResource("BoxShape3D_31ynh")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="5" unique_id=1444465198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 1.8914673, 0)
+shape = SubResource("BoxShape3D_trt82")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" index="6" unique_id=1091660040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 1.4414673, 0)
+shape = SubResource("BoxShape3D_trt82")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" index="7" unique_id=1282859186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 0.96646726, 0)
+shape = SubResource("BoxShape3D_trt82")

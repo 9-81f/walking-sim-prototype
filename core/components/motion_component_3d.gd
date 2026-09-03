@@ -34,6 +34,7 @@ var _tag_along_default_height: float = 0.0
 
 @export_category("Add-Ons")
 @export var ceiling_checker: RayCast3D
+@export var footstep_audio: FootstepsComponent
 
 var is_running := false
 var is_sprinting := false
@@ -143,5 +144,8 @@ func move(delta: float) -> void:
 	
 	_body.velocity = _velocity_builder
 	_body.move_and_slide()
+	
+	if footstep_audio:
+		footstep_audio.update_footsteps(delta, _body.velocity, _body.is_on_floor())
 	
 	_velocity_builder = _body.velocity

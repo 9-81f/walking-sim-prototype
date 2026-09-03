@@ -25,6 +25,7 @@ func open() -> void:
 	
 	# Wait 1 frame so Godot updates layouts before grabbing focus
 	await get_tree().process_frame
+	
 	var focus_target := _get_initial_focus()
 	if focus_target and focus_target.is_inside_tree():
 		focus_target.grab_focus()

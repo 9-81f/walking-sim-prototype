@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bsas8et3bjsv3"]
+
+[ext_resource type="Script" uid="uid://d3mq1lue5yf1t" path="res://game/components/switch_toggle_component.gd" id="1_mcdit"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="2_nbxa7"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="3_rms6n"]
+
+[node name="BaseSwitch" type="Node3D" unique_id=800763591 node_paths=PackedStringArray("interact")]
+script = ExtResource("1_mcdit")
+interact = NodePath("Interactable3D")
+metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
+
+[node name="VisualSocket" type="Node3D" parent="." unique_id=476945848]
+
+[node name="Interactable3D" type="Area3D" parent="." unique_id=1109806985 node_paths=PackedStringArray("_spatial_prompt")]
+script = ExtResource("2_nbxa7")
+prompt_message = "Switch"
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="Interactable3D" unique_id=610268147]
+script = ExtResource("3_rms6n")
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable3D" unique_id=786361068]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bnhvcsfx31ui3"]
+
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_drjau"]
+[ext_resource type="ArrayMesh" uid="uid://2ibdxm0k3nhb" path="res://assets/inspectables/teddy_bear_inspectable.res" id="1_yqebt"]
+
+[resource]
+script = ExtResource("1_drjau")
+id = "teddy-bear-001"
+display_name = "Teddy Bear"
+description = "A teddy bear doll."
+mesh = ExtResource("1_yqebt")
+type = 2
+is_storable = false
+readable_text = "Try look around maybe there's something here..."
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

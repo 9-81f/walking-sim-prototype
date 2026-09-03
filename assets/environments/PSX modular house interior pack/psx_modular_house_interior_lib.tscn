@@ -31,15 +31,19 @@
 [ext_resource type="PackedScene" uid="uid://deaup4w5ikhi0" path="res://assets/environments/PSX modular house interior pack/geometry/cornerPillarPlaster.glb" id="29_7sw0k"]
 [ext_resource type="PackedScene" uid="uid://076dmi1ilhf3" path="res://assets/environments/PSX modular house interior pack/geometry/cornerPillarStone.glb" id="30_ml587"]
 [ext_resource type="PackedScene" uid="uid://buebhebh6ubyk" path="res://assets/environments/PSX modular house interior pack/geometry/cornerPillarWood.glb" id="31_n2uo5"]
+[ext_resource type="PhysicsMaterial" uid="uid://bfbu5kqaiul2" path="res://game/resources/surfaces/phys_carpet.tres" id="33_qk3fg"]
 [ext_resource type="PackedScene" uid="uid://8g2x1y8jtmkp" path="res://assets/environments/PSX modular house interior pack/geometry/floorCarpet2.glb" id="35_bvx8s"]
 [ext_resource type="PackedScene" uid="uid://dmhtivwnsjges" path="res://assets/environments/PSX modular house interior pack/geometry/floorCarpet.glb" id="36_ilinl"]
 [ext_resource type="PackedScene" uid="uid://cqkk70rxsctrx" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfCarpet2.glb" id="37_krqd1"]
 [ext_resource type="PackedScene" uid="uid://bg27q755nw6i" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfCarpet.glb" id="38_21rmm"]
+[ext_resource type="PhysicsMaterial" uid="uid://clxwjwnphed17" path="res://game/resources/surfaces/phys_marble.tres" id="38_ndbsb"]
 [ext_resource type="PackedScene" uid="uid://dcf3on2dop17h" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfMarble.glb" id="39_ly8lf"]
 [ext_resource type="PackedScene" uid="uid://ew7jrmka1dqv" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfStone.glb" id="40_6hbjq"]
+[ext_resource type="PhysicsMaterial" uid="uid://blvvqp70lfybx" path="res://game/resources/surfaces/phys_stone.tres" id="40_twvsi"]
 [ext_resource type="PackedScene" uid="uid://bjq11al2yn23b" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfTiles.glb" id="41_fydiu"]
 [ext_resource type="PackedScene" uid="uid://bp6dfe0yrhh0h" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfWood2.glb" id="42_eom20"]
 [ext_resource type="PackedScene" uid="uid://87pyd35lpnu5" path="res://assets/environments/PSX modular house interior pack/geometry/floorHalfWood.glb" id="43_5lwas"]
+[ext_resource type="PhysicsMaterial" uid="uid://d3nr0imiwj6uy" path="res://game/resources/surfaces/phys_wood.tres" id="43_v2cul"]
 [ext_resource type="PackedScene" uid="uid://cptkapyugre0b" path="res://assets/environments/PSX modular house interior pack/geometry/floorMarble.glb" id="44_niew4"]
 [ext_resource type="PackedScene" uid="uid://cokcefahibj6v" path="res://assets/environments/PSX modular house interior pack/geometry/floorStone.glb" id="45_402c3"]
 [ext_resource type="PackedScene" uid="uid://dqst8h2oo35sv" path="res://assets/environments/PSX modular house interior pack/geometry/floorTiles.glb" id="46_oq3xb"]
@@ -554,6 +558,7 @@ shape = SubResource("BoxShape3D_78xn6")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorCarpet22/floorCarpet2" parent_id_path=PackedInt32Array(716945635, 1799139109) index="0" unique_id=1890350525]
+physics_material_override = ExtResource("33_qk3fg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorCarpet22/floorCarpet2/StaticBody3D" unique_id=1048431441]
 shape = SubResource("BoxShape3D_kjoil")
@@ -562,6 +567,7 @@ shape = SubResource("BoxShape3D_kjoil")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorCarpet2/floorCarpet" parent_id_path=PackedInt32Array(2089495357, 137384750) index="0" unique_id=829885730]
+physics_material_override = ExtResource("33_qk3fg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorCarpet2/floorCarpet/StaticBody3D" unique_id=2057070770]
 shape = SubResource("BoxShape3D_kjoil")
@@ -569,6 +575,7 @@ shape = SubResource("BoxShape3D_kjoil")
 [node name="floorHalfCarpet22" parent="." unique_id=362677710 instance=ExtResource("37_krqd1")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorHalfCarpet22/floorHalfCarpet2" parent_id_path=PackedInt32Array(362677710, 1085766858) index="0" unique_id=352610930]
+physics_material_override = ExtResource("33_qk3fg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfCarpet22/floorHalfCarpet2/StaticBody3D" unique_id=1300860764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -578,6 +585,7 @@ shape = SubResource("BoxShape3D_kssrv")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorHalfCarpet2/floorHalfCarpet" parent_id_path=PackedInt32Array(1320179478, 814485397) index="0" unique_id=189884587]
+physics_material_override = ExtResource("33_qk3fg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfCarpet2/floorHalfCarpet/StaticBody3D" unique_id=1837353756]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -587,6 +595,7 @@ shape = SubResource("BoxShape3D_kssrv")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorHalfMarble2/floorHalfMarble" parent_id_path=PackedInt32Array(2060136991, 1977904291) index="0" unique_id=2116783201]
+physics_material_override = ExtResource("38_ndbsb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfMarble2/floorHalfMarble/StaticBody3D" unique_id=516862656]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -596,6 +605,7 @@ shape = SubResource("BoxShape3D_kssrv")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorHalfStone2/floorHalfStone" parent_id_path=PackedInt32Array(2081643468, 179094076) index="0" unique_id=85625910]
+physics_material_override = ExtResource("40_twvsi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfStone2/floorHalfStone/StaticBody3D" unique_id=1753025377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -614,6 +624,7 @@ shape = SubResource("BoxShape3D_kssrv")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorHalfWood22/floorHalfWood2" parent_id_path=PackedInt32Array(124555174, 593516326) index="0" unique_id=276585355]
+physics_material_override = ExtResource("43_v2cul")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfWood22/floorHalfWood2/StaticBody3D" unique_id=866575625]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -623,6 +634,7 @@ shape = SubResource("BoxShape3D_kssrv")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorHalfWood2/floorHalfWood" parent_id_path=PackedInt32Array(1194793150, 1575879384) index="0" unique_id=545168160]
+physics_material_override = ExtResource("43_v2cul")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorHalfWood2/floorHalfWood/StaticBody3D" unique_id=968933480]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -632,6 +644,7 @@ shape = SubResource("BoxShape3D_kssrv")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorMarble2/floorMarble" parent_id_path=PackedInt32Array(1479798925, 1144876984) index="0" unique_id=804397047]
+physics_material_override = ExtResource("38_ndbsb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorMarble2/floorMarble/StaticBody3D" unique_id=103482392]
 shape = SubResource("BoxShape3D_kjoil")
@@ -640,6 +653,7 @@ shape = SubResource("BoxShape3D_kjoil")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorStone2/floorStone" parent_id_path=PackedInt32Array(238899762, 1635084634) index="0" unique_id=1871681204]
+physics_material_override = ExtResource("40_twvsi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorStone2/floorStone/StaticBody3D" unique_id=153317738]
 shape = SubResource("BoxShape3D_kjoil")
@@ -656,6 +670,7 @@ shape = SubResource("BoxShape3D_kjoil")
 visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorWood22/floorWood2" parent_id_path=PackedInt32Array(227953122, 1435556677) index="0" unique_id=380039671]
+physics_material_override = ExtResource("43_v2cul")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorWood22/floorWood2/StaticBody3D" unique_id=1633366135]
 shape = SubResource("BoxShape3D_kjoil")
@@ -663,6 +678,7 @@ shape = SubResource("BoxShape3D_kjoil")
 [node name="floorWood2" parent="." unique_id=1639769959 instance=ExtResource("48_8iagd")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floorWood2/floorWood" parent_id_path=PackedInt32Array(1639769959, 2059436486) index="0" unique_id=344953057]
+physics_material_override = ExtResource("43_v2cul")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floorWood2/floorWood/StaticBody3D" unique_id=1673691311]
 shape = SubResource("BoxShape3D_kjoil")
@@ -786,6 +802,7 @@ shape = SubResource("BoxShape3D_jsjat")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stairsStone2/stairsStone" parent_id_path=PackedInt32Array(155332288, 1515002090) index="0" unique_id=1362172286]
 transform = Transform3D(1, 0, 0, 0, 0.8925858, 0.45087752, 0, -0.45087752, 0.8925858, 0, 0, 0)
+physics_material_override = ExtResource("40_twvsi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stairsStone2/stairsStone/StaticBody3D" unique_id=1766825032]
 transform = Transform3D(1, 0, 0, 0, 1.0000031, -2.9802322e-08, 0, 2.9802322e-08, 1.0000031, 0, -0.108000755, -4.921661)
@@ -796,6 +813,7 @@ visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stairsWood22/stairsWood2" parent_id_path=PackedInt32Array(1245042950, 2122165397) index="0" unique_id=628078194]
 transform = Transform3D(1, 0, 0, 0, 0.8925858, 0.45087752, 0, -0.45087752, 0.8925858, 0, 0, 0)
+physics_material_override = ExtResource("43_v2cul")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stairsWood22/stairsWood2/StaticBody3D" unique_id=1322154289]
 transform = Transform3D(1, 0, 0, 0, 1.0000031, -2.9802322e-08, 0, 2.9802322e-08, 1.0000031, 0, -0.176, -4.78)
@@ -806,6 +824,7 @@ visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stairsWood32/stairsWood3" parent_id_path=PackedInt32Array(1053590233, 229285174) index="0" unique_id=1460374654]
 transform = Transform3D(1, 0, 0, 0, 0.8925858, 0.45087752, 0, -0.45087752, 0.8925858, 0, 0, 0)
+physics_material_override = ExtResource("43_v2cul")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stairsWood32/stairsWood3/StaticBody3D" unique_id=1179548851]
 transform = Transform3D(1, 0, 0, 0, 1.0000031, -2.9802322e-08, 0, 2.9802322e-08, 1.0000031, 0, -0.176, -4.78)
@@ -816,6 +835,7 @@ visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stairsWood42/stairsWood4" parent_id_path=PackedInt32Array(981551333, 1537304565) index="0" unique_id=357697104]
 transform = Transform3D(1, 0, 0, 0, 0.8925858, 0.45087752, 0, -0.45087752, 0.8925858, 0, 0, 0)
+physics_material_override = ExtResource("43_v2cul")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stairsWood42/stairsWood4/StaticBody3D" unique_id=974243519]
 transform = Transform3D(1, 0, 0, 0, 1.0000031, -2.9802322e-08, 0, 2.9802322e-08, 1.0000031, 0, -0.176, -4.78)
@@ -826,6 +846,7 @@ visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="stairsWood2/stairsWood" parent_id_path=PackedInt32Array(1198766739, 1670130801) index="0" unique_id=431478785]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+physics_material_override = ExtResource("43_v2cul")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="stairsWood2/stairsWood/StaticBody3D" unique_id=623265548]
 transform = Transform3D(1, 0, 0, 0, 0.892588, 0.45087865, 0, -0.45087865, 0.892588, 0, -2.31, -4.18)
@@ -836,7 +857,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999993, -2.9802068e-08, 0, 2.9802068e-08, 
 shape = SubResource("BoxShape3D_sjqw4")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="stairsWood2/stairsWood/StaticBody3D" unique_id=892028916]
-transform = Transform3D(1, 0, 0, 0, 0.9999887, 0, 0, 0, 0.9999887, 0, -2.8295033, -1.8497789)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.8295033, -1.8497789)
 shape = SubResource("BoxShape3D_ivbot")
 
 [node name="wallBrick2" parent="." unique_id=2072836785 instance=ExtResource("65_le4kq")]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://captcx4ogxru1"]
+
+[ext_resource type="PackedScene" uid="uid://dxxkfekil2mj4" path="res://assets/environments/PSX modular house interior pack/props/tableSmall.glb" id="1_c5pu5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g86i6"]
+size = Vector3(0.875, 0.6407471, 0.62890625)
+
+[node name="TableSmall" type="Node3D" unique_id=981859291]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="tableSmall2" parent="." unique_id=1806466532 instance=ExtResource("1_c5pu5")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=995601212]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1976298443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32037354, -0.001953125)
+shape = SubResource("BoxShape3D_g86i6")

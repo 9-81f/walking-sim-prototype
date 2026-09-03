@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://b0ooc3jw5o8ig"]
+
+[ext_resource type="AudioStream" uid="uid://ccpn6ys6ql0cy" path="res://assets/sfx/impacts/impactWood_medium_000.ogg" id="1_n4pdb"]
+[ext_resource type="AudioStream" uid="uid://xgx1kjpqgu24" path="res://assets/sfx/impacts/impactWood_medium_001.ogg" id="2_6seig"]
+[ext_resource type="AudioStream" uid="uid://c4tdrarou0ltj" path="res://assets/sfx/impacts/impactWood_medium_002.ogg" id="3_dj67w"]
+[ext_resource type="AudioStream" uid="uid://vmm3g5w4x7hy" path="res://assets/sfx/impacts/impactWood_medium_003.ogg" id="4_o6eh4"]
+[ext_resource type="AudioStream" uid="uid://di5otw58tk0gc" path="res://assets/sfx/impacts/impactWood_medium_004.ogg" id="5_ef8ao"]
+
+[resource]
+random_pitch = 1.0116194
+random_volume_offset_db = 0.2
+streams_count = 5
+stream_0/stream = ExtResource("1_n4pdb")
+stream_1/stream = ExtResource("2_6seig")
+stream_2/stream = ExtResource("3_dj67w")
+stream_3/stream = ExtResource("4_o6eh4")
+stream_4/stream = ExtResource("5_ef8ao")

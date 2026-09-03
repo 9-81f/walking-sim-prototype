@@ -4,12 +4,13 @@ class_name LockComponent
 @export_category("Lock Settings")
 @export var _is_unlocked := false
 @export var _is_permanent_locked := false
+@export var _permanent_locked_prompt := "Blocked from the other side."
 @export var required_keys:Array[ItemData] = []
 @export var _remove_key_on_use := false
 
 func attempt_unlock() -> bool:
 	if _is_permanent_locked: 
-		UiEvents.toast_requested.emit("Something is blocking from the other side.", null)
+		UiEvents.toast_requested.emit(_permanent_locked_prompt, null)
 		return false
 	
 	if _is_unlocked: return true

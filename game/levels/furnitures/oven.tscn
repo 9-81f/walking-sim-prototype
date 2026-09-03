@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://esuchbrthh6u"]
+
+[ext_resource type="PackedScene" uid="uid://djbkn08khx5wn" path="res://assets/environments/PSX modular house interior pack/props/oven.glb" id="1_mw8lc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
+size = Vector3(0.77500004, 1.25, 1.275)
+
+[node name="Oven" unique_id=718464616 instance=ExtResource("1_mw8lc")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1282309798]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=419647889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("BoxShape3D_qmagn")

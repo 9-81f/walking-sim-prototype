@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cscc6topq452t"]
+
+[ext_resource type="PackedScene" uid="uid://dx5orjq8apx2o" path="res://assets/environments/PSX modular house interior pack/props/bathroomSink.glb" id="1_whuv8"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="2_jngls"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="3_5rt57"]
+[ext_resource type="Script" uid="uid://b7sokq5tfwike" path="res://game/components/interactable_door_component.gd" id="4_l0a6c"]
+[ext_resource type="AudioStream" uid="uid://b0ooc3jw5o8ig" path="res://game/levels/furnitures/audio/impact_wood_medium.tres" id="5_5rt57"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kjoil"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
+size = Vector3(0.90000004, 0.125, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jngls"]
+size = Vector3(0.925, 0.031054687, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5rt57"]
+size = Vector3(0.925, 0.19907227, 2.075)
+
+[node name="KitchenSink" unique_id=809078105 instance=ExtResource("1_whuv8")]
+
+[node name="Interactable3D" type="Area3D" parent="bathroomSink/sink_001" parent_id_path=PackedInt32Array(295558506) index="0" unique_id=600640455 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39999998)
+script = ExtResource("2_jngls")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="bathroomSink/sink_001/Interactable3D" index="0" unique_id=83819039]
+script = ExtResource("3_5rt57")
+_display_position_y = 0.0
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bathroomSink/sink_001/Interactable3D" index="1" unique_id=2072691136]
+shape = SubResource("SphereShape3D_qmagn")
+
+[node name="Interactable3D" type="Area3D" parent="bathroomSink/sink_002" parent_id_path=PackedInt32Array(695818255) index="0" unique_id=1697482538 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.35000002)
+script = ExtResource("2_jngls")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="bathroomSink/sink_002/Interactable3D" index="0" unique_id=518005539]
+script = ExtResource("3_5rt57")
+_display_position_y = 0.0
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bathroomSink/sink_002/Interactable3D" index="1" unique_id=844724689]
+shape = SubResource("SphereShape3D_kjoil")
+
+[node name="LeftDoorManager" type="Node3D" parent="." index="1" unique_id=1465126694 node_paths=PackedStringArray("_audio", "_mesh_to_tween", "interact")]
+script = ExtResource("4_l0a6c")
+_audio = NodePath("../LeftAudioStreamPlayer3D")
+_open_sfx = ExtResource("5_5rt57")
+_close_sfx = ExtResource("5_5rt57")
+_locked_sfx = ExtResource("5_5rt57")
+_mesh_to_tween = NodePath("../bathroomSink/sink_001")
+_target_tween_prop_value = -100.0
+_enable_focus_overlay = false
+interact = NodePath("../bathroomSink/sink_001/Interactable3D")
+metadata/_custom_type_script = "uid://b7sokq5tfwike"
+
+[node name="RightDoorManager" type="Node3D" parent="." index="2" unique_id=1295678054 node_paths=PackedStringArray("_audio", "_mesh_to_tween", "interact")]
+script = ExtResource("4_l0a6c")
+_audio = NodePath("../RightAudioStreamPlayer3D2")
+_open_sfx = ExtResource("5_5rt57")
+_close_sfx = ExtResource("5_5rt57")
+_locked_sfx = ExtResource("5_5rt57")
+_mesh_to_tween = NodePath("../bathroomSink/sink_002")
+_target_tween_prop_value = 100.0
+_enable_focus_overlay = false
+interact = NodePath("../bathroomSink/sink_002/Interactable3D")
+metadata/_custom_type_script = "uid://b7sokq5tfwike"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=1561053620]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1671077107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0625, 0)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=194938948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38447267, 0)
+shape = SubResource("BoxShape3D_jngls")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1780841295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9318603, 0)
+shape = SubResource("BoxShape3D_5rt57")
+
+[node name="LeftAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1368340379]
+
+[node name="RightAudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." index="5" unique_id=1117703174]

@@ -50,10 +50,11 @@ func focus(interactor: Node3D) -> void:
 	
 	update_prompt_state()
 	
+	focused.emit(interactor)
+	
 	if _enable_interaction_prompt_display:
 		UiEvents.display_interaction_prompt_requested.emit(get_prompt())
 	
-	focused.emit(interactor)
 	
 func interact(interactor: Node3D) -> void:
 	if not is_enabled or not is_in_active_room: return
@@ -67,10 +68,11 @@ func blur(interactor: Node3D) -> void:
 	
 	update_prompt_state()
 		
+	blurred.emit(interactor)
+	
 	if _enable_interaction_prompt_display:
 		UiEvents.dismiss_interaction_prompt_requested.emit()
 	
-	blurred.emit(interactor)
 	
 func set_room_active(active: bool) -> void:
 	is_in_active_room = active

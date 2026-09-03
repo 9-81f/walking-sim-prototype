@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SurfaceAudioData" format=3 uid="uid://bs2435svvrldm"]
+
+[ext_resource type="Script" uid="uid://dkol5mkpvdafy" path="res://core/blueprints/surface_audio_data.gd" id="1_607qu"]
+[ext_resource type="AudioStream" uid="uid://rvgm62mcahqw" path="res://game/actors/player/audio/footstep_concrete_stream.tres" id="1_ke8r7"]
+[ext_resource type="PhysicsMaterial" uid="uid://blvvqp70lfybx" path="res://game/resources/surfaces/phys_stone.tres" id="2_y2lov"]
+
+[resource]
+script = ExtResource("1_607qu")
+physics_material = ExtResource("2_y2lov")
+audio_stream = ExtResource("1_ke8r7")
+metadata/_custom_type_script = "uid://dkol5mkpvdafy"

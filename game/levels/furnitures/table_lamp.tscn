@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cxkdqwy5t88m8"]
+
+[ext_resource type="PackedScene" uid="uid://dwstvb2hmivd1" path="res://assets/environments/PSX modular house interior pack/props/tableLamp.glb" id="1_nd7u3"]
+[ext_resource type="Script" uid="uid://bf4dcooqlria4" path="res://game/components/light_toggle_component.gd" id="1_tmscm"]
+[ext_resource type="Script" uid="uid://d3mq1lue5yf1t" path="res://game/components/switch_toggle_component.gd" id="2_jhy7u"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="3_tmscm"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="5_hcuvm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nd7u3"]
+size = Vector3(0.175, 0.442, 0.175)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
+
+[node name="TableLamp" type="Node3D" unique_id=623990678 node_paths=PackedStringArray("_light_source", "_audio_player", "_controller")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+script = ExtResource("1_tmscm")
+_light_source = NodePath("OmniLight3D")
+_audio_player = NodePath("AudioStreamPlayer3D")
+_controller = NodePath("SwitchToggleComponent")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=513859995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35000002, 0)
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 2.0
+omni_attenuation = 2.0
+
+[node name="tableLamp2" parent="." unique_id=2006971657 instance=ExtResource("1_nd7u3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=169015755]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2132272995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22113037, 0)
+shape = SubResource("BoxShape3D_nd7u3")
+
+[node name="SwitchToggleComponent" type="Node3D" parent="." unique_id=1560703073 node_paths=PackedStringArray("interact")]
+script = ExtResource("2_jhy7u")
+interact = NodePath("../Interactable3D")
+metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
+
+[node name="Interactable3D" type="Area3D" parent="." unique_id=769346987 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21666668, 0)
+script = ExtResource("3_tmscm")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable3D" unique_id=156502666]
+shape = SubResource("SphereShape3D_qmagn")
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="Interactable3D" unique_id=1088902578]
+script = ExtResource("5_hcuvm")
+_display_position_y = 0.3
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=477448634]

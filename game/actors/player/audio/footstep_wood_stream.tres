@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://bnhkptydrtp6t"]
+
+[ext_resource type="AudioStream" uid="uid://cfvm7pnqp7wkc" path="res://assets/sfx/footsteps/kenneys/footstep_wood_000.ogg" id="1_d4y38"]
+[ext_resource type="AudioStream" uid="uid://d7stc6vxc7jp" path="res://assets/sfx/footsteps/kenneys/footstep_wood_001.ogg" id="2_rg1oo"]
+[ext_resource type="AudioStream" uid="uid://bybwvgvkkxngr" path="res://assets/sfx/footsteps/kenneys/footstep_wood_002.ogg" id="3_75ros"]
+[ext_resource type="AudioStream" uid="uid://ply16wuykrgy" path="res://assets/sfx/footsteps/kenneys/footstep_wood_003.ogg" id="4_khms5"]
+[ext_resource type="AudioStream" uid="uid://cskm0erqlyjrf" path="res://assets/sfx/footsteps/kenneys/footstep_wood_004.ogg" id="5_fd3a2"]
+
+[resource]
+random_pitch = 1.005793
+random_volume_offset_db = 0.2
+streams_count = 5
+stream_0/stream = ExtResource("1_d4y38")
+stream_1/stream = ExtResource("2_rg1oo")
+stream_2/stream = ExtResource("3_75ros")
+stream_3/stream = ExtResource("4_khms5")
+stream_4/stream = ExtResource("5_fd3a2")
