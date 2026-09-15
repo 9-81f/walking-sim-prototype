@@ -121,6 +121,7 @@ _controller = NodePath("..")
 metadata/_custom_type_script = "uid://fet110r47r63"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="3" unique_id=767024718]
+bus = &"SFX"
 
 [node name="AudioToggleComponent" type="Node3D" parent="." index="4" unique_id=88642874 node_paths=PackedStringArray("_audio", "_controller")]
 script = ExtResource("5_b22f5")

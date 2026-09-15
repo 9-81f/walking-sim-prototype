@@ -16,7 +16,7 @@ func _on_switch_toggled(toggled: bool) -> void:
 	else:
 		_tween_toggled_off()
 		
-func _on_switch_locked(_unlocked: bool) -> void:
+func _on_switch_locked() -> void:
 	_controller.is_tweening = true
 	
 	var tween := _node_to_tween.create_tween()

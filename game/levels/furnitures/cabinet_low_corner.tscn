@@ -7,8 +7,8 @@ size = Vector3(0.9057617, 1.0229187, 1)
 
 [node name="CabinetLowCorner" unique_id=2097487932 instance=ExtResource("1_f4hbi")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=25556337]
+[node name="StaticBody3D" type="StaticBody3D" parent="cabinetLowCorner" parent_id_path=PackedInt32Array(470238263) index="0" unique_id=25556337]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1431772764]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetLowCorner/StaticBody3D" index="0" unique_id=1431772764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5539551, 0.5684967, 0)
 shape = SubResource("BoxShape3D_qmagn")

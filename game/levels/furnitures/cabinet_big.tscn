@@ -1,17 +1,21 @@
 [gd_scene format=3 uid="uid://cylw3g70jej6s"]
 
 [ext_resource type="PackedScene" uid="uid://beumq1d4tkek" path="res://assets/environments/PSX modular house interior pack/props/cabinetBig.glb" id="1_bufln"]
+[ext_resource type="Script" uid="uid://3dj6csaocnvh" path="res://game/components/shelves_storage_manager_3d.gd" id="2_31ynh"]
 [ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="2_h2a28"]
 [ext_resource type="Script" uid="uid://d3mq1lue5yf1t" path="res://game/components/switch_toggle_component.gd" id="2_w8dwf"]
+[ext_resource type="PackedScene" uid="uid://cfov2f6pljsj" path="res://assets/environments/PSX modular house interior pack/props/bookStack.glb" id="3_o18hr"]
+[ext_resource type="PackedScene" uid="uid://gi6w5ldmu177" path="res://assets/environments/PSX modular house interior pack/props/bookStack3.glb" id="3_sw4qs"]
 [ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="3_sy8m5"]
+[ext_resource type="PackedScene" uid="uid://bjyu0p4oj2uyo" path="res://assets/environments/PSX modular house interior pack/props/bookStack2.glb" id="3_xaxec"]
 [ext_resource type="Script" uid="uid://b0ld3gnc7p4sc" path="res://core/components/tween_mesh_toggle.gd" id="5_33541"]
 [ext_resource type="Script" uid="uid://b4dg5dsmsigbm" path="res://core/components/audio_toggle_component.gd" id="7_33541"]
 [ext_resource type="AudioStream" uid="uid://b0ooc3jw5o8ig" path="res://game/levels/furnitures/audio/impact_wood_medium.tres" id="8_xdodb"]
 [ext_resource type="AudioStream" uid="uid://dh2j0bau0w25x" path="res://game/levels/furnitures/audio/impact_wood_heavy.tres" id="9_pc7j1"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_kjoil"]
+[ext_resource type="Script" uid="uid://evm6758yh37o" path="res://game/components/shelf_storage_component_3d.gd" id="10_trt82"]
+[ext_resource type="Script" uid="uid://d05res58un2au" path="res://game/components/lock_component.gd" id="10_xaxec"]
+[ext_resource type="PackedScene" uid="uid://dij85xs7kt4kf" path="res://assets/environments/PSX modular house interior pack/props/bookStack4.glb" id="14_qy128"]
+[ext_resource type="PackedScene" uid="uid://b5uqily4345ds" path="res://assets/environments/PSX modular house interior pack/props/bookStack5.glb" id="16_176wn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
 size = Vector3(1.6750001, 0.2, 0.5)
@@ -31,7 +35,79 @@ size = Vector3(1.6750001, 0.05, 0.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_trt82"]
 size = Vector3(1.6750001, 0.03293457, 0.5)
 
-[node name="CabinetBig" unique_id=2038461481 instance=ExtResource("1_bufln")]
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xdodb"]
+points = PackedVector3Array(1.7881393e-06, -1.130507, 4.61936e-07, 0.76326835, -1.130507, 4.61936e-07, 1.7881393e-06, -1.130507, 0.030160487, 1.7881393e-06, 1.130507, 4.61936e-07, 0.76326835, -1.130507, 0.030160487, 0.76326835, 1.130507, 4.61936e-07, 0.66920483, -0.1677612, 0.10216054, 1.7881393e-06, 1.130507, 0.030160487, 0.76326835, 1.130507, 0.030160487)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kjoil"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pc7j1"]
+points = PackedVector3Array(-0.76326835, -1.130507, 4.61936e-07, -1.7881393e-06, -1.130507, 4.61936e-07, -0.76326835, -1.130507, 0.030160487, -0.76326835, 1.130507, 4.61936e-07, -1.7881393e-06, -1.130507, 0.030160487, -1.7881393e-06, 1.130507, 4.61936e-07, -0.6692796, -0.1677612, 0.10216054, -0.76326835, 1.130507, 0.030160487, -1.7881393e-06, 1.130507, 0.030160487)
+
+[node name="CabinetBig" unique_id=2038461481 node_paths=PackedStringArray("_shelves", "_enclosure_toggles") instance=ExtResource("1_bufln")]
+script = ExtResource("2_31ynh")
+_shelves = {
+NodePath("LeftBottomShelfStorageComponent3D"): null,
+NodePath("LeftThirdShelfStorageComponent3D"): null,
+NodePath("RightBottomShelfStorageComponent3D"): null
+}
+_enclosure_toggles = {
+NodePath("LeftDoorSwitchToggle"): null,
+NodePath("RightDoorSwitchToggle"): null
+}
+
+[node name="bookStack2" parent="." index="0" unique_id=207190033 instance=ExtResource("3_o18hr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.3, 2.2, 0)
+
+[node name="bookStack3" parent="." index="1" unique_id=1495901583 instance=ExtResource("3_o18hr")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.3, 1.475, 0)
+
+[node name="bookStack32" parent="." index="2" unique_id=518195249 instance=ExtResource("3_sw4qs")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.225, 1.475, 0)
+
+[node name="bookStack22" parent="." index="3" unique_id=755165986 instance=ExtResource("3_xaxec")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.875, 1.475, 0)
+
+[node name="bookStack23" parent="." index="4" unique_id=1857194156 instance=ExtResource("3_xaxec")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.875, 2.1999998, 0)
+
+[node name="cabinetBig" parent="." index="5" unique_id=252284301]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cabinetBig" index="0" unique_id=359207356]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetBig/StaticBody3D" index="0" unique_id=1496493448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.099999994, 0)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="cabinetBig/StaticBody3D" index="1" unique_id=730646300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8000001, 1.2500001, 0)
+shape = SubResource("BoxShape3D_xdodb")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="cabinetBig/StaticBody3D" index="2" unique_id=1410880313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 1.2500001, 0)
+shape = SubResource("BoxShape3D_pc7j1")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="cabinetBig/StaticBody3D" index="3" unique_id=572992485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5390258e-08, 1.2500001, 0)
+shape = SubResource("BoxShape3D_xaxec")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="cabinetBig/StaticBody3D" index="4" unique_id=690216437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 2.4750001, 0)
+shape = SubResource("BoxShape3D_31ynh")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="cabinetBig/StaticBody3D" index="5" unique_id=1444465198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 1.8914673, 0)
+shape = SubResource("BoxShape3D_trt82")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="cabinetBig/StaticBody3D" index="6" unique_id=1091660040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 1.4414673, 0)
+shape = SubResource("BoxShape3D_trt82")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="cabinetBig/StaticBody3D" index="7" unique_id=1282859186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 0.96646726, 0)
+shape = SubResource("BoxShape3D_trt82")
 
 [node name="Interactable3D" type="Area3D" parent="cabinetBig/cabinetBig_001" parent_id_path=PackedInt32Array(1069612747) index="0" unique_id=620456712 node_paths=PackedStringArray("_spatial_prompt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.375, -0.14999998, 0)
@@ -47,6 +123,11 @@ metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetBig/cabinetBig_001/Interactable3D" index="1" unique_id=1553446268]
 shape = SubResource("SphereShape3D_qmagn")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="cabinetBig/cabinetBig_001" parent_id_path=PackedInt32Array(1069612747) index="1" unique_id=1379028383]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetBig/cabinetBig_001/StaticBody3D" index="0" unique_id=761849143]
+shape = SubResource("ConvexPolygonShape3D_xdodb")
+
 [node name="Interactable3D" type="Area3D" parent="cabinetBig/cabinetBig_002" parent_id_path=PackedInt32Array(370267789) index="0" unique_id=1908004982 node_paths=PackedStringArray("_spatial_prompt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.375, -0.14999998, 0)
 script = ExtResource("2_h2a28")
@@ -61,11 +142,17 @@ metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetBig/cabinetBig_002/Interactable3D" index="1" unique_id=1863748686]
 shape = SubResource("SphereShape3D_kjoil")
 
-[node name="LeftDoorSwitchToggle" type="Node3D" parent="." index="1" unique_id=1037239425 node_paths=PackedStringArray("interact")]
+[node name="StaticBody3D" type="StaticBody3D" parent="cabinetBig/cabinetBig_002" parent_id_path=PackedInt32Array(370267789) index="1" unique_id=1713911320]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetBig/cabinetBig_002/StaticBody3D" index="0" unique_id=185733822]
+shape = SubResource("ConvexPolygonShape3D_pc7j1")
+
+[node name="LeftDoorSwitchToggle" type="Node3D" parent="." index="6" unique_id=1037239425 node_paths=PackedStringArray("interact", "lock")]
 script = ExtResource("2_w8dwf")
 interact = NodePath("../cabinetBig/cabinetBig_001/Interactable3D")
 _true_prompt = "Close"
 _false_prompt = "Open"
+lock = NodePath("LockComponent")
 metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
 
 [node name="LeftDoorTweenMeshToggle" type="Node3D" parent="LeftDoorSwitchToggle" index="0" unique_id=1693356003 node_paths=PackedStringArray("_node_to_tween", "_controller")]
@@ -85,12 +172,18 @@ _controller = NodePath("..")
 metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LeftDoorSwitchToggle" index="2" unique_id=283825529]
+bus = &"SFX"
 
-[node name="RightDoorSwitchToggle" type="Node3D" parent="." index="2" unique_id=2030130894 node_paths=PackedStringArray("interact")]
+[node name="LockComponent" type="Node" parent="LeftDoorSwitchToggle" index="3" unique_id=624868271]
+script = ExtResource("10_xaxec")
+metadata/_custom_type_script = "uid://d05res58un2au"
+
+[node name="RightDoorSwitchToggle" type="Node3D" parent="." index="7" unique_id=2030130894 node_paths=PackedStringArray("interact", "lock")]
 script = ExtResource("2_w8dwf")
 interact = NodePath("../cabinetBig/cabinetBig_002/Interactable3D")
 _true_prompt = "Close"
 _false_prompt = "Open"
+lock = NodePath("LockComponent")
 metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
 
 [node name="RightDoorTweenMeshToggle" type="Node3D" parent="RightDoorSwitchToggle" index="0" unique_id=1914331531 node_paths=PackedStringArray("_node_to_tween", "_controller")]
@@ -109,37 +202,53 @@ _controller = NodePath("..")
 metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RightDoorSwitchToggle" index="2" unique_id=2111163051]
+bus = &"SFX"
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=359207356]
+[node name="LockComponent" type="Node" parent="RightDoorSwitchToggle" index="3" unique_id=158312951]
+script = ExtResource("10_xaxec")
+metadata/_custom_type_script = "uid://d05res58un2au"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1496493448]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.099999994, 0)
-shape = SubResource("BoxShape3D_qmagn")
+[node name="LeftBottomShelfStorageComponent3D" type="Node3D" parent="." index="8" unique_id=503176783 node_paths=PackedStringArray("enclosure_toggle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.325, 0)
+script = ExtResource("10_trt82")
+enclosure_toggle = NodePath("../LeftDoorSwitchToggle")
+metadata/_custom_type_script = "uid://evm6758yh37o"
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=730646300]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8000001, 1.2500001, 0)
-shape = SubResource("BoxShape3D_xdodb")
+[node name="Marker3D" type="Marker3D" parent="LeftBottomShelfStorageComponent3D" index="0" unique_id=113068472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0)
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1410880313]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79999995, 1.2500001, 0)
-shape = SubResource("BoxShape3D_pc7j1")
+[node name="Marker3D2" type="Marker3D" parent="LeftBottomShelfStorageComponent3D" index="1" unique_id=610202553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40000004, 0, 0)
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=572992485]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5390258e-08, 1.2500001, 0)
-shape = SubResource("BoxShape3D_xaxec")
+[node name="LeftThirdShelfStorageComponent3D" type="Node3D" parent="." index="9" unique_id=1171700856 node_paths=PackedStringArray("enclosure_toggle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("10_trt82")
+enclosure_toggle = NodePath("../LeftDoorSwitchToggle")
+metadata/_custom_type_script = "uid://evm6758yh37o"
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="4" unique_id=690216437]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 2.4750001, 0)
-shape = SubResource("BoxShape3D_31ynh")
+[node name="Marker3D" type="Marker3D" parent="LeftThirdShelfStorageComponent3D" index="0" unique_id=530755754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 0, 0)
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="5" unique_id=1444465198]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 1.8914673, 0)
-shape = SubResource("BoxShape3D_trt82")
+[node name="RightBottomShelfStorageComponent3D" type="Node3D" parent="." index="10" unique_id=930154550 node_paths=PackedStringArray("enclosure_toggle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.325, 0)
+script = ExtResource("10_trt82")
+enclosure_toggle = NodePath("../RightDoorSwitchToggle")
+metadata/_custom_type_script = "uid://evm6758yh37o"
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" index="6" unique_id=1091660040]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 1.4414673, 0)
-shape = SubResource("BoxShape3D_trt82")
+[node name="Marker3D" type="Marker3D" parent="RightBottomShelfStorageComponent3D" index="0" unique_id=959316087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
 
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" index="7" unique_id=1282859186]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 0.96646726, 0)
-shape = SubResource("BoxShape3D_trt82")
+[node name="Marker3D2" type="Marker3D" parent="RightBottomShelfStorageComponent3D" index="1" unique_id=947264904]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0)
+
+[node name="bookStack42" parent="." index="11" unique_id=58692644 instance=ExtResource("14_qy128")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.75, 1.5, 0)
+
+[node name="bookStack43" parent="." index="12" unique_id=1845367071 instance=ExtResource("14_qy128")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.29999998, 2.875, 0)
+
+[node name="bookStack52" parent="." index="13" unique_id=1316993920 instance=ExtResource("16_176wn")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.725, 2.2, 0)
+
+[node name="bookStack53" parent="." index="14" unique_id=420290399 instance=ExtResource("16_176wn")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.82500005, 2.4, 0)

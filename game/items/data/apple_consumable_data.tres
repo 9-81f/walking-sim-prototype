@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://sxfg7d12gp61"]
+
+[ext_resource type="Texture2D" uid="uid://seoux54i27vw" path="res://assets/consumables/apple_icon.png" id="1_hdtis"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_ok768"]
+[ext_resource type="ArrayMesh" uid="uid://b14qb4j87bxh1" path="res://assets/consumables/apple.res" id="2_fd0ik"]
+
+[resource]
+script = ExtResource("1_ok768")
+id = "apple-cnsmbl-001"
+display_name = "Apple"
+description = "A fresh looking apple"
+icon = ExtResource("1_hdtis")
+mesh = ExtResource("2_fd0ik")
+is_stackable = true
+max_stack_size = 10
+stats_modifiers = Dictionary[String, Variant]({
+"heal": 2
+})
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

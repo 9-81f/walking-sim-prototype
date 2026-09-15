@@ -6,8 +6,8 @@
 
 [resource]
 script = ExtResource("3_h106w")
-id = "old_key_01"
-display_name = "Old Key"
+id = "key-001"
+display_name = "Key"
 description = "Old rusty key"
 icon = ExtResource("1_n8ik5")
 mesh = ExtResource("2_anybs")

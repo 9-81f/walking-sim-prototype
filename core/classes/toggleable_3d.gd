@@ -13,4 +13,4 @@ func _ready() -> void:
 
 @abstract func _on_switch_toggled(toggled: bool) -> void
 
-func _on_switch_locked(_unlocked: bool) -> void: pass
+func _on_switch_locked() -> void: pass

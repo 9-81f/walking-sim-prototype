@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://biawjfdquxodi"]
+
+[ext_resource type="ArrayMesh" uid="uid://dp67hmld7iqc1" path="res://assets/consumables/pocky_strawberry.res" id="1_hxhfi"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="2_s6q81"]
+
+[resource]
+script = ExtResource("2_s6q81")
+id = "poki-sberry"
+display_name = "Poki Strawberry"
+description = "Imported Poki strawberry flavour from Japan."
+mesh = ExtResource("1_hxhfi")
+type = 2
+is_storable = false
+readable_text = "I hid it on purpose. Won't get this kind of snack anytime soon in my life."
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

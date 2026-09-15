@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c0egtc7uss6vq"]
+
+[ext_resource type="ArrayMesh" uid="uid://x1uoxc1fidcj" path="res://assets/inspectables/milk_carton.res" id="1_1voq7"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_xtiw3"]
+
+[resource]
+script = ExtResource("1_xtiw3")
+id = "milk-inspctbl-001"
+display_name = "Milk Carton"
+description = "A questionably fresh looking milk carton."
+mesh = ExtResource("1_1voq7")
+type = 2
+is_storable = false
+readable_text = "There's usually something interesting on the side of this milk carton"
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

@@ -1,0 +1,769 @@
+[gd_scene format=3 uid="uid://c256iiig6drvf"]
+
+[ext_resource type="MeshLibrary" uid="uid://bnt5lvkwvb62m" path="res://assets/environments/meshlibs/psx_modular_house_interior.meshlib" id="1_0b74h"]
+[ext_resource type="PackedScene" uid="uid://2pgepvbkx7tr" path="res://assets/environments/PSX modular house interior pack/props/windowCurtains.glb" id="2_hkw3r"]
+[ext_resource type="PhysicsMaterial" uid="uid://clxwjwnphed17" path="res://game/resources/surfaces/phys_marble.tres" id="2_o6nqy"]
+[ext_resource type="PackedScene" uid="uid://b2ighkbsw5jvg" path="res://assets/environments/PSX modular house interior pack/props/doormat.glb" id="2_sdirq"]
+[ext_resource type="PackedScene" uid="uid://dan5rmei5ko5p" path="res://game/levels/furnitures/radio.tscn" id="3_1eh8c"]
+[ext_resource type="PackedScene" uid="uid://b3weo10n7b5pe" path="res://game/interactables/switches/flick_switch.tscn" id="3_4nhsi"]
+[ext_resource type="PackedScene" uid="uid://jiux1lg5yvi8" path="res://game/interactables/doors/wood_door_white_01.tscn" id="3_nts5u"]
+[ext_resource type="PackedScene" uid="uid://k4yjqgakj5rp" path="res://game/levels/furnitures/cabinet_drawer_big.tscn" id="3_oj4lt"]
+[ext_resource type="PackedScene" uid="uid://cxkdqwy5t88m8" path="res://game/levels/furnitures/table_lamp.tscn" id="3_slbab"]
+[ext_resource type="Script" uid="uid://s1rngkubb457" path="res://game/components/room_zone_3d.gd" id="3_tc7r6"]
+[ext_resource type="PackedScene" uid="uid://cylw3g70jej6s" path="res://game/levels/furnitures/cabinet_big.tscn" id="3_uh7m6"]
+[ext_resource type="PackedScene" uid="uid://cwpqh1s2ml3fa" path="res://game/levels/furnitures/cabinet_sink.tscn" id="3_xp538"]
+[ext_resource type="PackedScene" uid="uid://nt7w7xrvjta3" path="res://game/levels/furnitures/couch_small.tscn" id="3_y34ln"]
+[ext_resource type="PackedScene" uid="uid://b0w4srvs08g5h" path="res://game/levels/furnitures/table_wide.tscn" id="4_5i7lp"]
+[ext_resource type="PackedScene" uid="uid://dyntjokkid4p0" path="res://assets/environments/PSX modular house interior pack/props/powerSocket.glb" id="4_8gc2e"]
+[ext_resource type="PackedScene" uid="uid://esuchbrthh6u" path="res://game/levels/furnitures/oven.tscn" id="4_8rwog"]
+[ext_resource type="PhysicsMaterial" uid="uid://bfbu5kqaiul2" path="res://game/resources/surfaces/phys_carpet.tres" id="4_a584s"]
+[ext_resource type="Script" uid="uid://d05res58un2au" path="res://game/components/lock_component.gd" id="4_j15tc"]
+[ext_resource type="PackedScene" uid="uid://captcx4ogxru1" path="res://game/levels/furnitures/table_small.tscn" id="5_53q6s"]
+[ext_resource type="PackedScene" uid="uid://chfq50lypr6eu" path="res://game/levels/furnitures/plant_big.tscn" id="5_d44rf"]
+[ext_resource type="PackedScene" uid="uid://byrwyt5nhg8vc" path="res://game/levels/furnitures/cabinet_low.tscn" id="5_ilmif"]
+[ext_resource type="PackedScene" uid="uid://blekudnpekaev" path="res://game/levels/furnitures/fridge.tscn" id="6_0krwf"]
+[ext_resource type="Resource" uid="uid://1las6wc2ags1" path="res://game/items/data/log001_inspectable.tres" id="6_buadj"]
+[ext_resource type="Resource" uid="uid://d05nlrbc43hm5" path="res://game/items/data/log003_inspectable.tres" id="7_giax2"]
+[ext_resource type="Resource" uid="uid://ch55tx5dar1rw" path="res://game/items/data/log004_inspectable.tres" id="8_7php7"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="8_yov1d"]
+[ext_resource type="Resource" uid="uid://6mabdxpg1554" path="res://game/items/data/old_key_01.tres" id="9_4nhsi"]
+[ext_resource type="Resource" uid="uid://c4t4wu47rgox0" path="res://game/items/data/log005_inspectable.tres" id="9_hjiv6"]
+[ext_resource type="Resource" uid="uid://dxustpfhqcied" path="res://game/items/data/crips_consumable_data.tres" id="10_k4uhm"]
+[ext_resource type="PackedScene" uid="uid://g55671hmebo4" path="res://game/levels/furnitures/ceiling_light_disc.tscn" id="11_14u0e"]
+[ext_resource type="Resource" uid="uid://4fm3is3ya58m" path="res://game/items/data/piko_choco_inspectable_data.tres" id="11_tx4sa"]
+[ext_resource type="Resource" uid="uid://biawjfdquxodi" path="res://game/items/data/piko_sberry_inspectable_data.tres" id="12_42f83"]
+[ext_resource type="PackedScene" uid="uid://0khfwnco2ux3" path="res://game/levels/furnitures/cabinet_high.tscn" id="16_8rwog"]
+[ext_resource type="PackedScene" uid="uid://h0jirq08asc3" path="res://game/levels/furnitures/table_rounded.tscn" id="17_0krwf"]
+[ext_resource type="Resource" uid="uid://fvmyqr1xpjf2" path="res://game/items/data/pot_carryable_data.tres" id="17_ceb5f"]
+[ext_resource type="PackedScene" uid="uid://jcvp8homcsvo" path="res://game/levels/furnitures/chair_03.tscn" id="18_3l2jm"]
+[ext_resource type="Resource" uid="uid://cki4p51e7u2ov" path="res://game/items/data/plate_carryable_data.tres" id="18_wa6w2"]
+[ext_resource type="PackedScene" uid="uid://c8t2ppxoybpvq" path="res://assets/environments/PSX modular house interior pack/props/product4.glb" id="20_2wqt5"]
+[ext_resource type="Resource" uid="uid://btin0m8v4hvio" path="res://game/items/data/water_bottle_consumable_data.tres" id="22_nbel1"]
+[ext_resource type="PackedScene" uid="uid://cgdsaf7s44yt8" path="res://game/levels/furnitures/couch_big.tscn" id="22_slbab"]
+[ext_resource type="Resource" uid="uid://c0egtc7uss6vq" path="res://game/items/data/milk_carton_inspectable.tres" id="23_ibb4q"]
+[ext_resource type="Resource" uid="uid://cken4pb1uv8xw" path="res://game/items/data/pan_carryable_data.tres" id="23_ym13e"]
+[ext_resource type="Script" uid="uid://y1v4rlucx6df" path="res://core/blueprints/item_data_array.gd" id="24_k4uhm"]
+[ext_resource type="PackedScene" uid="uid://b0jsnhpcnfs5e" path="res://game/levels/furnitures/tv.tscn" id="24_wcsr1"]
+[ext_resource type="Resource" uid="uid://sxfg7d12gp61" path="res://game/items/data/apple_consumable_data.tres" id="25_d44rf"]
+[ext_resource type="PackedScene" uid="uid://cditk4gmhbcio" path="res://game/levels/furnitures/plant_01.tscn" id="25_dkq24"]
+[ext_resource type="PackedScene" uid="uid://day3uq5b1g3od" path="res://game/interactables/pickup/world_pickup.tscn" id="26_0me3r"]
+[ext_resource type="PackedScene" uid="uid://ct5rp4culu8tv" path="res://game/levels/furnitures/sideboard_drawers.tscn" id="26_wcsr1"]
+[ext_resource type="Resource" uid="uid://b83f3fs72t8cm" path="res://game/items/data/burger_consumable_data.tres" id="26_ym13e"]
+[ext_resource type="Resource" uid="uid://pnjq1vncclcq" path="res://game/items/data/pizza_consumable_data.tres" id="27_2wqt5"]
+[ext_resource type="Resource" uid="uid://bnhvcsfx31ui3" path="res://game/items/data/teddy_bear_inspectable_data.tres" id="27_ceb5f"]
+[ext_resource type="PackedScene" uid="uid://ch2d5jqlib70s" path="res://game/levels/furnitures/single_bed.tscn" id="27_dkq24"]
+[ext_resource type="PackedScene" uid="uid://b7aeo1g422xp6" path="res://game/levels/furnitures/shelves_metal.tscn" id="28_5pagi"]
+[ext_resource type="PackedScene" uid="uid://ckans0ydwwfo5" path="res://game/levels/furnitures/washing_machine.tscn" id="28_8of7y"]
+[ext_resource type="PackedScene" uid="uid://br6tctw8q4dre" path="res://game/levels/furnitures/bathtub.tscn" id="28_gs746"]
+[ext_resource type="Resource" uid="uid://bvd76qta7n8wv" path="res://game/items/data/cup01_carryable_data.tres" id="29_4kiom"]
+[ext_resource type="PackedScene" uid="uid://cscc6topq452t" path="res://game/levels/furnitures/kitchen_sink.tscn" id="29_vxq1x"]
+[ext_resource type="PackedScene" uid="uid://bgq1fpeluiera" path="res://game/levels/furnitures/radiator.tscn" id="30_kir01"]
+[ext_resource type="Resource" uid="uid://dc1tr5y8jilyf" path="res://game/items/data/cup02_carryable_data.tres" id="30_sjw7i"]
+[ext_resource type="PackedScene" uid="uid://tkcmuw3h3oq8" path="res://assets/environments/PSX modular house interior pack/props/mirror2.glb" id="31_gs746"]
+[ext_resource type="PackedScene" uid="uid://dqfo0yjb6quj4" path="res://game/levels/furnitures/toilet.tscn" id="31_rvycv"]
+[ext_resource type="PackedScene" uid="uid://ds34r7ttdaacn" path="res://game/levels/furnitures/trash_bin.tscn" id="32_vmp2j"]
+[ext_resource type="Resource" uid="uid://0t3pln6427bv" path="res://game/items/data/flashlight_equippable_data.tres" id="41_ibb4q"]
+[ext_resource type="PackedScene" uid="uid://cl3o27yvtdur5" path="res://assets/environments/PSX modular house interior pack/props/product2.glb" id="49_yp33g"]
+[ext_resource type="PackedScene" uid="uid://c6u5lfcjreut6" path="res://assets/environments/PSX modular house interior pack/props/product.glb" id="50_i1ylm"]
+[ext_resource type="Resource" uid="uid://dexl30nyg6t2r" path="res://game/items/data/log002_inspectable.tres" id="51_qd041"]
+[ext_resource type="PackedScene" uid="uid://t72248wvngm3" path="res://assets/environments/PSX modular house interior pack/props/painting3.glb" id="51_sjw7i"]
+[ext_resource type="PackedScene" uid="uid://clnvp4kenvbq8" path="res://assets/environments/PSX modular house interior pack/props/clock.glb" id="52_10tdl"]
+[ext_resource type="Resource" uid="uid://bwyh17wjpvw2l" path="res://game/items/data/pencil_cup_inspectable_data.tres" id="53_alhb8"]
+[ext_resource type="PackedScene" uid="uid://crj8x8iballse" path="res://assets/environments/PSX modular house interior pack/props/product5.glb" id="58_4kiom"]
+[ext_resource type="PackedScene" uid="uid://bq83g24wtxv02" path="res://assets/environments/PSX modular house interior pack/props/product3.glb" id="59_sjw7i"]
+[ext_resource type="Script" uid="uid://b4dg5dsmsigbm" path="res://core/components/audio_toggle_component.gd" id="70_sv3ou"]
+[ext_resource type="AudioStream" uid="uid://e6t0bq1iuf46" path="res://assets/sfx/horror/mixkit-horror-sci-fi-wind-tunnel-894.wav" id="71_5pchr"]
+[ext_resource type="AudioStream" uid="uid://b8vhvjm7fhen7" path="res://assets/sfx/horror/mixkit-hard-horror-hit-drum-565.wav" id="72_3rqtw"]
+[ext_resource type="Script" uid="uid://dj6m7vrhjedwj" path="res://core/components/trigger_area_3d_component.gd" id="73_rdm5u"]
+[ext_resource type="Script" uid="uid://lw8l3qilpme5" path="res://core/components/audio_trigger_component.gd" id="74_c6ym6"]
+[ext_resource type="AudioStream" uid="uid://c6er60q21rmuy" path="res://assets/sfx/horror/alex_jauk-evil-laughing-256454.mp3" id="75_3hqx5"]
+[ext_resource type="Script" uid="uid://bdki821upggto" path="res://core/components/tween_walk_off_component.gd" id="76_2ankl"]
+[ext_resource type="AudioStream" uid="uid://c0hiaoxsa651d" path="res://assets/sfx/horror/mixkit-terror-sweep-of-darkness-2630.wav" id="76_jcyny"]
+[ext_resource type="AudioStream" uid="uid://dio83y2imfgh4" path="res://assets/sfx/horror/freesound_community-ghostly-whispers-6085.mp3" id="76_t3nrq"]
+[ext_resource type="PackedScene" uid="uid://chx8vtekqw560" path="res://assets/characters/creepy_doll/CreepyDoll.fbx" id="77_l8sva"]
+[ext_resource type="AudioStream" uid="uid://ci1j12g5gh4rl" path="res://assets/sfx/horror/mixkit-gasping-zombie-963.wav" id="77_sthv3"]
+[ext_resource type="AudioStream" uid="uid://d2j27c4lbuvkp" path="res://assets/sfx/horror/mixkit-creepy-little-creature-2873.wav" id="78_seg30"]
+[ext_resource type="Script" uid="uid://v8lcrdlqmprn" path="res://game/components/unlocker_trigger_component.gd" id="80_seg30"]
+[ext_resource type="Script" uid="uid://buyb53fhfrwij" path="res://core/components/endgame_ui_toggle_component.gd" id="82_nawy8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kjoil"]
+size = Vector3(4, 0.55, 16)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v7nto"]
+size = Vector3(12, 0.6, 8)
+
+[sub_resource type="Resource" id="Resource_777ly"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("11_tx4sa"), ExtResource("12_42f83"), ExtResource("11_tx4sa")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_lrcr7"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("9_4nhsi")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_nbebd"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("10_k4uhm"), ExtResource("10_k4uhm")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_ryvvy"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("10_k4uhm"), ExtResource("10_k4uhm")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_843vb"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("23_ibb4q")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_i73u0"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("25_d44rf"), ExtResource("26_ym13e")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_tx4sa"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("22_nbel1"), ExtResource("22_nbel1")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_6emgg"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("27_2wqt5")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
+size = Vector3(1.0500001, 0.5345947, 0.6)
+
+[sub_resource type="Resource" id="Resource_xc5ny"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("9_4nhsi"), ExtResource("41_ibb4q")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_ju1st"]
+script = ExtResource("24_k4uhm")
+list = Array[ExtResource("8_yov1d")]([ExtResource("51_qd041")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78xn6"]
+size = Vector3(18, 4.025, 16)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ktmh6"]
+size = Vector3(4, 4.025, 16.025)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_155sq"]
+size = Vector3(43.5, 4.0750003, 51.95)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nawy8"]
+size = Vector3(3.75, 1.25, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jsjat"]
+size = Vector3(3.75, 1.25, 3.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_seg30"]
+size = Vector3(13.75, 1.25, 3.75)
+
+[node name="TheSpace" type="Node3D" unique_id=1932012842]
+
+[node name="Architecture" type="Node3D" parent="." unique_id=1688674267]
+
+[node name="FloorGridMap" type="GridMap" parent="Architecture" unique_id=1611914333]
+mesh_library = ExtResource("1_0b74h")
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65535, 3, 655404, 1, 3, 655404, 3, 3, 655404, 3, 1, 655404, 65533, 3, 655404, 3, 65535, 655404, 3, 65533, 655404, 1, 65533, 655404, 65535, 65533, 655404, 5, 3, 655400, 5, 1, 655400, 5, 65535, 655400, 5, 65533, 655400, 65532, 65533, 1048615, 65532, 1, 1048615, 65532, 3, 1048615, 65531, 3, 1048589, 65531, 1, 1048589, 65531, 65535, 1048589, 65531, 65533, 1048589, 65532, 65532, 13, 65534, 65532, 13, 0, 65532, 13, 2, 65532, 13, 4, 65532, 13, 5, 65532, 131085, 6, 65533, 1179661, 6, 65535, 1179661, 6, 1, 1179661, 6, 3, 1179661, 5, 4, 524301, 3, 4, 524301, 1, 4, 524301, 65535, 4, 524301, 65533, 4, 524301, 65532, 4, 524301, 1, 1, 32, 65535, 1, 32, 65533, 1, 32, 65532, 65535, 1048615, 65533, 65533, 655404, 1, 65535, 32, 65535, 65535, 32, 65533, 65535, 32, 65533, 5, 44, 65533, 7, 44, 65533, 9, 44, 65533, 11, 44, 65533, 13, 44, 65533, 15, 44, 65533, 17, 44, 65531, 17, 44, 65529, 17, 44, 65527, 17, 44, 65525, 17, 44, 65523, 17, 44, 65535, 17, 44, 1, 17, 44, 3, 17, 44, 5, 17, 44, 7, 17, 44, 7, 19, 44, 7, 21, 44, 7, 23, 44, 7, 25, 44, 7, 27, 44, 7, 29, 44, 5, 29, 44, 3, 29, 44, 1, 29, 44, 65535, 29, 44, 65533, 29, 44, 65531, 29, 44, 65529, 29, 44, 65527, 29, 44, 65525, 29, 44, 65523, 29, 44, 65523, 27, 44, 65523, 25, 44, 65523, 23, 44, 65523, 21, 44, 65523, 19, 44)
+}
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Architecture/FloorGridMap" unique_id=1747256392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+physics_material_override = ExtResource("2_o6nqy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/FloorGridMap/StaticBody3D" unique_id=1469970976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225, 0)
+shape = SubResource("BoxShape3D_kjoil")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Architecture/FloorGridMap" unique_id=934290422]
+physics_material_override = ExtResource("4_a584s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Architecture/FloorGridMap/StaticBody3D2" unique_id=1354416599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.19999999, 0)
+shape = SubResource("BoxShape3D_v7nto")
+
+[node name="OuterWallGridMap" type="GridMap" parent="Architecture" unique_id=1541850870]
+mesh_library = ExtResource("1_0b74h")
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65533, 5, 655439, 65535, 5, 655484, 3, 5, 655484, 65531, 5, 655472, 65530, 2, 1048699, 65530, 0, 1048699, 65530, 65534, 1048699, 65533, 65531, 124, 65535, 65531, 124, 1, 65531, 124, 3, 65531, 124, 1, 5, 655483, 6, 65531, 104, 5, 65531, 80, 4, 5, 655440, 7, 4, 1441896, 7, 2, 1441853, 7, 0, 1441853, 7, 65534, 1441853, 65530, 65532, 1048688, 3, 65533, 1048689, 3, 3, 1048689, 3, 65535, 1048689, 3, 1, 1048653, 5, 65533, 655449, 5, 3, 89)
+}
+
+[node name="InnerWallGridMap" type="GridMap" parent="Architecture" unique_id=875717569]
+mesh_library = ExtResource("1_0b74h")
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65533, 3, 77, 65532, 4, 1441878, 65532, 3, 86, 65532, 2, 1441913, 65532, 0, 1441913, 65532, 65534, 1441913, 65532, 65533, 1441878, 65531, 65533, 655446, 65533, 65533, 655473, 65535, 65533, 655473, 1, 65533, 655473, 3, 65533, 655473, 65535, 3, 113, 3, 3, 113, 1, 3, 121, 5, 65533, 1441881, 5, 65535, 1441881, 5, 3, 1441881, 5, 1, 1441864, 65534, 17, 114, 0, 17, 114, 2, 17, 114, 4, 17, 114, 6, 17, 111, 7, 28, 1441903, 65523, 18, 1048687, 7, 26, 1441906, 7, 24, 1441906, 7, 22, 1441906, 7, 20, 1441906, 65532, 17, 114, 65530, 17, 114, 65528, 17, 114, 65526, 17, 114, 65523, 20, 1048690, 65523, 22, 1048690, 65523, 24, 1048690, 65523, 25, 1048690, 65524, 29, 655471, 65523, 26, 1048663, 65526, 29, 655474, 65528, 29, 655474, 65530, 29, 655474, 65532, 29, 655474, 65534, 29, 655474, 0, 29, 655474, 2, 29, 655474, 4, 29, 655474)
+}
+
+[node name="AdditionalInnerwallGridMap" type="GridMap" parent="Architecture" unique_id=429464908]
+mesh_library = ExtResource("1_0b74h")
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(5, 65533, 1048665, 5, 65535, 1048665, 5, 1, 1048665, 5, 3, 1048665, 65533, 5, 1441906, 65533, 7, 1441906, 65533, 9, 1441906, 65533, 11, 1441906, 65533, 13, 1441906, 65529, 17, 655474, 65527, 17, 655474, 65525, 17, 655474, 65523, 17, 655474, 65533, 16, 1441903, 65533, 15, 1441879, 65530, 17, 655447, 7, 29, 114, 5, 29, 114, 3, 29, 114, 1, 29, 114, 65535, 29, 114, 65533, 29, 114, 65531, 29, 114, 65529, 29, 114, 65527, 29, 114, 65525, 29, 114, 65523, 29, 114, 65533, 17, 1048654, 65535, 17, 1441870)
+}
+
+[node name="CeilingGridMap" type="GridMap" parent="Architecture" unique_id=1683548468]
+mesh_library = ExtResource("1_0b74h")
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(5, 65533, 1048600, 5, 65535, 1048600, 5, 1, 1048600, 5, 3, 1048600, 3, 3, 1048600, 1, 3, 1048600, 65535, 3, 1048600, 3, 1, 1048600, 1, 1, 1048600, 3, 65535, 1048600, 3, 65533, 1048600, 1, 65535, 1048600, 1, 65533, 1048600, 65535, 65533, 1048600, 65535, 65535, 1048600, 65535, 1, 1048600, 65533, 3, 1048600, 65533, 1, 1048600, 65533, 65535, 1048600, 65533, 65533, 1048600, 65532, 65533, 1048595, 65532, 65535, 1048595, 65532, 1, 1048595, 65532, 3, 1048595, 65533, 5, 1441817, 65533, 7, 1441817, 65533, 9, 1441817, 65533, 11, 1441817, 65533, 13, 1441817, 65533, 15, 1441817, 65533, 17, 1441817, 65531, 17, 1441817, 65529, 17, 1441817, 65527, 17, 1441817, 65525, 17, 1441817, 65523, 17, 1441817, 65523, 19, 1441817, 65523, 21, 1441817, 65523, 23, 1441817, 65523, 25, 1441817, 65523, 27, 1441817, 65523, 29, 1441817, 65525, 29, 1441817, 65527, 29, 1441817, 65529, 29, 1441817, 65531, 29, 1441817, 65533, 29, 1441817, 65535, 29, 1441817, 1, 29, 1441817, 3, 29, 1441817, 5, 29, 1441817, 7, 29, 1441817, 7, 27, 1441817, 7, 25, 1441817, 7, 23, 1441817, 7, 21, 1441817, 7, 19, 1441817, 7, 17, 1441817, 5, 17, 1441817, 3, 17, 1441817, 1, 17, 1441817, 65535, 17, 1441817)
+}
+
+[node name="OuterWindowGridMap" type="GridMap" parent="Architecture" unique_id=1659520038]
+mesh_library = ExtResource("1_0b74h")
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65530, 65534, 1048703, 65530, 0, 1048703, 65530, 2, 1048703, 1, 5, 655487)
+}
+
+[node name="InnerWindowGridMap" type="GridMap" parent="Architecture" unique_id=2043008826]
+mesh_library = ExtResource("1_0b74h")
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65532, 2, 1441919, 65532, 0, 1441919, 65532, 65534, 1441919, 1, 3, 127)
+}
+
+[node name="InnerWall02GridMap" type="GridMap" parent="Architecture" unique_id=1574295065]
+mesh_library = ExtResource("1_0b74h")
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65533, 5, 1048690, 65533, 7, 1048690, 65533, 9, 1048690, 65533, 11, 1048690, 65533, 13, 1048690, 65534, 17, 655471, 0, 17, 655474, 2, 17, 655474, 4, 17, 655474, 6, 17, 655474, 65533, 14, 1048663, 7, 17, 655447, 7, 16, 1048663, 7, 18, 1048690, 7, 20, 1048690, 7, 22, 1048690, 7, 24, 1048690, 7, 26, 1048690, 7, 28, 1048690, 7, 29, 1048663, 65523, 29, 1441906, 65523, 27, 1441906, 65523, 25, 1441906, 65523, 23, 1441906, 65523, 21, 1441906, 65523, 19, 1441906, 65523, 17, 1441906)
+}
+
+[node name="LivingZone" type="Area3D" parent="." unique_id=3499686 node_paths=PackedStringArray("_room_objects")]
+script = ExtResource("3_tc7r6")
+_room_objects = [NodePath("Radio"), NodePath("CabinetDrawerBig"), NodePath("CabinetBig"), NodePath("TableLamp"), NodePath("TableLamp2"), NodePath("CabinetSink"), NodePath("CabinetLow"), NodePath("CabinetLow2"), NodePath("Fridge"), NodePath("FlickSwitch"), NodePath("CabinetHighNew"), NodePath("CabinetHighNew2"), NodePath("TV"), NodePath("SideboardDrawers"), NodePath("PencilCup"), NodePath("Log001")]
+metadata/_custom_type_script = "uid://s1rngkubb457"
+
+[node name="Log001" parent="LivingZone" unique_id=1270918494 instance=ExtResource("26_0me3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.05, 0.95000005, 6.55)
+display_standing = true
+data = ExtResource("6_buadj")
+
+[node name="Log002" parent="LivingZone" unique_id=1071688398 instance=ExtResource("26_0me3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85, 0.95, -2.35)
+display_standing = true
+data = ExtResource("7_giax2")
+
+[node name="Log003" parent="LivingZone" unique_id=1243903029 instance=ExtResource("26_0me3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.15, 1.1, -6.6000004)
+display_standing = true
+data = ExtResource("8_7php7")
+
+[node name="Log004" parent="LivingZone" unique_id=188335317 instance=ExtResource("26_0me3r")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.35, 1.1, -5.8500004)
+display_standing = true
+data = ExtResource("9_hjiv6")
+
+[node name="PlantBig" parent="LivingZone" unique_id=1883687450 instance=ExtResource("5_d44rf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 0, 7.5)
+
+[node name="powerSocket2" parent="LivingZone" unique_id=1060708209 instance=ExtResource("4_8gc2e")]
+transform = Transform3D(-1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, -1, 7.875, 1.275, -5.325)
+
+[node name="powerSocket4" parent="LivingZone" unique_id=436450171 instance=ExtResource("4_8gc2e")]
+transform = Transform3D(1.0331603e-07, 0, -1, 0, 1, 0, 1, 0, 1.0331603e-07, 2.125, 0.525, -7.825)
+
+[node name="powerSocket5" parent="LivingZone" unique_id=2144479392 instance=ExtResource("4_8gc2e")]
+transform = Transform3D(1.0331603e-07, 0, -1, 0, 1, 0, 1, 0, 1.0331603e-07, -3.625, 0.525, -7.825)
+
+[node name="powerSocket3" parent="LivingZone" unique_id=169077253 instance=ExtResource("4_8gc2e")]
+transform = Transform3D(-1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, -1, 7.875, 0.525, 5.625)
+
+[node name="TrashBin2" parent="LivingZone" unique_id=1442233999 instance=ExtResource("32_vmp2j")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.625, 0, -1.5999999)
+
+[node name="Radio" parent="LivingZone" unique_id=91371797 instance=ExtResource("3_1eh8c")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 1.175, 4.425)
+
+[node name="CabinetDrawerBig" parent="LivingZone" unique_id=1254286147 node_paths=PackedStringArray("_shelves", "_enclosure_toggles") instance=ExtResource("3_oj4lt")]
+transform = Transform3D(-1.5, 0, 1.3113416e-07, 0, 1.5, 0, -1.3113416e-07, 0, -1.5, -3.1, 0, 7.5)
+_shelves = {
+NodePath("3rdShelfStorageComponent3D"): null,
+NodePath("cabinet/cabinet_001/1stDrawerStorageComponent3D"): SubResource("Resource_777ly"),
+NodePath("cabinet/cabinet_002/2ndDrawerStorageComponent3D"): null
+}
+_enclosure_toggles = {
+NodePath("FirstToggleComponent"): SubResource("Resource_lrcr7"),
+NodePath("SecondToggleComponent"): null
+}
+
+[node name="CabinetBig" parent="LivingZone" unique_id=2038461481 node_paths=PackedStringArray("_shelves", "_enclosure_toggles") instance=ExtResource("3_uh7m6")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.65, 0, 7.5)
+_shelves = {
+NodePath("LeftBottomShelfStorageComponent3D"): SubResource("Resource_nbebd"),
+NodePath("LeftThirdShelfStorageComponent3D"): null,
+NodePath("RightBottomShelfStorageComponent3D"): SubResource("Resource_ryvvy")
+}
+_enclosure_toggles = {
+NodePath("LeftDoorSwitchToggle"): null,
+NodePath("RightDoorSwitchToggle"): null
+}
+
+[node name="TableLamp" parent="LivingZone" unique_id=623990678 instance=ExtResource("3_slbab")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -2.25, 1, -2.5)
+
+[node name="TableLamp2" parent="LivingZone" unique_id=962128185 instance=ExtResource("3_slbab")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 7.45, 1.1750001, 5.25)
+
+[node name="CouchSmall" parent="LivingZone" unique_id=953881942 instance=ExtResource("3_y34ln")]
+transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, -1.5, 0, -4.25)
+
+[node name="TableWide" parent="LivingZone" unique_id=1125492377 instance=ExtResource("4_5i7lp")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.2599993, 0, -6.9449997)
+
+[node name="TableSmall" parent="LivingZone" unique_id=981859291 instance=ExtResource("5_53q6s")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -2.5, 0, -2.5)
+
+[node name="CabinetSink" parent="LivingZone" unique_id=1025581081 node_paths=PackedStringArray("_enclosures") instance=ExtResource("3_xp538")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.9900007, 0, -2.4449995)
+_enclosures = {
+NodePath("LeftDoorManager"): null,
+NodePath("RightDoorManager"): null
+}
+
+[node name="product42" parent="LivingZone/CabinetSink" unique_id=363294871 instance=ExtResource("20_2wqt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 1.075, -0.225)
+
+[node name="Oven" parent="LivingZone" unique_id=718464616 instance=ExtResource("4_8rwog")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.3650007, 0, -3.6199994)
+
+[node name="PotCarry" parent="LivingZone/Oven" unique_id=1423786813 instance=ExtResource("26_0me3r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.16500057, 1.0749999, 0.30500054)
+display_standing = true
+data = ExtResource("17_ceb5f")
+
+[node name="PanCarry" parent="LivingZone/Oven" unique_id=541994366 instance=ExtResource("26_0me3r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.16500051, 1.0749999, -0.29499948)
+display_standing = true
+_body_radius = 0.3
+data = ExtResource("23_ym13e")
+
+[node name="Plate" parent="LivingZone" unique_id=751893147 instance=ExtResource("26_0me3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6250002, 1.2249999, -3.8249998)
+display_standing = true
+data = ExtResource("18_wa6w2")
+
+[node name="Plate2" parent="LivingZone" unique_id=665129458 instance=ExtResource("26_0me3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3000002, 1.2249999, -3.8249998)
+display_standing = true
+data = ExtResource("18_wa6w2")
+
+[node name="Plate3" parent="LivingZone" unique_id=698873564 instance=ExtResource("26_0me3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3000002, 1.2249999, -5.225)
+display_standing = true
+data = ExtResource("18_wa6w2")
+
+[node name="Plate4" parent="LivingZone" unique_id=1693226972 instance=ExtResource("26_0me3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5750003, 1.2249999, -5.225)
+display_standing = true
+data = ExtResource("18_wa6w2")
+
+[node name="CabinetLow" parent="LivingZone" unique_id=1700769392 instance=ExtResource("5_ilmif")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.99, 0, -5.794999)
+
+[node name="CabinetLow2" parent="LivingZone" unique_id=2125437532 instance=ExtResource("5_ilmif")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.99, 0, -4.794999)
+
+[node name="Cup" parent="LivingZone/CabinetLow2" unique_id=2053978602 instance=ExtResource("26_0me3r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.34000057, 1.0749999, 0.3050005)
+display_standing = true
+data = ExtResource("29_4kiom")
+
+[node name="Cup2" parent="LivingZone/CabinetLow2" unique_id=1275006236 instance=ExtResource("26_0me3r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.34000054, 1.0749999, 0.055000514)
+display_standing = true
+data = ExtResource("30_sjw7i")
+
+[node name="Cup3" parent="LivingZone/CabinetLow2" unique_id=141628264 instance=ExtResource("26_0me3r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.66500056, 1.0749999, 0.055000484)
+display_standing = true
+data = ExtResource("29_4kiom")
+
+[node name="Cup4" parent="LivingZone/CabinetLow2" unique_id=1205275894 instance=ExtResource("26_0me3r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.66500056, 1.0749999, 0.3300005)
+display_standing = true
+data = ExtResource("30_sjw7i")
+
+[node name="Fridge" parent="LivingZone" unique_id=262631552 node_paths=PackedStringArray("_shelves", "_enclosure_toggles") instance=ExtResource("6_0krwf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.3400006, 0, -7.119999)
+_shelves = {
+NodePath("Lower1stShelfStorageComponent3D"): SubResource("Resource_843vb"),
+NodePath("Lower2ndShelfStorageComponent3D"): SubResource("Resource_i73u0"),
+NodePath("Lower3rdShelfStorageComponent3D"): SubResource("Resource_tx4sa"),
+NodePath("UpperShelfStorageComponent3D"): SubResource("Resource_6emgg")
+}
+_enclosure_toggles = {
+NodePath("UpperSwitchToggleComponent"): null,
+NodePath("LowerSwitchToggleComponent"): null
+}
+
+[node name="FlickSwitch" parent="LivingZone" unique_id=800763591 instance=ExtResource("3_4nhsi")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.75, 1.75, 7.9)
+is_toggled = true
+
+[node name="windowCurtains2" parent="LivingZone" unique_id=448007791 instance=ExtResource("2_hkw3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
+
+[node name="windowCurtains3" parent="LivingZone" unique_id=704411349 instance=ExtResource("2_hkw3r")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 0, 4)
+
+[node name="windowCurtains4" parent="LivingZone" unique_id=835224232 instance=ExtResource("2_hkw3r")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 0, 0)
+
+[node name="windowCurtains5" parent="LivingZone" unique_id=1773627960 instance=ExtResource("2_hkw3r")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 0, -4)
+
+[node name="doormat2" parent="LivingZone" unique_id=1403745840 instance=ExtResource("2_sdirq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 7.5)
+
+[node name="doormat" parent="LivingZone/doormat2" index="0" unique_id=887354673]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, -0.25)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LivingZone/doormat2/doormat" index="0" unique_id=1558073409]
+physics_material_override = ExtResource("4_a584s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LivingZone/doormat2/doormat/StaticBody3D" unique_id=625261669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.23270261, 0)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CeilingLightDisc" parent="LivingZone" unique_id=1622957295 node_paths=PackedStringArray("_controller") instance=ExtResource("11_14u0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 4, 0)
+_controller = NodePath("../FlickSwitch")
+
+[node name="CeilingLightDisc3" parent="LivingZone" unique_id=162154752 node_paths=PackedStringArray("_controller") instance=ExtResource("11_14u0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0750003, 4, 0)
+_controller = NodePath("../FlickSwitch")
+
+[node name="CeilingLightDisc2" parent="LivingZone" unique_id=929509223 node_paths=PackedStringArray("_controller") instance=ExtResource("11_14u0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.175, 4, 0)
+_controller = NodePath("../../ToiletZone/FlickSwitch2")
+
+[node name="CabinetHighNew" parent="LivingZone" unique_id=826840127 instance=ExtResource("16_8rwog")]
+transform = Transform3D(-0.99999994, 0, 0, 0, 1, 0, 0, 0, -0.99999994, 8, 3.9, -5.825)
+
+[node name="CabinetHighNew2" parent="LivingZone" unique_id=1659149993 instance=ExtResource("16_8rwog")]
+transform = Transform3D(-0.99999994, 0, 0, 0, 1, 0, 0, 0, -0.99999994, 8, 3.9, -4.825)
+
+[node name="TableRounded" parent="LivingZone" unique_id=479919991 instance=ExtResource("17_0krwf")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, 2.9, 0, -4.5)
+
+[node name="Chair03" parent="LivingZone/TableRounded" unique_id=1522085378 instance=ExtResource("18_3l2jm")]
+transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -1.1333332, 0, 0)
+
+[node name="Chair06" parent="LivingZone/TableRounded" unique_id=1468692958 instance=ExtResource("18_3l2jm")]
+transform = Transform3D(-3.4969112e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.4969112e-08, 1.1333332, 0, 0)
+
+[node name="Chair04" parent="LivingZone/TableRounded" unique_id=1672336182 instance=ExtResource("18_3l2jm")]
+transform = Transform3D(-0.8, 0, -1.2079664e-07, 0, 0.8, 0, 1.2079664e-07, 0, -0.8, -0.4666667, 0, 0.7999997)
+
+[node name="Chair05" parent="LivingZone/TableRounded" unique_id=309714124 instance=ExtResource("18_3l2jm")]
+transform = Transform3D(-0.8, 0, -1.2079664e-07, 0, 0.8, 0, 1.2079664e-07, 0, -0.8, 0.4666667, 0, 0.7999997)
+
+[node name="Chair07" parent="LivingZone/TableRounded" unique_id=92248961 instance=ExtResource("18_3l2jm")]
+transform = Transform3D(0.8, 0, 9.536743e-08, 0, 0.8, 0, -9.536743e-08, 0, 0.8, 0.4666667, 0, -0.80000067)
+
+[node name="Chair08" parent="LivingZone/TableRounded" unique_id=560493451 instance=ExtResource("18_3l2jm")]
+transform = Transform3D(0.8, 0, 9.536743e-08, 0, 0.8, 0, -9.536743e-08, 0, 0.8, -0.46666718, 0, -0.7999997)
+
+[node name="CouchBig" parent="LivingZone" unique_id=433226213 instance=ExtResource("22_slbab")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.25, 0, -2.75)
+
+[node name="TeddyBear" parent="LivingZone/CouchBig" unique_id=336348591 instance=ExtResource("26_0me3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0500001, 1.025, 0.12500001)
+display_standing = true
+_body_radius = 0.3
+data = ExtResource("27_ceb5f")
+
+[node name="TV" parent="LivingZone" unique_id=1518228698 instance=ExtResource("24_wcsr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 1, -6.75)
+
+[node name="Plant01" parent="LivingZone" unique_id=1271881917 instance=ExtResource("25_dkq24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35, 1.075, -6.75)
+
+[node name="SideboardDrawers" parent="LivingZone" unique_id=204743699 node_paths=PackedStringArray("_shelves") instance=ExtResource("26_wcsr1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 0, 4.475)
+_shelves = {
+NodePath("sideboard2/sideboard2_001/ShelfStorageComponent3D"): SubResource("Resource_xc5ny"),
+NodePath("sideboard2/sideboard2_002/ShelfStorageComponent3D"): SubResource("Resource_ju1st")
+}
+
+[node name="SingleBed" parent="LivingZone" unique_id=32819178 instance=ExtResource("27_dkq24")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0, 6.75)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LivingZone" unique_id=1059357675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.9875, 0)
+shape = SubResource("BoxShape3D_78xn6")
+
+[node name="painting32" parent="LivingZone" unique_id=682904944 instance=ExtResource("51_sjw7i")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, -8.4125, 1.9125, -7.75)
+
+[node name="clock2" parent="LivingZone" unique_id=637594879 instance=ExtResource("52_10tdl")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.5, 2.775, -7.75)
+
+[node name="PencilCup" parent="LivingZone" unique_id=1759894356 instance=ExtResource("26_0me3r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.425, 1.2, 3.8000002)
+display_standing = true
+data = ExtResource("53_alhb8")
+
+[node name="ToiletZone" type="Area3D" parent="." unique_id=2046915667 node_paths=PackedStringArray("_room_objects")]
+script = ExtResource("3_tc7r6")
+_room_objects = [NodePath("Toilet"), NodePath("FlickSwitch2"), NodePath("KitchenSink")]
+metadata/_custom_type_script = "uid://s1rngkubb457"
+
+[node name="product22" parent="ToiletZone" unique_id=884966262 instance=ExtResource("49_yp33g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.25, 0.65, -5.65)
+
+[node name="product2" parent="ToiletZone" unique_id=2043151274 instance=ExtResource("50_i1ylm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25, 1.05, 0)
+
+[node name="doormat3" parent="ToiletZone" unique_id=1978958037 instance=ExtResource("2_sdirq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.5, 0, 1.9999993)
+
+[node name="doormat" parent="ToiletZone/doormat3" index="0" unique_id=887354673]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, -0.25)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ToiletZone/doormat3/doormat" index="0" unique_id=1691496645]
+physics_material_override = ExtResource("4_a584s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ToiletZone/doormat3/doormat/StaticBody3D" unique_id=190576151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.23270261, 0)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="Radiator" parent="ToiletZone" unique_id=819368382 instance=ExtResource("30_kir01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.175, 0, 7.45)
+
+[node name="WashingMachine" parent="ToiletZone" unique_id=2133315473 instance=ExtResource("28_8of7y")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.075, 0, 7.2)
+
+[node name="ShelvesMetal" parent="ToiletZone" unique_id=2138813630 instance=ExtResource("28_5pagi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.475, 0, -4.5)
+
+[node name="ShelvesMetal2" parent="ToiletZone" unique_id=1406055291 instance=ExtResource("28_5pagi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.475, 0, 4.8500004)
+
+[node name="Bathtub" parent="ToiletZone" unique_id=1196021883 instance=ExtResource("28_gs746")]
+transform = Transform3D(-5.9010375e-08, 0, -1.35, 0, 1.35, 0, 1.35, 0, -5.9010375e-08, 10.013056, 0, -7.15)
+
+[node name="FlickSwitch2" parent="ToiletZone" unique_id=2083865143 instance=ExtResource("3_4nhsi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.125, 1.75, 3.15)
+is_toggled = true
+
+[node name="Toilet" parent="ToiletZone" unique_id=400484367 instance=ExtResource("31_rvycv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.775, 0.075, -2.625)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ToiletZone" unique_id=2025440814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.9875, 0.012499809)
+shape = SubResource("BoxShape3D_ktmh6")
+
+[node name="KitchenSink" parent="ToiletZone" unique_id=809078105 instance=ExtResource("29_vxq1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.575, 0, -0.65)
+
+[node name="mirror22" parent="ToiletZone" unique_id=1770625105 instance=ExtResource("31_gs746")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 8.1, 1.8539795, -0.67499995)
+
+[node name="TrashBin" parent="ToiletZone" unique_id=1353023836 instance=ExtResource("32_vmp2j")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5, 0, -2)
+
+[node name="product52" parent="ToiletZone" unique_id=1875560541 instance=ExtResource("58_4kiom")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 8.5, 1, -1.25)
+
+[node name="product32" parent="ToiletZone" unique_id=2082513782 instance=ExtResource("59_sjw7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.275, 0.625, -5.225)
+
+[node name="HallwayZone" type="Area3D" parent="." unique_id=804451560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25, 0, 8)
+script = ExtResource("3_tc7r6")
+metadata/_custom_type_script = "uid://s1rngkubb457"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HallwayZone" unique_id=898349002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9624999, 26.099998)
+shape = SubResource("BoxShape3D_155sq")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="HallwayZone" unique_id=1867222442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 38.350002)
+bus = &"SFX"
+
+[node name="AudioToggleComponent" type="Node3D" parent="HallwayZone" unique_id=1399135778 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("70_sv3ou")
+_audio = NodePath("../AudioStreamPlayer3D")
+_on_sound = ExtResource("71_5pchr")
+_off_sound = ExtResource("72_3rqtw")
+_controller = NodePath("../../Doors/WoodDoorWhite01")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
+
+[node name="TriggerArea3D" type="Area3D" parent="HallwayZone" unique_id=786868076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22)
+collision_layer = 1024
+collision_mask = 0
+audio_bus_name = &"WET_SFX"
+reverb_bus_enabled = true
+reverb_bus_name = &"WET_SFX"
+script = ExtResource("73_rdm5u")
+one_shot = true
+metadata/_custom_type_script = "uid://dj6m7vrhjedwj"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HallwayZone/TriggerArea3D" unique_id=1637897640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.125, 0.625)
+shape = SubResource("BoxShape3D_nawy8")
+
+[node name="AudioTriggerComponent" type="Node3D" parent="HallwayZone/TriggerArea3D" unique_id=461352134 node_paths=PackedStringArray("_trigger_area", "_audio_player")]
+script = ExtResource("74_c6ym6")
+_trigger_area = NodePath("..")
+_audio_player = NodePath("../AudioStreamPlayer3D")
+_entered_stream = ExtResource("75_3hqx5")
+metadata/_custom_type_script = "uid://lw8l3qilpme5"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="HallwayZone/TriggerArea3D" unique_id=1948758346]
+pitch_scale = 0.5
+bus = &"SFX"
+
+[node name="TriggerArea3D4" type="Area3D" parent="HallwayZone" unique_id=85055938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 50.25)
+collision_layer = 1024
+collision_mask = 0
+audio_bus_name = &"WET_SFX"
+reverb_bus_enabled = true
+reverb_bus_name = &"WET_SFX"
+script = ExtResource("73_rdm5u")
+one_shot = true
+metadata/_custom_type_script = "uid://dj6m7vrhjedwj"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HallwayZone/TriggerArea3D4" unique_id=1279061675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.125, 0.625)
+shape = SubResource("BoxShape3D_nawy8")
+
+[node name="AudioTriggerComponent" type="Node3D" parent="HallwayZone/TriggerArea3D4" unique_id=141696492 node_paths=PackedStringArray("_trigger_area", "_audio_player")]
+script = ExtResource("74_c6ym6")
+_trigger_area = NodePath("..")
+_audio_player = NodePath("../AudioStreamPlayer3D")
+_entered_stream = ExtResource("76_jcyny")
+metadata/_custom_type_script = "uid://lw8l3qilpme5"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="HallwayZone/TriggerArea3D4" unique_id=910548811]
+pitch_scale = 0.5
+bus = &"SFX"
+
+[node name="TriggerArea3D2" type="Area3D" parent="HallwayZone" unique_id=1838920201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.75, 0, 30.75)
+collision_layer = 1024
+collision_mask = 0
+reverb_bus_name = &"WET_SFX"
+script = ExtResource("73_rdm5u")
+one_shot = true
+metadata/_custom_type_script = "uid://dj6m7vrhjedwj"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HallwayZone/TriggerArea3D2" unique_id=1413639150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85, 0.125, 1.5)
+shape = SubResource("BoxShape3D_jsjat")
+
+[node name="AudioTriggerComponent" type="Node3D" parent="HallwayZone/TriggerArea3D2" unique_id=640834965 node_paths=PackedStringArray("_trigger_area", "_audio_player")]
+script = ExtResource("74_c6ym6")
+_trigger_area = NodePath("..")
+_audio_player = NodePath("../AudioStreamPlayer3D")
+_entered_stream = ExtResource("76_t3nrq")
+metadata/_custom_type_script = "uid://lw8l3qilpme5"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="HallwayZone/TriggerArea3D2" unique_id=904239539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0.5)
+pitch_scale = 0.5
+bus = &"SFX"
+
+[node name="TriggerArea3D3" type="Area3D" parent="HallwayZone" unique_id=1907113332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 0, 49.9)
+collision_layer = 1024
+collision_mask = 0
+audio_bus_name = &"WET_SFX"
+reverb_bus_enabled = true
+reverb_bus_name = &"WET_SFX"
+script = ExtResource("73_rdm5u")
+one_shot = true
+metadata/_custom_type_script = "uid://dj6m7vrhjedwj"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HallwayZone/TriggerArea3D3" unique_id=2005314277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.625, 0.125, 0.125)
+shape = SubResource("BoxShape3D_seg30")
+
+[node name="AudioTriggerComponent" type="Node3D" parent="HallwayZone/TriggerArea3D3" unique_id=208350476 node_paths=PackedStringArray("_trigger_area", "_audio_player")]
+script = ExtResource("74_c6ym6")
+_trigger_area = NodePath("..")
+_audio_player = NodePath("../AudioStreamPlayer3D")
+_entered_stream = ExtResource("77_sthv3")
+_exited_stream = ExtResource("78_seg30")
+metadata/_custom_type_script = "uid://lw8l3qilpme5"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="HallwayZone/TriggerArea3D3" unique_id=1145568126]
+pitch_scale = 0.5
+bus = &"SFX"
+
+[node name="TweenWalkOffComponent3D" type="Node3D" parent="HallwayZone/TriggerArea3D3" unique_id=1647379860 node_paths=PackedStringArray("_trigger_area", "_tween_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.25, 0, 0)
+script = ExtResource("76_2ankl")
+_trigger_area = NodePath("..")
+_tween_target = NodePath("../../CreepyDoll")
+metadata/_custom_type_script = "uid://bdki821upggto"
+
+[node name="UnlockerTriggerComponent" type="Node" parent="HallwayZone/TriggerArea3D3" unique_id=1678224613 node_paths=PackedStringArray("_trigger_area", "_locks")]
+script = ExtResource("80_seg30")
+_trigger_area = NodePath("..")
+_locks = [NodePath("../../../Doors/WoodDoorWhite03/LockComponent")]
+metadata/_custom_type_script = "uid://v8lcrdlqmprn"
+
+[node name="CreepyDoll" parent="HallwayZone" unique_id=892289078 instance=ExtResource("77_l8sva")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20.269775, 0.012752458, 50.016968)
+
+[node name="EndGameUIToggleComponent" type="Node3D" parent="HallwayZone" unique_id=107155944 node_paths=PackedStringArray("_controller")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25.826477)
+script = ExtResource("82_nawy8")
+_controller = NodePath("../../Doors/WoodDoorWhite03")
+metadata/_custom_type_script = "uid://buyb53fhfrwij"
+
+[node name="Doors" type="Node3D" parent="." unique_id=1090253159]
+
+[node name="WoodDoorWhite01" parent="Doors" unique_id=414897940 node_paths=PackedStringArray("lock") instance=ExtResource("3_nts5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.975, 0, 6)
+lock = NodePath("LockComponent")
+
+[node name="LockComponent" type="Node" parent="Doors/WoodDoorWhite01" unique_id=390001114]
+script = ExtResource("4_j15tc")
+required_keys = Array[ExtResource("8_yov1d")]([ExtResource("9_4nhsi")])
+metadata/_custom_type_script = "uid://d05res58un2au"
+
+[node name="WoodDoorWhite02" parent="Doors" unique_id=448022585 instance=ExtResource("3_nts5u")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 0, 2)
+
+[node name="WoodDoorWhite03" parent="Doors" unique_id=1306222226 node_paths=PackedStringArray("lock") instance=ExtResource("3_nts5u")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -6, 0, 34)
+lock = NodePath("LockComponent")
+
+[node name="LockComponent" type="Node" parent="Doors/WoodDoorWhite03" unique_id=1057882320]
+script = ExtResource("4_j15tc")
+_is_permanent_locked = true
+metadata/_custom_type_script = "uid://d05res58un2au"
+
+[editable path="LivingZone/doormat2"]
+[editable path="ToiletZone/doormat3"]

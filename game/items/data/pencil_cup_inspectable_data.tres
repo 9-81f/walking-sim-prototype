@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bwyh17wjpvw2l"]
+
+[ext_resource type="ArrayMesh" uid="uid://ds6uo0pcqibq" path="res://assets/inspectables/pencil_cup_inspectable.res" id="1_i7dlc"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_vjmiu"]
+
+[resource]
+script = ExtResource("1_vjmiu")
+id = "pencil_cup-inspct-001"
+display_name = "Pencil Cup"
+description = "A cup to stash stationaries"
+mesh = ExtResource("1_i7dlc")
+type = 2
+is_storable = false
+readable_text = "My trusty stationary cup. Pencils, pens, erasers, whatever needs for drawing & writing."
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

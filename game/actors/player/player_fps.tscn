@@ -61,7 +61,7 @@ transform = Transform3D(0.9999994, 0, 0, 0, 0.99999976, 0, 0, 0, 1, -0.269, -0.3
 transform = Transform3D(0.99999976, 0, 0, 0, 0.9999995, 0, 0, 0, 0.9999995, 0.27884352, -0.3198923, -0.38004494)
 
 [node name="CarryMarker" type="Marker3D" parent="FPSCameraUtility/Camera3D" unique_id=1922407003]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31999993, -0.49799997)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.053938866, -1.2)
 
 [node name="InteractionCast3D" type="RayCast3D" parent="FPSCameraUtility/Camera3D" unique_id=439539899]
 target_position = Vector3(0, 0, -1.5)
@@ -73,7 +73,7 @@ target_position = Vector3(0, 1, 0)
 collide_with_areas = true
 
 [node name="TriggerObserverComponent" type="Area3D" parent="." unique_id=720590500]
-collision_layer = 0
+collision_layer = 1024
 collision_mask = 1024
 script = ExtResource("4_ehyvf")
 metadata/_custom_type_script = "uid://cyh7wi6qfidx0"
@@ -189,3 +189,4 @@ _surface_data_list = Array[ExtResource("22_afsr7")]([ExtResource("21_blps4"), Ex
 metadata/_custom_type_script = "uid://dsyswg6pcnqt7"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2055062699]
+bus = &"SFX"

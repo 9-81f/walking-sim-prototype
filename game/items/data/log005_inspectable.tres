@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c4t4wu47rgox0"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwa18x7ub8xoq" path="res://assets/inspectables/book_001.res" id="1_60ptn"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="2_ikrke"]
+
+[resource]
+script = ExtResource("2_ikrke")
+id = "book-inspct-005"
+display_name = "Log-005"
+description = "Tiny commentaries around this demo."
+mesh = ExtResource("1_60ptn")
+type = 2
+is_storable = false
+readable_text = "The carry mechanic is quite tricky and while it currently worked. There are still a lot of things I would fix in the future.
+
+Anyways, you can still try & go play around with it."
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

@@ -7,6 +7,9 @@ signal closed()
 
 @export var pause_game_on_open := true
 
+@export_category("Audio Settings")
+@export var _close_audio: AudioStream = preload("res://assets/sfx/rpg-audio/handleSmallLeather2.ogg")
+
 func _ready() -> void:
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -36,6 +39,8 @@ func close() -> void:
 		return
 		
 	hide()
+	
+	UiEvents.ui_audio_requested.emit(_close_audio)
 	closed.emit()
 	
 	if pause_game_on_open:

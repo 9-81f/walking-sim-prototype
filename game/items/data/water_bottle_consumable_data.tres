@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://btin0m8v4hvio"]
+
+[ext_resource type="Texture2D" uid="uid://csjeuv4f6h18q" path="res://assets/consumables/water_bottle_icon.png" id="1_mnubd"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_n3q2c"]
+[ext_resource type="ArrayMesh" uid="uid://dj7xhwnky2oyh" path="res://assets/consumables/water_bottle.res" id="2_d4sew"]
+
+[resource]
+script = ExtResource("1_n3q2c")
+id = "water-cnsmbl-001"
+display_name = "Water Bottle"
+description = "Nice cold bottle of water."
+icon = ExtResource("1_mnubd")
+mesh = ExtResource("2_d4sew")
+is_stackable = true
+max_stack_size = 10
+stats_modifiers = Dictionary[String, Variant]({
+"heal": 2
+})
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

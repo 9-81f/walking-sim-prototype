@@ -1,0 +1,183 @@
+[gd_scene format=4 uid="uid://b0jsnhpcnfs5e"]
+
+[ext_resource type="Script" uid="uid://d3mq1lue5yf1t" path="res://game/components/switch_toggle_component.gd" id="2_jtr8v"]
+[ext_resource type="Texture2D" uid="uid://jdjdcujr4fj0" path="res://assets/environments/PSX modular house interior pack/props/tv_albedo.png" id="2_vmod3"]
+[ext_resource type="Texture2D" uid="uid://bq8cu4lqd0xas" path="res://assets/environments/PSX modular house interior pack/props/tv_roughness.png" id="3_cn72n"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="3_pmkej"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="4_jk1kf"]
+[ext_resource type="Texture2D" uid="uid://byclucincx1x4" path="res://assets/environments/PSX modular house interior pack/props/tv_screenAlbedo.png" id="4_p1k1v"]
+[ext_resource type="Script" uid="uid://dqfnvbolpea1w" path="res://core/components/video_toggle_component.gd" id="5_pmkej"]
+[ext_resource type="Texture2D" uid="uid://ddgv6v6o45kih" path="res://assets/environments/PSX modular house interior pack/props/tv_screenRoughness.png" id="5_qbk3y"]
+[ext_resource type="VideoStream" uid="uid://chxd36d28ncvv" path="res://assets/videos/ogvtest.ogv" id="9_cn72n"]
+[ext_resource type="Script" uid="uid://b4dg5dsmsigbm" path="res://core/components/audio_toggle_component.gd" id="10_p1k1v"]
+[ext_resource type="AudioStream" uid="uid://hr2bjo2jdson" path="res://assets/sfx/ui-audio/switch37.ogg" id="11_4x03h"]
+[ext_resource type="AudioStream" uid="uid://d2f31xh75uyfd" path="res://assets/sfx/ui-audio/switch35.ogg" id="12_4x03h"]
+[ext_resource type="Script" uid="uid://bf4dcooqlria4" path="res://game/components/light_toggle_component.gd" id="13_t3eiy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sh78m"]
+resource_name = "tv"
+albedo_texture = ExtResource("2_vmod3")
+metallic_texture = ExtResource("3_cn72n")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_cn72n")
+roughness_texture_channel = 1
+texture_filter = 2
+metadata/extras = {
+"yp": {
+"active_ypaint_node": "",
+"expand_content": 0.0
+}
+}
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7x53c"]
+resource_name = "tvScreen"
+albedo_texture = ExtResource("4_p1k1v")
+metallic_texture = ExtResource("5_qbk3y")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("5_qbk3y")
+roughness_texture_channel = 1
+texture_filter = 2
+metadata/extras = {
+"yp": {
+"active_ypaint_node": "",
+"expand_content": 0.0
+}
+}
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4x03h"]
+_surfaces = [{
+"aabb": AABB(-0.3315111, 1.1175871e-08, -0.39553434, 0.6630222, 0.5333753, 0.5937065),
+"format": 34896613377,
+"index_count": 252,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAADAAEAAAAEAAEABAAFAAMABgAEAAAABgAFAAQABwADAAUAAgADAAcABwAFAAYACAAAAAIACQACAAcACAACAAkACQAHAAoACgAHAAYACQALAAgADAAAAAgADAAGAAAACAALAAwACQANAAsADQAJAAoADgAMAAsADgALAA0ADAAPAAYADgAPAAwACgAGABAADwAQAAYAEQAKABAADQAKABEAEgAQAA8AEQAQABIADwATABIADgATAA8AEgAUABEAFAANABEAEgATABQADgANABUAFgAUABMAFgANABQAEwAOABcADQAYABUADQAWABgAGQAOABUAFwAOABkAGQAVABgAEwAXABoAFgATABoAGwAXABkAGAAWABwAHQAaABcAHQAXABsAHgAWABoAHgAaAB0AHwAcABYAHwAWAB4AHgAgAB8AHgAhACAAHQAhAB4AHwAgACIAHQAjACEAGwAjAB0AGwAkACMAHwAiACUAJQAcAB8AJQAYABwAJQAiACYAJwAYACUAJQAmACcAJwAmACQAJwAkABsAJwAZABgAGwAZACcAKAApACoAKQArACoAKAAsACkAKgArAC0AKgAtACgAKAAuACwAKAAtAC4ALAAvACkAKQAvACsALAAuAC8ALQArAC8ALQAvAC4A"),
+"name": "tv",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("Bw44Of0/AAA5Fa6yAAAAAAcO7s0CQAAAxequsgAAAAA5Fe5NAAAAAMXq7k0AAAAA9/E4Of0/AAD38e7NAkAAABIG9Dk/hAAAEga790mEAADs+bv3SYQAAAAA4QxEhAAAEgbhDESEAAAAAP//RIQAAAAA4Qzs5QAA7PnhDESEAADs+fQ5P4QAAP////9EhAAA///hDESEAAD//+EM7OUAAP/////s5QAAAAD//+zlAABY8v//I/kAAP9/4Qz//wAApg3//yP5AACmDeEMI/kAAFjy4Qwj+QAA/38mPf//AAD/f/////8AAPnmJj0j+QAA+eam6yP5AAD/f6br//8AAP9/put+9QAA+eam66LuAAAFGabrou4AAPnmJj2i7gAA/38mPX71AAAFGabrI/kAAAUZJj2i7gAABRkmPSP5AABZCOEMwmMAAKX34QxV8QAAWQjhDFXxAABZCAAAVfEAAKX34QzCYwAAWQgAAMJjAACl9wAAwmMAAKX3AABV8QAA")
+}, {
+"aabb": AABB(-0.2667095, 0.12740457, 0.15790734, 0.533419, 0.36358348, 0.015904248),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"name": "tvScreen",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("/38AAP//AAAAAP//AAAAAP9//////wAAAAAAAAAAAAD//wAAAAAAAP////8AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w7ab1"]
+resource_name = "tv_Cube_059"
+_surfaces = [{
+"aabb": AABB(-0.3315111, 1.1175871e-08, -0.39553434, 0.6630222, 0.5333753, 0.5937065),
+"attribute_data": PackedByteArray("Dz8ZPj1T+hsQP1EUO1NIOBE/TxQ+U0Y4Ez8XPj5T9xt7LIBaclASVXJQW1h7LDdXhAhbWIQIElUKn7WZIuzdhKXutZmNod2E7Z4CPQbskyeJ7gI9cKGTJ4zz+NBt8W2yjPNtskKcbbIjmvjQI5ptstjGINnH7vrW6J761jgWeJZAErtfOBZyZUASCKQ3JttMrQeNCDcmjQitB9tMS1rmC5Rd7jxLWu48lF3mC3ssgFpyUBJVclBbWHssN1eECFtYhAgSVZRd7jxLWuYLlF3mC0ta7jxzck9StJFPF7SRT1Jzck8XtJFPUnNyTxe0kU8Xc3JPUvXzfvH1uAz09bh+8fXzDPT1837x9bgM9PW4fvH18wz09fM57bPUx++z1Dnt9fPH7/XzOe2z1Mfvs9Q57fXzx+9woUQLBuyTJ3ChkycG7EQLQTp4lkASCKQ4FniWQToIpEZecGVCYgWkSV51lj5it18/Om9lPmK3X0ZecGU+Ordfqwqh8osIpbCrCk+9jAjz9KsKT72LCKWwqwqlsIwI8/TVX6Hy9GHz9KsKofL0YfP01V9PvfRhpbDVX6HyIvITeLmYiFki8ohZXe0Vfn2dFX5txTqAuZgTeEASCKSUCrtfQBK7X5QKCKQ+Yrdf7mkFpEJiBaTpabdfrQeNCDcm20ytB9tMNyaNCCacYFWJ7gI9UPFgVe2eAj2IKZAIEz8XPowp4z0RP08UiCnjPRA/URSIKZAIDz8ZPvRhpbDVX0+91V+lsG3xbbIKn7WZpe61mUKcbbIUP8NKiSlSPg8/GT4XP8FKEz8XPowpUT44FnJlPjq3Xz86b2VAErtfSV51lkE6CKRBOniWQmIFpA=="),
+"format": 34896613399,
+"index_count": 252,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAALAAgADAANAAsADgAPABAADgARAA8AEgATABQAEgAVABMAFgAXABgAFgAZABcAFgAaABkAGQAaABsAGgAWABwAHAAWAB0AGgAcAB4AHwAgACEAHwAiACAAIwAkACUAIwAmACQAJwAoACkAJwAqACgAKwAsAC0AKwAuACwALwAuACsALwAwAC4AMQAyADMAMQA0ADIANQA2ADcANQA4ADYAOQA6ADsAOQA8ADoAPQA+AD8APQBAAD4AQQBCAEMAQQBEAEIARQBGAEcARQBIAEYASQBKAEsASQBMAEoATQBOAE8ATQBQAE4AUQBSAFMAUQBUAFIAVQBWAFcAVQBYAFYAWQBaAFsAWQBcAFoAXQBeAF8AXQBgAF4AYQBiAGMAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbwBtAGwAbQBvAHAAcABvAHEAbQBwAHIAcwB0AHUAcwB2AHQAdwB4AHkAdwB6AHgAewB8AH0AewB+AHwAfwCAAIEAfwCCAIAAgwCEAIUAgwCGAIQAhwCIAIkAhwCKAIgAiwCMAI0AjgCPAJAAjgCRAI8AkgCTAJQAlQCWAJcAmACZAJoAmACbAJkAnACdAJ4AnACfAJ0A"),
+"material": SubResource("StandardMaterial3D_sh78m"),
+"name": "tv",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 160,
+"vertex_data": PackedByteArray("Bw44Of0/AAA5Fa6yAAAAAAcO7s0CQAAAORXuTQAAAAD38e7NAkAVxcXq7k0AABXF9/E4Of0/FcXF6q6yAAAVxf9/Jj3///+/+eYmPaLu/7/55iY9I/n/v/9/Jj1+9f+/BRkmPSP5/78FGSY9ou7/v/fxODn9P///ORXuTQAA//8HDjg5/T///8Xq7k0AAP//Bw7uzQJA4c7F6q6yAADhzvfx7s0CQOHOORWusgAA4c4AAOEM7OX//xIG4QxEhP//AADhDESE///s+eEMRIT/////4Qzs5f/////hDESE////f+EM/////6YN4Qwj+f//WPLhDCP5//8FGSY9I/kEgKYN//8j+QCABRmm6yP5BoCmDeEMI/kGgP//4QxEhP+//////+zl/7//////RIT/v///4Qzs5f+/BRmm6yP5/78FGSY9ou7/vwUZJj0j+f+/BRmm66Lu/7//f6br/////wUZpuui7v//BRmm6yP5////f6brfvX///nmpusj+f//+eam66Lu///55iY9I/n/v/nmpuui7v+/+eam6yP5/7/55iY9ou7/v1kI4QzCY1TVpffhDFXxVNVZCOEMVfFU1aX34QzCY1TVWQgAAMJjVNWl9wAAVfFU1aX3AADCY1TVWQgAAFXxVNWl9+EMVfEAgFkIAABV8QCAWQjhDFXxAICl9wAAVfEAgFkI4QzCY///pfcAAMJj//+l9+EMwmP//1kIAADCY///pffhDMJj/7+l9wAAVfH/v6X34QxV8f+/pfcAAMJj/79ZCOEMVfH/v1kIAADCY/+/WQjhDMJj/79ZCAAAVfH/vzkV7k0AAP//xequsgAA//85Fa6yAAD//8Xq7k0AAP///38mPf//UoKmDeEMI/lSggUZJj0j+VKC/3/hDP//UoL55qbrI/kGgFjy4Qwj+QCA+eYmPSP5BIBY8v//I/kIgP9/puv//26CWPL//yP5boL55qbrI/lugv9//////26CEga790mE//8AAOEMRIT//xIG9Dk/hP//AAD//0SE//8SBvQ5P4T5/wAA4QxEhPn/EgbhDESE+f8AAP//RITj/+z5u/dJhOP//////0SE4/8SBrv3SYTj//////9EhP//7Pn0OT+E/////+EMRIT//+z5u/dJhP///////+zl/78AAP//RIT/v/////9EhP+/WPL//yP5/7+mDf//I/n/v/9///////+/AAD//+zl/7+mDeEMI/mspAAA///s5aykpg3//yP5rKQAAOEM7OWspFjy//8j+ayk///hDOzlrKRY8uEMI/mspP/////s5aykAADhDOzl//8AAP//RIT//wAA///s5f//AADhDESE//8SBrv3SYR81Pfx7s0CQHzU7Pm790mEfNQHDu7NAkB81Oz5u/dJhEXF9/E4Of0/RcXs+fQ5P4RFxffx7s0CQEXFEgb0OT+EAAAHDu7NAkAAABIGu/dJhAAABw44Of0/AAD//+EMRIT5/+z59Dk/hPn/7PnhDESE+f8SBuEMRIT///fxODn9P///Bw44Of0////s+eEMRIT//xIG4QxEhEXFBw44Of0/RcUSBvQ5P4RFxez54QxEhAUA7Pn0OT+EBQD38Tg5/T8FAAUZpusj+W6C/3//////boL/f6br//9ugqYN//8j+W6C+eYmPSP5UoL/f+EM//9Sgv9/Jj3//1KCWPLhDCP5UoL6/wG8+v8BvPr/Abz6/wG8/38AAP9/AAD/fwAA/38AAP7//3/+//9//v//f/7//3/+//9//v//f+G2///htv//4bb//+G2//////9/////f////3////9//3//P/9//z//f/8//3//P/9//z//f/8//3//P/9//z//f/8//3//f////////////3//f/9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3//P/9//z//f/8//3//P/9//z//f/8//3////9/////f////3///6qqqqqqqqqqqqqqqqqqqqpUVVRVVFVUVVRVVFVUVVRV/3////9/////f////3////9//v//f////3////9//v//fwAA/38AAP9/AAD/fwAA/3////9//v//f/7//3///////3////9/////f////39ckEXvWJAu71aQJO9ekE7v/3//f////////////3//fzRfjyE5X5whOl+eITNfjiH+/wSA/v8EgP7/BID+/wSAAAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/f/r//3/5//9/+f//f/r//3/+//9/////f////3/+//9/////f/7//3/+//9//3////9/////f////3///wOACwADgAsAA4ALAAOACwD/P/9//z//f/8//3//P/9/////f////3////9/////f/9/AAD/fwAA/38AAP9/AAD6/9u7///Zu///2bv//9m7AAD/fwAA/38AAP9/TVH//01R//+xrv//TVH//+9/5P/vf+T/73/k/yDE938gxPd/IMT1f9JeDd/CXhPfwV4T39NeDN9mkJMQaZB6EGqQbxBlkJwQ")
+}, {
+"aabb": AABB(-0.2667095, 0.12740457, 0.15790734, 0.533419, 0.36358348, 0.015904248),
+"attribute_data": PackedByteArray("/7////9//3//v/9//3//////////v/9/////f/+///8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_7x53c"),
+"name": "tvScreen",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/38AAP//bIIAAP//AABsgv9//////2yCAAAAAAAAbIL//wAAAABsgv9//////2yC/////wAAbIL/fwAA//9sgv9/////f////3////9/////fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4x03h")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_78xn6"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_t3eiy"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmagn"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_78xn6")
+emission_enabled = true
+emission_texture = SubResource("ViewportTexture_t3eiy")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
+radius = 0.7
+
+[node name="TV" type="Node3D" unique_id=1518228698 node_paths=PackedStringArray("interact")]
+script = ExtResource("2_jtr8v")
+interact = NodePath("Interactable3D")
+
+[node name="tv" type="MeshInstance3D" parent="." unique_id=1600933395]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = SubResource("ArrayMesh_w7ab1")
+surface_material_override/1 = SubResource("StandardMaterial3D_qmagn")
+metadata/extras = {
+"yp_decal": {}
+}
+
+[node name="Interactable3D" type="Area3D" parent="." unique_id=738316077 node_paths=PackedStringArray("_spatial_prompt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45000002, 0)
+script = ExtResource("3_pmkej")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="Interactable3D" unique_id=837994334]
+script = ExtResource("4_jk1kf")
+_display_position_y = 0.0
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable3D" unique_id=6340030]
+shape = SubResource("SphereShape3D_qmagn")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=26393233]
+size = Vector2i(1920, 1080)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="SubViewport" unique_id=207266713]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+loop = true
+bus = &"SFX"
+
+[node name="VideoToggleComponent" type="Node3D" parent="." unique_id=954670724 node_paths=PackedStringArray("_video_player", "_mesh", "_controller")]
+script = ExtResource("5_pmkej")
+_video_stream = ExtResource("9_cn72n")
+_video_player = NodePath("../SubViewport/VideoStreamPlayer")
+_mesh = NodePath("../tv")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://dqfnvbolpea1w"
+
+[node name="AudioToggleComponent" type="Node3D" parent="." unique_id=1462555485 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("10_p1k1v")
+_audio = NodePath("../AudioStreamPlayer3D")
+_on_sound = ExtResource("11_4x03h")
+_off_sound = ExtResource("12_4x03h")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1705982444]
+bus = &"SFX"
+
+[node name="LightToggleComponent" type="Node3D" parent="." unique_id=1897819414 node_paths=PackedStringArray("_light_source", "_controller")]
+script = ExtResource("13_t3eiy")
+_light_source = NodePath("../SpotLight3D")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://bf4dcooqlria4"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1419807029]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.45, -0.025000006)
+light_specular = 0.0

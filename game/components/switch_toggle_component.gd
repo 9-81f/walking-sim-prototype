@@ -1,7 +1,7 @@
 extends Node3D
 class_name SwitchToggleComponent
 
-signal switch_locked(unlocked: bool)
+signal switch_locked
 signal switch_toggled(toggled: bool)
 
 @export var _one_shot := false
@@ -13,7 +13,7 @@ signal switch_toggled(toggled: bool)
 @export var _false_prompt := "Turn on"
 
 @export_category("Add-ons")
-@export var _lock: LockComponent
+@export var lock: LockComponent
 
 var _is_one_shot := false
 var is_tweening := false
@@ -25,6 +25,10 @@ func _ready() -> void:
 		interact.interacted.connect(_on_interacted)
 	else:
 		push_error("[SwitchToggleComponent]: Interactable3D not found!")
+	
+	if is_toggled:
+		switch_toggled.emit(is_toggled)
+		_update_interaction_prompt()
 		
 func _on_interacted(_interactor: Node3D) -> void:
 	if _one_shot and _is_one_shot: return
@@ -34,11 +38,11 @@ func _on_interacted(_interactor: Node3D) -> void:
 	
 	if is_tweening: return
 	
-	if _lock:
-		var is_unlocked := _lock.attempt_unlock()
+	if lock:
+		var is_unlocked := lock.attempt_unlock()
 		
 		if not is_unlocked: 
-			switch_locked.emit(is_unlocked)
+			switch_locked.emit()
 			_update_interaction_prompt()
 			return
 		

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ds34r7ttdaacn"]
+
+[ext_resource type="PackedScene" uid="uid://t8052nkkiulf" path="res://assets/environments/PSX modular house interior pack/props/trashBin.glb" id="1_ex6vf"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ex6vf"]
+points = PackedVector3Array(0.21187937, 0.6035846, 0.2787739, 0.20155108, 0.6351612, 0.26703995, -0.042636335, 0.8422647, 0.19881955, -0.21187103, 0.6035846, 0.2787739, 0.21187937, 0.577944, 0.2787739, 0.21187937, 0.6035846, -0.27877796, 0.20155108, 0.6351612, -0.26709864, -0.042636335, 0.8422647, -0.1988782, -0.15446396, 0.7917255, 0.20493212, -0.20158422, 0.6351612, 0.26796776, -0.21187103, 0.6035846, -0.27877796, -0.21187103, 0.577944, 0.2787739, 0.20155108, 0, 0.26753116, 0.21187937, 0.577944, -0.27877796, -0.15446396, 0.7917255, -0.20499074, -0.20158422, 0.6351612, -0.2680264, -0.21187103, 0.577944, -0.27877796, -0.20158422, 0, 0.26753116, 0.20155108, 0, -0.2675898, -0.20158422, 0, -0.2675898)
+
+[node name="TrashBin" unique_id=1442233999 instance=ExtResource("1_ex6vf")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="trashBin" parent_id_path=PackedInt32Array(1481665019) index="0" unique_id=1220281338]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="trashBin/StaticBody3D" index="0" unique_id=1598322122]
+shape = SubResource("ConvexPolygonShape3D_ex6vf")

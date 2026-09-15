@@ -2,10 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://c5y1y8ees2bnd" path="res://game/actors/player/player_fps.tscn" id="1_8fcwd"]
 [ext_resource type="Script" uid="uid://cp85g8pcwm2is" path="res://core/main/main.gd" id="1_k5wvu"]
+[ext_resource type="PackedScene" uid="uid://c256iiig6drvf" path="res://game/levels/the_space.tscn" id="3_k5wvu"]
+[ext_resource type="PackedScene" uid="uid://cw5pvqc4hd4fg" path="res://game/actors/creepy_doll_look_at.tscn" id="3_vxc0a"]
 [ext_resource type="PackedScene" uid="uid://blcxorm5qb0kt" path="res://core/main/ui/hud.tscn" id="5_81xgm"]
 [ext_resource type="Texture2D" uid="uid://hye73388185s" path="res://assets/icons/reticle/crosshair-000.png" id="6_81xgm"]
-[ext_resource type="PackedScene" uid="uid://sfh4ye4pxs3i" path="res://game/levels/sandbox.tscn" id="7_xwlw8"]
-[ext_resource type="PackedScene" uid="uid://bqn7wqiorrhgn" path="res://game/ui/inspect/inspect_ui.tscn" id="8_5alkf"]
+[ext_resource type="Texture2D" uid="uid://bvh4xr5sf67uq" path="res://assets/icons/keyboard_mouse_input_prompts/keyboard-&-mouse_sheet_default.png" id="6_qctb3"]
+[ext_resource type="Script" uid="uid://dr8iddicxbq5p" path="res://core/main/ui/modals.gd" id="7_qctb3"]
+[ext_resource type="Script" uid="uid://ckdsablkkp7or" path="res://core/ui/end_game_modal.gd" id="8_5alkf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_k5wvu"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -20,6 +23,40 @@ background_energy_multiplier = 0.01
 sky = SubResource("Sky_81xgm")
 glow_enabled = true
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5alkf"]
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 0.49019608)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxc0a"]
+atlas = ExtResource("6_qctb3")
+region = Rect2(320, 832, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwlw8"]
+atlas = ExtResource("6_qctb3")
+region = Rect2(576, 704, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0ilk"]
+atlas = ExtResource("6_qctb3")
+region = Rect2(384, 704, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dl4c"]
+atlas = ExtResource("6_qctb3")
+region = Rect2(384, 576, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkm43"]
+atlas = ExtResource("6_qctb3")
+region = Rect2(512, 448, 64, 64)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmagn"]
+content_margin_left = 32.0
+content_margin_top = 16.0
+content_margin_right = 32.0
+content_margin_bottom = 16.0
+bg_color = Color(0.15294118, 0.15294118, 0.15294118, 0.8235294)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [node name="Main" type="Node3D" unique_id=1450284131]
 script = ExtResource("1_k5wvu")
 
@@ -32,19 +69,20 @@ shadow_enabled = true
 sky_mode = 2
 
 [node name="PlayerFPS" parent="." unique_id=1807322468 instance=ExtResource("1_8fcwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.181128, 0, 5.321582)
+
+[node name="CreepyDoll" parent="." unique_id=833931623 node_paths=PackedStringArray("target") instance=ExtResource("3_vxc0a")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.806526, 0, 44.86428)
+target = NodePath("../PlayerFPS")
 
 [node name="ActiveLevel" type="Node3D" parent="." unique_id=788955052]
 
-[node name="Sandbox" parent="ActiveLevel" unique_id=1366386856 instance=ExtResource("7_xwlw8")]
+[node name="TheSpace" parent="ActiveLevel" unique_id=1932012842 instance=ExtResource("3_k5wvu")]
 
 [node name="HUD" parent="." unique_id=1545210953 instance=ExtResource("5_81xgm")]
 
 [node name="Windows" parent="HUD" index="1" unique_id=1575906040]
 visible = true
-
-[node name="InspectUI" parent="HUD/Windows" index="0" unique_id=1459878502 instance=ExtResource("8_5alkf")]
-layout_mode = 1
 
 [node name="Reticle" type="Control" parent="HUD" unique_id=731120024]
 layout_mode = 3
@@ -73,5 +111,158 @@ offset_transform_scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_81xgm")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="HUD" unique_id=1863299767]
+bus = &"UI_SFX"
+
+[node name="Tutorial" type="Control" parent="HUD" unique_id=1928678838]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HUD/Tutorial" unique_id=1266502497]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5alkf")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Tutorial/PanelContainer" unique_id=307035406]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Tutorial/PanelContainer/MarginContainer" unique_id=1306304142]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer" unique_id=596411017]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1461615541]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=2057128294]
+layout_mode = 2
+texture = SubResource("AtlasTexture_vxc0a")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=912966241]
+layout_mode = 2
+text = "Walk"
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1993286244]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2" unique_id=487785787]
+layout_mode = 2
+texture = SubResource("AtlasTexture_xwlw8")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2" unique_id=1156704301]
+layout_mode = 2
+text = "Run"
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1921367675]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer4" unique_id=716155070]
+layout_mode = 2
+texture = SubResource("AtlasTexture_v0ilk")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer4" unique_id=2033032868]
+layout_mode = 2
+text = "Crouch"
+vertical_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1690757863]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer5" unique_id=1602511016]
+layout_mode = 2
+texture = SubResource("AtlasTexture_4dl4c")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer5" unique_id=1680048213]
+layout_mode = 2
+text = "Interact"
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1748578792]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer3" unique_id=704641155]
+layout_mode = 2
+texture = SubResource("AtlasTexture_lkm43")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer3" unique_id=1129410571]
+layout_mode = 2
+text = "Inventory"
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="HUD/Tutorial/PanelContainer/MarginContainer/VBoxContainer" unique_id=1520556594]
+layout_mode = 2
+text = "Press [Tab] to close/open this window."
+
+[node name="Modals" type="CanvasLayer" parent="." unique_id=1848008410]
+process_mode = 3
+script = ExtResource("7_qctb3")
+
+[node name="EndGame" type="Control" parent="Modals" unique_id=1661253073]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_5alkf")
+
+[node name="PanelContainer" type="PanelContainer" parent="Modals/EndGame" unique_id=1523638138]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5alkf")
+
+[node name="CenterContainer" type="CenterContainer" parent="Modals/EndGame/PanelContainer" unique_id=1980638662]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Modals/EndGame/PanelContainer/CenterContainer" unique_id=1902413028]
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qmagn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Modals/EndGame/PanelContainer/CenterContainer/PanelContainer" unique_id=822782574]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Modals/EndGame/PanelContainer/CenterContainer/PanelContainer/VBoxContainer" unique_id=1197776316]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Thank you for finishing this demo!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Modals/EndGame/PanelContainer/CenterContainer/PanelContainer/VBoxContainer" unique_id=1276912200]
+layout_mode = 2
+text = "The demo is finished. Should you be interested, you can press below to replay."
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Modals/EndGame/PanelContainer/CenterContainer/PanelContainer/VBoxContainer" unique_id=66504156]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Replay"
 
 [editable path="HUD"]
