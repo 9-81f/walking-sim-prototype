@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://1las6wc2ags1"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwa18x7ub8xoq" path="res://assets/inspectables/book_001.res" id="1_336in"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="2_wpcn7"]
+
+[resource]
+script = ExtResource("2_wpcn7")
+id = "book-inspct-001"
+display_name = "Log-001"
+description = "Tiny commentaries around this demo."
+mesh = ExtResource("1_336in")
+type = 2
+is_storable = false
+readable_text = "To whom it may concern,
+
+Thank you for spending time with this humble simple tech demo. 
+
+This project has been an amazing learning experience for me to understand \"composition-over-inheritance\" better as a game developer and it has served it's purpose albeit not becoming a full-fledged game with the time I've had with it.
+
+Think about this space as a playable space without any game loops. Just a space to unwind and get back to reality for a short while.
+
+Go! Interact with every interactables & enjoy your stay!"
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

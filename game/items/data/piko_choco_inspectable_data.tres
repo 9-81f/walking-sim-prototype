@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://4fm3is3ya58m"]
+
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_4i0xl"]
+[ext_resource type="ArrayMesh" uid="uid://q3qcfwsuj2bd" path="res://assets/consumables/pocky_chocolate.res" id="1_puuig"]
+
+[resource]
+script = ExtResource("1_4i0xl")
+id = "poki-choco"
+display_name = "Poki Chocolate"
+description = "Imported Poki chocolate flavour from Japan."
+mesh = ExtResource("1_puuig")
+type = 2
+is_storable = false
+readable_text = "I hid it on purpose. Won't get this kind of snack anytime soon in my life."
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

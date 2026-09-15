@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dxustpfhqcied"]
 
-[ext_resource type="Texture2D" uid="uid://c4k63uqlx31eg" path="res://assets/consumables/chips-icon.png" id="1_1w83x"]
+[ext_resource type="Texture2D" uid="uid://c4k63uqlx31eg" path="res://assets/consumables/chips/chips-icon.png" id="1_1w83x"]
 [ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_typwl"]
-[ext_resource type="ArrayMesh" uid="uid://bwe76fu2knstb" path="res://assets/consumables/chipsbottle.res" id="2_hppcp"]
+[ext_resource type="ArrayMesh" uid="uid://c8lwf2g41ctqa" path="res://assets/consumables/chips/chipsbottle.res" id="2_hppcp"]
 
 [resource]
 script = ExtResource("1_typwl")

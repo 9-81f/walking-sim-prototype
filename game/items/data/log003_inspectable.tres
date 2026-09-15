@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d05nlrbc43hm5"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwa18x7ub8xoq" path="res://assets/inspectables/book_001.res" id="1_3aiy2"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="2_0ni0h"]
+
+[resource]
+script = ExtResource("2_0ni0h")
+id = "book-inspct-003"
+display_name = "Log-003"
+description = "Tiny commentaries around this demo."
+mesh = ExtResource("1_3aiy2")
+type = 2
+is_storable = false
+readable_text = "As a fullstack web dev by day, all I can say is the knowledge I've attained from this game dev experience has significantly broaden the horizons on how I could better compose & organize my code."
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

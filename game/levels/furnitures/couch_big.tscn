@@ -10,12 +10,15 @@ size = Vector3(2, 0.6, 0.30081788)
 
 [node name="CouchBig" unique_id=433226213 instance=ExtResource("1_hpw3l")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=285707532]
+[node name="couchBig" parent="." index="0" unique_id=1066979999]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1879531266]
+[node name="StaticBody3D" type="StaticBody3D" parent="couchBig" index="0" unique_id=285707532]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="couchBig/StaticBody3D" index="0" unique_id=1879531266]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3726563, 0)
 shape = SubResource("BoxShape3D_qmagn")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1411041449]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="couchBig/StaticBody3D" index="1" unique_id=1411041449]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -0.24959113)
 shape = SubResource("BoxShape3D_kjoil")

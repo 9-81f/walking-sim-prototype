@@ -10,8 +10,8 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="tableSmall2" parent="." unique_id=1806466532 instance=ExtResource("1_c5pu5")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=995601212]
+[node name="StaticBody3D" type="StaticBody3D" parent="tableSmall2" unique_id=995601212]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1976298443]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tableSmall2/StaticBody3D" unique_id=1976298443]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32037354, -0.001953125)
 shape = SubResource("BoxShape3D_g86i6")

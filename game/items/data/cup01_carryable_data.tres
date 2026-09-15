@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bvd76qta7n8wv"]
+
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_ji8fc"]
+[ext_resource type="ArrayMesh" uid="uid://8yewegw8v7uf" path="res://assets/carryables/cup01.res" id="1_ysrdq"]
+
+[resource]
+script = ExtResource("1_ji8fc")
+id = "cup-carry-001"
+display_name = "Cup"
+mesh = ExtResource("1_ysrdq")
+type = 3
+is_storable = false
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

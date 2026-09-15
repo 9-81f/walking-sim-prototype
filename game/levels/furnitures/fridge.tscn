@@ -1,16 +1,19 @@
 [gd_scene format=4 uid="uid://blekudnpekaev"]
 
-[ext_resource type="Script" uid="uid://r4m0eshactwm" path="res://game/components/loot_container_component.gd" id="1_eo063"]
+[ext_resource type="Script" uid="uid://3dj6csaocnvh" path="res://game/components/shelves_storage_manager_3d.gd" id="1_4s0cr"]
 [ext_resource type="Texture2D" uid="uid://bjkrysb34sxht" path="res://assets/environments/PSX modular house interior pack/props/fridge_albedo.png" id="2_fotq5"]
 [ext_resource type="Texture2D" uid="uid://b26xyr1mwnjvy" path="res://assets/environments/PSX modular house interior pack/props/fridge_emission.png" id="3_4s0cr"]
 [ext_resource type="Texture2D" uid="uid://2oywwnd4wxsx" path="res://assets/environments/PSX modular house interior pack/props/fridge_roughness.png" id="4_12waf"]
 [ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="5_0wcft"]
 [ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="6_xbxsx"]
-[ext_resource type="Script" uid="uid://b7sokq5tfwike" path="res://game/components/interactable_door_component.gd" id="7_fotq5"]
+[ext_resource type="Script" uid="uid://d3mq1lue5yf1t" path="res://game/components/switch_toggle_component.gd" id="7_12waf"]
+[ext_resource type="Script" uid="uid://evm6758yh37o" path="res://game/components/shelf_storage_component_3d.gd" id="8_0wcft"]
+[ext_resource type="Script" uid="uid://b0ld3gnc7p4sc" path="res://core/components/tween_mesh_toggle.gd" id="8_12waf"]
+[ext_resource type="Script" uid="uid://b4dg5dsmsigbm" path="res://core/components/audio_toggle_component.gd" id="9_0wcft"]
+[ext_resource type="AudioStream" uid="uid://dppubiew057cm" path="res://game/levels/furnitures/audio/impact_soft.tres" id="10_j80fe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yrb3"]
 resource_name = "fridge"
-transparency = 4
 albedo_texture = ExtResource("2_fotq5")
 metallic_texture = ExtResource("4_12waf")
 metallic_texture_channel = 2
@@ -63,42 +66,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hg0w4")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_xsxhl"]
-_surfaces = [{
-"aabb": AABB(-1.4238076, -0.7525094, -3.2434286e-08, 1.4238087, 1.5050188, 0.13860717),
-"format": 34896613377,
-"index_count": 180,
-"index_data": PackedByteArray("AAABAAIAAgADAAAAAgAEAAMABAACAAEAAAADAAUABAAFAAMABQAEAAYABAABAAYAAAAFAAcAAQAAAAcABQAGAAgACAAGAAEABwAFAAgACAABAAkAAQAHAAkABwAIAAkACgALAAwACgANAAsADgAMAAsADQAOAAsADwANAAoADQAPAA4AEAAKAAwADwAKABAADgARAAwAEAAMABEADwASAA4AEgARAA4AEgATABEADwAUABIAFAATABIAFQARABMAFAAVABMAFQAQABEAFgAUAA8AFgAPABAAFwAVABQAFgAXABQAFwAYABUAGAAQABUAGQAYABcAGAAaABAAFgAQABoAGQAbABgAGwAaABgAHAAZABcAHAAbABkAHAAXABYAGwAdABoAHAAdABsAHQAeABoAFgAaAB4AHwAdABwAHwAcABYAHwAgAB0AHQAgAB4AHwAWACEAIAAfACEAFgAeACEAIAAhAB4A"),
-"lods": [0.162419, PackedByteArray("AAABAAIAAgADAAAAAgAEAAMABAACAAEAAAADAAUABAAFAAMABQAEAAYABAABAAYAAAAFAAcAAQAAAAcABQAGAAgACAAGAAEABwAFAAgACAABAAkAAQAHAAkABwAIAAkA")],
-"name": "fridge",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 34,
-"vertex_data": PackedByteArray("/////wAAAAD//zQKuX8AAP////+5fwAAAAD//wAAAAAAAP//uX8AAAAAAAAAAAAAAAA0Crl/AAD//wAAAAAAAAAAAADpEAAA//8AAOkQAABHF57oun8AALQes+26fwAARxez7bp/AAC0Hp7oun8AALQes+3cvwAAtB6e6Ny/AABHF57o3L8AAEcXs+3cvwAAtB6z7f//AABHF7Pt//8AALQenuj//wAARxee6P//AAC0Hm693L8AALQebr3//wAARxduvf//AAC0Hlq4//8AAEcXbr3cvwAARxdauP//AAC0Hlq43L8AAEcXWrjcvwAARxduvbp/AAC0Hlq4un8AAEcXWri6fwAAtB5uvbp/AAA=")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_1cybm"]
-resource_name = "fridge_Cube_071"
-_surfaces = [{
-"aabb": AABB(-1.4238076, -0.7525094, -3.2434286e-08, 1.4238087, 1.5050188, 0.13860717),
-"attribute_data": PackedByteArray("v4gGliyG0csshgaWv4gNzmiIDc42uHXxNYPM8Ta4zPE1g3Xxz0IXK9B342DPQuNg0HcXKzWDje42uGXrNriN7jWDZesshgaWv4gNzr+IBpYshtHLaIgNztB342DPQuqY0HfqmM9C42A2uHPlNYPg4ja44OI1g3Pl2pGJEY2R9RGNkYkR2pH1EULnxgb35akFQuepBfflxgaN6MYGjeipBULnOhD35ToQQudWEfflVhGN6FYRjeg6EPflxgZu5KkF9+WpBW7kxgb35ToQbuQ6EPflVhFu5FYRI+PGBtjhqQUj46kF2OHGBm7kxgZu5KkFbuQ6ECPjOhBu5FYRI+NWEdjhOhDY4VYRi+qeChTs6QuL6ukLFOyeCovqUwkU7FMJFOyeCovqUwkU7FMJi+qeChTs6QuL6ukLTuALENjhmAbY4QsQTuCYBq6Q9RH8kIkR/JD1Ea6QiRFO4AsQ2OFWEU7gVhHY4QsQTuCYBtjhTQXY4ZgGTuBNBQ=="),
-"format": 34896613399,
-"index_count": 180,
-"index_data": PackedByteArray("AAABAAIAAQAAAAMAAQADAAQABQAGAAcABQAIAAYACQAKAAsACQAMAAoADQAOAA8ADQAQAA4AEQASABMAEgARABQAEgAUABUAFgAXABgAFgAZABcAGgAbABwAGgAdABsAHgAfACAAHgAhAB8AIgAjACQAIgAlACMAJgAiACQAJgAkACcAKAAlACIAKAApACUAKgApACgAKgArACkALAAqACgALAAoAC0ALgAvADAALgAxAC8AMgAxAC4AMgAzADEANAAzADIANAA1ADMANgA3ADgANgA5ADcAOgA2ADgAOgA4ADsAPAA2ADoAPAA9ADYAPgA9ADwAPgA/AD0APwBAAD0APwBBAEAAQgBDAEQAQgBFAEMARgBFAEIARgBHAEUASABJAEoASABLAEkATABLAEgATABNAEsATgBPAFAATgBRAE8AUgBTAFQAUgBVAFMAVgBXAFgAVgBZAFcAWgBbAFwAWgBdAFsA"),
-"lods": [0.162419, PackedByteArray("AAABAAIAAQAAAAMAAQADAAQABQAGAAcABQAIAAYACQAKAAsACQAMAAoADQAOAA8ADQAQAA4AEQASABMAEgARABQAEgAUABUAFgAXABgAFgAZABcAGgAbABwAGgAdABsA")],
-"material": SubResource("StandardMaterial3D_6yrb3"),
-"name": "fridge",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 94,
-"vertex_data": PackedByteArray("/////wAA/7///zQKuX//v/////+5f/+///8AAAAA/7///wAA6RD/v///AAAAAP8/AAAAAOkQ/z///wAA6RD/PwAAAAAAAP8/AAD//7l/AID//zQKuX8AgAAANAq5fwCA/////7l/AIAAAAAA6RD/n///NAq5f/+f//8AAOkQ/58AADQKuX//nwAA//+5fwAAAAAAAAAAAAAAAP//AAAAAAAANAq5fwAAAAAAAOkQAAD/////AAAAAAAAAAAAAAAA//8AAAAAAAAAAP//AAAAAP////+5f/+/AAD//wAA/7//////AAD/vwAA//+5f/+/Rxee6Lp///+0HrPtun///0cXs+26f///tB6e6Lp///+0Hp7o3L//v7Qes+3///+/tB6z7dy//7+0Hp7o////v7Qenui6f/+/tB6z7bp//7+0Hm693L//v7Qebr3///+/tB5auNy//7+0Hlq4////v7QeWri6f/+/tB5uvbp//7+0Hp7o//8AgEcXs+3//wCAtB6z7f//AIBHF57o//8AgLQebr3//wCARxduvf//AIC0Hlq4//8AgEcXWrj//wCARxee6Ny//79HF7Ptun//v0cXs+3cv/+/Rxee6Lp//79HF57o////v0cXs+3///+/Rxduvf///79HF2693L//v0cXWrj///+/RxdauNy//79HF269un//v0cXWri6f/+/tB5auNy///9HF1q4/////7QeWrj/////RxdauNy///+0Hlq4un///0cXWri6f///tB6z7dy//79HF7Ptun//v7Qes+26f/+/Rxez7dy//7+0HrPt////v0cXs+3///+/tB5uvdy///9HF57o3L///0cXbr3cv///tB6e6Ny///9HF1q4un///7Qebr26f///Rxduvbp///+0Hlq4un///7Qebr3cv///Rxduvbp///+0Hm69un///0cXbr3cv///tB6e6Ny///9HF57oun///0cXnujcv///tB6e6Lp/////fwAA/38AAP9/AAD/fwAA/38AAAAA/38AAP9/AAD/fwAA/3//f////3////9/////f///AAD/fwAA/38AAP9/AAD/f/8//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f////3//P/+//z//v/8//7//P/+//38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9/////f/7//3/+//9//v//f/7//3/+//9//v//f/7//3/+//9//v//f/7//3/+//9/////v////7////9//z//v////7////9//z/+//9//v//f/7//3/+//9/////f////3//f/7//3/+//9//v//f/7//7//v/+//7//v/+//7//v/9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_xsxhl")
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_j7gv6"]
 _surfaces = [{
 "aabb": AABB(-1.4238076, -0.37226903, -3.2434286e-08, 1.4238087, 0.7445382, 0.13860717),
@@ -133,42 +100,70 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j7gv6")
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_qmagn"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
-size = Vector3(1.4250001, 2.5, 0.95788574)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fotq5"]
+points = PackedVector3Array(1.1920929e-06, 0.3722692, 0.069154315, 1.1920929e-06, 0.3722692, -3.2434286e-08, -1.4238076, 0.3722692, 0.069154315, -1.2530788, 0.04380074, 0.13860714, 1.1920929e-06, -0.37226903, 0.069154315, 1.1920929e-06, -0.37226903, -3.2434286e-08, -1.4238076, 0.3722692, -3.2434286e-08, -1.4238076, -0.37226903, 0.069154315, -1.2944719, 0.04380074, 0.13860714, -1.2530788, -0.26980028, 0.13860714, -1.4238076, -0.37226903, -3.2434286e-08, -1.2944719, -0.26980028, 0.13860714)
 
-[node name="Fridge" type="Node3D" unique_id=1092317820]
-script = ExtResource("1_eo063")
-metadata/_custom_type_script = "uid://r4m0eshactwm"
+[sub_resource type="ArrayMesh" id="ArrayMesh_xsxhl"]
+_surfaces = [{
+"aabb": AABB(-1.4238076, -0.7525094, -3.2434286e-08, 1.4238087, 1.5050188, 0.13860717),
+"format": 34896613377,
+"index_count": 180,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAgAEAAMABAACAAEAAAADAAUABAAFAAMABQAEAAYABAABAAYAAAAFAAcAAQAAAAcABQAGAAgACAAGAAEABwAFAAgACAABAAkAAQAHAAkABwAIAAkACgALAAwACgANAAsADgAMAAsADQAOAAsADwANAAoADQAPAA4AEAAKAAwADwAKABAADgARAAwAEAAMABEADwASAA4AEgARAA4AEgATABEADwAUABIAFAATABIAFQARABMAFAAVABMAFQAQABEAFgAUAA8AFgAPABAAFwAVABQAFgAXABQAFwAYABUAGAAQABUAGQAYABcAGAAaABAAFgAQABoAGQAbABgAGwAaABgAHAAZABcAHAAbABkAHAAXABYAGwAdABoAHAAdABsAHQAeABoAFgAaAB4AHwAdABwAHwAcABYAHwAgAB0AHQAgAB4AHwAWACEAIAAfACEAFgAeACEAIAAhAB4A"),
+"lods": [0.162419, PackedByteArray("AAABAAIAAgADAAAAAgAEAAMABAACAAEAAAADAAUABAAFAAMABQAEAAYABAABAAYAAAAFAAcAAQAAAAcABQAGAAgACAAGAAEABwAFAAgACAABAAkAAQAHAAkABwAIAAkA")],
+"name": "fridge",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 34,
+"vertex_data": PackedByteArray("/////wAAAAD//zQKuX8AAP////+5fwAAAAD//wAAAAAAAP//uX8AAAAAAAAAAAAAAAA0Crl/AAD//wAAAAAAAAAAAADpEAAA//8AAOkQAABHF57oun8AALQes+26fwAARxez7bp/AAC0Hp7oun8AALQes+3cvwAAtB6e6Ny/AABHF57o3L8AAEcXs+3cvwAAtB6z7f//AABHF7Pt//8AALQenuj//wAARxee6P//AAC0Hm693L8AALQebr3//wAARxduvf//AAC0Hlq4//8AAEcXbr3cvwAARxdauP//AAC0Hlq43L8AAEcXWrjcvwAARxduvbp/AAC0Hlq4un8AAEcXWri6fwAAtB5uvbp/AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1cybm"]
+resource_name = "fridge_Cube_071"
+_surfaces = [{
+"aabb": AABB(-1.4238076, -0.7525094, -3.2434286e-08, 1.4238087, 1.5050188, 0.13860717),
+"attribute_data": PackedByteArray("v4gGliyG0csshgaWv4gNzmiIDc42uHXxNYPM8Ta4zPE1g3Xxz0IXK9B342DPQuNg0HcXKzWDje42uGXrNriN7jWDZesshgaWv4gNzr+IBpYshtHLaIgNztB342DPQuqY0HfqmM9C42A2uHPlNYPg4ja44OI1g3Pl2pGJEY2R9RGNkYkR2pH1EULnxgb35akFQuepBfflxgaN6MYGjeipBULnOhD35ToQQudWEfflVhGN6FYRjeg6EPflxgZu5KkF9+WpBW7kxgb35ToQbuQ6EPflVhFu5FYRI+PGBtjhqQUj46kF2OHGBm7kxgZu5KkFbuQ6ECPjOhBu5FYRI+NWEdjhOhDY4VYRi+qeChTs6QuL6ukLFOyeCovqUwkU7FMJFOyeCovqUwkU7FMJi+qeChTs6QuL6ukLTuALENjhmAbY4QsQTuCYBq6Q9RH8kIkR/JD1Ea6QiRFO4AsQ2OFWEU7gVhHY4QsQTuCYBtjhTQXY4ZgGTuBNBQ=="),
+"format": 34896613399,
+"index_count": 180,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAQADAAQABQAGAAcABQAIAAYACQAKAAsACQAMAAoADQAOAA8ADQAQAA4AEQASABMAEgARABQAEgAUABUAFgAXABgAFgAZABcAGgAbABwAGgAdABsAHgAfACAAHgAhAB8AIgAjACQAIgAlACMAJgAiACQAJgAkACcAKAAlACIAKAApACUAKgApACgAKgArACkALAAqACgALAAoAC0ALgAvADAALgAxAC8AMgAxAC4AMgAzADEANAAzADIANAA1ADMANgA3ADgANgA5ADcAOgA2ADgAOgA4ADsAPAA2ADoAPAA9ADYAPgA9ADwAPgA/AD0APwBAAD0APwBBAEAAQgBDAEQAQgBFAEMARgBFAEIARgBHAEUASABJAEoASABLAEkATABLAEgATABNAEsATgBPAFAATgBRAE8AUgBTAFQAUgBVAFMAVgBXAFgAVgBZAFcAWgBbAFwAWgBdAFsA"),
+"lods": [0.162419, PackedByteArray("AAABAAIAAQAAAAMAAQADAAQABQAGAAcABQAIAAYACQAKAAsACQAMAAoADQAOAA8ADQAQAA4AEQASABMAEgARABQAEgAUABUAFgAXABgAFgAZABcAGgAbABwAGgAdABsA")],
+"material": SubResource("StandardMaterial3D_6yrb3"),
+"name": "fridge",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 94,
+"vertex_data": PackedByteArray("/////wAA/7///zQKuX//v/////+5f/+///8AAAAA/7///wAA6RD/v///AAAAAP8/AAAAAOkQ/z///wAA6RD/PwAAAAAAAP8/AAD//7l/AID//zQKuX8AgAAANAq5fwCA/////7l/AIAAAAAA6RD/n///NAq5f/+f//8AAOkQ/58AADQKuX//nwAA//+5fwAAAAAAAAAAAAAAAP//AAAAAAAANAq5fwAAAAAAAOkQAAD/////AAAAAAAAAAAAAAAA//8AAAAAAAAAAP//AAAAAP////+5f/+/AAD//wAA/7//////AAD/vwAA//+5f/+/Rxee6Lp///+0HrPtun///0cXs+26f///tB6e6Lp///+0Hp7o3L//v7Qes+3///+/tB6z7dy//7+0Hp7o////v7Qenui6f/+/tB6z7bp//7+0Hm693L//v7Qebr3///+/tB5auNy//7+0Hlq4////v7QeWri6f/+/tB5uvbp//7+0Hp7o//8AgEcXs+3//wCAtB6z7f//AIBHF57o//8AgLQebr3//wCARxduvf//AIC0Hlq4//8AgEcXWrj//wCARxee6Ny//79HF7Ptun//v0cXs+3cv/+/Rxee6Lp//79HF57o////v0cXs+3///+/Rxduvf///79HF2693L//v0cXWrj///+/RxdauNy//79HF269un//v0cXWri6f/+/tB5auNy///9HF1q4/////7QeWrj/////RxdauNy///+0Hlq4un///0cXWri6f///tB6z7dy//79HF7Ptun//v7Qes+26f/+/Rxez7dy//7+0HrPt////v0cXs+3///+/tB5uvdy///9HF57o3L///0cXbr3cv///tB6e6Ny///9HF1q4un///7Qebr26f///Rxduvbp///+0Hlq4un///7Qebr3cv///Rxduvbp///+0Hm69un///0cXbr3cv///tB6e6Ny///9HF57oun///0cXnujcv///tB6e6Lp/////fwAA/38AAP9/AAD/fwAA/38AAAAA/38AAP9/AAD/fwAA/3//f////3////9/////f///AAD/fwAA/38AAP9/AAD/f/8//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f////3//P/+//z//v/8//7//P/+//38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9/////f/7//3/+//9//v//f/7//3/+//9//v//f/7//3/+//9//v//f/7//3/+//9/////v////7////9//z//v////7////9//z/+//9//v//f/7//3/+//9/////f////3//f/7//3/+//9//v//f/7//7//v/+//7//v/+//7//v/9//7//f/+//3//v/9//7//f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xsxhl")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4s0cr"]
+points = PackedVector3Array(-1.4238076, -0.7525094, -3.2434286e-08, 1.1920929e-06, -0.7525094, -3.2434286e-08, -1.4238076, -0.7525094, 0.009144568, -1.4238076, 0.7523623, -3.2434286e-08, 1.1920929e-06, -0.7525094, 0.009144568, 1.1920929e-06, 0.7523623, -3.2434286e-08, -1.4238076, -0.69255024, 0.069154315, -1.4238076, 0.7523623, 0.069154315, 1.1920929e-06, -0.69255024, 0.069154315, 1.1920929e-06, 0.7523623, 0.069154315, -1.2944719, 0.33117503, 0.13860714, -1.2944719, 0.64481884, 0.13860714, -1.2530788, 0.33117503, 0.13860714, -1.2530788, 0.64481884, 0.13860714)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4s0cr"]
+data = PackedVector3Array(-0.7119, 0.0797, 0.4755, -0.7175, 2.3523, -0.45189998, -0.7175, 0.0744, -0.45189998, -0.7119, 0.0797, 0.4755, -0.7119, 2.3523, 0.4755, -0.7175, 2.3523, -0.45189998, -0.7423, 0, -0.4755, 0.7423, 2.5186, -0.4755, -0.7423, 2.5186, -0.4755, -0.7423, 0, -0.4755, 0.7423, 0, -0.4755, 0.7423, 2.5186, -0.4755, 0.7423, 0, -0.4755, 0.7423, 2.5186, 0.4755, 0.7423, 2.5186, -0.4755, 0.7423, 0, -0.4755, 0.7423, 0, 0.4755, 0.7423, 2.5186, 0.4755, 0.7423, 0, -0.4755, -0.7423, 0, 0.4755, 0.7423, 0, 0.4755, 0.7423, 0, -0.4755, -0.7423, 0, -0.4755, -0.7423, 0, 0.4755, 0.7423, 2.5186, 0.4755, -0.7423, 2.5186, -0.4755, 0.7423, 2.5186, -0.4755, 0.7423, 2.5186, 0.4755, -0.7423, 2.5186, 0.4755, -0.7423, 2.5186, -0.4755, -0.7423, 0, 0.4755, -0.7119, 2.3523, 0.4755, -0.7119, 0.0797, 0.4755, -0.7423, 0, 0.4755, -0.7423, 2.5186, 0.4755, -0.7119, 2.3523, 0.4755, -0.7175, 0.0744, -0.45189998, 0.7175, 2.3523, -0.45189998, 0.7175, 0.0744, -0.45189998, -0.7175, 0.0744, -0.45189998, -0.7175, 2.3523, -0.45189998, 0.7175, 2.3523, -0.45189998, 0.7175, 0.0744, -0.45189998, 0.7119, 2.3523, 0.4755, 0.7119, 0.0797, 0.4755, 0.7175, 0.0744, -0.45189998, 0.7175, 2.3523, -0.45189998, 0.7119, 2.3523, 0.4755, 0.7175, 0.0744, -0.45189998, -0.7119, 0.0797, 0.4755, -0.7175, 0.0744, -0.45189998, 0.7175, 0.0744, -0.45189998, 0.7119, 0.0797, 0.4755, -0.7119, 0.0797, 0.4755, 0.7119, 2.3523, 0.4755, -0.7175, 2.3523, -0.45189998, -0.7119, 2.3523, 0.4755, 0.7119, 2.3523, 0.4755, 0.7175, 2.3523, -0.45189998, -0.7175, 2.3523, -0.45189998, 0.7423, 0, 0.4755, 0.7119, 2.3523, 0.4755, 0.7423, 2.5186, 0.4755, 0.7423, 0, 0.4755, 0.7119, 0.0797, 0.4755, 0.7119, 2.3523, 0.4755, 0.7423, 0, 0.4755, -0.7119, 0.0797, 0.4755, 0.7119, 0.0797, 0.4755, 0.7423, 0, 0.4755, -0.7423, 0, 0.4755, -0.7119, 0.0797, 0.4755, -0.7423, 2.5186, 0.4755, 0.7119, 2.3523, 0.4755, -0.7119, 2.3523, 0.4755, -0.7423, 2.5186, 0.4755, 0.7423, 2.5186, 0.4755, 0.7119, 2.3523, 0.4755, -0.7423, 2.5186, -0.4755, -0.7423, 0, 0.4755, -0.7423, 0, -0.4755, -0.7423, 2.5186, -0.4755, -0.7423, 2.5186, 0.4755, -0.7423, 0, 0.4755, -0.7119, 2.5186, 0.4755, 0.7119, 2.3523, 0.4755, 0.7119, 2.5186, 0.4755, -0.7119, 2.5186, 0.4755, -0.7119, 2.3523, 0.4755, 0.7119, 2.3523, 0.4755, -0.7119, 2.5186, 0.4755, 0.7119, 2.5186, 0.4847, -0.7119, 2.5186, 0.4847, -0.7119, 2.5186, 0.4755, 0.7119, 2.5186, 0.4755, 0.7119, 2.5186, 0.4847, -0.7119, 2.4586, 0.54469997, 0.7119, 2.3523, 0.54469997, -0.7119, 2.3523, 0.54469997, -0.7119, 2.4586, 0.54469997, 0.7119, 2.4586, 0.54469997, 0.7119, 2.3523, 0.54469997, 0.7119, 2.3523, 0.4755, -0.7119, 2.3523, 0.54469997, 0.7119, 2.3523, 0.54469997, 0.7119, 2.3523, 0.4755, -0.7119, 2.3523, 0.4755, -0.7119, 2.3523, 0.54469997, 0.7119, 2.3523, 0.4755, 0.7119, 2.5186, 0.4847, 0.7119, 2.5186, 0.4755, 0.7119, 2.5186, 0.4847, 0.7119, 2.3523, 0.4755, 0.7119, 2.3523, 0.54469997, 0.7119, 2.5186, 0.4847, 0.7119, 2.3523, 0.54469997, 0.7119, 2.4586, 0.54469997, -0.7119, 2.5186, 0.4755, -0.7119, 2.3523, 0.54469997, -0.7119, 2.3523, 0.4755, -0.7119, 2.3523, 0.54469997, -0.7119, 2.5186, 0.4755, -0.7119, 2.5186, 0.4847, -0.7119, 2.3523, 0.54469997, -0.7119, 2.5186, 0.4847, -0.7119, 2.4586, 0.54469997, 0.7119, 2.5186, 0.4847, -0.7119, 2.4586, 0.54469997, -0.7119, 2.5186, 0.4847, 0.7119, 2.5186, 0.4847, 0.7119, 2.4586, 0.54469997, -0.7119, 2.4586, 0.54469997, -0.7119, 1.6078, 0.4755, 0.7119, 1.6078, -0.45189998, 0.7119, 1.6078, 0.4755, -0.7119, 1.6078, 0.4755, -0.7119, 1.6078, -0.45189998, 0.7119, 1.6078, -0.45189998, 0.7119, 1.5847, 0.4755, -0.7119, 1.5847, -0.45189998, -0.7119, 1.5847, 0.4755, 0.7119, 1.5847, 0.4755, 0.7119, 1.5847, -0.45189998, -0.7119, 1.5847, -0.45189998, 0.7119, 1.5847, 0.4755, -0.7119, 1.6078, 0.4755, 0.7119, 1.6078, 0.4755, 0.7119, 1.5847, 0.4755, -0.7119, 1.5847, 0.4755, -0.7119, 1.6078, 0.4755, -0.7119, 0.7001, 0.4755, 0.7119, 0.7001, -0.45189998, 0.7119, 0.7001, 0.4755, -0.7119, 0.7001, 0.4755, -0.7119, 0.7001, -0.45189998, 0.7119, 0.7001, -0.45189998, 0.7119, 0.67689997, 0.4755, -0.7119, 0.67689997, -0.45189998, -0.7119, 0.67689997, 0.4755, 0.7119, 0.67689997, 0.4755, 0.7119, 0.67689997, -0.45189998, -0.7119, 0.67689997, -0.45189998, 0.7119, 0.67689997, 0.4755, -0.7119, 0.7001, 0.4755, 0.7119, 0.7001, 0.4755, 0.7119, 0.67689997, 0.4755, -0.7119, 0.67689997, 0.4755, -0.7119, 0.7001, 0.4755, -0.7119, 1.1709, 0.4755, 0.7119, 1.1709, -0.45189998, 0.7119, 1.1709, 0.4755, -0.7119, 1.1709, 0.4755, -0.7119, 1.1709, -0.45189998, 0.7119, 1.1709, -0.45189998, 0.7119, 1.1478, 0.4755, -0.7119, 1.1478, -0.45189998, -0.7119, 1.1478, 0.4755, 0.7119, 1.1478, 0.4755, 0.7119, 1.1478, -0.45189998, -0.7119, 1.1478, -0.45189998, 0.7119, 1.1478, 0.4755, -0.7119, 1.1709, 0.4755, 0.7119, 1.1709, 0.4755, 0.7119, 1.1478, 0.4755, -0.7119, 1.1478, 0.4755, -0.7119, 1.1709, 0.4755, 0.6665, 2.1571, 0.3746, 0.6665, 2.2041, -0.45189998, 0.6665, 2.2041, 0.3746, 0.6665, 2.1571, 0.3746, 0.6665, 2.1571, -0.45189998, 0.6665, 2.2041, -0.45189998, 0.6665, 2.1571, -0.45189998, 0.7119, 2.2041, -0.45189998, 0.6665, 2.2041, -0.45189998, 0.6665, 2.1571, -0.45189998, 0.7119, 2.1571, -0.45189998, 0.7119, 2.2041, -0.45189998, 0.7119, 2.1571, -0.45189998, 0.7119, 2.2041, 0.4351, 0.7119, 2.2041, -0.45189998, 0.7119, 2.1571, -0.45189998, 0.7119, 2.1571, 0.4351, 0.7119, 2.2041, 0.4351, 0.7119, 2.1571, 0.4351, 0.6665, 2.2041, 0.3746, 0.7119, 2.2041, 0.4351, 0.7119, 2.1571, 0.4351, 0.6665, 2.1571, 0.3746, 0.6665, 2.2041, 0.3746, 0.6665, 2.1571, -0.45189998, 0.7119, 2.1571, 0.4351, 0.7119, 2.1571, -0.45189998, 0.6665, 2.1571, -0.45189998, 0.6665, 2.1571, 0.3746, 0.7119, 2.1571, 0.4351, 0.7119, 2.2041, -0.45189998, 0.6665, 2.2041, 0.3746, 0.6665, 2.2041, -0.45189998, 0.7119, 2.2041, -0.45189998, 0.7119, 2.2041, 0.4351, 0.6665, 2.2041, 0.3746, 0.6665, 1.8625, 0.3746, 0.6665, 1.9095, -0.45189998, 0.6665, 1.9095, 0.3746, 0.6665, 1.8625, 0.3746, 0.6665, 1.8625, -0.45189998, 0.6665, 1.9095, -0.45189998, 0.6665, 1.8625, -0.45189998, 0.7119, 1.9095, -0.45189998, 0.6665, 1.9095, -0.45189998, 0.6665, 1.8625, -0.45189998, 0.7119, 1.8625, -0.45189998, 0.7119, 1.9095, -0.45189998, 0.7119, 1.8625, -0.45189998, 0.7119, 1.9095, 0.4351, 0.7119, 1.9095, -0.45189998, 0.7119, 1.8625, -0.45189998, 0.7119, 1.8625, 0.4351, 0.7119, 1.9095, 0.4351, 0.7119, 1.8625, 0.4351, 0.6665, 1.9095, 0.3746, 0.7119, 1.9095, 0.4351, 0.7119, 1.8625, 0.4351, 0.6665, 1.8625, 0.3746, 0.6665, 1.9095, 0.3746, 0.6665, 1.8625, -0.45189998, 0.7119, 1.8625, 0.4351, 0.7119, 1.8625, -0.45189998, 0.6665, 1.8625, -0.45189998, 0.6665, 1.8625, 0.3746, 0.7119, 1.8625, 0.4351, 0.7119, 1.9095, -0.45189998, 0.6665, 1.9095, 0.3746, 0.6665, 1.9095, -0.45189998, 0.7119, 1.9095, -0.45189998, 0.7119, 1.9095, 0.4351, 0.6665, 1.9095, 0.3746, 0.6665, 1.3321999, 0.3746, 0.6665, 1.3792, -0.45189998, 0.6665, 1.3792, 0.3746, 0.6665, 1.3321999, 0.3746, 0.6665, 1.3321999, -0.45189998, 0.6665, 1.3792, -0.45189998, 0.6665, 1.3321999, -0.45189998, 0.7119, 1.3792, -0.45189998, 0.6665, 1.3792, -0.45189998, 0.6665, 1.3321999, -0.45189998, 0.7119, 1.3321999, -0.45189998, 0.7119, 1.3792, -0.45189998, 0.7119, 1.3321999, -0.45189998, 0.7119, 1.3792, 0.4351, 0.7119, 1.3792, -0.45189998, 0.7119, 1.3321999, -0.45189998, 0.7119, 1.3321999, 0.4351, 0.7119, 1.3792, 0.4351, 0.7119, 1.3321999, 0.4351, 0.6665, 1.3792, 0.3746, 0.7119, 1.3792, 0.4351, 0.7119, 1.3321999, 0.4351, 0.6665, 1.3321999, 0.3746, 0.6665, 1.3792, 0.3746, 0.6665, 1.3321999, -0.45189998, 0.7119, 1.3321999, 0.4351, 0.7119, 1.3321999, -0.45189998, 0.6665, 1.3321999, -0.45189998, 0.6665, 1.3321999, 0.3746, 0.7119, 1.3321999, 0.4351, 0.7119, 1.3792, -0.45189998, 0.6665, 1.3792, 0.3746, 0.6665, 1.3792, -0.45189998, 0.7119, 1.3792, -0.45189998, 0.7119, 1.3792, 0.4351, 0.6665, 1.3792, 0.3746, 0.6665, 0.90809995, 0.3746, 0.6665, 0.9551, -0.45189998, 0.6665, 0.9551, 0.3746, 0.6665, 0.90809995, 0.3746, 0.6665, 0.90809995, -0.45189998, 0.6665, 0.9551, -0.45189998, 0.6665, 0.90809995, -0.45189998, 0.7119, 0.9551, -0.45189998, 0.6665, 0.9551, -0.45189998, 0.6665, 0.90809995, -0.45189998, 0.7119, 0.90809995, -0.45189998, 0.7119, 0.9551, -0.45189998, 0.7119, 0.90809995, -0.45189998, 0.7119, 0.9551, 0.4351, 0.7119, 0.9551, -0.45189998, 0.7119, 0.90809995, -0.45189998, 0.7119, 0.90809995, 0.4351, 0.7119, 0.9551, 0.4351, 0.7119, 0.90809995, 0.4351, 0.6665, 0.9551, 0.3746, 0.7119, 0.9551, 0.4351, 0.7119, 0.90809995, 0.4351, 0.6665, 0.90809995, 0.3746, 0.6665, 0.9551, 0.3746, 0.6665, 0.90809995, -0.45189998, 0.7119, 0.90809995, 0.4351, 0.7119, 0.90809995, -0.45189998, 0.6665, 0.90809995, -0.45189998, 0.6665, 0.90809995, 0.3746, 0.7119, 0.90809995, 0.4351, 0.7119, 0.9551, -0.45189998, 0.6665, 0.9551, 0.3746, 0.6665, 0.9551, -0.45189998, 0.7119, 0.9551, -0.45189998, 0.7119, 0.9551, 0.4351, 0.6665, 0.9551, 0.3746, -0.6665, 2.1571, 0.3746, -0.6665, 2.2041, -0.45189998, -0.6665, 2.1571, -0.45189998, -0.6665, 2.1571, 0.3746, -0.6665, 2.2041, 0.3746, -0.6665, 2.2041, -0.45189998, -0.6665, 2.1571, -0.45189998, -0.7119, 2.2041, -0.45189998, -0.7119, 2.1571, -0.45189998, -0.6665, 2.1571, -0.45189998, -0.6665, 2.2041, -0.45189998, -0.7119, 2.2041, -0.45189998, -0.7119, 2.1571, -0.45189998, -0.7119, 2.2041, 0.4351, -0.7119, 2.1571, 0.4351, -0.7119, 2.1571, -0.45189998, -0.7119, 2.2041, -0.45189998, -0.7119, 2.2041, 0.4351, -0.7119, 2.1571, 0.4351, -0.6665, 2.2041, 0.3746, -0.6665, 2.1571, 0.3746, -0.7119, 2.1571, 0.4351, -0.7119, 2.2041, 0.4351, -0.6665, 2.2041, 0.3746, -0.6665, 2.1571, -0.45189998, -0.7119, 2.1571, 0.4351, -0.6665, 2.1571, 0.3746, -0.6665, 2.1571, -0.45189998, -0.7119, 2.1571, -0.45189998, -0.7119, 2.1571, 0.4351, -0.7119, 2.2041, -0.45189998, -0.6665, 2.2041, 0.3746, -0.7119, 2.2041, 0.4351, -0.7119, 2.2041, -0.45189998, -0.6665, 2.2041, -0.45189998, -0.6665, 2.2041, 0.3746, -0.6665, 1.8625, 0.3746, -0.6665, 1.9095, -0.45189998, -0.6665, 1.8625, -0.45189998, -0.6665, 1.8625, 0.3746, -0.6665, 1.9095, 0.3746, -0.6665, 1.9095, -0.45189998, -0.6665, 1.8625, -0.45189998, -0.7119, 1.9095, -0.45189998, -0.7119, 1.8625, -0.45189998, -0.6665, 1.8625, -0.45189998, -0.6665, 1.9095, -0.45189998, -0.7119, 1.9095, -0.45189998, -0.7119, 1.8625, -0.45189998, -0.7119, 1.9095, 0.4351, -0.7119, 1.8625, 0.4351, -0.7119, 1.8625, -0.45189998, -0.7119, 1.9095, -0.45189998, -0.7119, 1.9095, 0.4351, -0.7119, 1.8625, 0.4351, -0.6665, 1.9095, 0.3746, -0.6665, 1.8625, 0.3746, -0.7119, 1.8625, 0.4351, -0.7119, 1.9095, 0.4351, -0.6665, 1.9095, 0.3746, -0.6665, 1.8625, -0.45189998, -0.7119, 1.8625, 0.4351, -0.6665, 1.8625, 0.3746, -0.6665, 1.8625, -0.45189998, -0.7119, 1.8625, -0.45189998, -0.7119, 1.8625, 0.4351, -0.7119, 1.9095, -0.45189998, -0.6665, 1.9095, 0.3746, -0.7119, 1.9095, 0.4351, -0.7119, 1.9095, -0.45189998, -0.6665, 1.9095, -0.45189998, -0.6665, 1.9095, 0.3746, -0.6665, 1.3321999, 0.3746, -0.6665, 1.3792, -0.45189998, -0.6665, 1.3321999, -0.45189998, -0.6665, 1.3321999, 0.3746, -0.6665, 1.3792, 0.3746, -0.6665, 1.3792, -0.45189998, -0.6665, 1.3321999, -0.45189998, -0.7119, 1.3792, -0.45189998, -0.7119, 1.3321999, -0.45189998, -0.6665, 1.3321999, -0.45189998, -0.6665, 1.3792, -0.45189998, -0.7119, 1.3792, -0.45189998, -0.7119, 1.3321999, -0.45189998, -0.7119, 1.3792, 0.4351, -0.7119, 1.3321999, 0.4351, -0.7119, 1.3321999, -0.45189998, -0.7119, 1.3792, -0.45189998, -0.7119, 1.3792, 0.4351, -0.7119, 1.3321999, 0.4351, -0.6665, 1.3792, 0.3746, -0.6665, 1.3321999, 0.3746, -0.7119, 1.3321999, 0.4351, -0.7119, 1.3792, 0.4351, -0.6665, 1.3792, 0.3746, -0.6665, 1.3321999, -0.45189998, -0.7119, 1.3321999, 0.4351, -0.6665, 1.3321999, 0.3746, -0.6665, 1.3321999, -0.45189998, -0.7119, 1.3321999, -0.45189998, -0.7119, 1.3321999, 0.4351, -0.7119, 1.3792, -0.45189998, -0.6665, 1.3792, 0.3746, -0.7119, 1.3792, 0.4351, -0.7119, 1.3792, -0.45189998, -0.6665, 1.3792, -0.45189998, -0.6665, 1.3792, 0.3746, -0.6665, 0.90809995, 0.3746, -0.6665, 0.9551, -0.45189998, -0.6665, 0.90809995, -0.45189998, -0.6665, 0.90809995, 0.3746, -0.6665, 0.9551, 0.3746, -0.6665, 0.9551, -0.45189998, -0.6665, 0.90809995, -0.45189998, -0.7119, 0.9551, -0.45189998, -0.7119, 0.90809995, -0.45189998, -0.6665, 0.90809995, -0.45189998, -0.6665, 0.9551, -0.45189998, -0.7119, 0.9551, -0.45189998, -0.7119, 0.90809995, -0.45189998, -0.7119, 0.9551, 0.4351, -0.7119, 0.90809995, 0.4351, -0.7119, 0.90809995, -0.45189998, -0.7119, 0.9551, -0.45189998, -0.7119, 0.9551, 0.4351, -0.7119, 0.90809995, 0.4351, -0.6665, 0.9551, 0.3746, -0.6665, 0.90809995, 0.3746, -0.7119, 0.90809995, 0.4351, -0.7119, 0.9551, 0.4351, -0.6665, 0.9551, 0.3746, -0.6665, 0.90809995, -0.45189998, -0.7119, 0.90809995, 0.4351, -0.6665, 0.90809995, 0.3746, -0.6665, 0.90809995, -0.45189998, -0.7119, 0.90809995, -0.45189998, -0.7119, 0.90809995, 0.4351, -0.7119, 0.9551, -0.45189998, -0.6665, 0.9551, 0.3746, -0.7119, 0.9551, 0.4351, -0.7119, 0.9551, -0.45189998, -0.6665, 0.9551, -0.45189998, -0.6665, 0.9551, 0.3746)
+
+[node name="Fridge" type="Node3D" unique_id=262631552 node_paths=PackedStringArray("_shelves", "_enclosure_toggles")]
+script = ExtResource("1_4s0cr")
+_shelves = {
+NodePath("Lower1stShelfStorageComponent3D"): null,
+NodePath("Lower2ndShelfStorageComponent3D"): null,
+NodePath("Lower3rdShelfStorageComponent3D"): null,
+NodePath("UpperShelfStorageComponent3D"): null
+}
+_enclosure_toggles = {
+NodePath("UpperSwitchToggleComponent"): null,
+NodePath("LowerSwitchToggleComponent"): null
+}
+metadata/_custom_type_script = "uid://3dj6csaocnvh"
 
 [node name="fridge" type="MeshInstance3D" parent="." unique_id=2114955788]
 mesh = SubResource("ArrayMesh_j80fe")
 metadata/extras = {
 "yp_decal": {}
 }
-
-[node name="LowerDoor" type="MeshInstance3D" parent="fridge" unique_id=1789079587]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71190643, 0.83219343, 0.47554398)
-mesh = SubResource("ArrayMesh_1cybm")
-metadata/extras = {
-"yp_decal": {}
-}
-
-[node name="Interactable3D" type="Area3D" parent="fridge/LowerDoor" unique_id=1307943778 node_paths=PackedStringArray("_spatial_prompt")]
-script = ExtResource("5_0wcft")
-_spatial_prompt = NodePath("SpatialPromptComponent")
-metadata/_custom_type_script = "uid://cwcrparb0y6ct"
-
-[node name="SpatialPromptComponent" type="Sprite3D" parent="fridge/LowerDoor/Interactable3D" unique_id=293905038]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, 0.14999998)
-script = ExtResource("6_xbxsx")
-_display_position_y = 0.0
-metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="fridge/LowerDoor/Interactable3D" unique_id=1449874959]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.024999917, 0.024999976)
-shape = SubResource("SphereShape3D_qmagn")
 
 [node name="UpperDoor" type="MeshInstance3D" parent="fridge" unique_id=627209516]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71190643, 1.980087, 0.47554398)
@@ -193,32 +188,179 @@ metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.024999857, 0.024999976)
 shape = SubResource("SphereShape3D_qmagn")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="fridge" unique_id=841821501]
-transform = Transform3D(-2.1855694e-08, 1, -5.3109332e-08, 0, -4.371139e-08, -1.2149999, -0.5, -4.371139e-08, 2.3214827e-15, 0.74998057, 1.3, -0.025)
-mesh = SubResource("PlaneMesh_qmagn")
+[node name="StaticBody3D" type="StaticBody3D" parent="fridge/UpperDoor" unique_id=654954018]
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="fridge" unique_id=1794793437]
-transform = Transform3D(-2.1855694e-08, -1, 5.3109332e-08, 0, -4.371139e-08, -1.2149999, 0.5, -4.371139e-08, 2.3214827e-15, -0.7398071, 1.3, 0)
-mesh = SubResource("PlaneMesh_qmagn")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fridge/UpperDoor/StaticBody3D" unique_id=323414150]
+shape = SubResource("ConvexPolygonShape3D_fotq5")
 
-[node name="LowerDoorManager" type="Node3D" parent="." unique_id=1863871550 node_paths=PackedStringArray("_mesh_to_tween", "interact")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
-script = ExtResource("7_fotq5")
-_mesh_to_tween = NodePath("../fridge/LowerDoor")
-_target_tween_prop_value = 100.0
-interact = NodePath("../fridge/LowerDoor/Interactable3D")
-metadata/_custom_type_script = "uid://b7sokq5tfwike"
+[node name="LowerDoor" type="MeshInstance3D" parent="fridge" unique_id=1789079587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71190643, 0.83219343, 0.47554398)
+mesh = SubResource("ArrayMesh_1cybm")
+metadata/extras = {
+"yp_decal": {}
+}
 
-[node name="UpperDoorManager" type="Node3D" parent="." unique_id=342347409 node_paths=PackedStringArray("_mesh_to_tween", "interact")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-script = ExtResource("7_fotq5")
-_mesh_to_tween = NodePath("../fridge/UpperDoor")
-_target_tween_prop_value = 100.0
+[node name="Interactable3D" type="Area3D" parent="fridge/LowerDoor" unique_id=1307943778 node_paths=PackedStringArray("_spatial_prompt")]
+script = ExtResource("5_0wcft")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="fridge/LowerDoor/Interactable3D" unique_id=293905038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, 0.14999998)
+script = ExtResource("6_xbxsx")
+_display_position_y = 0.0
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fridge/LowerDoor/Interactable3D" unique_id=1449874959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.024999917, 0.024999976)
+shape = SubResource("SphereShape3D_qmagn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="fridge/LowerDoor" unique_id=1494262028]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fridge/LowerDoor/StaticBody3D" unique_id=1231842529]
+shape = SubResource("ConvexPolygonShape3D_4s0cr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="fridge" unique_id=1567367030]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fridge/StaticBody3D" unique_id=60939958]
+shape = SubResource("ConcavePolygonShape3D_4s0cr")
+
+[node name="InternalLights" type="Node3D" parent="fridge" unique_id=459387753]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="fridge/InternalLights" unique_id=813827796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 2.1499999, -0.25)
+shadow_enabled = true
+omni_range = 1.3
+omni_attenuation = 0.6
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="fridge/InternalLights" unique_id=1164659436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 1.3499999, -0.25)
+shadow_enabled = true
+omni_range = 1.5
+omni_attenuation = 0.6
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="fridge/InternalLights" unique_id=901608832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89999986, -0.25)
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 0.7
+omni_attenuation = -0.5
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="fridge/InternalLights" unique_id=2087379090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49999985, -0.25)
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 1.0
+omni_attenuation = -0.5
+
+[node name="UpperSwitchToggleComponent" type="Node3D" parent="." unique_id=561477241 node_paths=PackedStringArray("interact")]
+script = ExtResource("7_12waf")
 interact = NodePath("../fridge/UpperDoor/Interactable3D2")
-metadata/_custom_type_script = "uid://b7sokq5tfwike"
+_true_prompt = "Close"
+_false_prompt = "Open"
+metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1030004739]
+[node name="TweenMeshToggleComponent" type="Node3D" parent="UpperSwitchToggleComponent" unique_id=649573903 node_paths=PackedStringArray("_node_to_tween", "_controller")]
+script = ExtResource("8_12waf")
+_node_to_tween = NodePath("../../fridge/UpperDoor")
+_target_tween_value = 100.0
+_tween_duration = 0.8
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b0ld3gnc7p4sc"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=112286056]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0.00091552734)
-shape = SubResource("BoxShape3D_qmagn")
+[node name="AudioToggleComponent" type="Node3D" parent="UpperSwitchToggleComponent" unique_id=1564990644 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("9_0wcft")
+_audio = NodePath("../AudioStreamPlayer3D")
+_on_sound = ExtResource("10_j80fe")
+_off_sound = ExtResource("10_j80fe")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="UpperSwitchToggleComponent" unique_id=852608591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9499999, 0)
+bus = &"SFX"
+
+[node name="LowerSwitchToggleComponent" type="Node3D" parent="." unique_id=121619186 node_paths=PackedStringArray("interact")]
+script = ExtResource("7_12waf")
+interact = NodePath("../fridge/LowerDoor/Interactable3D")
+_true_prompt = "Close"
+_false_prompt = "Open"
+metadata/_custom_type_script = "uid://d3mq1lue5yf1t"
+
+[node name="TweenMeshToggleComponent" type="Node3D" parent="LowerSwitchToggleComponent" unique_id=172483883 node_paths=PackedStringArray("_node_to_tween", "_controller")]
+script = ExtResource("8_12waf")
+_node_to_tween = NodePath("../../fridge/LowerDoor")
+_target_tween_value = 100.0
+_tween_duration = 0.8
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b0ld3gnc7p4sc"
+
+[node name="AudioToggleComponent" type="Node3D" parent="LowerSwitchToggleComponent" unique_id=1748217064 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("9_0wcft")
+_audio = NodePath("../AudioStreamPlayer3D")
+_on_sound = ExtResource("10_j80fe")
+_off_sound = ExtResource("10_j80fe")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LowerSwitchToggleComponent" unique_id=1003674997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
+bus = &"SFX"
+
+[node name="UpperShelfStorageComponent3D" type="Node3D" parent="." unique_id=1164107745 node_paths=PackedStringArray("enclosure_toggle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6000001, 0)
+script = ExtResource("8_0wcft")
+enclosure_toggle = NodePath("../UpperSwitchToggleComponent")
+metadata/_custom_type_script = "uid://evm6758yh37o"
+
+[node name="Marker3D" type="Marker3D" parent="UpperShelfStorageComponent3D" unique_id=807670075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.024999976, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="UpperShelfStorageComponent3D" unique_id=909865010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.024999976, 0)
+
+[node name="Marker3D3" type="Marker3D" parent="UpperShelfStorageComponent3D" unique_id=1683760712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.024999976, 0)
+
+[node name="Lower1stShelfStorageComponent3D" type="Node3D" parent="." unique_id=974831097 node_paths=PackedStringArray("enclosure_toggle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1750001, 0)
+script = ExtResource("8_0wcft")
+enclosure_toggle = NodePath("../LowerSwitchToggleComponent")
+metadata/_custom_type_script = "uid://evm6758yh37o"
+
+[node name="Marker3D" type="Marker3D" parent="Lower1stShelfStorageComponent3D" unique_id=70794292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.024999976, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="Lower1stShelfStorageComponent3D" unique_id=1612617250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.024999976, 0)
+
+[node name="Marker3D3" type="Marker3D" parent="Lower1stShelfStorageComponent3D" unique_id=923512825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.024999976, 0)
+
+[node name="Lower2ndShelfStorageComponent3D" type="Node3D" parent="." unique_id=2124609567 node_paths=PackedStringArray("enclosure_toggle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.725, 0)
+script = ExtResource("8_0wcft")
+enclosure_toggle = NodePath("../LowerSwitchToggleComponent")
+metadata/_custom_type_script = "uid://evm6758yh37o"
+
+[node name="Marker3D" type="Marker3D" parent="Lower2ndShelfStorageComponent3D" unique_id=1372390296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="Lower2ndShelfStorageComponent3D" unique_id=2065400535]
+
+[node name="Marker3D3" type="Marker3D" parent="Lower2ndShelfStorageComponent3D" unique_id=516729729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)
+
+[node name="Lower3rdShelfStorageComponent3D" type="Node3D" parent="." unique_id=498824568 node_paths=PackedStringArray("enclosure_toggle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+script = ExtResource("8_0wcft")
+enclosure_toggle = NodePath("../LowerSwitchToggleComponent")
+metadata/_custom_type_script = "uid://evm6758yh37o"
+
+[node name="Marker3D" type="Marker3D" parent="Lower3rdShelfStorageComponent3D" unique_id=655047691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="Lower3rdShelfStorageComponent3D" unique_id=2055761519]
+
+[node name="Marker3D3" type="Marker3D" parent="Lower3rdShelfStorageComponent3D" unique_id=1744753740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0)

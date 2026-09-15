@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b83f3fs72t8cm"]
+
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_2v1mp"]
+[ext_resource type="Texture2D" uid="uid://ct6e1kmhjct2u" path="res://assets/consumables/burger_icon.png" id="1_etel1"]
+[ext_resource type="ArrayMesh" uid="uid://jy2feep7ryo2" path="res://assets/consumables/burger.res" id="2_8vsqq"]
+
+[resource]
+script = ExtResource("1_2v1mp")
+id = "burger-cnsmbl-001"
+display_name = "Burger"
+description = "Delicious looking cold burger."
+icon = ExtResource("1_etel1")
+mesh = ExtResource("2_8vsqq")
+is_stackable = true
+max_stack_size = 5
+stats_modifiers = Dictionary[String, Variant]({
+"heal": 5
+})
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

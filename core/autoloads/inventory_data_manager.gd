@@ -92,3 +92,7 @@ func get_pluralized_item_name(item: ItemData, pluralizer: int) -> String:
 		return item.display_name + "s"
 	else:
 		return item.display_name
+		
+func clear() -> void:
+	list = {}
+	updated.emit()

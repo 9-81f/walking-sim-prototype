@@ -13,6 +13,6 @@ description = "Standard & handy flashlight."
 icon = ExtResource("2_f3w52")
 mesh = ExtResource("3_kr2lh")
 type = 1
-hand_slot = 2
+hand_slot = 1
 equip_scene = ExtResource("1_7ew72")
 metadata/_custom_type_script = "uid://drxfxv3bewl1f"

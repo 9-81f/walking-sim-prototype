@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ch55tx5dar1rw"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwa18x7ub8xoq" path="res://assets/inspectables/book_001.res" id="1_42r65"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="2_7qdjq"]
+
+[resource]
+script = ExtResource("2_7qdjq")
+id = "book-inspct-004"
+display_name = "Log-004"
+description = "Tiny commentaries around this demo."
+mesh = ExtResource("1_42r65")
+type = 2
+is_storable = false
+readable_text = "If you've watched whatever it is this TV is playing. It's a video of me trying to incorporate the components I've made to get the fridge able to spawn items/foods inside of it. 
+
+You could eat any foods you found in this demo, as long as it can be stored to inventory.
+"
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

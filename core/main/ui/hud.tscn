@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d0c3yv4pi3vju" path="res://game/ui/inventory/inventory_ui.tscn" id="2_c6nsw"]
 [ext_resource type="PackedScene" uid="uid://cd65yvy1mcd3f" path="res://core/ui/interaction_prompt.tscn" id="2_ub1m4"]
 [ext_resource type="PackedScene" uid="uid://dghqnqfa8qkkq" path="res://core/ui/toast/toaster.tscn" id="4_2asln"]
+[ext_resource type="PackedScene" uid="uid://bqn7wqiorrhgn" path="res://game/ui/inspect/inspect_ui.tscn" id="4_hm6sm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmagn"]
 bg_color = Color(1, 0, 0, 1)
@@ -37,6 +38,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InventoryUI" parent="Windows" unique_id=1428632633 instance=ExtResource("2_c6nsw")]
+layout_mode = 1
+
+[node name="InspectUI" parent="Windows" unique_id=1459878502 instance=ExtResource("4_hm6sm")]
 layout_mode = 1
 
 [node name="Bars" type="Control" parent="." unique_id=291245043]

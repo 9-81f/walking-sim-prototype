@@ -16,3 +16,6 @@ signal item_inspection_requested(item: ItemData)
 
 ## UI Audio signals
 signal ui_audio_requested(stream: AudioStream)
+
+## Modal UI signals
+signal end_game_modal_requested

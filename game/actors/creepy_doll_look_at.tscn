@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cw5pvqc4hd4fg"]
+
+[ext_resource type="PackedScene" uid="uid://chx8vtekqw560" path="res://assets/characters/creepy_doll/CreepyDoll.fbx" id="1_u3jcu"]
+[ext_resource type="Script" uid="uid://cbgnrfxy5o4mk" path="res://game/actors/creepy_doll_look_at.gd" id="2_c3mu2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c3mu2"]
+radius = 0.002
+height = 0.010112485
+
+[node name="CreepyDoll" unique_id=833931623 instance=ExtResource("1_u3jcu")]
+script = ExtResource("2_c3mu2")
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(754530381) index="0" unique_id=1205506997]
+bones/1/position = Vector3(-2.3029964e-17, 0.0021105325, 1.728018e-11)
+bones/1/rotation = Quaternion(-0.18669471, 3.73247e-14, -4.4511456e-08, 0.982418)
+bones/1/scale = Vector3(1, 0.99999994, 0.9999999)
+bones/2/position = Vector3(2.5277849e-17, 0.0026343754, -2.1108294e-11)
+bones/2/rotation = Quaternion(0.08499338, -1.17551275e-14, 2.0263982e-08, 0.9963815)
+bones/2/scale = Vector3(1, 0.9999998, 0.9999999)
+bones/3/position = Vector3(0.0015078359, 0.0016088267, -4.0456922e-05)
+bones/3/rotation = Quaternion(0.41028944, -0.33397248, -0.5257773, 0.6660955)
+bones/4/position = Vector3(-1.6748411e-10, 0.0011704644, -3.7887254e-12)
+bones/4/scale = Vector3(1, 0.99999994, 1)
+bones/5/position = Vector3(-0.0015078358, 0.0016088267, -4.045764e-05)
+bones/5/rotation = Quaternion(0.41725552, 0.33947048, 0.5222443, 0.66175413)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/position = Vector3(1.4572678e-10, 0.0011704644, -5.5248328e-12)
+bones/6/rotation = Quaternion(4.604827e-08, 2.1688949e-07, 0.33990845, 0.94045854)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/position = Vector3(0.0017591418, 0.0010304753, 0.00042354595)
+bones/7/rotation = Quaternion(0.6036016, -0.052296985, 0.78137136, 0.14962977)
+bones/7/scale = Vector3(0.999999, 1, 0.9999999)
+bones/8/position = Vector3(-2.7768843e-10, 0.002268827, -1.42629e-10)
+bones/8/rotation = Quaternion(0.1660412, -0.007966431, -0.19554192, 0.9665041)
+bones/8/scale = Vector3(0.9999998, 0.99999976, 1)
+bones/9/position = Vector3(-0.001759142, 0.0010304751, 0.00042354493)
+bones/9/rotation = Quaternion(-0.6036021, -0.05229739, 0.7813712, -0.14962856)
+bones/9/scale = Vector3(1.0000011, 1.0000001, 1)
+bones/10/position = Vector3(-9.721239e-12, 0.0022688278, -1.5155878e-10)
+bones/10/rotation = Quaternion(0.16604455, 0.007966671, 0.19554448, 0.966503)
+bones/10/scale = Vector3(1.0000001, 0.9999998, 0.99999994)
+bones/12/rotation = Quaternion(0.1683427, -1.18066666e-07, 0.9857285, 2.468667e-07)
+bones/12/scale = Vector3(1, 1, 0.99999994)
+bones/13/position = Vector3(-4.768384e-10, 2.908707e-09, -4.768364e-10)
+bones/13/rotation = Quaternion(-0.0016227799, 0.022727499, 0.99719656, -0.07127321)
+bones/13/scale = Vector3(0.9999992, 1, 0.99999994)
+bones/15/rotation = Quaternion(-0.16834296, 3.2200205e-08, 0.9857285, 1.12700704e-07)
+bones/16/position = Vector3(-3.5762815e-10, 1.1438333e-17, 8.5830687e-10)
+bones/16/rotation = Quaternion(0.0016329535, 0.022729814, 0.9971966, 0.07127105)
+bones/16/scale = Vector3(1.0000048, 1.0000001, 1.0000005)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Armature/Skeleton3D/CreepyDoll" parent_id_path=PackedInt32Array(1350256894) index="0" unique_id=1273788256]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -1.1848751e-06, 0.004930671)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Armature/Skeleton3D/CreepyDoll/StaticBody3D" index="0" unique_id=1319020974]
+shape = SubResource("CapsuleShape3D_c3mu2")
+
+[node name="LookAtModifier3D" type="LookAtModifier3D" parent="Armature/Skeleton3D" index="1" unique_id=975308084]
+bone_name = "Bone.002"
+bone = 2

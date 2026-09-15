@@ -1,18 +1,19 @@
 extends UIWindow
 class_name InspectUI
 
-#TODO: Complete inspect ui implementation
 @onready var _mesh_transform: Node3D = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D
 @onready var _mesh: MeshInstance3D = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D/MeshInstance3D
-@onready var _subviewport_container: SubViewportContainer = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer
 @onready var _subviewport_cam: Camera3D = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport/Camera3D
 @onready var _item_name: Label = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/ItemName
 @onready var _item_desc: Label = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/ItemDescription
 @onready var _rich_texts: RichTextLabel = $PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/RichTextLabel
 
+@export_category("Inspection Camera Settings")
 @export var _camera_zoom_speed := 2.0
 @export var _inspect_x_rotation_speed := 10.0
 @export var _inspect_y_rotation_speed := 10.0
+
+@export var scroll_speed: float = 30.0
 
 var _current_item: ItemData
 var _defaults: Dictionary[String, Variant]
@@ -44,7 +45,7 @@ func _on_refresh() -> void:
 		_rich_texts.text = ""
 	
 func _get_initial_focus() -> Control:
-	return _subviewport_container
+	return _rich_texts
 	
 func _setup(item: ItemData) -> void:
 	_current_item = item
@@ -84,4 +85,18 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		close()
 		get_viewport().set_input_as_handled()
-	
+		
+	if event is InputEventMouseButton and event.is_pressed():
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP or event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			var mouse_pos = _rich_texts.get_local_mouse_position()
+			
+			if _rich_texts.get_rect().has_point(mouse_pos):
+				var v_scroll = _rich_texts.get_v_scroll_bar()
+			
+				if v_scroll:
+					if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+						v_scroll.value -= scroll_speed
+					elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+						v_scroll.value += scroll_speed
+
+					get_viewport().set_input_as_handled()

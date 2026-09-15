@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cken4pb1uv8xw"]
+
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_fho82"]
+[ext_resource type="ArrayMesh" uid="uid://dvdcibqhboaxh" path="res://assets/carryables/pan.res" id="1_m11un"]
+
+[resource]
+script = ExtResource("1_fho82")
+id = "pan-carry-001"
+display_name = "Pan"
+mesh = ExtResource("1_m11un")
+type = 3
+is_storable = false
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

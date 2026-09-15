@@ -21,7 +21,7 @@ var current_health: float :
 				died.emit()
 				
 func _ready() -> void:
-	current_health = max_health - 10
+	current_health = max_health / 2
 
 func is_health_full() -> bool:
 	return current_health == max_health

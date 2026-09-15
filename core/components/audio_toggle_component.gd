@@ -8,13 +8,13 @@ class_name AudioToggleComponent
 
 func _on_switch_toggled(toggled: bool) -> void:
 	if toggled:
-		_audio.stream = _on_sound
+		_audio.stream = _on_sound if _on_sound else null
 	else:
-		_audio.stream = _off_sound
+		_audio.stream = _off_sound if _off_sound else null
 	
 	_audio.play()
 	
-func _on_switch_locked(_unlocked: bool) -> void:
+func _on_switch_locked() -> void:
 	if _locked_sound:
 		_audio.stream = _locked_sound
 		_audio.play()

@@ -17,10 +17,9 @@
 [ext_resource type="Resource" uid="uid://bnhvcsfx31ui3" path="res://game/items/data/teddy_bear_inspectable_data.tres" id="10_nddve"]
 [ext_resource type="PackedScene" uid="uid://b0w4srvs08g5h" path="res://game/levels/furnitures/table_wide.tscn" id="10_w7auw"]
 [ext_resource type="PackedScene" uid="uid://cditk4gmhbcio" path="res://game/levels/furnitures/plant_01.tscn" id="11_lq2yx"]
-[ext_resource type="Resource" uid="uid://1las6wc2ags1" path="res://game/items/data/book_inspectable.tres" id="11_p1amm"]
+[ext_resource type="Resource" uid="uid://1las6wc2ags1" path="res://game/items/data/log001_inspectable.tres" id="11_p1amm"]
 [ext_resource type="PackedScene" uid="uid://nt7w7xrvjta3" path="res://game/levels/furnitures/couch_small.tscn" id="13_lofix"]
 [ext_resource type="PackedScene" uid="uid://captcx4ogxru1" path="res://game/levels/furnitures/table_small.tscn" id="14_5d5iq"]
-[ext_resource type="PackedScene" uid="uid://cylw3g70jej6s" path="res://game/levels/furnitures/cabinet_big.tscn" id="14_16y1n"]
 [ext_resource type="PackedScene" uid="uid://k4yjqgakj5rp" path="res://game/levels/furnitures/cabinet_drawer_big.tscn" id="14_doqk6"]
 [ext_resource type="PackedScene" uid="uid://cxkdqwy5t88m8" path="res://game/levels/furnitures/table_lamp.tscn" id="15_lofix"]
 [ext_resource type="PackedScene" uid="uid://b3weo10n7b5pe" path="res://game/interactables/switches/flick_switch.tscn" id="18_5d5iq"]
@@ -32,8 +31,16 @@
 [ext_resource type="PackedScene" uid="uid://byrwyt5nhg8vc" path="res://game/levels/furnitures/cabinet_low.tscn" id="20_ylgha"]
 [ext_resource type="PackedScene" uid="uid://jcvp8homcsvo" path="res://game/levels/furnitures/chair_03.tscn" id="21_unpyp"]
 [ext_resource type="PackedScene" uid="uid://esuchbrthh6u" path="res://game/levels/furnitures/oven.tscn" id="24_qrai3"]
+[ext_resource type="PackedScene" uid="uid://b0jsnhpcnfs5e" path="res://game/levels/furnitures/tv.tscn" id="26_3hyke"]
 [ext_resource type="PhysicsMaterial" uid="uid://bfbu5kqaiul2" path="res://game/resources/surfaces/phys_carpet.tres" id="27_ogsec"]
 [ext_resource type="PhysicsMaterial" uid="uid://blvvqp70lfybx" path="res://game/resources/surfaces/phys_stone.tres" id="28_iew7l"]
+[ext_resource type="Resource" uid="uid://sxfg7d12gp61" path="res://game/items/data/apple_consumable_data.tres" id="31_l3kup"]
+[ext_resource type="Resource" uid="uid://c0egtc7uss6vq" path="res://game/items/data/milk_carton_inspectable.tres" id="32_1xtyh"]
+[ext_resource type="Script" uid="uid://y1v4rlucx6df" path="res://core/blueprints/item_data_array.gd" id="32_3r3ks"]
+[ext_resource type="Resource" uid="uid://pnjq1vncclcq" path="res://game/items/data/pizza_consumable_data.tres" id="33_h15ro"]
+[ext_resource type="Resource" uid="uid://btin0m8v4hvio" path="res://game/items/data/water_bottle_consumable_data.tres" id="34_3hyke"]
+[ext_resource type="Resource" uid="uid://b83f3fs72t8cm" path="res://game/items/data/burger_consumable_data.tres" id="35_w44d0"]
+[ext_resource type="PackedScene" uid="uid://dan5rmei5ko5p" path="res://game/levels/furnitures/radio.tscn" id="37_h15ro"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_155sq"]
 size = Vector3(24, 0.6, 24)
@@ -52,6 +59,21 @@ script = ExtResource("7_ibunk")
 list = Array[ExtResource("3_nfaxw")]([ExtResource("8_klcoi")])
 metadata/_custom_type_script = "uid://ckivwolg1pp5v"
 
+[sub_resource type="Resource" id="Resource_777ly"]
+script = ExtResource("32_3r3ks")
+list = Array[ExtResource("3_nfaxw")]([ExtResource("11_p1amm"), ExtResource("31_l3kup"), ExtResource("8_ibunk")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_lrcr7"]
+script = ExtResource("32_3r3ks")
+list = Array[ExtResource("3_nfaxw")]([ExtResource("7_yg4as"), ExtResource("31_l3kup")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_h15ro"]
+script = ExtResource("32_3r3ks")
+list = Array[ExtResource("3_nfaxw")]([ExtResource("8_klcoi")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_kjoil"]
 size = Vector3(14, 4.5, 8)
 
@@ -60,6 +82,26 @@ size = Vector3(24, 4, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ktmh6"]
 size = Vector3(12, 3.9, 7.9)
+
+[sub_resource type="Resource" id="Resource_l3kup"]
+script = ExtResource("32_3r3ks")
+list = Array[ExtResource("3_nfaxw")]([ExtResource("31_l3kup"), ExtResource("32_1xtyh")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_bgw47"]
+script = ExtResource("32_3r3ks")
+list = Array[ExtResource("3_nfaxw")]([ExtResource("34_3hyke"), ExtResource("31_l3kup")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_fv8tx"]
+script = ExtResource("32_3r3ks")
+list = Array[ExtResource("3_nfaxw")]([ExtResource("35_w44d0")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
+
+[sub_resource type="Resource" id="Resource_mnubd"]
+script = ExtResource("32_3r3ks")
+list = Array[ExtResource("3_nfaxw")]([ExtResource("34_3hyke"), ExtResource("33_h15ro")])
+metadata/_custom_type_script = "uid://y1v4rlucx6df"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v7nto"]
 size = Vector3(7.9, 0.2, 8)
@@ -172,16 +214,23 @@ NodePath("RightDoorManager"): SubResource("Resource_yg4as")
 
 [node name="LivingRoomZone3D" type="Area3D" parent="GF/Rooms" unique_id=1385758496 node_paths=PackedStringArray("_room_objects")]
 script = ExtResource("6_nfaxw")
-_room_objects = [NodePath("Interactables/OldKey"), NodePath("Interactables/Chips01"), NodePath("Interactables/Chips02"), NodePath("Interactables/TeddyBear"), NodePath("Interactables/Book001"), NodePath("Interactables/FlickSwitch")]
+_room_objects = [NodePath("Interactables/OldKey"), NodePath("Interactables/Chips01"), NodePath("Interactables/Chips02"), NodePath("Interactables/TeddyBear"), NodePath("Interactables/Book001"), NodePath("Interactables/FlickSwitch"), NodePath("Furnitures/TableLamp")]
 metadata/_custom_type_script = "uid://s1rngkubb457"
 
 [node name="Furnitures" type="Node3D" parent="GF/Rooms/LivingRoomZone3D" unique_id=170662856]
 
-[node name="CabinetDrawerBig" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=1254286147 instance=ExtResource("14_doqk6")]
-transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -9.503199, 0, -2.6018798)
-
-[node name="CabinetBig" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=2038461481 instance=ExtResource("14_16y1n")]
-transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, -10.5, 0, -4.4)
+[node name="CabinetDrawerBig" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=1254286147 node_paths=PackedStringArray("_shelves", "_enclosure_toggles") instance=ExtResource("14_doqk6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.503199, 0, -2.6018798)
+_shelves = {
+NodePath("3rdShelfStorageComponent3D"): SubResource("Resource_777ly"),
+NodePath("cabinet/cabinet_001/1stDrawerStorageComponent3D"): SubResource("Resource_lrcr7"),
+NodePath("cabinet/cabinet_002/2ndDrawerStorageComponent3D"): null,
+null: null
+}
+_enclosure_toggles = {
+NodePath("FirstToggleComponent"): SubResource("Resource_h15ro"),
+NodePath("SecondToggleComponent"): null
+}
 
 [node name="CeilingLightDisc" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=68019879 node_paths=PackedStringArray("_controller") instance=ExtResource("10_gcjrw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 3.9, -0.1)
@@ -192,16 +241,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 3.9, -8.200001)
 _controller = NodePath("../../Interactables/FlickSwitch")
 
 [node name="TableWide" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=1125492377 instance=ExtResource("10_w7auw")]
-transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -8.799999, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.799999, 0, 0)
 
 [node name="Plant01" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=1271881917 instance=ExtResource("11_lq2yx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.900001, 1.0999999, -0.9000001)
 
 [node name="CouchBig" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=433226213 instance=ExtResource("3_4xixx")]
-transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, -4, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, 0)
 
 [node name="CouchSmall" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=953881942 instance=ExtResource("13_lofix")]
-transform = Transform3D(-1.1490667, 0, -0.9641814, 0, 1.5, 0, 0.9641814, 0, -1.1490667, -5.1, 0, 3.3000002)
+transform = Transform3D(-0.76604444, 0, -0.64278764, 0, 1, 0, 0.64278764, 0, -0.76604444, -5.1, 0, 3.3000002)
 
 [node name="TableSmall" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=981859291 instance=ExtResource("14_5d5iq")]
 transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -4.1, 0, -2.8)
@@ -229,6 +278,9 @@ transform = Transform3D(0.8, 0, 9.536743e-08, 0, 0.8, 0, -9.536743e-08, 0, 0.8, 
 
 [node name="Chair08" parent="GF/Rooms/LivingRoomZone3D/Furnitures/TableRounded" unique_id=1729138594 instance=ExtResource("21_unpyp")]
 transform = Transform3D(0.8, 0, 9.536743e-08, 0, 0.8, 0, -9.536743e-08, 0, 0.8, -0.46666718, 0, -0.7999997)
+
+[node name="TV" parent="GF/Rooms/LivingRoomZone3D/Furnitures" unique_id=1518228698 instance=ExtResource("26_3hyke")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.6, 1.1, 0)
 
 [node name="Interactables" type="Node3D" parent="GF/Rooms/LivingRoomZone3D" unique_id=1512105114]
 
@@ -346,11 +398,24 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.8,
 [node name="CabinetLow5" parent="GF/Rooms/KitchenZone/Furnitures" unique_id=2066347343 instance=ExtResource("20_ylgha")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.400001, 0, -4.112036)
 
-[node name="Fridge" parent="GF/Rooms/KitchenZone/Furnitures" unique_id=1092317820 instance=ExtResource("20_6hqig")]
+[node name="Fridge" parent="GF/Rooms/KitchenZone/Furnitures" unique_id=1092317820 node_paths=PackedStringArray("_shelves", "_enclosure_toggles") instance=ExtResource("20_6hqig")]
 transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 5.1000004, 0, -4.6)
+_shelves = {
+NodePath("Lower1stShelfStorageComponent3D"): SubResource("Resource_l3kup"),
+NodePath("Lower2ndShelfStorageComponent3D"): SubResource("Resource_bgw47"),
+NodePath("Lower3rdShelfStorageComponent3D"): SubResource("Resource_fv8tx"),
+NodePath("UpperShelfStorageComponent3D"): SubResource("Resource_mnubd")
+}
+_enclosure_toggles = {
+NodePath("UpperSwitchToggleComponent"): null,
+NodePath("LowerSwitchToggleComponent"): null
+}
 
 [node name="Oven" parent="GF/Rooms/KitchenZone/Furnitures" unique_id=718464616 instance=ExtResource("24_qrai3")]
 transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-08, 9.099999, 0, -4.7)
+
+[node name="Radio" parent="GF/Rooms/KitchenZone/Furnitures" unique_id=91371797 instance=ExtResource("37_h15ro")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.865857, 1.1, -4.855737)
 
 [node name="Architecture" type="Node3D" parent="GF" unique_id=1877515099]
 

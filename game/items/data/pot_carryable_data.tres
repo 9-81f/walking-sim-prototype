@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://fvmyqr1xpjf2"]
+
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="1_as7m5"]
+[ext_resource type="ArrayMesh" uid="uid://bdarqua33got7" path="res://assets/carryables/pot.res" id="1_ur674"]
+
+[resource]
+script = ExtResource("1_as7m5")
+id = "pot-carry-001"
+display_name = "Pot"
+mesh = ExtResource("1_ur674")
+type = 3
+is_storable = false
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dan5rmei5ko5p"]
+
+[ext_resource type="PackedScene" uid="uid://bgl228s0gqxr1" path="res://assets/environments/PSX modular house interior pack/props/radio.glb" id="1_xlhkm"]
+[ext_resource type="Script" uid="uid://d3mq1lue5yf1t" path="res://game/components/switch_toggle_component.gd" id="2_ktymx"]
+[ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="2_m5flb"]
+[ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="3_rr76p"]
+[ext_resource type="Script" uid="uid://b4dg5dsmsigbm" path="res://core/components/audio_toggle_component.gd" id="5_q2dl8"]
+[ext_resource type="AudioStream" uid="uid://dstqbgoqv3f03" path="res://assets/sfx/radio/556371__splatbot__bbc-radio-news-30-1-1933-theatre-construct.wav" id="6_vlokd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
+
+[node name="Radio" unique_id=91371797 node_paths=PackedStringArray("interact") instance=ExtResource("1_xlhkm")]
+script = ExtResource("2_ktymx")
+interact = NodePath("Interactable3D")
+
+[node name="radio" parent="." index="0" unique_id=1279702875]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Interactable3D" type="Area3D" parent="." index="1" unique_id=2009217785 node_paths=PackedStringArray("_spatial_prompt")]
+script = ExtResource("2_m5flb")
+_spatial_prompt = NodePath("SpatialPromptComponent")
+metadata/_custom_type_script = "uid://cwcrparb0y6ct"
+
+[node name="SpatialPromptComponent" type="Sprite3D" parent="Interactable3D" index="0" unique_id=751536894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.075, 0.125, 0)
+script = ExtResource("3_rr76p")
+metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable3D" index="1" unique_id=236429072]
+shape = SubResource("SphereShape3D_qmagn")
+
+[node name="AudioToggleComponent" type="Node3D" parent="." index="2" unique_id=1436284383 node_paths=PackedStringArray("_audio", "_controller")]
+script = ExtResource("5_q2dl8")
+_audio = NodePath("../AudioStreamPlayer3D")
+_on_sound = ExtResource("6_vlokd")
+_controller = NodePath("..")
+metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="3" unique_id=1640912386]
+bus = &"SFX"

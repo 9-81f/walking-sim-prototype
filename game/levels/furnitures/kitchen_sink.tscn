@@ -6,10 +6,6 @@
 [ext_resource type="Script" uid="uid://b7sokq5tfwike" path="res://game/components/interactable_door_component.gd" id="4_l0a6c"]
 [ext_resource type="AudioStream" uid="uid://b0ooc3jw5o8ig" path="res://game/levels/furnitures/audio/impact_wood_medium.tres" id="5_5rt57"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_kjoil"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
 size = Vector3(0.90000004, 0.125, 2)
 
@@ -19,7 +15,25 @@ size = Vector3(0.925, 0.031054687, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_5rt57"]
 size = Vector3(0.925, 0.19907227, 2.075)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kjoil"]
+
 [node name="KitchenSink" unique_id=809078105 instance=ExtResource("1_whuv8")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="bathroomSink" parent_id_path=PackedInt32Array(1773973919) index="0" unique_id=1561053620]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bathroomSink/StaticBody3D" index="0" unique_id=1671077107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0625, 0)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="bathroomSink/StaticBody3D" index="1" unique_id=194938948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38447267, 0)
+shape = SubResource("BoxShape3D_jngls")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="bathroomSink/StaticBody3D" index="2" unique_id=1780841295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9318603, 0)
+shape = SubResource("BoxShape3D_5rt57")
 
 [node name="Interactable3D" type="Area3D" parent="bathroomSink/sink_001" parent_id_path=PackedInt32Array(295558506) index="0" unique_id=600640455 node_paths=PackedStringArray("_spatial_prompt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39999998)
@@ -73,20 +87,8 @@ _enable_focus_overlay = false
 interact = NodePath("../bathroomSink/sink_002/Interactable3D")
 metadata/_custom_type_script = "uid://b7sokq5tfwike"
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=1561053620]
+[node name="LeftAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="3" unique_id=1368340379]
+bus = &"SFX"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1671077107]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0625, 0)
-shape = SubResource("BoxShape3D_qmagn")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=194938948]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38447267, 0)
-shape = SubResource("BoxShape3D_jngls")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1780841295]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9318603, 0)
-shape = SubResource("BoxShape3D_5rt57")
-
-[node name="LeftAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1368340379]
-
-[node name="RightAudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." index="5" unique_id=1117703174]
+[node name="RightAudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1117703174]
+bus = &"SFX"

@@ -3,6 +3,7 @@ class_name ItemSlot
 
 var item_data: ItemData
 var is_equippable := false
+var _focus_audio: AudioStream = preload("res://assets/sfx/rpg-audio/beltHandle1.ogg")
 
 func setup(data: ItemData, current_quantity: int, is_currently_equipped: bool) -> void:
 	item_data = data
@@ -19,9 +20,13 @@ func setup(data: ItemData, current_quantity: int, is_currently_equipped: bool) -
 	
 func _ready() -> void:
 	pressed.connect(_on_pressed)
+	focus_entered.connect(_on_focus_entered)
 	GameEvents.item_equipped.connect(_on_global_item_equipped)
 	GameEvents.item_unequip.connect(_on_global_item_unequipped)
-	
+
+func _on_focus_entered() -> void:
+	UiEvents.ui_audio_requested.emit(_focus_audio)
+
 func _on_pressed() -> void:
 	if not item_data: return
 	

@@ -91,6 +91,9 @@ shadow_mesh = SubResource("ArrayMesh_seu7w")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_2e5cd"]
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ok6my"]
+points = PackedVector3Array(0.12393507, 0.5114846, 4.7683716e-07, 0.1000006, 0.5114846, 4.7683716e-07, 0.12393507, -0.41148448, 4.7683716e-07, 0.13615866, 0.4957645, -0.008627415, 0.12393507, 0.5114846, -0.454342, 0.1000006, 0.5114846, -0.454342, 0.1000006, -0.41148448, 4.7683716e-07, 0.12393507, -0.41148448, -0.454342, 0.13615866, -0.3958547, -0.008627415, 0.16891679, 0.09625697, -0.37553477, 0.13615866, 0.4957645, -0.44580308, 0.1000006, -0.41148448, -0.454342, 0.13615866, -0.3958547, -0.44580308, 0.16891679, 0.09625697, -0.3967042)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_bmiax"]
 _surfaces = [{
 "aabb": AABB(0.1000006, -0.41148448, -4.7683716e-07, 0.068916194, 0.9229691, 0.45434248),
@@ -126,6 +129,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bmiax")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ixr7x"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3bcoe"]
+points = PackedVector3Array(0.12393507, 0.5114846, 0.454342, 0.13615866, 0.4957645, 0.44575858, 0.12393507, 0.5114846, -4.7683716e-07, 0.1000006, 0.5114846, 0.454342, 0.12393507, -0.41148448, 0.454342, 0.13615866, 0.4957645, 0.008582931, 0.13615866, -0.3958547, 0.44575858, 0.16891679, 0.09625697, 0.39665973, 0.1000006, 0.5114846, -4.7683716e-07, 0.12393507, -0.41148448, -4.7683716e-07, 0.1000006, -0.41148448, 0.454342, 0.16891679, 0.09625697, 0.37549028, 0.13615866, -0.3958547, 0.008582931, 0.1000006, -0.41148448, -4.7683716e-07)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qmagn"]
 size = Vector3(0.77500004, 0.075, 1)
@@ -171,6 +177,11 @@ metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.07499999, -0.225)
 shape = SubResource("SphereShape3D_2e5cd")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="cabinetLow/LeftDoor/cabinetLow_002" unique_id=1596522636]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetLow/LeftDoor/cabinetLow_002/StaticBody3D" unique_id=1080405841]
+shape = SubResource("ConvexPolygonShape3D_ok6my")
+
 [node name="RightDoor" type="Node3D" parent="cabinetLow" unique_id=804862644]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875, 0.125, -0.45000002)
 
@@ -194,6 +205,37 @@ metadata/_custom_type_script = "uid://bkuwnbcx8k1nf"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetLow/RightDoor/cabinetLow_001/Interactable3D" unique_id=1662806061]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.07499999, 0.22500001)
 shape = SubResource("SphereShape3D_ixr7x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cabinetLow/RightDoor/cabinetLow_001" unique_id=1377130014]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetLow/RightDoor/cabinetLow_001/StaticBody3D" unique_id=207668077]
+shape = SubResource("ConvexPolygonShape3D_3bcoe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="cabinetLow" unique_id=645349384]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cabinetLow/StaticBody3D" unique_id=791211134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48749998, 0.087499976, 0)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="cabinetLow/StaticBody3D" unique_id=1865250890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 1.045, 0)
+shape = SubResource("BoxShape3D_qmagn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="cabinetLow/StaticBody3D" unique_id=1262310672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 0.57, 0.475)
+shape = SubResource("BoxShape3D_0ex5k")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="cabinetLow/StaticBody3D" unique_id=1321908869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 0.57, -0.475)
+shape = SubResource("BoxShape3D_0ex5k")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="cabinetLow/StaticBody3D" unique_id=1219746428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 0.57, 0)
+shape = SubResource("BoxShape3D_ok6my")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="cabinetLow/StaticBody3D" unique_id=621778588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 0.4821033, 0)
+shape = SubResource("BoxShape3D_3bcoe")
 
 [node name="LeftDoorManager" type="Node3D" parent="." unique_id=822701020 node_paths=PackedStringArray("_audio", "_mesh_to_tween", "interact")]
 script = ExtResource("5_62pk2")
@@ -219,34 +261,10 @@ _enable_focus_overlay = false
 interact = NodePath("../cabinetLow/RightDoor/cabinetLow_001/Interactable3D")
 metadata/_custom_type_script = "uid://b7sokq5tfwike"
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=645349384]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=791211134]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48749998, 0.087499976, 0)
-shape = SubResource("BoxShape3D_qmagn")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1865250890]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 1.045, 0)
-shape = SubResource("BoxShape3D_qmagn")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1262310672]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 0.57, 0.475)
-shape = SubResource("BoxShape3D_0ex5k")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=1321908869]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 0.57, -0.475)
-shape = SubResource("BoxShape3D_0ex5k")
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" unique_id=1219746428]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 0.57, 0)
-shape = SubResource("BoxShape3D_ok6my")
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" unique_id=621778588]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487, 0.4821033, 0)
-shape = SubResource("BoxShape3D_3bcoe")
-
 [node name="LeftAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1409212403]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875, 0.5, 0.25)
+bus = &"SFX"
 
 [node name="RightAudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1196513958]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875, 0.5, -0.25)
+bus = &"SFX"

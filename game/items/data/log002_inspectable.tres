@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dexl30nyg6t2r"]
+
+[ext_resource type="ArrayMesh" uid="uid://bwa18x7ub8xoq" path="res://assets/inspectables/book_001.res" id="1_ju1st"]
+[ext_resource type="Script" uid="uid://drxfxv3bewl1f" path="res://core/blueprints/item_data.gd" id="2_sulbk"]
+
+[resource]
+script = ExtResource("2_sulbk")
+id = "book-inspct-002"
+display_name = "Log-002"
+description = "Tiny commentaries around this demo."
+mesh = ExtResource("1_ju1st")
+type = 2
+is_storable = false
+readable_text = "I kept most of my unrefined implementations code intact & some of the things in this project still used it, especially things that has doors.
+
+Now, if you see empty interactable cabinets. That's most likely caused by the old door focused component which made it hard for me to implement shelf system for placing interactable items in it."
+metadata/_custom_type_script = "uid://drxfxv3bewl1f"
