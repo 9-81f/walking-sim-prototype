@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cwcrparb0y6ct" path="res://core/components/interactable_component_3d.gd" id="2_m5flb"]
 [ext_resource type="Script" uid="uid://bkuwnbcx8k1nf" path="res://game/components/spatial_prompt_component.gd" id="3_rr76p"]
 [ext_resource type="Script" uid="uid://b4dg5dsmsigbm" path="res://core/components/audio_toggle_component.gd" id="5_q2dl8"]
-[ext_resource type="AudioStream" uid="uid://dstqbgoqv3f03" path="res://assets/sfx/radio/556371__splatbot__bbc-radio-news-30-1-1933-theatre-construct.wav" id="6_vlokd"]
+[ext_resource type="AudioStream" uid="uid://c330do0i2ys3b" path="res://assets/sfx/radio/692014__jim-bretherick__complex-drone-radio1.wav" id="6_ktymx"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_qmagn"]
 
@@ -32,7 +32,7 @@ shape = SubResource("SphereShape3D_qmagn")
 [node name="AudioToggleComponent" type="Node3D" parent="." index="2" unique_id=1436284383 node_paths=PackedStringArray("_audio", "_controller")]
 script = ExtResource("5_q2dl8")
 _audio = NodePath("../AudioStreamPlayer3D")
-_on_sound = ExtResource("6_vlokd")
+_on_sound = ExtResource("6_ktymx")
 _controller = NodePath("..")
 metadata/_custom_type_script = "uid://b4dg5dsmsigbm"
 
